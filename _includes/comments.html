@@ -147,13 +147,15 @@ let currentSection = '_global';
 let commentCounts = {};
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Add comment buttons to h2 headings
-  const headings = document.querySelectorAll('article h2[id]');
+  // Add comment buttons to h2 headings (Quarto uses data-anchor-id, not id)
+  const headings = document.querySelectorAll('article h2[data-anchor-id], article h2[id]');
   headings.forEach(h => {
+    const sectionId = h.getAttribute('data-anchor-id') || h.id;
+    if (!sectionId || sectionId === 'toc-title') return;
     const btn = document.createElement('button');
     btn.className = 'comment-btn';
-    btn.innerHTML = '💬 <span class="count" data-section="' + h.id + '">0</span>';
-    btn.onclick = (e) => { e.preventDefault(); openCommentPanel(h.id, h.textContent.trim()); };
+    btn.innerHTML = '💬 <span class="count" data-section="' + sectionId + '">0</span>';
+    btn.onclick = (e) => { e.preventDefault(); openCommentPanel(sectionId, h.textContent.replace(/💬\s*\d*/, '').trim()); };
     h.appendChild(btn);
   });
 

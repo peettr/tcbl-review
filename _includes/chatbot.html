@@ -2,10 +2,10 @@
 /* Sidebar chat panel */
 #feifei-sidebar {
   position: fixed;
-  top: 0;
+  top: 60px;
   right: -400px;
   width: 380px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background: white;
   box-shadow: -4px 0 20px rgba(0,0,0,0.12);
   z-index: 10000;
@@ -387,23 +387,17 @@ document.addEventListener('scroll', () => {
   document.getElementById('feifei-select-popup').style.display = 'none';
 });
 
-// Position button right next to article text
+// Position button aligned with the right margin sidebar (TOC area)
 function positionFeifeiTab() {
   const tab = document.getElementById('feifei-tab');
-  // Find actual paragraph text right edge
-  const paras = document.querySelectorAll('main.content p, main.content section > h2, main.content section > h3');
-  let maxRight = 0;
-  for (const p of paras) {
-    const r = p.getBoundingClientRect();
-    if (r.right > maxRight && r.width > 100) maxRight = r.right;
-  }
-  if (maxRight > 0) {
-    tab.style.left = (maxRight + 12) + 'px';
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar) {
+    const r = marginSidebar.getBoundingClientRect();
+    tab.style.left = (r.left + r.width / 2 - 22) + 'px';
   } else {
-    // Fallback
-    tab.style.left = 'calc(50% + 440px)';
+    tab.style.right = '30px';
+    tab.style.left = 'auto';
   }
-  tab.style.right = 'auto';
 }
 
 positionFeifeiTab();

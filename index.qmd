@@ -25,8 +25,6 @@ format:
     toc: true
     toc-depth: 4
     number-sections: true
-    include-after-body:
-      - _includes/chatbot.html
 ---
 
 An overview of modeling tropical cyclone boundary layer (TCBL): From meteorological perspectives to wind engineering applications

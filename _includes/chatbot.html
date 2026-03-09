@@ -18,36 +18,32 @@
 
 /* Overlay mode - no push */
 
-/* Toggle button - floating tab on right edge */
+/* Floating button near article content */
 #feifei-tab {
   position: fixed;
-  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 100px;
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 10001;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 4px;
-  box-shadow: -2px 2px 8px rgba(102,126,234,0.3);
-  transition: right 0.3s ease, width 0.15s;
-  writing-mode: vertical-lr;
+  box-shadow: 0 3px 12px rgba(102,126,234,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
   color: white;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-size: 22px;
+  /* Will be repositioned by JS to sit next to article */
 }
-#feifei-tab:hover { width: 46px; }
-body.feifei-open #feifei-tab { right: 380px; }
-#feifei-tab .tab-icon { font-size: 20px; writing-mode: horizontal-tb; }
-#feifei-tab .tab-text { writing-mode: vertical-lr; }
+#feifei-tab:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 16px rgba(102,126,234,0.6);
+}
+#feifei-tab .tab-text { display: none; }
 
 /* Header */
 #feifei-header {
@@ -228,11 +224,8 @@ body.feifei-open #feifei-tab { right: 380px; }
 }
 </style>
 
-<!-- Tab button on right edge -->
-<button id="feifei-tab" onclick="toggleFeifei()">
-  <span class="tab-icon">🐱</span>
-  <span class="tab-text">菲菲</span>
-</button>
+<!-- Floating button next to article -->
+<button id="feifei-tab" onclick="toggleFeifei()">🐱</button>
 
 <!-- Selection popup -->
 <div id="feifei-select-popup" onclick="askAboutSelection()">🐱 问菲菲</div>
@@ -396,4 +389,36 @@ function askAboutSelection() {
 document.addEventListener('scroll', () => {
   document.getElementById('feifei-select-popup').style.display = 'none';
 });
+
+// Position floating button next to article content
+function positionFeifeiTab() {
+  const tab = document.getElementById('feifei-tab');
+  const article = document.querySelector('#quarto-content .content-visible, main.content, article, #quarto-document-content, .page-columns');
+  if (article) {
+    const rect = article.getBoundingClientRect();
+    const rightEdge = rect.right + 16;
+    // Don't go beyond viewport
+    const maxRight = window.innerWidth - 60;
+    tab.style.left = Math.min(rightEdge, maxRight) + 'px';
+    tab.style.right = 'auto';
+  } else {
+    // Fallback: just right of center content area
+    tab.style.left = 'calc(50% + 400px)';
+    tab.style.right = 'auto';
+  }
+}
+
+// Also position the sidebar panel near the button
+function positionSidebar() {
+  const tab = document.getElementById('feifei-tab');
+  const sidebar = document.getElementById('feifei-sidebar');
+  const tabLeft = tab.getBoundingClientRect().left;
+  // Position sidebar so its left edge aligns with the tab
+  const sidebarRight = window.innerWidth - tabLeft - 50;
+  sidebar.style.right = Math.max(0, -sidebarRight) + 'px';
+}
+
+positionFeifeiTab();
+window.addEventListener('resize', positionFeifeiTab);
+window.addEventListener('scroll', positionFeifeiTab);
 </script>

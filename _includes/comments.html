@@ -147,8 +147,8 @@ let currentSection = '_global';
 let commentCounts = {};
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Add comment buttons to h2 headings (Quarto uses data-anchor-id, not id)
-  const headings = document.querySelectorAll('article h2[data-anchor-id], article h2[id]');
+  // Add comment buttons to h2 headings (Quarto uses main, not article; data-anchor-id, not id)
+  const headings = document.querySelectorAll('main h2[data-anchor-id], main h2[id]');
   headings.forEach(h => {
     const sectionId = h.getAttribute('data-anchor-id') || h.id;
     if (!sectionId || sectionId === 'toc-title') return;
@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
     h.appendChild(btn);
   });
 
-  // Add a global comment button at article end
-  const article = document.querySelector('article');
+  // Add a global comment button at end
+  const article = document.querySelector('main #quarto-document-content') || document.querySelector('main');
   if (article) {
     const globalDiv = document.createElement('div');
     globalDiv.style.cssText = 'margin: 40px 0; text-align: center;';

@@ -147,8 +147,8 @@ let currentSection = '_global';
 let commentCounts = {};
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Add comment buttons to h2 headings (Quarto uses main, not article; data-anchor-id, not id)
-  const headings = document.querySelectorAll('main h2[data-anchor-id], main h2[id]');
+  // Add comment buttons to all section headings (h2-h6)
+  const headings = document.querySelectorAll('main h2[data-anchor-id], main h3[data-anchor-id], main h4[data-anchor-id], main h5[data-anchor-id], main h6[data-anchor-id], main h2[id], main h3[id], main h4[id], main h5[id], main h6[id]');
   headings.forEach(h => {
     const sectionId = h.getAttribute('data-anchor-id') || h.id;
     if (!sectionId || sectionId === 'toc-title') return;

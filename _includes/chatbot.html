@@ -435,9 +435,10 @@ function injectFeifeiTab() {
   if (marginSidebar) {
     marginSidebar.appendChild(btn);
   } else {
-    // No TOC sidebar: small circular floating button
-    btn.style.cssText = 'position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;padding:0;margin:0;display:flex;align-items:center;justify-content:center;z-index:10001;';
-    btn.innerHTML = '<img src="' + btn.querySelector('img').src + '" style="width:30px;height:30px;">';
+    // No TOC sidebar: small circular floating button — override all CSS class styles
+    btn.setAttribute('style', 'position:fixed !important;bottom:24px !important;right:24px !important;width:48px !important;height:48px !important;border-radius:50% !important;padding:0 !important;margin:0 !important;display:flex !important;align-items:center !important;justify-content:center !important;z-index:10001 !important;background:linear-gradient(135deg,#667eea,#764ba2) !important;border:none !important;cursor:pointer !important;box-shadow:0 3px 12px rgba(102,126,234,0.4) !important;');
+    const imgSrc = btn.querySelector('img') ? btn.querySelector('img').src : '';
+    btn.innerHTML = imgSrc ? '<img src="' + imgSrc + '" style="width:32px;height:32px;border-radius:50%;">' : '🐱';
     document.body.appendChild(btn);
   }
   

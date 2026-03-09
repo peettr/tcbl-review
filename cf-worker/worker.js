@@ -1,3 +1,5 @@
+// Cloudflare Worker — 菲菲 TCBL Chat Proxy (DashScope Bailian API)
+
 export default {
   async fetch(request, env) {
     const corsHeaders = {
@@ -26,35 +28,34 @@ export default {
         ...userMessages
       ];
 
-      if (!env.AI) {
-        return new Response(JSON.stringify({ reply: 'Error: AI binding not found', debug: Object.keys(env) }), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
-      }
-
-      const result = await env.AI.run('@cf/qwen/qwen3-30b-a3b-fp8', {
-        messages,
-        max_tokens: 800,
+      const apiResp = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + env.DASHSCOPE_KEY,
+        },
+        body: JSON.stringify({
+          model: 'qwen-max',
+          messages,
+          max_tokens: 1000,
+        }),
       });
 
+      const data = await apiResp.json();
       let reply = '';
-      if (typeof result === 'string') {
-        reply = result;
-      } else if (result && result.response) {
-        reply = result.response;
-      } else if (result && result.choices && result.choices[0]) {
-        reply = result.choices[0].message.content || '';
+
+      if (data.choices && data.choices[0]) {
+        reply = data.choices[0].message.content || '';
+        reply = reply.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
       } else {
         reply = '喵...出了点小问题 🐱';
       }
-      
-      reply = reply.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
 
       return new Response(JSON.stringify({ reply }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     } catch (e) {
-      return new Response(JSON.stringify({ reply: 'Error: ' + e.message }), {
+      return new Response(JSON.stringify({ reply: '网络好像不太通 🐱', error: e.message }), {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });

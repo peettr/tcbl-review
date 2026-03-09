@@ -2,5 +2,4 @@ name = "feifei-tcbl"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
-[ai]
-binding = "AI"
+# DASHSCOPE_KEY set via: npx wrangler secret put DASHSCOPE_KEY

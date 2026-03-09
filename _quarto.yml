@@ -7,6 +7,7 @@ project:
     - literature.qmd
     - slides.qmd
     - index-zh.qmd
+    - network.qmd
 
 website:
   title: "TCBL Review — An Interactive Publication"
@@ -21,6 +22,8 @@ website:
         href: mindmap.qmd
       - text: "Literature"
         href: literature.qmd
+      - text: "Network"
+        href: network.qmd
       - text: "Slides"
         href: slides.qmd
     right:

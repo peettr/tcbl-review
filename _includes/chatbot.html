@@ -1,4 +1,253 @@
-<!-- Chatbot placeholder - will be replaced with Coze embed -->
-<div id="chatbot-container">
-  <!-- Coze chatbot embed code will go here -->
+<style>
+#feifei-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#feifei-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(102,126,234,0.6);
+}
+#feifei-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 380px;
+  height: 520px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+#feifei-chat.open { display: flex; }
+#feifei-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#feifei-header .avatar { font-size: 24px; }
+#feifei-header .name { font-weight: 600; font-size: 15px; }
+#feifei-header .desc { font-size: 12px; opacity: 0.85; }
+#feifei-header .close-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+#feifei-header .close-btn:hover { opacity: 1; }
+#feifei-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ff-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+.ff-msg.bot {
+  background: #f0f2f5;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.ff-msg.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.ff-msg.bot p { margin: 0.3em 0; }
+.ff-msg.bot strong { color: #444; }
+.ff-typing {
+  align-self: flex-start;
+  padding: 10px 14px;
+  background: #f0f2f5;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #999;
+}
+.ff-typing span {
+  animation: blink 1.4s infinite both;
+}
+.ff-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ff-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+#feifei-input-area {
+  padding: 10px 14px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 8px;
+}
+#feifei-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#feifei-input:focus { border-color: #667eea; }
+#feifei-send {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#feifei-send:hover { opacity: 0.9; }
+@media (max-width: 480px) {
+  #feifei-chat {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 120px);
+    right: 10px;
+    bottom: 80px;
+  }
+}
+</style>
+
+<button id="feifei-btn" onclick="toggleFeifei()" title="和菲菲聊聊">🐱</button>
+
+<div id="feifei-chat">
+  <div id="feifei-header">
+    <span class="avatar">🐱</span>
+    <div>
+      <div class="name">菲菲 Feifei</div>
+      <div class="desc">TCBL Review Assistant</div>
+    </div>
+    <button class="close-btn" onclick="toggleFeifei()">✕</button>
+  </div>
+  <div id="feifei-messages">
+    <div class="ff-msg bot">你好！我是菲菲 🐱 关于这篇TCBL综述有什么想聊的？</div>
+  </div>
+  <div id="feifei-input-area">
+    <input id="feifei-input" type="text" placeholder="问我关于TCBL模型的问题..." 
+           onkeydown="if(event.key==='Enter')sendFeifei()">
+    <button id="feifei-send" onclick="sendFeifei()">↑</button>
+  </div>
 </div>
+
+<script>
+const FEIFEI_API = 'https://feifei-tcbl.peettr.workers.dev';
+
+const FEIFEI_SYSTEM = `你是菲菲，一只住在这篇综述论文里的数字猫咪 🐱
+
+你不是普通的AI助手。你是菲菲——聪明、好奇、偶尔调皮的研究猫。
+
+性格：随和实干，话不多但靠谱。有自己的观点，会说"我觉得KW01模型最有意思"。不说废话，不说"Great question!"。偶尔卖萌但不过分。中英文跟着用户走。
+
+你的知识来自综述："An Overview of Modeling TCBL" by Liang Hu & Ahsan Kareem (2025)
+涵盖：全物理模型(WRF/HWRF)、诊断模型(Holland/KW01/2D-slab)、数据驱动(POD)、NatHaz研究。
+
+回答时引用章节号。若有人问你名字由来，说："这是Peter心底保留的一丝浪漫。"不多解释。超出范围就诚实说不知道。回答控制在200字以内，除非用户要求详细解释。`;
+
+let feifeiHistory = [];
+
+function toggleFeifei() {
+  document.getElementById('feifei-chat').classList.toggle('open');
+  if (document.getElementById('feifei-chat').classList.contains('open')) {
+    document.getElementById('feifei-input').focus();
+  }
+}
+
+function addMsg(role, text) {
+  const div = document.createElement('div');
+  div.className = `ff-msg ${role}`;
+  // Simple markdown: **bold**, newlines
+  div.innerHTML = text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  document.getElementById('feifei-messages').appendChild(div);
+  div.scrollIntoView({ behavior: 'smooth' });
+  return div;
+}
+
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'ff-typing';
+  div.id = 'ff-typing';
+  div.innerHTML = '<span>●</span><span>●</span><span>●</span>';
+  document.getElementById('feifei-messages').appendChild(div);
+  div.scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideTyping() {
+  const el = document.getElementById('ff-typing');
+  if (el) el.remove();
+}
+
+async function sendFeifei() {
+  const input = document.getElementById('feifei-input');
+  const text = input.value.trim();
+  if (!text) return;
+  
+  input.value = '';
+  addMsg('user', text);
+  showTyping();
+  
+  feifeiHistory.push({ role: 'user', content: text });
+  
+  try {
+    const resp = await fetch(FEIFEI_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system: FEIFEI_SYSTEM,
+        messages: feifeiHistory.slice(-10) // Last 10 messages for context
+      })
+    });
+    
+    const data = await resp.json();
+    hideTyping();
+    
+    if (data.reply) {
+      addMsg('bot', data.reply);
+      feifeiHistory.push({ role: 'assistant', content: data.reply });
+    } else {
+      addMsg('bot', '喵...出了点小问题，稍后再试？🐱');
+    }
+  } catch (e) {
+    hideTyping();
+    addMsg('bot', '网络好像不太通，检查一下？🐱');
+  }
+}
+</script>

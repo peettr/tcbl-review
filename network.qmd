@@ -176,13 +176,14 @@ fetch('citation_network.json')
         .on('drag', dragged)
         .on('end', dragended));
 
-    // Labels for top nodes
+    // Labels for all nodes
     const label = g.append('g')
       .selectAll('text')
-      .data(nodes.filter(d => d.citations >= 3))
+      .data(nodes)
       .join('text')
       .text(d => d.short)
-      .attr('font-size', '10px')
+      .attr('font-size', d => d.citations >= 3 ? '11px' : '8px')
+      .attr('font-weight', d => d.citations >= 3 ? 'bold' : 'normal')
       .attr('fill', '#333')
       .attr('dx', d => d.size + 3)
       .attr('dy', 4)

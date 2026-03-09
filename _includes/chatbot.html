@@ -436,10 +436,13 @@ function injectFeifeiTab() {
   if (marginSidebar) {
     marginSidebar.appendChild(btn);
   } else {
-    // No TOC sidebar: small circular floating button — override all CSS class styles
-    btn.setAttribute('style', 'position:fixed !important;bottom:24px !important;right:24px !important;width:48px !important;height:48px !important;border-radius:50% !important;padding:0 !important;margin:0 !important;display:flex !important;align-items:center !important;justify-content:center !important;z-index:10001 !important;background:linear-gradient(135deg,#667eea,#764ba2) !important;border:none !important;cursor:pointer !important;box-shadow:0 3px 12px rgba(102,126,234,0.4) !important;overflow:visible !important;');
+    // No TOC sidebar: create a completely separate small floating button
+    // Use a different ID to avoid CSS class conflicts
+    btn.id = 'feifei-tab-float';
+    btn.removeAttribute('class');
     const imgSrc = btn.querySelector('img') ? btn.querySelector('img').src : '';
-    btn.innerHTML = imgSrc ? '<img src="' + imgSrc + '" style="width:72px;height:72px;margin:-16px;pointer-events:none;">' : '🐱';
+    btn.innerHTML = imgSrc ? '<img src="' + imgSrc + '" style="width:40px;height:40px;border-radius:50%;">' : '🐱';
+    btn.style.cssText = 'all:unset;position:fixed;bottom:24px;right:24px;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:10001;background:linear-gradient(135deg,#667eea,#764ba2);cursor:pointer;box-shadow:0 3px 12px rgba(102,126,234,0.4);overflow:hidden;';
     document.body.appendChild(btn);
   }
   

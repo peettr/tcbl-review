@@ -18,29 +18,29 @@
 
 /* Overlay mode - no push */
 
-/* Floating button - fixed position, JS places it next to text */
+/* Feifei button inside TOC area */
 #feifei-tab {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10001;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 12px rgba(102,126,234,0.4);
-  transition: box-shadow 0.2s;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   color: white;
-  font-size: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 3px 12px rgba(102,126,234,0.3);
+  transition: box-shadow 0.2s, transform 0.15s;
 }
 #feifei-tab:hover {
-  box-shadow: 0 4px 16px rgba(102,126,234,0.6);
+  box-shadow: 0 4px 16px rgba(102,126,234,0.5);
+  transform: translateY(-1px);
 }
+#feifei-tab .tab-icon { font-size: 20px; }
 
 /* Header */
 #feifei-header {
@@ -221,8 +221,7 @@
 }
 </style>
 
-<!-- Floating button next to article -->
-<button id="feifei-tab" onclick="toggleFeifei()">🐱</button>
+<!-- Button will be injected into TOC sidebar by JS -->
 
 <!-- Selection popup -->
 <div id="feifei-select-popup" onclick="askAboutSelection()">🐱 问菲菲</div>
@@ -387,19 +386,26 @@ document.addEventListener('scroll', () => {
   document.getElementById('feifei-select-popup').style.display = 'none';
 });
 
-// Position button aligned with the right margin sidebar (TOC area)
-function positionFeifeiTab() {
-  const tab = document.getElementById('feifei-tab');
+// Inject button into the right margin sidebar (TOC area)
+function injectFeifeiTab() {
   const marginSidebar = document.querySelector('#quarto-margin-sidebar');
   if (marginSidebar) {
-    const r = marginSidebar.getBoundingClientRect();
-    tab.style.left = (r.left + r.width / 2 - 22) + 'px';
+    // Create button inside the TOC area
+    const btn = document.createElement('button');
+    btn.id = 'feifei-tab';
+    btn.onclick = toggleFeifei;
+    btn.innerHTML = '<span class="tab-icon">🐱</span> 问菲菲 Ask Feifei';
+    marginSidebar.appendChild(btn);
   } else {
-    tab.style.right = '30px';
-    tab.style.left = 'auto';
+    // Fallback: fixed position bottom-right
+    const btn = document.createElement('button');
+    btn.id = 'feifei-tab';
+    btn.onclick = toggleFeifei;
+    btn.innerHTML = '🐱';
+    btn.style.cssText = 'position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);border:none;color:white;font-size:24px;cursor:pointer;z-index:10001;box-shadow:0 3px 12px rgba(102,126,234,0.4);';
+    document.body.appendChild(btn);
   }
 }
 
-positionFeifeiTab();
-window.addEventListener('resize', positionFeifeiTab);
+injectFeifeiTab();
 </script>

@@ -1,0 +1,153 @@
+---
+title: "Modeling Tropical Cyclone Boundary Layer"
+subtitle: "A Comprehensive Review"
+author: "Liang Hu & Ahsan Kareem"
+institute: "NatHaz Modeling Laboratory, University of Notre Dame"
+format:
+  revealjs:
+    theme: white
+    slide-number: true
+    transition: slide
+    width: 1200
+    height: 700
+    css: slides.css
+---
+
+## Overview
+
+- **Tropical cyclones** generate extreme winds threatening civil infrastructure
+- **TCBL modeling** is essential for Performance-Based Wind Engineering (PBWE)
+- This review bridges **meteorology** and **wind engineering** perspectives
+
+::: {.notes}
+This review covers TCBL models from both meteorological and wind engineering perspectives.
+:::
+
+---
+
+## Why TCBL Matters
+
+$$G(PI) = \int \int \int \int G(PI \mid DM) f(DM \mid EDP) f(EDP \mid IP, SP, IM) f(IP \mid IM, SP) \, d\lambda(IM)$$
+
+- The **intensity measure** $\lambda(IM)$ drives the entire PBWE framework
+- Accurate TCBL modeling → reliable wind hazard assessment
+- Monte Carlo simulation requires efficient TCBL models
+
+---
+
+## Multi-scale TC Simulation
+
+| Scale | Spatial | Temporal | Method |
+|-------|---------|----------|--------|
+| Climate | Global | Months–Years | Statistical genesis |
+| Macro | ~1000 km | Days | Track models |
+| Meso | ~100 km | Hours | TCBL models |
+| Micro | ~1 km | Minutes | LES/ABL models |
+
+---
+
+## TCBL Model Hierarchy
+
+```{mermaid}
+graph TD
+    A[TCBL Models] --> B[Full-physics]
+    A --> C[Diagnostic]
+    A --> D[Data-driven]
+    B --> B1[WRF-ARW]
+    B --> B2[HWRF]
+    B --> B3[CM1]
+    C --> C1[Parametric]
+    C --> C2[Simulation-based]
+    C1 --> C1a[Empirical]
+    C1 --> C1b[Analytical]
+    C2 --> C2a[2D-slab]
+    C2 --> C2b[2D Hybrid]
+    C2 --> C2c[3D Nonlinear KW01]
+    D --> D1[Profile modification]
+    D --> D2[POD-based]
+```
+
+---
+
+## Full-physics Models
+
+- **WRF-ARW**: Most widely used NWP system for TC simulation
+  - Turbulence parameterizations (YSU, MYJ, etc.)
+  - Data assimilation critical for accuracy
+- **HWRF**: Operational hurricane forecasting
+- **HWCM**: Hybrid approach (WRF + vortex following)
+- **Limitation**: Computationally expensive for Monte Carlo PBWE
+
+---
+
+## Diagnostic Models — Governing Equations
+
+$$\frac{\partial u}{\partial t} + u\,\frac{\partial u}{\partial r} + \frac{v + v_{gr}}{r}\frac{\partial u}{\partial \varphi} + w\,\frac{\partial u}{\partial z} - \frac{v^2}{r} = \left(f + \frac{2v_{gr}}{r}\right)v + \frac{\partial}{\partial z}\left(K\,\frac{\partial u}{\partial z}\right)$$
+
+$$\frac{\partial v}{\partial t} + u\,\frac{\partial v}{\partial r} + \frac{v + v_{gr}}{r}\frac{\partial v}{\partial \varphi} + w\,\frac{\partial v}{\partial z} + \frac{uv}{r} = -\left(f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\\partial r}\right)u + \frac{\partial}{\partial z}\left(K\,\frac{\partial v}{\partial z}\right)$$
+
+---
+
+## Gradient Wind Profiles
+
+**Holland (1980):**
+
+$$p = p_c + \Delta p \exp\left(-A / r^B\right), \quad RMW = A^{1/B}$$
+
+$$v_{\max} = \sqrt{\frac{B}{\rho e} \Delta p}$$
+
+**Willoughby (2006):** Piecewise profile with smooth transition
+
+---
+
+## The KW01 3D Nonlinear Model
+
+- **Most theoretically rigorous** TCBL model
+- Solves full nonlinear primitive equations
+- Captures:
+  - Low-level jet (supergradient winds)
+  - Asymmetric structure from translation
+  - Vertical advection effects
+- **Benchmark** for PBWE applications
+
+---
+
+## Data-driven Approaches
+
+- **Profile modification**: Adjusting gradient profiles with observational data
+- **Asymmetry introduction**: Adding observed asymmetric patterns
+- **POD-based**: Proper Orthogonal Decomposition for wind field reconstruction
+
+$$\text{TARGET}(t) = \text{MFLD} + \sum_{i=1}^{n_s} W_i(t) \text{PC}_i$$
+
+---
+
+## NatHaz Systematic Investigation
+
+Key contributions from NatHaz Modeling Laboratory:
+
+1. Comprehensive validation of KW01 model
+2. Turbulence closure optimization
+3. Linearization for computational efficiency
+4. Surface wind reduction factor analysis
+5. GPU acceleration for Monte Carlo simulation
+
+---
+
+## Future Directions
+
+- Integration of full-physics and diagnostic models
+- Machine learning for TCBL prediction
+- Improved turbulence parameterizations
+- Climate change impacts on TC wind hazards
+- Real-time PBWE with operational forecasting
+
+---
+
+## Thank You {.center}
+
+**Paper:** [DOI: 10.1016/j.awe.2025.100097](https://doi.org/10.1016/j.awe.2025.100097)
+
+**Interactive version:** This website!
+
+🐱 Ask the AI assistant for more details →

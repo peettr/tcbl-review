@@ -1,0 +1,18 @@
+---
+title: "热带气旋边界层建模综述"
+subtitle: "从气象学视角到风工程应用"
+author:
+  - name: 胡亮
+    affiliation: NatHaz建模实验室, 圣母大学
+  - name: Ahsan Kareem
+    affiliation: NatHaz建模实验室, 圣母大学
+date: 2025-03-01
+lang: zh
+---
+
+::: {.callout-note}
+## 🚧 中文版正在翻译中
+中文版本正在准备中，请暂时参阅[英文版](index.qmd)。
+:::
+
+中文版将包含完整翻译，敬请期待。

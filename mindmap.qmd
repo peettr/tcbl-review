@@ -1,0 +1,154 @@
+---
+title: "TCBL Models — Interactive Mind Map"
+format:
+  html:
+    toc: false
+    minimal: true
+---
+
+::: {.column-page}
+
+```{=html}
+<style>
+  body { margin: 0; padding: 0; }
+  #mindmap-container { 
+    width: 100vw; 
+    height: 90vh; 
+  }
+  .controls {
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .controls button {
+    padding: 6px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+  }
+  .controls button:hover { background: #e8e8e8; }
+  .back-link { 
+    margin-left: auto; 
+    color: #0066cc; 
+    text-decoration: none; 
+  }
+</style>
+
+<div class="controls">
+  <strong>TCBL Model Taxonomy</strong>
+  <button onclick="mm.fit()">🔄 Fit</button>
+  <button onclick="mm.rescale(1.25)">➕ Zoom In</button>
+  <button onclick="mm.rescale(0.8)">➖ Zoom Out</button>
+  <a href="index.html" class="back-link">← Back to Article</a>
+</div>
+
+<svg id="mindmap-container"></svg>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.17"></script>
+
+<script>
+const md = `
+# TCBL Models
+
+## Full-physics Models
+### WRF (Weather Research & Forecasting)
+#### WRF-ARW
+- Turbulence parameterizations (YSU, MYJ)
+- Bottom boundary conditions
+- Initial conditions & data assimilation
+- Ensemble prediction
+#### HWRF (Hurricane WRF)
+- Operational forecasting
+- Ocean coupling
+#### HWCM (Hybrid WRF Cyclone Model)
+### Other Models
+- GFS (Global Forecast System)
+- CM1 (Cloud Model 1 / LES)
+
+## Diagnostic Models
+### Axisymmetric (Column) Models
+#### Hybrid models (Shapiro 1983)
+#### Height-averaged models (Chow 1971)
+#### Nonlinear analytical (Kuo 1982)
+#### Linear analytical (Kepert 2001)
+### Parametric — Empirical
+#### Gradient Profiles
+- **Holland (1980)**: p = pc + Δp·exp(-A/r^B)
+- **Willoughby (2006)**: Piecewise with transition
+- **Emanuel (2004)**: Potential intensity theory
+- Asymmetric profiles (Xie 2006, Mattocks 2008)
+#### TC Track Models
+- Circular sub-region method
+- Full-track method (Vickery 2000)
+#### Vertical Wind Profiles
+- Surface Wind Reduction Factor (SWRF)
+- TCBL profile models
+### Parametric — Analytical
+#### K01 (Kepert 2001) — Linear
+#### Column linear model (Meng 1995)
+#### Recent developments
+### 2D-slab Model
+- Height-averaged primitive equations
+- Surrogates for PBWE
+- Empirical corrections needed
+### 2D Hybrid Models
+- Between 2D and 3D
+- Prescribed vertical profiles
+### **3D Nonlinear — KW01** ⭐
+#### KW01 model (Kepert & Wang 2001)
+- Most theoretically rigorous
+- Full nonlinear primitive equations
+- Captures low-level jet (LLJ)
+#### Y08 model (Yoshizumi 2008)
+#### Linearization for efficiency
+#### Extensive validation
+#### Physics
+- Turbulence closure (M-Y, Louis)
+- Vertical advection (~50% LLJ effect)
+- Landfall & land-sea contrast
+- Thermodynamic coupling
+#### Comparison to other models
+- vs 2D-slab (excessive asymmetry)
+- vs Parametric (limited physics)
+- vs Full-physics (CM1, WRF-ARW)
+
+## Data-driven Methods
+### Modifying radial profiles
+### Introducing asymmetries
+### POD-based models
+- TARGET(t) = MFLD + Σ Wi(t)·PCi
+
+## NatHaz Investigation
+### GPU-accelerated MC simulation
+### Turbulence closure optimization
+### Surface wind analysis
+### Future: ML integration
+`;
+
+const { Transformer } = window.markmap;
+const transformer = new Transformer();
+const { root } = transformer.transform(md);
+
+const { Markmap } = window.markmap;
+const mm = Markmap.create('#mindmap-container', {
+  autoFit: true,
+  duration: 500,
+  maxWidth: 300,
+  color: (node) => {
+    const depth = node.state?.depth || 0;
+    const colors = ['#003366', '#0066cc', '#3399ff', '#66b3ff', '#99ccff', '#cce5ff'];
+    return colors[Math.min(depth, colors.length - 1)];
+  }
+}, root);
+
+setTimeout(() => mm.fit(), 500);
+</script>
+```
+
+:::

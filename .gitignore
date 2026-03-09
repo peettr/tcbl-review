@@ -1,0 +1,11 @@
+_site/
+.quarto/
+*.pyc
+__pycache__/
+.DS_Store
+equations/
+content/
+images/image[0-9]*.png
+!images/image1.png
+!images/image7.png
+!images/image8.png

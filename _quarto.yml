@@ -102,7 +102,6 @@ format:
     link-external-newwindow: true
     include-after-body: 
       - _includes/hypothesis.html
-      - _includes/chatbot.html
       - _includes/inline-edit.html
 
 execute:

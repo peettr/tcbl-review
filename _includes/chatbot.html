@@ -386,24 +386,99 @@ document.addEventListener('scroll', () => {
   document.getElementById('feifei-select-popup').style.display = 'none';
 });
 
-// Inject button into the right margin sidebar (TOC area)
+// Inject draggable button into the right margin sidebar (TOC area)
 function injectFeifeiTab() {
   const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  
+  const btn = document.createElement('button');
+  btn.id = 'feifei-tab';
+  btn.innerHTML = '<span class="tab-icon">🐱</span> 问菲菲 Ask Feifei';
+  
   if (marginSidebar) {
-    // Create button inside the TOC area
-    const btn = document.createElement('button');
-    btn.id = 'feifei-tab';
-    btn.onclick = toggleFeifei;
-    btn.innerHTML = '<span class="tab-icon">🐱</span> 问菲菲 Ask Feifei';
     marginSidebar.appendChild(btn);
   } else {
-    // Fallback: fixed position bottom-right
-    const btn = document.createElement('button');
-    btn.id = 'feifei-tab';
-    btn.onclick = toggleFeifei;
-    btn.innerHTML = '🐱';
-    btn.style.cssText = 'position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);border:none;color:white;font-size:24px;cursor:pointer;z-index:10001;box-shadow:0 3px 12px rgba(102,126,234,0.4);';
+    btn.style.cssText = 'position:fixed;bottom:24px;right:24px;';
     document.body.appendChild(btn);
+  }
+  
+  // Make it draggable
+  let isDragging = false;
+  let dragStarted = false;
+  let startX, startY, origX, origY;
+  
+  function onPointerDown(e) {
+    // Record start position
+    isDragging = true;
+    dragStarted = false;
+    startX = e.clientX;
+    startY = e.clientY;
+    const rect = btn.getBoundingClientRect();
+    origX = rect.left;
+    origY = rect.top;
+    e.preventDefault();
+  }
+  
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    
+    // Only start dragging after 5px movement (avoid accidental drag on click)
+    if (!dragStarted && Math.abs(dx) + Math.abs(dy) < 5) return;
+    
+    if (!dragStarted) {
+      dragStarted = true;
+      // Switch to fixed positioning for free movement
+      btn.style.position = 'fixed';
+      btn.style.left = origX + 'px';
+      btn.style.top = origY + 'px';
+      btn.style.margin = '0';
+      btn.style.width = 'auto';
+      btn.style.zIndex = '10001';
+    }
+    
+    let newX = origX + dx;
+    let newY = origY + dy;
+    
+    // Constrain to viewport
+    newX = Math.max(0, Math.min(newX, window.innerWidth - btn.offsetWidth));
+    newY = Math.max(0, Math.min(newY, window.innerHeight - btn.offsetHeight));
+    
+    btn.style.left = newX + 'px';
+    btn.style.top = newY + 'px';
+    btn.style.transform = 'none';
+  }
+  
+  function onPointerUp(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    
+    if (!dragStarted) {
+      // It was a click, not a drag
+      toggleFeifei();
+    } else {
+      // Save position
+      localStorage.setItem('feifei-x', btn.style.left);
+      localStorage.setItem('feifei-y', btn.style.top);
+    }
+  }
+  
+  btn.addEventListener('pointerdown', onPointerDown);
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup', onPointerUp);
+  btn.style.touchAction = 'none'; // prevent scroll while dragging
+  
+  // Restore saved position
+  const savedX = localStorage.getItem('feifei-x');
+  const savedY = localStorage.getItem('feifei-y');
+  if (savedX && savedY) {
+    btn.style.position = 'fixed';
+    btn.style.left = savedX;
+    btn.style.top = savedY;
+    btn.style.margin = '0';
+    btn.style.width = 'auto';
+    btn.style.zIndex = '10001';
+    btn.style.transform = 'none';
   }
 }
 

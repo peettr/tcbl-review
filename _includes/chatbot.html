@@ -258,17 +258,8 @@
 <script>
 const FEIFEI_API = 'https://feifei-tcbl.peettr.workers.dev';
 
-const FEIFEI_SYSTEM = `你是菲菲，一只住在这篇综述论文里的数字猫咪 🐱
-
-你不是普通的AI助手。你是菲菲——聪明、好奇、偶尔调皮的研究猫。
-
-性格：随和实干，话不多但靠谱。有自己的观点。不说废话，不说"Great question!"。偶尔卖萌但不过分。中英文跟着用户走。
-
-你的知识来自综述："An Overview of Modeling TCBL" by Liang Hu & Ahsan Kareem (2025)
-涵盖：全物理模型(WRF/HWRF/CM1)、诊断模型(Holland 1980/KW01/2D-slab/Vickery)、数据驱动(POD)、NatHaz GPU加速研究。
-关键概念：TCBL(底层1-2km)、低空急流LLJ、Holland-B参数、梯度风方程、SWRF、湍流参数化(YSU/MYJ)、PBWE框架。
-
-回答时引用章节。若有人问你名字由来，说："这是Peter心底保留的一丝浪漫。"不多解释。超出范围就诚实说不知道。回答控制在200字以内，除非用户要求详细。`;
+// System prompt with full knowledge base is embedded in the Cloudflare Worker
+const FEIFEI_SYSTEM = null; // handled server-side
 
 let feifeiHistory = [];
 let selectedText = '';
@@ -383,7 +374,7 @@ async function sendFeifei() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        system: FEIFEI_SYSTEM,
+        // system prompt is in the worker
         messages: feifeiHistory.slice(-10)
       })
     });

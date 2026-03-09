@@ -18,7 +18,7 @@
 
 /* Overlay mode - no push */
 
-/* Floating button near article content */
+/* Floating button - fixed position, JS places it next to text */
 #feifei-tab {
   position: fixed;
   top: 50%;
@@ -34,16 +34,13 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 12px rgba(102,126,234,0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: box-shadow 0.2s;
   color: white;
   font-size: 22px;
-  /* Will be repositioned by JS to sit next to article */
 }
 #feifei-tab:hover {
-  transform: translateY(-50%) scale(1.1);
   box-shadow: 0 4px 16px rgba(102,126,234,0.6);
 }
-#feifei-tab .tab-text { display: none; }
 
 /* Header */
 #feifei-header {
@@ -390,35 +387,25 @@ document.addEventListener('scroll', () => {
   document.getElementById('feifei-select-popup').style.display = 'none';
 });
 
-// Position floating button next to article content
+// Position button right next to article text
 function positionFeifeiTab() {
   const tab = document.getElementById('feifei-tab');
-  const article = document.querySelector('#quarto-content .content-visible, main.content, article, #quarto-document-content, .page-columns');
-  if (article) {
-    const rect = article.getBoundingClientRect();
-    const rightEdge = rect.right + 16;
-    // Don't go beyond viewport
-    const maxRight = window.innerWidth - 60;
-    tab.style.left = Math.min(rightEdge, maxRight) + 'px';
-    tab.style.right = 'auto';
-  } else {
-    // Fallback: just right of center content area
-    tab.style.left = 'calc(50% + 400px)';
-    tab.style.right = 'auto';
+  // Find actual paragraph text right edge
+  const paras = document.querySelectorAll('main.content p, main.content section > h2, main.content section > h3');
+  let maxRight = 0;
+  for (const p of paras) {
+    const r = p.getBoundingClientRect();
+    if (r.right > maxRight && r.width > 100) maxRight = r.right;
   }
-}
-
-// Also position the sidebar panel near the button
-function positionSidebar() {
-  const tab = document.getElementById('feifei-tab');
-  const sidebar = document.getElementById('feifei-sidebar');
-  const tabLeft = tab.getBoundingClientRect().left;
-  // Position sidebar so its left edge aligns with the tab
-  const sidebarRight = window.innerWidth - tabLeft - 50;
-  sidebar.style.right = Math.max(0, -sidebarRight) + 'px';
+  if (maxRight > 0) {
+    tab.style.left = (maxRight + 12) + 'px';
+  } else {
+    // Fallback
+    tab.style.left = 'calc(50% + 440px)';
+  }
+  tab.style.right = 'auto';
 }
 
 positionFeifeiTab();
 window.addEventListener('resize', positionFeifeiTab);
-window.addEventListener('scroll', positionFeifeiTab);
 </script>

@@ -3,3 +3,7 @@ main = "worker.js"
 compatibility_date = "2025-01-01"
 
 # DASHSCOPE_KEY set via: npx wrangler secret put DASHSCOPE_KEY
+
+[[kv_namespaces]]
+binding = "COMMENTS"
+id = "77d55eab363540e2891cde3e28b2ac9c"

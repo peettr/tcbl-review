@@ -6,12 +6,19 @@ export default {
   async fetch(request, env) {
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     };
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
+    }
+
+    const url = new URL(request.url);
+
+    // === Comments API ===
+    if (url.pathname === '/comments') {
+      return handleComments(request, env, corsHeaders, url);
     }
 
     if (request.method !== 'POST') {
@@ -63,3 +70,75 @@ export default {
     }
   },
 };
+
+async function handleComments(request, env, corsHeaders, url) {
+  const jsonHeaders = { ...corsHeaders, 'Content-Type': 'application/json' };
+
+  // GET — list comments for a section
+  if (request.method === 'GET') {
+    const section = url.searchParams.get('section') || '_global';
+    const key = 'comments:' + section;
+    const data = await env.COMMENTS.get(key, { type: 'json' });
+    return new Response(JSON.stringify(data || []), { headers: jsonHeaders });
+  }
+
+  // POST — add a comment
+  if (request.method === 'POST') {
+    const body = await request.json();
+    const section = body.section || '_global';
+    const text = (body.text || '').trim();
+    const name = (body.name || '').trim() || '匿名读者';
+
+    if (!text || text.length > 2000) {
+      return new Response(JSON.stringify({ error: '评论内容无效(1-2000字)' }), {
+        status: 400, headers: jsonHeaders,
+      });
+    }
+
+    const key = 'comments:' + section;
+    const existing = await env.COMMENTS.get(key, { type: 'json' }) || [];
+
+    const comment = {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      name,
+      text,
+      time: new Date().toISOString(),
+    };
+
+    existing.push(comment);
+    await env.COMMENTS.put(key, JSON.stringify(existing));
+
+    // Also track sections list
+    const sections = await env.COMMENTS.get('_sections', { type: 'json' }) || [];
+    if (!sections.includes(section)) {
+      sections.push(section);
+      await env.COMMENTS.put('_sections', JSON.stringify(sections));
+    }
+
+    return new Response(JSON.stringify(comment), { headers: jsonHeaders });
+  }
+
+  // DELETE — delete a comment (admin, by id)
+  if (request.method === 'DELETE') {
+    const body = await request.json();
+    const section = body.section || '_global';
+    const id = body.id;
+    const adminKey = body.adminKey;
+
+    if (adminKey !== 'feifei-admin-2026') {
+      return new Response(JSON.stringify({ error: '无权限' }), {
+        status: 403, headers: jsonHeaders,
+      });
+    }
+
+    const key = 'comments:' + section;
+    const existing = await env.COMMENTS.get(key, { type: 'json' }) || [];
+    const filtered = existing.filter(c => c.id !== id);
+    await env.COMMENTS.put(key, JSON.stringify(filtered));
+    return new Response(JSON.stringify({ ok: true }), { headers: jsonHeaders });
+  }
+
+  return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+    status: 405, headers: jsonHeaders,
+  });
+}

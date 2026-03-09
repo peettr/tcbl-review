@@ -10,6 +10,9 @@ project:
 
 website:
   title: "TCBL Review — An Interactive Publication"
+  repo-url: https://github.com/peettr/tcbl-review
+  repo-actions: [edit, issue]
+  repo-branch: main
   navbar:
     left:
       - text: "Article"
@@ -24,7 +27,7 @@ website:
       - text: "中文"
         href: index-zh.qmd
       - icon: github
-        href: https://github.com
+        href: https://github.com/peettr/tcbl-review
   page-footer:
     center: |
       © 2025 Liang Hu & Ahsan Kareem | 
@@ -98,7 +101,3 @@ format:
 
 execute:
   freeze: auto
-
-  repo-url: https://github.com/peettr/tcbl-review
-  repo-actions: [edit, issue]
-  repo-branch: main

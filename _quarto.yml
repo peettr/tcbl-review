@@ -100,7 +100,7 @@ format:
     grid:
       body-width: 850px
       sidebar-width: 350px
-      margin-width: 350px
+      margin-width: 0px
     code-fold: true
     # bibliography: references.bib
     link-external-newwindow: true

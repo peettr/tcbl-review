@@ -40,7 +40,7 @@ Suppose the TC-induced damage to a structure can be predicted with sufficient ac
 ::: {#fig-pbwe}
 ![](images/image1.png)
 
-Figure 1: A typical schematic of the simulation-based PBWE framework for low-rise buildings under TC-induced winds
+A typical schematic of the simulation-based PBWE framework for low-rise buildings under TC-induced winds
 :::
 
 The PBWE framework aims to evaluate the total probabilistic integral:
@@ -77,7 +77,7 @@ Vertically, a TC model spans the full depth of the atmosphere from the surface t
 ::: {#fig-tcbl-definition}
 ![](images/image7.png)
 
-Figure 2: Illustration of the tropical cyclone boundary layer \[reproduced from [Kepert (2012)](#ref-kepert-2012), its Fig.1\]
+Illustration of the tropical cyclone boundary layer \[reproduced from [Kepert (2012)](#ref-kepert-2012), its Fig.1\]
 :::
 
 ## Recent research on TCBL characteristics
@@ -97,7 +97,7 @@ A further development in TCBL observational research is the ability to resolve i
 ::: {#fig-tcbl-models}
 ![](images/image8.png)
 
-Figure 3: Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al. 2003](#ref-franklin-2003)), its Fig. 8\]
+Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al. 2003](#ref-franklin-2003)), its Fig. 8\]
 :::
 
 ## Introduction to TCBL modeling

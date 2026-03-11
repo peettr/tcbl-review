@@ -98,9 +98,9 @@ format:
     number-depth: 4
     smooth-scroll: true
     grid:
-      body-width: 900px
-      sidebar-width: 300px
-      margin-width: 300px
+      body-width: 850px
+      sidebar-width: 350px
+      margin-width: 350px
     code-fold: true
     # bibliography: references.bib
     link-external-newwindow: true

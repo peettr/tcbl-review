@@ -424,13 +424,17 @@ This category of methods combines parametrized radial and vertical profiles of h
 
 Smith ([1968](#ref-smith-1968)) proposed a hybrid solution by assuming the wind profiles:
 
-$u(r, \eta) = v_{gr}(r) E(r) f(\eta)$~,~ $v(r, \eta) = v_{gr}(r) g(\eta)$
+$$
+u(r, \eta) = v_{gr}(r) E(r) f(\eta) \qquad v(r, \eta) = v_{gr}(r) g(\eta)
+$$
 
 where $f(\eta) = -e^{-\eta} \sin \eta$, $g(\eta) = e^{-\eta} \cos \eta$ (Ekman profile) and $f(\eta) = c e^{-\eta} (a_1 \sin \eta + a_2 \cos \eta)$, $g(\eta) = 1 - c e^{-\eta} (a_1 \cos \eta + a_2 \sin \eta)$ for no-slip and slip bottom boundary conditions, respectively; $\eta = z / \delta(r)$; and $\delta(r)$ is the TCBL height. By substituting Eq. into the axisymmetrical primitive equations and integrating along height $[0, +\infty]$, a set of ordinary differential equations \[([Smith 1968](#ref-smith-1968)), its Eqs. (24) and (25)\] in terms of the unknowns $E^2$ and $E\delta^2$, which could be solved numerically, e.g., by the Runge-Kutta method. This hybrid model is nonlinear, 3D, but vertically parameterized. It has been extended by Langousis et al. ([2009](#ref-langousis-2009)) to account for asymmetries (see Sec. [3.5](#simulation-based-models-ii-2d-hybrid-models)).
 
 Following the similar derivation ([Smith 1968](#ref-smith-1968)), Kepert ([2010b](#ref-kepert-2010b)) utilized an alternative parameterization of the wind profiles to simplify the axisymmetric primitive equations:
 
-$u(r,z) = [\{u_m(r) - v_m(r)\}\cos\{z/\delta(r)\} + \{u_m(r) + v_m(r)\}\sin\{z/\delta(r)\}]\exp\{-z/\delta(r)\}$
+$$
+u(r,z) = [\{u_m(r) - v_m(r)\}\cos\{z/\delta(r)\} + \{u_m(r) + v_m(r)\}\sin\{z/\delta(r)\}]\exp\{-z/\delta(r)\}
+$$
 
 where the two unknowns are $u_{\mathrm{m}}(r)$ and $v_{\mathrm{m}}(r)$, while the TCBL height $\delta(r)$ is prescribed. The obtained hybrid model \[([Kepert 2010b](#ref-kepert-2010b)), its Eqs. (14) and (15)\] avoids numerical instability in the 2D-slab model.
 
@@ -544,7 +548,9 @@ There are also other profile models of interest. Emanuel's profile \[([Emanuel 2
 
 As noted earlier, most studies assume azimuthally invariant radial pressure profiles, based on the gradient balance at all azimuths. However, to incorporate asymmetry into axisymmetric (column) TCBL models or into the empirical surface wind models discussed above, several researchers have developed azimuthally varying gradient pressure/wind profiles. For example, [Xie et al. (2006)](#ref-xie-2006) defined the azimuthally-varying RMW and attendant pressure profile as:
 
-$p(r, \varphi) = p_c + \Delta p \, e^{-[RMW(\varphi)/r]^B}$, $RMW(\varphi) = C_1 \varphi^{n-1} + C_2 \varphi^{n-2} + \cdots + C_{n-1} \varphi + C_n$
+$$
+p(r, \varphi) = p_c + \Delta p \, e^{-[RMW(\varphi)/r]^B} \qquad RMW(\varphi) = C_1 \varphi^{n-1} + C_2 \varphi^{n-2} + \cdots + C_{n-1} \varphi + C_n
+$$
 
 where $C_n$ denotes a series of polynomial coefficients determined by fitting to measurements. A similar idea was utilized by [Guo and van de Lindt (2019)](#ref-guo-2019) to account for both translation-induced and land-induced asymmetry. However, the increased number of parameters limits the applicability of this model type in PBWE.
 
@@ -616,7 +622,9 @@ $$ {#eq-16}
 
 By linearizing the slip bottom boundary condition, utilizing a Fourier series expansion, and separating the vertical and azimuthal coordinates, the final solution is given by:
 
-$u(\lambda, z) = u_1(\lambda, z) + u_0(z) + u_{-1}(\lambda, z)$
+$$
+u(\lambda, z) = u_1(\lambda, z) + u_0(z) + u_{-1}(\lambda, z)
+$$
 
 That is, as the summation of wavenumber 0 and 1 azimuthal variations. This model is inspired by early research on the Ekman layer in TCs ([Eliassen 1971](#ref-eliassen-1971); [Kuo 1982](#ref-kuo-1982)). It is based on four key assumptions: (1) The vertical turbulence diffusivity *K* keeps constant vertically and azimuthally but may vary radially as the linearized equations are solved at every radial coordinate separately; (2) The surface drag coefficient is constant azimuthally; (3) The translation velocity is far less than the maximum TC wind speed to enable the linearization of surface drag force; (4) The vertical advection is ignored.
 
@@ -664,7 +672,9 @@ Studies that use the 2D-slab model to examine the underlying physics of TCs are 
 
 A spectral-method-like approximation has been designed by substituting the surface wind, expressed by the first two orders of a radially-azimuthally separable Fourier series, into the governing equations ([Shapiro 1983](#ref-shapiro-1983)):
 
-$u = u_{s1}(r)\sin\varphi + u_{c1}(r)\cos\varphi + u_{s2}(r)\sin 2\varphi + u_{c2}(r)\cos 2\varphi$
+$$
+u = u_{s1}(r)\sin\varphi + u_{c1}(r)\cos\varphi + u_{s2}(r)\sin 2\varphi + u_{c2}(r)\cos 2\varphi
+$$
 
 With this substitution, only the Fourier coefficients ($u_{s1}$, $u_{c1}$, $u_{s2}$, $u_{c2}$) need to be solved via their respective differential equations, making the surrogate intrusive. A related but non-intrusive surrogate was proposed by Vickery et al. ([2000a](#ref-vickery-2000a)), who applied Eq. to the solutions generated by Chow's algorithm. A linear interpolation scheme was then constructed for these Fourier coefficients to reduce both storage requirements and computational demand.
 
@@ -678,9 +688,13 @@ Regarding PBWE systems, Vickery's 2D-slab model is implemented in the software H
 
 The 2D hybrid axisymmetric model reviewed in Sec. [3.1.1](#axisymmetric-hybrid-models) has been extended to its asymmetric formulation. To incorporate the asymmetry, [Langousis et al. (2009)](#ref-langousis-2009) introduced a parameterization of the wind field that depends on the azimuthal coordinate \[with reference to Eq. \], e.g.:
 
-$u(r,\varphi,\eta) = E(r,\varphi)\left[gV_T\cos\varphi + f\left(v_{gr} - V_T\sin\varphi\right) - V_T\cos\varphi\right]$, $\eta = z / \delta(r,\varphi)$,
+$$
+u(r,\varphi,\eta) = E(r,\varphi)\left[gV_T\cos\varphi + f\left(v_{gr} - V_T\sin\varphi\right) - V_T\cos\varphi\right] \qquad \eta = z / \delta(r,\varphi)
+$$
 
-$f = -e^{-\eta} \left[ a_1(r, \varphi) \sin \eta + a_2(r, \varphi) \cos \eta \right]$, $g = 1 - e^{-\eta} \left[ a_1(r, \varphi) \cos \eta + a_2(r, \varphi) \sin \eta \right]$
+$$
+f = -e^{-\eta} \left[ a_1(r, \varphi) \sin \eta + a_2(r, \varphi) \cos \eta \right] \qquad g = 1 - e^{-\eta} \left[ a_1(r, \varphi) \cos \eta + a_2(r, \varphi) \sin \eta \right]
+$$
 
 Substituting this parameterization into the fully nonlinear primitive equations \[Eqs. and \] and applying a height-averaging procedure similar to [Smith (1968)](#ref-smith-1968) yields governing equations for the unknowns $E$ and $\delta$.
 

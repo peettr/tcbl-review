@@ -50,16 +50,13 @@ In this regard, this section begins with a summary of the PBWE in Sec. [1.1](#pe
 
 ## Performance-based wind engineering (PBWE)
 
-Suppose the TC-induced damage to a structure can be predicted with sufficient accuracy, the structure can then be designed appropriately or retrofitted to withstand TC hazards throughout its life cycle or to recover with adequate resilience. Because this damage prediction is inherently uncertain, it must be assessed probabilistically, and the resulting fragility, vulnerability, risk, and loss estimates can subsequently inform wind-resistant design. To support such assessments, performance-based wind engineering (PBWE) has been developed as a rigorous, module-based simulation framework ([Ciampoli et al. 2011](#ref-ciampoli-2011); [Barbato et al. 2013](#ref-barbato-2013); [Spence and Kareem 2014](#ref-spence-2014); [Vanmarcke et al. 2014](#ref-vanmarcke-2014); [Cai et al. 2019](#ref-cai-2019)) and facilitates optimization of wind-resistant design of structures ([Huang et al. 2012](#ref-huang-2012); [Bobby et al. 2014](#ref-bobby-2014); [Li and Hu 2014](#ref-li-2014); [Deng et al. 2019](#ref-deng-2019); [Subgranon and Spence 2021](#ref-subgranon-2021); [Spence and Arunachalam 2022](#ref-spence-2022)). Although various other methods have been proposed for PBWE, including empirical and heuristic approaches ([Walker 2011](#ref-walker-2011); [Pita et al. 2014](#ref-pita-2014)), the simulation-based PBWE offers the capability to capture structural performance with high fidelity and provides the flexibility to incorporate cutting-edge developments in individual modules. [Figure 1.1](#fig-pbwe) shows a typical schematic of the PBWE framework for low-rise buildings.
+Suppose the TC-induced damage to a structure can be predicted with sufficient accuracy, the structure can then be designed appropriately or retrofitted to withstand TC hazards throughout its life cycle or to recover with adequate resilience. Because this damage prediction is inherently uncertain, it must be assessed probabilistically, and the resulting fragility, vulnerability, risk, and loss estimates can subsequently inform wind-resistant design. To support such assessments, performance-based wind engineering (PBWE) has been developed as a rigorous, module-based simulation framework ([Ciampoli et al. 2011](#ref-ciampoli-2011); [Barbato et al. 2013](#ref-barbato-2013); [Spence and Kareem 2014](#ref-spence-2014); [Vanmarcke et al. 2014](#ref-vanmarcke-2014); [Cai et al. 2019](#ref-cai-2019)) and facilitates optimization of wind-resistant design of structures ([Huang et al. 2012](#ref-huang-2012); [Bobby et al. 2014](#ref-bobby-2014); [Li and Hu 2014](#ref-li-2014); [Deng et al. 2019](#ref-deng-2019); [Subgranon and Spence 2021](#ref-subgranon-2021); [Spence and Arunachalam 2022](#ref-spence-2022)). Although various other methods have been proposed for PBWE, including empirical and heuristic approaches ([Walker 2011](#ref-walker-2011); [Pita et al. 2014](#ref-pita-2014)), the simulation-based PBWE offers the capability to capture structural performance with high fidelity and provides the flexibility to incorporate cutting-edge developments in individual modules. [Figure 1](#fig-pbwe) shows a typical schematic of the PBWE framework for low-rise buildings.
 
 ::: {#fig-pbwe}
 ![](images/image1.png)
 
-Figure 1.1: The PBWE framework
+Figure 1: A typical schematic of the simulation-based PBWE framework for low-rise buildings under TC-induced winds
 :::
-
-
-[]Figure 1.1 A typical schematic of the simulation-based PBWE framework for low-rise buildings under TC-induced winds
 
 The PBWE framework aims to evaluate the total probabilistic integral:
 
@@ -73,7 +70,7 @@ where the complementary cumulative distribution $G(PI)$ of performance indicator
 
 The accuracy of the intensity measure $\lambda(IM)$ obtained from simulated TC events is therefore essential not only for producing reliable PBWE results but also for establishing confidence among its end users. However, validating PBWE outcomes remains substantially challenging, if not impossible, primarily due to the absence of robust, universally accepted benchmarks. Consequently, to ensure that PBWE delivers trustworthy and actionable information, a common practice is to validate and refine each framework module to the greatest extent feasible.
 
-Unlike traditional prescriptive wind-resistant design, which typically relies on conservative values, PBWE requires its probabilistic models to reflect real-world behavior as faithfully as possible. As indicated in Eq. (@eq-1) and [Figure 1.1](#fig-pbwe), the intensity measure $\lambda(IM)$serves as the foundational input to the entire PBWE framework and therefore has a profound influence on its results. For structures located in TC-prone regions, this measure is governed by TC-induced extreme winds. Accordingly, the TC simulation to determine the intensity measure is critical, as its accuracy is essential to the PBWE. The TC simulation module must therefore be thoroughly evaluated, adapted, and enhanced to enable a paradigm shift from traditional wind engineering practices toward the more comprehensive and probabilistic philosophy of PBWE.
+Unlike traditional prescriptive wind-resistant design, which typically relies on conservative values, PBWE requires its probabilistic models to reflect real-world behavior as faithfully as possible. As indicated in Eq. (@eq-1) and [Figure 1](#fig-pbwe), the intensity measure $\lambda(IM)$serves as the foundational input to the entire PBWE framework and therefore has a profound influence on its results. For structures located in TC-prone regions, this measure is governed by TC-induced extreme winds. Accordingly, the TC simulation to determine the intensity measure is critical, as its accuracy is essential to the PBWE. The TC simulation module must therefore be thoroughly evaluated, adapted, and enhanced to enable a paradigm shift from traditional wind engineering practices toward the more comprehensive and probabilistic philosophy of PBWE.
 
 .
 
@@ -90,16 +87,13 @@ Note that this framework reflects the current practice of TC simulation used in 
 
 ## Definition of TCBL
 
-Vertically, a TC model spans the full depth of the atmosphere from the surface to the top of the free atmosphere ([Figure 1.2](#fig-tcbl-definition)). However, the TCBL in this study corresponds to the lowest portion of the troposphere, where viscosity plays a significant role and therefore cannot be neglected. Within the lowest approximately 10 cm above the surface, the interfacial sublayer, molecular constraints dominate momentum exchange ([Liu et al. 1979](#ref-liu-1979)). From the top of this sublayer to roughly 200 m is the flux-constant surface layer, where the shear-generated turbulence is the principal driver of turbulent diffusivity and the fluxes of momentum and heat remain constant. Above the flux-constant layer and extending to the top of the TCBL is the mixed layer, where the influence of the surface and turbulence-generated viscosity gradually diminishes with height. The overall TCBL height is commonly taken to be 500\~1000 m, although it varies with distance from the TC center and depends on how the boundary layer is defined. In \[([Kepert and Wang 2001](#ref-kepert-2001)), KW01 hereafter\], the TCBL height is defined by the location of the maximum angular momentum, which increases from \~200m near the TC center to 1200m outside the core, based on the simulation results therein. Although there are other dynamic (e.g., by maximum total wind speed or zero inflow) and thermodynamic definitions (e.g., by constant potential temperature) ([Zhang et al. 2011](#ref-zhang-2011)), the definition adopted in KW01 is used in the present study.
+Vertically, a TC model spans the full depth of the atmosphere from the surface to the top of the free atmosphere ([Figure 2](#fig-tcbl-definition)). However, the TCBL in this study corresponds to the lowest portion of the troposphere, where viscosity plays a significant role and therefore cannot be neglected. Within the lowest approximately 10 cm above the surface, the interfacial sublayer, molecular constraints dominate momentum exchange ([Liu et al. 1979](#ref-liu-1979)). From the top of this sublayer to roughly 200 m is the flux-constant surface layer, where the shear-generated turbulence is the principal driver of turbulent diffusivity and the fluxes of momentum and heat remain constant. Above the flux-constant layer and extending to the top of the TCBL is the mixed layer, where the influence of the surface and turbulence-generated viscosity gradually diminishes with height. The overall TCBL height is commonly taken to be 500\~1000 m, although it varies with distance from the TC center and depends on how the boundary layer is defined. In \[([Kepert and Wang 2001](#ref-kepert-2001)), KW01 hereafter\], the TCBL height is defined by the location of the maximum angular momentum, which increases from \~200m near the TC center to 1200m outside the core, based on the simulation results therein. Although there are other dynamic (e.g., by maximum total wind speed or zero inflow) and thermodynamic definitions (e.g., by constant potential temperature) ([Zhang et al. 2011](#ref-zhang-2011)), the definition adopted in KW01 is used in the present study.
 
 ::: {#fig-tcbl-definition}
 ![](images/image7.png)
 
-Figure 1.2: Definition of TCBL
+Figure 2: Illustration of the tropical cyclone boundary layer \[reproduced from [Kepert (2012)](#ref-kepert-2012), its Fig.1\]
 :::
-
-
-[]Figure 1.2 Illustration of the tropical cyclone boundary layer \[reproduced from [Kepert (2012)](#ref-kepert-2012), its Fig.1\]
 
 ## Recent research on TCBL characteristics
 
@@ -107,7 +101,7 @@ This section provides a concise review of recent meteorological research on TCBL
 
 Over the past several decades, the accumulation of measurement data, especially flight reconnaissance observations, together with advances in measurement techniques such as satellite products and the Stepped Frequency Microwave Radiometer (SFMR), has substantially improved the understanding of TCBL structure. Surface wind fields in TCs exhibit notable asymmetries that arise from the surface drag force (and heat flux), TC translation speed, vertical wind shear ([Klotz and Jiang 2017](#ref-klotz-2017)), extratropical transition ([Loridan et al. 2014](#ref-loridan-2014)), and Beta-gyre ([Ueno and Bessho 2011](#ref-ueno-2011)). Uhlhorn ([2014](#ref-loridan-2014)) reported observational evidence that asymmetries are influenced by both storm motion and vertical wind shear, with the latter\'s influence being moderate.
 
-Another salient property noted recently is the low-level jet (LLJ) in the mean wind speed profile, as shown in [Figure 1.3](#fig-tcbl-models). At the LLJ height, which is usually about 500m, the TC wind speed reaches a maximum in the TCBL, with a supergradient coefficient as significant as 1.2. Numerical simulations by [Kepert (2001)](#ref-kepert-2001) and KW01 successfully reproduce the LLJ and interpret it as a result of the interaction between radial inflow and eyewall updrafts. Observational evidence of the LLJ was provided by ([Franklin et al. 2003](#ref-franklin-2003)), based on more than 600 dropsonde profiles. These observations show that below the jet height, the TCBL resembles a constant-flux layer, and the near-surface profile approaches a logarithmic shape. More recent observations further confirm the presence and characteristics of the LLJ ([Ming et al. 2015](#ref-ming-2015); [He et al. 2016](#ref-he-2016); [He et al. 2018](#ref-he-2018)). Slightly above the TCBL, the azimuthal wind speed can increase again between approximately 2 and 5 km, with a local maximum around 5 km, as indicated by Doppler radar observations during Typhoon Haiyan ([Shimada et al. 2018](#ref-shimada-2018)).
+Another salient property noted recently is the low-level jet (LLJ) in the mean wind speed profile, as shown in [Figure 3](#fig-tcbl-models). At the LLJ height, which is usually about 500m, the TC wind speed reaches a maximum in the TCBL, with a supergradient coefficient as significant as 1.2. Numerical simulations by [Kepert (2001)](#ref-kepert-2001) and KW01 successfully reproduce the LLJ and interpret it as a result of the interaction between radial inflow and eyewall updrafts. Observational evidence of the LLJ was provided by ([Franklin et al. 2003](#ref-franklin-2003)), based on more than 600 dropsonde profiles. These observations show that below the jet height, the TCBL resembles a constant-flux layer, and the near-surface profile approaches a logarithmic shape. More recent observations further confirm the presence and characteristics of the LLJ ([Ming et al. 2015](#ref-ming-2015); [He et al. 2016](#ref-he-2016); [He et al. 2018](#ref-he-2018)). Slightly above the TCBL, the azimuthal wind speed can increase again between approximately 2 and 5 km, with a local maximum around 5 km, as indicated by Doppler radar observations during Typhoon Haiyan ([Shimada et al. 2018](#ref-shimada-2018)).
 
 In addition to the wind speed distribution, the inflow angle (wind direction) is also of interest. Zhang and Uhlhorn ([2012](#ref-zhang-2012)) analyzed dropsonde measurements from 18 hurricanes and identified significant inflow-angle asymmetries, from which a parametric model was developed as a function of TC intensity and translation.
 
@@ -118,11 +112,8 @@ A further development in TCBL observational research is the ability to resolve i
 ::: {#fig-tcbl-models}
 ![](images/image8.png)
 
-Figure 2.8: TCBL model comparison
+Figure 3: Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al. 2003](#ref-franklin-2003)), its Fig. 8\]
 :::
-
-
-[]Figure 1.3 Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al. 2003](#ref-franklin-2003)), its Fig. 8\]
 
 ## Introduction to TCBL modeling
 
@@ -797,10 +788,14 @@ The 3D nonlinear TCBL model should be incorporated into PBWE, given that its com
 (5) The TCBL models reviewed here offer opportunities to develop data-driven models. For example, TC surface wind fields may be constructed as the sum of TCBL model output (including translation-induced and roughness-induced asymmetries) and additional asymmetry components modeled by machine learning. Multi-fidelity modeling could integrate TCBL models of varying accuracy with sparse measurements in the benchmark dataset. Surrogates based on machine learning may be constructed using simulation results from the 3D nonlinear model. Given the rapid progress in machine learning, the combination of TCBL models with data-driven approaches appears promising.
 
 
-[]AcknowledgementsThe authors wish to acknowledge the financial support from the U.S. National Institute of Standards and Technology (NIST 70NANB24H014) and the Robert M. Moran Professorship at the University of Notre Dame. Any opinions and concluding remarks presented in this paper are entirely those of the authors.
+## Acknowledgements
+
+The authors wish to acknowledge the financial support from the U.S. National Institute of Standards and Technology (NIST 70NANB24H014) and the Robert M. Moran Professorship at the University of Notre Dame. Any opinions and concluding remarks presented in this paper are entirely those of the authors.
 
 
-[]ReferencesAbarca, S. F., Montgomery, M. T., and McWilliams, J. C. (2015). \"The azimuthally averaged boundary layer structure of a numerically simulated major hurricane.\" *Journal of Advances in Modeling Earth Systems*, 7(3), 1207-1219.
+## References
+
+Abarca, S. F., Montgomery, M. T., and McWilliams, J. C. (2015). \"The azimuthally averaged boundary layer structure of a numerically simulated major hurricane.\" *Journal of Advances in Modeling Earth Systems*, 7(3), 1207-1219.
 
 Ahern, K., Bourassa, M. A., Hart, R. E., Zhang, J. A., and Rogers, R. F. (2019). \"Observed kinematic and thermodynamic structure in the hurricane boundary layer during intensity change.\" *Monthly Weather Review*, 147(8), 2765-2785.
 

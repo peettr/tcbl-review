@@ -282,8 +282,7 @@ Diagnostic models can be further classified into simulation-based and parametric
 
 [Table 1](#tbl-models) presents a rough categorization of TCBL models currently in use or developed in recent years. The categorization is not rigid, and models can often be reconfigured to fall within different categories. For example, the full-physics model WRF can be run in a diagnostic mode, and more recently, the KW01 model has been applied in prognostic configurations \[e.g., ([Kepert and Nolan 2014](#ref-kepert-2014); [Zhang et al. 2017a](#ref-zhang-2017a); [Done et al. 2020](#ref-done-2020))\]. The models listed generally incorporate at least one form of asymmetry, which is essential for accurately representing the TCBL. If all asymmetries are excluded, an axisymmetric TCBL model results \[e.g., ([Smith 1968](#ref-smith-1968))\], which is rather idealistic but may be helpful in exploring TCBL physics. Details of the categorization in this table will be presented in later sections.
 
-[]Table 1\
-The categorization of physics-based tropical cyclone boundary layer (TCBL) models
+: The categorization of physics-based tropical cyclone boundary layer (TCBL) models {#tbl-models}
 
 +---------------------+-----------------------+-----------------------+------------------+------------------------------------------+
 |                     |                       |                       | Axisymmetric     | Asymmetric                               |

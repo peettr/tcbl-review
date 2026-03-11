@@ -482,7 +482,7 @@ Kuo ([1982](#ref-kuo-1982)) converted the axisymmetric primitive equations into 
 
 
 $$
-\frac{\mathrm{d}^2 q}{\mathrm{d} \eta^2} + 2i q = \hat{Q}$, $q = v + \mathrm{i} \left( \frac{f_2}{f_1} \right)^{1/2} u$, $\dot{Q} = \frac{2 \left\{ u \dfrac{\partial q}{\partial r} + w \dfrac{\partial q}{\partial \eta} + \dfrac{u v}{r} - \mathrm{i} \left( \dfrac{f_2}{f_1} \right)^{1/2} \left( \dfrac{v^2}{r} - \dfrac{\partial p}{\partial r} \right) \right\}}{(f_1 f_2)^{1/2}}
+\frac{\mathrm{d}^2 q}{\mathrm{d} \eta^2} + 2i q = \hat{Q} \qquad q = v + \mathrm{i} \left( \frac{f_2}{f_1} \right)^{1/2} u \qquad \dot{Q} = \frac{2 \left\{ u \dfrac{\partial q}{\partial r} + w \dfrac{\partial q}{\partial \eta} + \dfrac{u v}{r} - \mathrm{i} \left( \dfrac{f_2}{f_1} \right)^{1/2} \left( \dfrac{v^2}{r} - \dfrac{\partial p}{\partial r} \right) \right\}}{(f_1 f_2)^{1/2}}
 $$ {#eq-10}
 
 
@@ -494,7 +494,7 @@ The axisymmetric primitive equations may be simplified further by linearizing ad
 
 
 $$
-v = \mathrm{e}^{-\lambda z} \left[ D_1 \cos(\lambda z) + D_2 \sin(\lambda z) \right]$, $D_1 = \frac{-\chi(\chi + 1) v_{gr}}{1 + (\chi + 1)^2}$, $D_2 = \frac{\chi v_{gr}}{1 + (\chi + 1)^2}$,$\chi = \frac{C_{\mathrm{d}} V_s}{K \lambda}
+v = \mathrm{e}^{-\lambda z} \left[ D_1 \cos(\lambda z) + D_2 \sin(\lambda z) \right] \qquad D_1 = \frac{-\chi(\chi + 1) v_{gr}}{1 + (\chi + 1)^2} \qquad D_2 = \frac{\chi v_{gr}}{1 + (\chi + 1)^2} \qquad \chi = \frac{C_{\mathrm{d}} V_s}{K \lambda}
 $$ {#eq-11}
 
 
@@ -592,7 +592,7 @@ By stratifying dropsonde measurements according to surface wind speed and radius
 
 
 $$
-U(z) = \frac{u_*}{k}\left[\ln\!\left(\frac{z}{z_0}\right) - 0.4\!\left(\frac{z}{H^*}\right)^2\right]$, $H^* = 343.7 + \frac{0.260}{\sqrt{\left(f + \dfrac{2v_{gr}}{r}\right)\!\left(f + \dfrac{v_{gr}}{r} + \dfrac{\partial v_{gr}}{\partial r}\right)}}
+U(z) = \frac{u_*}{k}\left[\ln\!\left(\frac{z}{z_0}\right) - 0.4\!\left(\frac{z}{H^*}\right)^2\right] \qquad H^* = 343.7 + \frac{0.260}{\sqrt{\left(f + \dfrac{2v_{gr}}{r}\right)\!\left(f + \dfrac{v_{gr}}{r} + \dfrac{\partial v_{gr}}{\partial r}\right)}}
 $$ {#eq-15}
 
 
@@ -610,7 +610,7 @@ The first is based directly on the governing equations together with linearized 
 
 
 $$
-\frac{v_{gr}}{r} \frac{\partial u}{\partial \varphi} - v \left( f + \frac{2 v_{gr}}{r} \right) = K \frac{\partial^2 u}{\partial z^2}$, $\frac{V}{r} \frac{\partial v}{\partial \varphi} + u \left( f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\partial r} \right) = K \frac{\partial^2 v}{\partial z^2}
+\frac{v_{gr}}{r} \frac{\partial u}{\partial \varphi} - v \left( f + \frac{2 v_{gr}}{r} \right) = K \frac{\partial^2 u}{\partial z^2} \qquad \frac{V}{r} \frac{\partial v}{\partial \varphi} + u \left( f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\partial r} \right) = K \frac{\partial^2 v}{\partial z^2}
 $$ {#eq-16}
 
 
@@ -648,7 +648,7 @@ The classical 2D-slab TC model is formulated on height-averaged primitive equati
 
 
 $$
-\frac{\partial u'}{\partial t} - F_{u'} = -A_{u'} + P_{u'} + E_{u'} + D_{u'}$, $\frac{\partial v'}{\partial t} - F_{v'} = -A_{v'} + P_{v'} + E_{v'} + D_{v'}
+\frac{\partial u'}{\partial t} - F_{u'} = -A_{u'} + P_{u'} + E_{u'} + D_{u'} \qquad \frac{\partial v'}{\partial t} - F_{v'} = -A_{v'} + P_{v'} + E_{v'} + D_{v'}
 $$ {#eq-17}
 
 

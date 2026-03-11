@@ -215,11 +215,11 @@ G(PI) = \int \int \int \int G(PI \mid DM) f(DM \mid EDP) f(EDP \mid IP, SP, IM) 
 $$ {#eq-1}
 
 
-where the complementary cumulative distribution $G(PI)$ of performance indicator (PI, e.g., loss) is defined in terms of a series of conditional probabilistic distribution functions; DM, EDP, IP, and SP denote the parameters of damage, engineering demanding (e.g., wind-induced structural response), wind-structure interaction (e.g., wind pressure coefficients), and structural properties, respectively; $\lambda(IM)$ is the probabilistic distribution function of hazard intensity measure, usually represented by the joint distribution of wind speed and direction. In the simulation-based PBWE, Eq. is commonly solved by the Monte Carlo method. An ensemble of TC wind samples is generated based on the statistics of TC characteristics (i.e., the TC simulation). Combined with sampled realizations of DM, EDP, IP, and SP, this ensemble yields a corresponding set of PI samples. Statistical evaluation of these samples provides estimates of the probabilistic characteristics required for PBWE. In addition, the probability distribution $\lambda(IM)$ can be estimated directly from the statistics of the simulated TC samples.
+where the complementary cumulative distribution $G(PI)$ of performance indicator (PI, e.g., loss) is defined in terms of a series of conditional probabilistic distribution functions; DM, EDP, IP, and SP denote the parameters of damage, engineering demanding (e.g., wind-induced structural response), wind-structure interaction (e.g., wind pressure coefficients), and structural properties, respectively; $\lambda(IM)$ is the probabilistic distribution function of hazard intensity measure, usually represented by the joint distribution of wind speed and direction. In the simulation-based PBWE, Eq. (@eq-1) is commonly solved by the Monte Carlo method. An ensemble of TC wind samples is generated based on the statistics of TC characteristics (i.e., the TC simulation). Combined with sampled realizations of DM, EDP, IP, and SP, this ensemble yields a corresponding set of PI samples. Statistical evaluation of these samples provides estimates of the probabilistic characteristics required for PBWE. In addition, the probability distribution $\lambda(IM)$ can be estimated directly from the statistics of the simulated TC samples.
 
 The accuracy of the intensity measure $\lambda(IM)$ obtained from simulated TC events is therefore essential not only for producing reliable PBWE results but also for establishing confidence among its end users. However, validating PBWE outcomes remains substantially challenging, if not impossible, primarily due to the absence of robust, universally accepted benchmarks. Consequently, to ensure that PBWE delivers trustworthy and actionable information, a common practice is to validate and refine each framework module to the greatest extent feasible.
 
-Unlike traditional prescriptive wind-resistant design, which typically relies on conservative values, PBWE requires its probabilistic models to reflect real-world behavior as faithfully as possible. As indicated in Eq. and [Figure 1.1](#fig-pbwe), the intensity measure $\lambda(IM)$serves as the foundational input to the entire PBWE framework and therefore has a profound influence on its results. For structures located in TC-prone regions, this measure is governed by TC-induced extreme winds. Accordingly, the TC simulation to determine the intensity measure is critical, as its accuracy is essential to the PBWE. The TC simulation module must therefore be thoroughly evaluated, adapted, and enhanced to enable a paradigm shift from traditional wind engineering practices toward the more comprehensive and probabilistic philosophy of PBWE.
+Unlike traditional prescriptive wind-resistant design, which typically relies on conservative values, PBWE requires its probabilistic models to reflect real-world behavior as faithfully as possible. As indicated in Eq. (@eq-1) and [Figure 1.1](#fig-pbwe), the intensity measure $\lambda(IM)$serves as the foundational input to the entire PBWE framework and therefore has a profound influence on its results. For structures located in TC-prone regions, this measure is governed by TC-induced extreme winds. Accordingly, the TC simulation to determine the intensity measure is critical, as its accuracy is essential to the PBWE. The TC simulation module must therefore be thoroughly evaluated, adapted, and enhanced to enable a paradigm shift from traditional wind engineering practices toward the more comprehensive and probabilistic philosophy of PBWE.
 
 .
 
@@ -392,11 +392,11 @@ $$ {#eq-3}
 
 where $v_{gr}$ is the gradient wind speed; $K$ is the vertical diffusivity; $f$ is the Coriolis force coefficient; $u$, $v$, $w$ are the radial, azimuthal, and vertical wind speed components. Other symbols, if used, retain their conventional meanings. Symbols appearing in the equations are not explained individually unless they are newly introduced or assigned specific meanings in this study. Equations with explicit references are presented as originally formulated. Readers interested in the mathematical details are referred to the corresponding sources.
 
-This equation is forced by the gradient wind $v_{gr}(r)$ at the top of the model, which may equivalently be prescribed through the gradient pressure using the gradient balance. The wind speed components can be solved numerically using the finite difference method without additional simplifications, resulting in the fully nonlinear 3D TCBL model developed by KW01 (Sec. [3.6](#simulation-based-models-iii-3d-nonlinear-models)). To reduce computational cost, several levels of approximation may be introduced. One natural simplification is to take the average of Eqs. and along the vertical coordinate *z*, which yields the 2D-slab model (Sec. [3.4](#simulation-based-models-i-2d-slab-model)). The 2D hybrid models lie between the 2D and 3D models, in which the integrated primitive equations to be solved account for the effect of prescribed vertical profiles (Sec. [3.5](#simulation-based-models-ii-2d-hybrid-models)).
+This equation is forced by the gradient wind $v_{gr}(r)$ at the top of the model, which may equivalently be prescribed through the gradient pressure using the gradient balance. The wind speed components can be solved numerically using the finite difference method without additional simplifications, resulting in the fully nonlinear 3D TCBL model developed by KW01 (Sec. [3.6](#simulation-based-models-iii-3d-nonlinear-models)). To reduce computational cost, several levels of approximation may be introduced. One natural simplification is to take the average of Eqs. (@eq-2) and (@eq-3) along the vertical coordinate *z*, which yields the 2D-slab model (Sec. [3.4](#simulation-based-models-i-2d-slab-model)). The 2D hybrid models lie between the 2D and 3D models, in which the integrated primitive equations to be solved account for the effect of prescribed vertical profiles (Sec. [3.5](#simulation-based-models-ii-2d-hybrid-models)).
 
 The TCBL models described in the preceding paragraph are simulation-based. In this study, the term "simulation-based" refers to models that solve the governing equations on a discretized computational domain (primarily via the finite difference method). To reduce computational demand, these models can be simplified into parametric formulations by partially or fully alleviating the discretization (see Sec. [1.5](#introduction-to-tcbl-modeling) and [Table 1](#tbl-models)).
 
-The simplification can be carried out along several paths. First, if the terms not enclosed in boxes are omitted based on scale analysis, the remaining equations contain only linear terms. This reduction yields a set of approximate analytical or semi-analytical solutions (Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models)), which form the linear model category within the parametric TCBL models. Furthermore, as noted earlier, all TCBL models aim to convert prescribed gradient wind or gradient pressure profiles into 3D wind speed fields within the TCBL. Models that perform this conversion by explicitly solving the governing equations are referred to here as "solution-pursued." This explicit solution process could be replaced by empirical relationships, leading to another type of simplification, i.e., the empirical models described in Sec. [3.2](#parametric-models-i-empirical-methods). The third simplification may be carried out by dropping the radial variation in Eqs. and , yielding the axisymmetric/column models (Sec. [3.1](#axisymmetric-models)). Note that the column models may also be utilized to capture the asymmetry in the TCBL wind fields (Sec. [3.3.2](#column-linear-model-meng-et-al.-1995)). In contrast, the models introduced in Sec. [3.2](#parametric-models-i-empirical-methods)\~Sec. [3.6](#simulation-based-models-iii-3d-nonlinear-models) are mostly asymmetric.
+The simplification can be carried out along several paths. First, if the terms not enclosed in boxes are omitted based on scale analysis, the remaining equations contain only linear terms. This reduction yields a set of approximate analytical or semi-analytical solutions (Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models)), which form the linear model category within the parametric TCBL models. Furthermore, as noted earlier, all TCBL models aim to convert prescribed gradient wind or gradient pressure profiles into 3D wind speed fields within the TCBL. Models that perform this conversion by explicitly solving the governing equations are referred to here as "solution-pursued." This explicit solution process could be replaced by empirical relationships, leading to another type of simplification, i.e., the empirical models described in Sec. [3.2](#parametric-models-i-empirical-methods). The third simplification may be carried out by dropping the radial variation in Eqs. (@eq-2) and (@eq-3), yielding the axisymmetric/column models (Sec. [3.1](#axisymmetric-models)). Note that the column models may also be utilized to capture the asymmetry in the TCBL wind fields (Sec. [3.3.2](#column-linear-model-meng-et-al.-1995)). In contrast, the models introduced in Sec. [3.2](#parametric-models-i-empirical-methods)\~Sec. [3.6](#simulation-based-models-iii-3d-nonlinear-models) are mostly asymmetric.
 
 Finally, it is noted that the simplifications described above can substantially reduce computational cost, but at the expense of accuracy. These models form a hierarchy with different levels of simplification and, consequently, different levels of fidelity, as summarized in Table 1. The KW01 3D nonlinear TCBL model is theoretically the most rigorous and is generally regarded as the most accurate. Models at lower levels of simplification are therefore not expected to match the KW01 model\'s accuracy.
 
@@ -404,7 +404,7 @@ In the preceding introduction, the diagnostic TCBL models were presented from th
 
 ## Axisymmetric models
 
-By dropping the azimuthal advection in Eqs. and , the axisymmetric primitive equations are obtained ([Rosenthal 1962](#ref-rosenthal-1962); [Smith 1968](#ref-smith-1968)):
+By dropping the azimuthal advection in Eqs. (@eq-2) and (@eq-3), the axisymmetric primitive equations are obtained ([Rosenthal 1962](#ref-rosenthal-1962); [Smith 1968](#ref-smith-1968)):
 
 
 $$
@@ -426,15 +426,15 @@ Smith ([1968](#ref-smith-1968)) proposed a hybrid solution by assuming the wind 
 
 $$
 u(r, \eta) = v_{gr}(r) E(r) f(\eta) \qquad v(r, \eta) = v_{gr}(r) g(\eta)
-$$
+$$ {#eq-6}
 
-where $f(\eta) = -e^{-\eta} \sin \eta$, $g(\eta) = e^{-\eta} \cos \eta$ (Ekman profile) and $f(\eta) = c e^{-\eta} (a_1 \sin \eta + a_2 \cos \eta)$, $g(\eta) = 1 - c e^{-\eta} (a_1 \cos \eta + a_2 \sin \eta)$ for no-slip and slip bottom boundary conditions, respectively; $\eta = z / \delta(r)$; and $\delta(r)$ is the TCBL height. By substituting Eq. into the axisymmetrical primitive equations and integrating along height $[0, +\infty]$, a set of ordinary differential equations \[([Smith 1968](#ref-smith-1968)), its Eqs. (24) and (25)\] in terms of the unknowns $E^2$ and $E\delta^2$, which could be solved numerically, e.g., by the Runge-Kutta method. This hybrid model is nonlinear, 3D, but vertically parameterized. It has been extended by Langousis et al. ([2009](#ref-langousis-2009)) to account for asymmetries (see Sec. [3.5](#simulation-based-models-ii-2d-hybrid-models)).
+where $f(\eta) = -e^{-\eta} \sin \eta$, $g(\eta) = e^{-\eta} \cos \eta$ (Ekman profile) and $f(\eta) = c e^{-\eta} (a_1 \sin \eta + a_2 \cos \eta)$, $g(\eta) = 1 - c e^{-\eta} (a_1 \cos \eta + a_2 \sin \eta)$ for no-slip and slip bottom boundary conditions, respectively; $\eta = z / \delta(r)$; and $\delta(r)$ is the TCBL height. By substituting Eq. (@eq-6) into the axisymmetrical primitive equations and integrating along height $[0, +\infty]$, a set of ordinary differential equations \[([Smith 1968](#ref-smith-1968)), its Eqs. (24) and (25)\] in terms of the unknowns $E^2$ and $E\delta^2$, which could be solved numerically, e.g., by the Runge-Kutta method. This hybrid model is nonlinear, 3D, but vertically parameterized. It has been extended by Langousis et al. ([2009](#ref-langousis-2009)) to account for asymmetries (see Sec. [3.5](#simulation-based-models-ii-2d-hybrid-models)).
 
 Following the similar derivation ([Smith 1968](#ref-smith-1968)), Kepert ([2010b](#ref-kepert-2010b)) utilized an alternative parameterization of the wind profiles to simplify the axisymmetric primitive equations:
 
 $$
 u(r,z) = [\{u_m(r) - v_m(r)\}\cos\{z/\delta(r)\} + \{u_m(r) + v_m(r)\}\sin\{z/\delta(r)\}]\exp\{-z/\delta(r)\}
-$$
+$$ {#eq-7}
 
 where the two unknowns are $u_{\mathrm{m}}(r)$ and $v_{\mathrm{m}}(r)$, while the TCBL height $\delta(r)$ is prescribed. The obtained hybrid model \[([Kepert 2010b](#ref-kepert-2010b)), its Eqs. (14) and (15)\] avoids numerical instability in the 2D-slab model.
 
@@ -443,20 +443,20 @@ Eliassen ([1971](#ref-eliassen-1971)) presented the power series expansion of wi
 
 $$
 \frac{1}{r}v(r,z) = v_0(z) + v_1(z)r + v_2(z)r^2 + \ldots
-$$ {#eq-6}
+$$ {#eq-8}
 
 
 By imposing the condition that the polynomial coefficients of every order of radius be balanced, a new set of ordinary differential equations in terms of *z* was derived, together with its analytical solution.
 
-There is another type of hybrid model that assumes separable wind profiles like Eq. , but does not parameterize these profiles ([Foster 2009](#ref-foster-2009)):
+There is another type of hybrid model that assumes separable wind profiles like Eq. (@eq-6), but does not parameterize these profiles ([Foster 2009](#ref-foster-2009)):
 
 
 $$
 u = v_{gr}(r)y_1(\xi),\quad v = v_{gr}(r)y_3(\xi),\quad W = \frac{v_{gr}(r)}{r_c(r)}y_5(\xi)
-$$ {#eq-7}
+$$ {#eq-9}
 
 
-where $\xi = z/\delta(r)$ and $r_e = r / \delta(r)$ are normalized vertical and radial coordinates, respectively; $\delta(r)$ is prescribed; and $y_1, y_3, y_5$ are unknown shape functions. By Eq. , the axisymmetric primitive equations are then converted into a set of fifth-order ordinary differential equations that could be solved by the collocation method. This model can readily account for different choices of spatially-varying turbulence parameterizations and surface drag coefficients, and hence has the potential to be extended to asymmetric TCBL. However, it cannot properly reflect the effects of turbulence parameterizations on the boundary layer height $\delta(r)$ (because it is pre-specified).
+where $\xi = z/\delta(r)$ and $r_e = r / \delta(r)$ are normalized vertical and radial coordinates, respectively; $\delta(r)$ is prescribed; and $y_1, y_3, y_5$ are unknown shape functions. By Eq. (@eq-9), the axisymmetric primitive equations are then converted into a set of fifth-order ordinary differential equations that could be solved by the collocation method. This model can readily account for different choices of spatially-varying turbulence parameterizations and surface drag coefficients, and hence has the potential to be extended to asymmetric TCBL. However, it cannot properly reflect the effects of turbulence parameterizations on the boundary layer height $\delta(r)$ (because it is pre-specified).
 
 Finally, although the above models are expressed in terms of the wind speed components, the axisymmetric primitive equations may also be reformulated in terms of angular momentum and stream functions. These alternative forms can then be solved numerically \[([Eliassen and Lystad 1977](#ref-eliassen-1977); [Montgomery et al. 2001](#ref-montgomery-2001))\] or semi-analytically through hybrid methods ([Kuo 1982](#ref-kuo-1982)).
 
@@ -467,7 +467,7 @@ Without the aforementioned parameterized wind profiles, the axisymmetric primiti
 
 $$
 \frac{\mathrm{d}}{\mathrm{d}r}\left(r \int_0^\delta u^2\,\mathrm{d}z\right) + \left[r u w\right]\Big|_{z=0} + \int_0^\delta \left(v_{gr}^2 - v^2\right)\mathrm{d}z + r f \int_0^\delta \left(v_{gr} - v\right)\mathrm{d}z = -K r \left.\frac{\partial u}{\partial z}\right|_{z=0}
-$$ {#eq-8}
+$$ {#eq-10}
 
 
 yielding the equation of the averaged wind speed components $u_b$ and $v_b$ \[Eq. (1) and (2) in ([Smith and Montgomery 2008](#ref-smith-2008))\]:
@@ -475,10 +475,10 @@ yielding the equation of the averaged wind speed components $u_b$ and $v_b$ \[Eq
 
 $$
 u_b \frac{\mathrm{d} u_b}{\mathrm{d} r} = u_b \frac{w_\delta}{\delta} - \frac{\left(v_{gr}^2 - v_b^2\right)}{r} - f\left(v_{gr} - v_b\right) - \frac{C_D}{\delta}\left(u_b^2 + v_b^2\right)^{1/2} u_b - \frac{\overline{u'w'}\big|_\delta}{\delta}
-$$ {#eq-9}
+$$ {#eq-11}
 
 
-The first and last terms on the right-hand side in Eq. denote the effects of vertical wind speed and turbulence diffusivity at the top of TCBL, respectively. This height-averaged model is axisymmetric, fully nonlinear, and can be solved using the Runge-Kutta method; numerical results reveal supergradient height-averaged azimuthal winds, a characteristic feature of the TCBL. The moisture and thermal equations may be treated similarly to examine the influence of TCBL thermodynamic structure ([Smith 2003](#ref-smith-2003); [Smith and Vogl 2008](#ref-smith-2008)). This model may be further simplified, for example, by dropping the advection and linearizing the term for surface drag force, yielding a series of approximations (linear, semi-nonlinear, geostrophic, etc.) ([Smith and Montgomery 2008](#ref-smith-2008)).
+The first and last terms on the right-hand side in Eq. (@eq-11) denote the effects of vertical wind speed and turbulence diffusivity at the top of TCBL, respectively. This height-averaged model is axisymmetric, fully nonlinear, and can be solved using the Runge-Kutta method; numerical results reveal supergradient height-averaged azimuthal winds, a characteristic feature of the TCBL. The moisture and thermal equations may be treated similarly to examine the influence of TCBL thermodynamic structure ([Smith 2003](#ref-smith-2003); [Smith and Vogl 2008](#ref-smith-2008)). This model may be further simplified, for example, by dropping the advection and linearizing the term for surface drag force, yielding a series of approximations (linear, semi-nonlinear, geostrophic, etc.) ([Smith and Montgomery 2008](#ref-smith-2008)).
 
 ### Axisymmetric nonlinear analytical models
 
@@ -487,7 +487,7 @@ Kuo ([1982](#ref-kuo-1982)) converted the axisymmetric primitive equations into 
 
 $$
 \frac{\mathrm{d}^2 q}{\mathrm{d} \eta^2} + 2i q = \hat{Q} \qquad q = v + \mathrm{i} \left( \frac{f_2}{f_1} \right)^{1/2} u \qquad \dot{Q} = \frac{2 \left\{ u \dfrac{\partial q}{\partial r} + w \dfrac{\partial q}{\partial \eta} + \dfrac{u v}{r} - \mathrm{i} \left( \dfrac{f_2}{f_1} \right)^{1/2} \left( \dfrac{v^2}{r} - \dfrac{\partial p}{\partial r} \right) \right\}}{(f_1 f_2)^{1/2}}
-$$ {#eq-10}
+$$ {#eq-12}
 
 
 where $f_1$ and $f_2$ are parameters in terms of the gradient wind speed; $p$ denotes the gradient pressure; $\eta$ denotes the dimensionless vertical coordinate. By introducing power series expansions for the variables, first-order (linear) and second-order (nonlinear) analytical solutions for the wind speed components were derived, subject to the appropriate bottom boundary conditions. Numerical results show that the TCBL vertical profiles also exhibit a supergradient LLJ \[e.g., Figure 7 of ([Kuo 1982](#ref-kuo-1982))\]. The similarity between profiles obtained from the analytical formulation and those produced by simulation-based methods ([Kuo 1971](#ref-kuo-1971)) was demonstrated, verifying the derived analytical solutions. Results also indicate that the second-order terms contribute little for Rankine-type gradient wind profiles with relatively flat shapes. The development of this analytical solution appears to have influenced the formulation of the asymmetric 3D linear analytical TCBL model ([Kepert 2001](#ref-kepert-2001)).
@@ -499,10 +499,10 @@ The axisymmetric primitive equations may be simplified further by linearizing ad
 
 $$
 v = \mathrm{e}^{-\lambda z} \left[ D_1 \cos(\lambda z) + D_2 \sin(\lambda z) \right] \qquad D_1 = \frac{-\chi(\chi + 1) v_{gr}}{1 + (\chi + 1)^2} \qquad D_2 = \frac{\chi v_{gr}}{1 + (\chi + 1)^2} \qquad \chi = \frac{C_{\mathrm{d}} V_s}{K \lambda}
-$$ {#eq-11}
+$$ {#eq-13}
 
 
-where $\xi$ and $\lambda$ are radially-varying parameters in terms of gradient wind speed $v_{gr}$; $C_d$ is the surface drag coefficient; $V_S$ is the surface wind speed; $D_1$ and $D_2$ are unknown coefficients. As the unknowns are defined in terms of surface wind speed (and thus $v$), an iterative solution procedure is required. Note that this model is axisymmetric; it only represents the wavenumber-0 (axisymmetric) part of the 3D linear asymmetric TCBL model by ([Kepert 2001](#ref-kepert-2001)), as shown in ([Vogl and Smith 2009](#ref-vogl-2009); [Snaiki and Wu 2017a](#ref-snaiki-2017a)). However, it may be utilized for asymmetric TCBL simulation by assuming an asymmetric gradient pressure/wind profile ([Meng et al. 1995](#ref-meng-1995)); also see Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models) for a brief description. In that situation, the axisymmetric model could be recast as a column model varying azimuthally. It is worth noting that this linear analytical solution followed a subset of the nonlinear analytical solution introduced in Sec. [3.1.3](#axisymmetric-nonlinear-analytical-models) (its first-order solution); moreover, the same solution as Eq. has been reinvented by ([Vogl 2009](#ref-vogl-2009); [Vogl and Smith 2009](#ref-vogl-2009)) as the linear weak-friction approximation.
+where $\xi$ and $\lambda$ are radially-varying parameters in terms of gradient wind speed $v_{gr}$; $C_d$ is the surface drag coefficient; $V_S$ is the surface wind speed; $D_1$ and $D_2$ are unknown coefficients. As the unknowns are defined in terms of surface wind speed (and thus $v$), an iterative solution procedure is required. Note that this model is axisymmetric; it only represents the wavenumber-0 (axisymmetric) part of the 3D linear asymmetric TCBL model by ([Kepert 2001](#ref-kepert-2001)), as shown in ([Vogl and Smith 2009](#ref-vogl-2009); [Snaiki and Wu 2017a](#ref-snaiki-2017a)). However, it may be utilized for asymmetric TCBL simulation by assuming an asymmetric gradient pressure/wind profile ([Meng et al. 1995](#ref-meng-1995)); also see Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models) for a brief description. In that situation, the axisymmetric model could be recast as a column model varying azimuthally. It is worth noting that this linear analytical solution followed a subset of the nonlinear analytical solution introduced in Sec. [3.1.3](#axisymmetric-nonlinear-analytical-models) (its first-order solution); moreover, the same solution as Eq. (@eq-13) has been reinvented by ([Vogl 2009](#ref-vogl-2009); [Vogl and Smith 2009](#ref-vogl-2009)) as the linear weak-friction approximation.
 
 ## Parametric models (I): Empirical methods
 
@@ -511,7 +511,7 @@ In Sec. [3](#diagnostic-models), the models after Sec. [3.1](#axisymmetric-model
 
 $$
 v(r, \varphi, z=10) = \left[0.865 v_{gr}(RMW) + 0.5 V_T\right] \left[\frac{v(10, r)}{v(10, RMW)}\right] - \frac{V_T}{2}(1 - \cos \varphi)
-$$ {#eq-12}
+$$ {#eq-14}
 
 
 where $V_T$ denotes the TC translation velocity; RMW denotes the radius to maximum wind speed. This equation accounts for TC translation and the surface radial profile rather than the gradient wind speed, but a surface wind reduction factor (SWRF) of 0.865 is used for the conversion.
@@ -525,7 +525,7 @@ Gradient wind/pressure profiles are the fundamental input to empirical methods a
 
 $$
 v_{gr} = -\frac{fr}{2} + \sqrt{\left(\frac{fr}{2}\right)^2 + \frac{r}{\rho} \frac{\partial p}{\partial r}}
-$$ {#eq-13}
+$$ {#eq-15}
 
 
 where $\Delta p$ is the central pressure difference. Near the RMW, the cyclostrophic approximation (*f* = 0) is also applicable. Generally, this gradient balance is only approximately satisfied in the real atmosphere. Still, it is a helpful fundamental assumption for facilitating calculations around this balance in the TCBL models. Because this assumption applies to azimuthally averaged profiles, the gradient profile models are usually axisymmetric. However, it may be lifted to yield asymmetric gradient profiles as a tool to account for the asymmetry in TCBL wind fields. In the following, Sec. [3.2.1.1](#axisymmetric-gradient-profiles) and Sec. [3.2.1.2](#asymmetric-gradient-profiles) introduce the axisymmetric and asymmetric gradient profiles, respectively. As input for determining the parameters of the gradient profiles, the TC track models associated with TCBL models are also briefly reviewed in Sec. [3.2.1.3](#tc-track-model).
@@ -550,7 +550,7 @@ As noted earlier, most studies assume azimuthally invariant radial pressure prof
 
 $$
 p(r, \varphi) = p_c + \Delta p \, e^{-[RMW(\varphi)/r]^B} \qquad RMW(\varphi) = C_1 \varphi^{n-1} + C_2 \varphi^{n-2} + \cdots + C_{n-1} \varphi + C_n
-$$
+$$ {#eq-16}
 
 where $C_n$ denotes a series of polynomial coefficients determined by fitting to measurements. A similar idea was utilized by [Guo and van de Lindt (2019)](#ref-guo-2019) to account for both translation-induced and land-induced asymmetry. However, the increased number of parameters limits the applicability of this model type in PBWE.
 
@@ -559,7 +559,7 @@ Furthermore, another form of asymmetric gradient wind model can arise even when 
 
 $$
 v_{gr}(r, \varphi) = \frac{1}{2}\left[(fr - V_T \sin \varphi)^2 + 4r\rho^{-1}\frac{dp}{dr}\right]^{1/2} - \frac{1}{2}(fr - V_T \sin \varphi)
-$$ {#eq-14}
+$$ {#eq-17}
 
 
 Georgiou ([1985](#ref-georgiou-1985)), Tryggvason et al. ([1976](#ref-tryggvason-1976)), and [Meng et al. (1995)](#ref-meng-1995) employed this gradient wind profile to attain the asymmetry in surface wind fields. As appears in classical works \[e.g., ([Haltiner and Martin 1957](#ref-haltiner-1957); [Myers and Malkin 1961](#ref-myers-1961))\], this asymmetric gradient wind profile is derived under the assumption of a circular gradient-pressure vortex, with the balance applied along streamlines rather than along isobars. This distinction reflects a treatment of the steering flow that differs from the conventional axisymmetric gradient balance.
@@ -599,16 +599,16 @@ By stratifying dropsonde measurements according to surface wind speed and radius
 
 $$
 U(z) = \frac{u_*}{k}\left[\ln\!\left(\frac{z}{z_0}\right) - 0.4\!\left(\frac{z}{H^*}\right)^2\right] \qquad H^* = 343.7 + \frac{0.260}{\sqrt{\left(f + \dfrac{2v_{gr}}{r}\right)\!\left(f + \dfrac{v_{gr}}{r} + \dfrac{\partial v_{gr}}{\partial r}\right)}}
-$$ {#eq-15}
+$$ {#eq-18}
 
 
-where $u_*$ denotes friction velocity; $z_0$denotes surface roughness length; $k = 0.4$; $H^*$ is associated with the TCBL height $H = 1.12 H^*$ (assumed at LLJ height). This formulation is inspired by the linear TCBL model ([Kepert 2001](#ref-kepert-2001)). Because Eq. does not incorporate azimuthal dependence, the resulting profile represents an axisymmetrical TCBL and is applicable only in an azimuthally averaged sense. With empirical adjustments and when combined with the 2D-slab model, its performance has been compared with that of a constant SWRF of 0.85. The results indicate that the proposed formulation can reduce the RMS error in fitting surface-station measurements by approximately 27 percent. The performance of this profile has not been exceeded to date.
+where $u_*$ denotes friction velocity; $z_0$denotes surface roughness length; $k = 0.4$; $H^*$ is associated with the TCBL height $H = 1.12 H^*$ (assumed at LLJ height). This formulation is inspired by the linear TCBL model ([Kepert 2001](#ref-kepert-2001)). Because Eq. (@eq-18) does not incorporate azimuthal dependence, the resulting profile represents an axisymmetrical TCBL and is applicable only in an azimuthally averaged sense. With empirical adjustments and when combined with the 2D-slab model, its performance has been compared with that of a constant SWRF of 0.85. The results indicate that the proposed formulation can reduce the RMS error in fitting surface-station measurements by approximately 27 percent. The performance of this profile has not been exceeded to date.
 
 Although the preceding profiles are largely derived from measurements, a power-law-type vertical wind profile ([Meng et al. 1997](#ref-meng-1997); [Ishihara et al. 2005](#ref-ishihara-2005)) has been proposed along with an inflow-angle profile based on TCBL simulation results from the 3D linear column model described in Sec. [3.1.4](#axisymmetric-linear-analytical-models). The parameters of this formulation are defined as functions of local terrain roughness, gradient wind, and inertial stability, all of which vary radially and azimuthally. Although the structure of this model is elegant, it has not yet been extensively validated against a sufficiently large measurement dataset.
 
 ## Parametric models (II): Analytical solution-based linear models
 
-As noted earlier, by linearizing the nonlinear terms (typically around the gradient wind) and introducing a series of simplifying assumptions, approximate closed-form solutions to the asymmetric primitive equations \[Eqs. and \] can be derived. Following this approach, two sets of linear TCBL models developed are discussed in this subsection.
+As noted earlier, by linearizing the nonlinear terms (typically around the gradient wind) and introducing a series of simplifying assumptions, approximate closed-form solutions to the asymmetric primitive equations \[Eqs. (@eq-2) and (@eq-3)\] can be derived. Following this approach, two sets of linear TCBL models developed are discussed in this subsection.
 
 ### The K01 model ([Kepert 2001](#ref-kepert-2001))
 
@@ -617,14 +617,14 @@ The first is based directly on the governing equations together with linearized 
 
 $$
 \frac{v_{gr}}{r} \frac{\partial u}{\partial \varphi} - v \left( f + \frac{2 v_{gr}}{r} \right) = K \frac{\partial^2 u}{\partial z^2} \qquad \frac{V}{r} \frac{\partial v}{\partial \varphi} + u \left( f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\partial r} \right) = K \frac{\partial^2 v}{\partial z^2}
-$$ {#eq-16}
+$$ {#eq-19}
 
 
 By linearizing the slip bottom boundary condition, utilizing a Fourier series expansion, and separating the vertical and azimuthal coordinates, the final solution is given by:
 
 $$
 u(\lambda, z) = u_1(\lambda, z) + u_0(z) + u_{-1}(\lambda, z)
-$$
+$$ {#eq-20}
 
 That is, as the summation of wavenumber 0 and 1 azimuthal variations. This model is inspired by early research on the Ekman layer in TCs ([Eliassen 1971](#ref-eliassen-1971); [Kuo 1982](#ref-kuo-1982)). It is based on four key assumptions: (1) The vertical turbulence diffusivity *K* keeps constant vertically and azimuthally but may vary radially as the linearized equations are solved at every radial coordinate separately; (2) The surface drag coefficient is constant azimuthally; (3) The translation velocity is far less than the maximum TC wind speed to enable the linearization of surface drag force; (4) The vertical advection is ignored.
 
@@ -634,7 +634,7 @@ Furthermore, the assumption (4) has been partially relaxed by reintroducing vert
 
 ### Column linear model ([Meng et al. 1995](#ref-meng-1995))
 
-As noted in Sec. [3.1.4](#axisymmetric-linear-analytical-models), the axisymmetric model can be reformulated as a column model that varies azimuthally by introducing the asymmetric gradient balance shown in Eq. . In this way, the axisymmetric linear model can represent asymmetric TCBL features. This is precisely the motivation behind developing such a height-resolving column model ([Meng et al. 1995](#ref-meng-1995)). The key reason is that the solutions at different azimuths or radii are independent of one another, making the formulation effectively a set of column models indexed by azimuth and radius.
+As noted in Sec. [3.1.4](#axisymmetric-linear-analytical-models), the axisymmetric model can be reformulated as a column model that varies azimuthally by introducing the asymmetric gradient balance shown in Eq. (@eq-17). In this way, the axisymmetric linear model can represent asymmetric TCBL features. This is precisely the motivation behind developing such a height-resolving column model ([Meng et al. 1995](#ref-meng-1995)). The key reason is that the solutions at different azimuths or radii are independent of one another, making the formulation effectively a set of column models indexed by azimuth and radius.
 
 Nevertheless, the translation-induced asymmetry produced by this model differs from the pattern represented by the superposition of the three harmonic components in the K01 model described in this section. The asymmetric gradient-wind approach cannot fully capture the height-resolved azimuthal advection present in the K01 solution. On the other hand, allowing the turbulence diffusivity and drag coefficient to vary azimuthally provides some capability for reproducing asymmetry. A comparison between these two models is therefore valuable for assessing their relative accuracy.
 
@@ -657,7 +657,7 @@ The classical 2D-slab TC model is formulated on height-averaged primitive equati
 
 $$
 \frac{\partial u'}{\partial t} - F_{u'} = -A_{u'} + P_{u'} + E_{u'} + D_{u'} \qquad \frac{\partial v'}{\partial t} - F_{v'} = -A_{v'} + P_{v'} + E_{v'} + D_{v'}
-$$ {#eq-17}
+$$ {#eq-21}
 
 
 where $u'$and $v'$denote the vertically-averaged horizontal wind components along the *x* and *y* axes with respect to the moving TC center; *F*, *A*, *P*, *E*, *D* denote the Coriolis force, horizontal advection, pressure, horizontal diffusion, and surface drag force terms, respectively; the height of the TCBL is fixed as 1000m. The unknown variables $u$ and $\nu$ are interpreted as the height-averaged wind speeds; to convert them to surface wind speeds at 10m above the surface, the depiction of the TCBL vertical structure is needed, such as surface wind reduction factors (SWRF) or prescribed vertical speed profiles (see Sec. [3.2.2](#vertical-wind-profile-models)). Because the governing equations of the 2D-slab model do not resolve the vertical structure, they cannot explicitly represent vertical advection or vertical diffusivity, and the TCBL height must be specified a priori (e.g., 1000m). As a result, the model cannot produce a simulation-based height-resolved TCBL wind field.
@@ -674,33 +674,33 @@ A spectral-method-like approximation has been designed by substituting the surfa
 
 $$
 u = u_{s1}(r)\sin\varphi + u_{c1}(r)\cos\varphi + u_{s2}(r)\sin 2\varphi + u_{c2}(r)\cos 2\varphi
-$$
+$$ {#eq-22}
 
-With this substitution, only the Fourier coefficients ($u_{s1}$, $u_{c1}$, $u_{s2}$, $u_{c2}$) need to be solved via their respective differential equations, making the surrogate intrusive. A related but non-intrusive surrogate was proposed by Vickery et al. ([2000a](#ref-vickery-2000a)), who applied Eq. to the solutions generated by Chow's algorithm. A linear interpolation scheme was then constructed for these Fourier coefficients to reduce both storage requirements and computational demand.
+With this substitution, only the Fourier coefficients ($u_{s1}$, $u_{c1}$, $u_{s2}$, $u_{c2}$) need to be solved via their respective differential equations, making the surrogate intrusive. A related but non-intrusive surrogate was proposed by Vickery et al. ([2000a](#ref-vickery-2000a)), who applied Eq. (@eq-22) to the solutions generated by Chow's algorithm. A linear interpolation scheme was then constructed for these Fourier coefficients to reduce both storage requirements and computational demand.
 
 ### Applications
 
-The 2D-slab TCBL model has been widely applied in practice. Various empirical radial pressure and vertical wind-speed profiles (Sec. [3.2](#parametric-models-i-empirical-methods)) have been incorporated into this model to estimate TC-induced surface wind speeds. For example, the US Army Corps of Engineers model combines the 2D-slab formulation with the Cardone vertical profile ([Thompson and Cardone 1996](#ref-thompson-1996)); Vickery et al. ([2000a](#ref-vickery-2000a)) introduced additional adjustments near the RMW to refine the 2D-slab predictions. In [Vickery et al. (2009b)](#ref-vickery-2009b), a logarithmic-type empirical profile \[Eq. \] was used together with the 2D-slab model, and the resulting surface winds showed satisfactory agreement with observations in a statistical sense. In that work, however, the input Holland-*B* parameter was iteratively adjusted based on the predicted surface winds. Results from [Vickery et al. (2000b)](#ref-vickery-2000b) and [Vickery et al. (2009c)](#ref-vickery-2009c) have underpinned design practice extensively in the US. Applications of typhoon-related extreme wind analysis in China have also been conducted ([Xiao et al. 2011](#ref-xiao-2011); [Li et al. 2016](#ref-li-2016); [Li and Hong 2016](#ref-li-2016)) and have been verified through comparisons with Chinese wind codes and measurements.
+The 2D-slab TCBL model has been widely applied in practice. Various empirical radial pressure and vertical wind-speed profiles (Sec. [3.2](#parametric-models-i-empirical-methods)) have been incorporated into this model to estimate TC-induced surface wind speeds. For example, the US Army Corps of Engineers model combines the 2D-slab formulation with the Cardone vertical profile ([Thompson and Cardone 1996](#ref-thompson-1996)); Vickery et al. ([2000a](#ref-vickery-2000a)) introduced additional adjustments near the RMW to refine the 2D-slab predictions. In [Vickery et al. (2009b)](#ref-vickery-2009b), a logarithmic-type empirical profile \[Eq. (@eq-18)\] was used together with the 2D-slab model, and the resulting surface winds showed satisfactory agreement with observations in a statistical sense. In that work, however, the input Holland-*B* parameter was iteratively adjusted based on the predicted surface winds. Results from [Vickery et al. (2000b)](#ref-vickery-2000b) and [Vickery et al. (2009c)](#ref-vickery-2009c) have underpinned design practice extensively in the US. Applications of typhoon-related extreme wind analysis in China have also been conducted ([Xiao et al. 2011](#ref-xiao-2011); [Li et al. 2016](#ref-li-2016); [Li and Hong 2016](#ref-li-2016)) and have been verified through comparisons with Chinese wind codes and measurements.
 
 Regarding PBWE systems, Vickery's 2D-slab model is implemented in the software HAZUS ([Vickery et al. 2006](#ref-vickery-2006)). Another system, FHLPM, employs the empirical formulation of [Powell et al. (2005)](#ref-powell-2005), which consists of an axisymmetric 2D-slab model supplemented by an azimuthally dependent correction for asymmetry residuals. The open-source PBWE package TCRM ([Arthur 2021](#ref-arthur-2021)), in contrast, includes only the parametric TCBL models described in Sec. [3.2](#parametric-models-i-empirical-methods) and Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models).
 
 ## Simulation-based models (II): 2D hybrid models 
 
-The 2D hybrid axisymmetric model reviewed in Sec. [3.1.1](#axisymmetric-hybrid-models) has been extended to its asymmetric formulation. To incorporate the asymmetry, [Langousis et al. (2009)](#ref-langousis-2009) introduced a parameterization of the wind field that depends on the azimuthal coordinate \[with reference to Eq. \], e.g.:
+The 2D hybrid axisymmetric model reviewed in Sec. [3.1.1](#axisymmetric-hybrid-models) has been extended to its asymmetric formulation. To incorporate the asymmetry, [Langousis et al. (2009)](#ref-langousis-2009) introduced a parameterization of the wind field that depends on the azimuthal coordinate \[with reference to Eq. (@eq-6)\], e.g.:
 
 $$
 u(r,\varphi,\eta) = E(r,\varphi)\left[gV_T\cos\varphi + f\left(v_{gr} - V_T\sin\varphi\right) - V_T\cos\varphi\right] \qquad \eta = z / \delta(r,\varphi)
-$$
+$$ {#eq-23}
 
 $$
 f = -e^{-\eta} \left[ a_1(r, \varphi) \sin \eta + a_2(r, \varphi) \cos \eta \right] \qquad g = 1 - e^{-\eta} \left[ a_1(r, \varphi) \cos \eta + a_2(r, \varphi) \sin \eta \right]
-$$
+$$ {#eq-24}
 
-Substituting this parameterization into the fully nonlinear primitive equations \[Eqs. and \] and applying a height-averaging procedure similar to [Smith (1968)](#ref-smith-1968) yields governing equations for the unknowns $E$ and $\delta$.
+Substituting this parameterization into the fully nonlinear primitive equations \[Eqs. (@eq-2) and (@eq-3)\] and applying a height-averaging procedure similar to [Smith (1968)](#ref-smith-1968) yields governing equations for the unknowns $E$ and $\delta$.
 
 The resulting system can be solved by nonlinear iteration combined with the central difference method. Because the formulation ultimately reduces to a 2D system, its computational cost is significantly lower than that of fully 3D nonlinear models such as KW01 and is comparable to that of the 2D-slab models. Notably, the derivation shows that all nonlinear advection terms, including vertical advection, are retained. From this perspective, the model should theoretically outperform existing 2D-slab formulations.
 
-However, Eq. implies the assumptions of constant vertical turbulence diffusivity *K* and linearized surface drag, both of which limit the model's ability to capture key nonlinear features of the TCBL. For example, its accuracy in predicting LLJ characteristics is expected to be lower than that of the KW01 model. This limitation may be alleviated by adopting vertically varying *K* profiles, similar to the enhancements made to axisymmetric 2D hybrid models ([Bode and Smith 1975](#ref-bode-1975)).
+However, Eq. (@eq-23) implies the assumptions of constant vertical turbulence diffusivity *K* and linearized surface drag, both of which limit the model's ability to capture key nonlinear features of the TCBL. For example, its accuracy in predicting LLJ characteristics is expected to be lower than that of the KW01 model. This limitation may be alleviated by adopting vertically varying *K* profiles, similar to the enhancements made to axisymmetric 2D hybrid models ([Bode and Smith 1975](#ref-bode-1975)).
 
 [Langousis et al. (2009)](#ref-langousis-2009) examined their model using simulation results from a linear parametric model, a 2D-slab model, and MM5. Unfortunately, the KW01 model was not used as a benchmark, and the results of some comparison models are not always reliable. If this formulation can be rigorously corrected and calibrated against established models and measurements, it has the potential to deliver meaningful benefits for PBWE applications.
 
@@ -710,7 +710,7 @@ The 3D nonlinear TCBL models represent the most rigorous category within the mod
 
 ### The KW01 model
 
-This 3D nonlinear TCBL model is simplified from full-physics TCBL models but remains closer to them than any of the diagnostic models introduced above. Sec. [2](#full-physics-tcbl-models) reviews applications of modern full-physics numerical weather prediction (NWP) systems for resolving TCBL, which represents only the most recent stage of development. In contrast, asymmetric TC models have been under continuous evolution since the 1970s. These models differ from axisymmetric formulations by solving the 3D nonlinear primitive equations \[Eq. but in *p* or $\sigma$ coordinate\] using the finite difference method.
+This 3D nonlinear TCBL model is simplified from full-physics TCBL models but remains closer to them than any of the diagnostic models introduced above. Sec. [2](#full-physics-tcbl-models) reviews applications of modern full-physics numerical weather prediction (NWP) systems for resolving TCBL, which represents only the most recent stage of development. In contrast, asymmetric TC models have been under continuous evolution since the 1970s. These models differ from axisymmetric formulations by solving the 3D nonlinear primitive equations \[Eq. (@eq-2) but in *p* or $\sigma$ coordinate\] using the finite difference method.
 
 A pioneering contribution ([Anthes 1972](#ref-anthes-1972); [Anthes 1981](#ref-anthes-1981)) developed an early asymmetric model that already incorporated several foundational elements found in modern TC models, including vertical and horizontal diffusion and air-sea exchange. However, this early model discretized the vertical domain with only three levels, leaving only one level within TCBL. Subsequent enhancements included boundary-layer parameterization, nested grids, idealized gradient wind profiles, data assimilation, verification, and bias correction ([Elsberry 1979](#ref-elsberry-1979); [Anthes 1982](#ref-anthes-1982)). With the steady increase in computational capability, later models resolved TCBL with multiple vertical levels \[e.g., ([Kurihara and Tuleya 1974](#ref-kurihara-1974))\]. These models were prognostic and usually full-physics, and they ultimately inspired and evolved into some of the NWP tools summarized in Sec. [2](#full-physics-tcbl-models).
 
@@ -834,7 +834,7 @@ Various data-driven approaches have been proposed to represent the asymmetry in 
 
 ## Modifying radial profiles
 
-As described in Sec. [3.2.1](#gradient-pressurewind-profile-models), Xie et al. ([2006](#ref-xie-2006)) introduced an azimuthally varying RMW into the Holland gradient radial profile by expressing RMW as a polynomial of azimuthal coordinate $\varphi$, as shown in Eq. . The polynomial coefficients are calibrated against gale radii (R64) at four quadrants. [Hu et al. (2012)](#ref-hu-2012) extended this method by adding translation-induced asymmetry to both wind speed and direction and by combining wind fields calibrated to three gale radii (R43, R50, and R64). In both studies, the resulting data-driven wind fields match well with H\*Wind analyses and surface station observations. However, the model parameters are estimated independently for each TC snapshot, making them difficult to generalize (express explicitly in terms of standard TC parameters) for use in PBWE.
+As described in Sec. [3.2.1](#gradient-pressurewind-profile-models), Xie et al. ([2006](#ref-xie-2006)) introduced an azimuthally varying RMW into the Holland gradient radial profile by expressing RMW as a polynomial of azimuthal coordinate $\varphi$, as shown in Eq. (@eq-17). The polynomial coefficients are calibrated against gale radii (R64) at four quadrants. [Hu et al. (2012)](#ref-hu-2012) extended this method by adding translation-induced asymmetry to both wind speed and direction and by combining wind fields calibrated to three gale radii (R43, R50, and R64). In both studies, the resulting data-driven wind fields match well with H\*Wind analyses and surface station observations. However, the model parameters are estimated independently for each TC snapshot, making them difficult to generalize (express explicitly in terms of standard TC parameters) for use in PBWE.
 
 To model the asymmetry in mid-latitude TCs, [MacAfee and Pearson (2006)](#ref-mac-2006) compared five gradient wind profiles (Rankine, Holland, Willoughby, and others) that were integrated with azimuthally varying parameters. Using 605 H\*Wind snapshots, parameters at 16 azimuthal sectors were estimated and then expressed through statistical models based on TC parameters, including VMax, latitude, heading, and translation velocity. A multilinear regression correction was introduced to reduce residual errors, again in terms of TC parameters. After further adjustments that account for translation-induced asymmetry and mid-latitude effects, the predicted surface wind fields show satisfactory agreement with surface station measurements.
 
@@ -845,7 +845,7 @@ Knaff et al. ([2007](#ref-knaff-2007); [2018](#ref-knaff-2018)) presented a CLIP
 
 $$
 v_s(r, \theta) = (v_{\max} - a) \left( \frac{RMW}{r} \right)^x + a \cos(\varphi - \varphi_o)
-$$ {#eq-18}
+$$ {#eq-25}
 
 
 where the exponent *x*=1 if $r < RMW$; $a$ is the magnitude of the wavenumber-1 asymmetry. The four coefficients $a$, $RMW$, $\varphi_o$, and *x* are expressed as the regression model in terms of the TC parameters (latitude, translation speed, and $v_{\max}$) and calibrated from thousands of gale-radius records. Although initially designed for operational gale-radius prediction, this model\'s potential for estimating TCBL surface winds is of interest to PBWE.
@@ -861,7 +861,7 @@ Loridan et al. ([2017](#ref-loridan-2017)) presented a purely data-driven model 
 
 $$
 \text{TARGET}(t) = \text{MFLD} + \sum_{i=1}^{n_s} W_i(t) \text{PC}_i
-$$ {#eq-19}
+$$ {#eq-26}
 
 
 where PC denotes PCA (POD) modes and three POD modes are included therein; the MFLD is the average or mean target wind field; the POD modal coordinate $W_i(t)$ is expressed as a function of several predictors (TC parameters) identified by a random forest. The model is calibrated using 1580 gridded hourly WRF-simulated wind fields from 30 western North Pacific TCs. A notable limitation is the omission of VWS as a predictor, despite its well-established role in shaping surface-wind asymmetry. Consequently, further validation is needed before this model can be recommended for broader application.

@@ -38,54 +38,6 @@ website:
       © 2025 Liang Hu & Ahsan Kareem | 
       [DOI: 10.1016/j.awe.2025.100097](https://doi.org/10.1016/j.awe.2025.100097)
   
-  sidebar:
-    style: floating
-    contents:
-      - section: "1. Introduction"
-        contents:
-          - text: "PBWE"
-            href: "#performance-based-wind-engineering-pbwe"
-          - text: "Multi-scale Simulation"
-            href: "#multi-scale-simulation-of-tropical-cyclones"
-          - text: "Definition of TCBL"
-            href: "#definition-of-tcbl"
-          - text: "TCBL Characteristics"
-            href: "#recent-research-on-tcbl-characteristics"
-          - text: "TCBL Modeling Intro"
-            href: "#introduction-to-tcbl-modeling"
-      - section: "2. Full-physics Models"
-        contents:
-          - text: "WRF"
-            href: "#weather-research-and-forecast-model-wrf"
-          - text: "Other Models"
-            href: "#other-models"
-      - section: "3. Diagnostic Models"
-        contents:
-          - text: "Axisymmetric"
-            href: "#axisymmetric-models"
-          - text: "Parametric (Empirical)"
-            href: "#parametric-models-i-empirical-methods"
-          - text: "Parametric (Analytical)"
-            href: "#parametric-models-ii-analytical-solution-based-linear-models"
-          - text: "2D-slab"
-            href: "#simulation-based-models-i-2d-slab-model"
-          - text: "2D Hybrid"
-            href: "#simulation-based-models-ii-2d-hybrid-models"
-          - text: "3D Nonlinear"
-            href: "#simulation-based-models-iii-3d-nonlinear-models"
-      - section: "4. Data-driven"
-        contents:
-          - text: "Profile Modification"
-            href: "#modifying-radial-profiles"
-          - text: "Asymmetries"
-            href: "#introducing-additional-asymmetries"
-          - text: "POD"
-            href: "#proper-orthogonal-decomposition-pod-based-models"
-      - section: "5. NatHaz Investigation"
-        href: "#a-systematic-investigation-carried-out-at-nathaz"
-      - section: "6. Conclusions"
-        href: "#concluding-remarks"
-
 format:
   html:
     theme:
@@ -100,7 +52,7 @@ format:
     grid:
       body-width: 850px
       sidebar-width: 350px
-      margin-width: 0px
+      margin-width: 300px
     code-fold: true
     # bibliography: references.bib
     link-external-newwindow: true

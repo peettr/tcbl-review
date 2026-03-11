@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 #quarto-document-content {
-  max-width: 1200px;
   margin: 0 auto;
   font-family: 'Source Serif 4', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.06rem;
@@ -327,6 +326,12 @@ hr {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #aaa;
+}
+
+/* ===== Layout: prevent TOC/sidebar overlap ===== */
+/* Let Quarto grid handle layout; add padding for breathing room */
+.page-columns .column-body {
+  margin-right: 2em;
 }
 
 /* ===== Responsive ===== */

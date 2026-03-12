@@ -340,10 +340,10 @@ hr {
       [page-start page-start-inset] 35px
       [body-start-outset] 35px
       [body-start] 1.5em
-      [body-content-start] minmax(500px, calc(850px - 3em))
-      [body-content-end] 1.5em
+      [body-content-start] minmax(400px, calc(700px - 3em))
+      [body-content-end] 3em
       [body-end] 50px
-      [body-end-outset] minmax(150px, 250px)
+      [body-end-outset] minmax(200px, 280px)
       [page-end-inset] 35px
       [page-end] 5fr
       [screen-end-inset] 1.5em

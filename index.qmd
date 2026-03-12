@@ -334,7 +334,7 @@ $$ {#eq-13}
 
 where $\xi$ and $\lambda$ are radially-varying parameters in terms of gradient wind speed $v_{gr}$; $C_d$ is the surface drag coefficient; $V_S$ is the surface wind speed; $D_1$ and $D_2$ are unknown coefficients. As the unknowns are defined in terms of surface wind speed (and thus $v$), an iterative solution procedure is required. Note that this model is axisymmetric; it only represents the wavenumber-0 (axisymmetric) part of the 3D linear asymmetric TCBL model by ([Kepert 2001](#ref-kepert-2001)), as shown in ([Vogl and Smith 2009](#ref-vogl-2009); [Snaiki and Wu 2017a](#ref-snaiki-2017a)). However, it may be utilized for asymmetric TCBL simulation by assuming an asymmetric gradient pressure/wind profile ([Meng et al. 1995](#ref-meng-1995)); also see Sec. [3.3](#parametric-models-ii-analytical-solution-based-linear-models) for a brief description. In that situation, the axisymmetric model could be recast as a column model varying azimuthally. It is worth noting that this linear analytical solution followed a subset of the nonlinear analytical solution introduced in Sec. [3.1.3](#axisymmetric-nonlinear-analytical-models) (its first-order solution); moreover, the same solution as Eq. (@eq-13) has been reinvented by ([Vogl 2009](#ref-vogl-2009); [Vogl and Smith 2009](#ref-vogl-2009)) as the linear weak-friction approximation.
 
-## Parametric models (I): Empirical methods
+## Parametric models (I): Methods
 
 In Sec. [3](#diagnostic-models), the models after Sec. [3.1](#axisymmetric-models) are asymmetric. Pioneering efforts (as early as the 1970s) to simulate TCBL for estimating TC-induced extreme winds use empirical methods, including a gradient wind at the top of TCBL and an empirical parametric conversion of TCBL wind speed to surface winds. No solution process is needed. A typical example is provided in ([Batts et al. 1980](#ref-batts-1980)):
 
@@ -470,7 +470,7 @@ This model's performance and physical mechanism in TCBL have been investigated i
 
 Furthermore, the assumption (4) has been partially relaxed by reintroducing vertical advection while prescribing a constant, height-independent vertical velocity profile ([Kepert 2002](#ref-kepert-2002); [Kepert 2006b](#ref-kepert-2006b)). This enhancement was recently reinvented ([Snaiki and Wu 2020](#ref-snaiki-2020); [Yang et al. 2021](#ref-yang-2021)).
 
-### Column linear model ([Meng et al. 1995](#ref-meng-1995))
+### Axisymmetric model accounting for asymmetry
 
 As noted in Sec. [3.1.4](#axisymmetric-linear-analytical-models), the axisymmetric model can be reformulated as a column model that varies azimuthally by introducing the asymmetric gradient balance shown in Eq. (@eq-19). In this way, the axisymmetric linear model can represent asymmetric TCBL features. This is precisely the motivation behind developing such a height-resolving column model ([Meng et al. 1995](#ref-meng-1995)). The key reason is that the solutions at different azimuths or radii are independent of one another, making the formulation effectively a set of column models indexed by azimuth and radius.
 
@@ -488,7 +488,7 @@ Although these extensions have limitations, they still offer approximate linear 
 
 In this section, the widely-used 2D-slab model is outlined in Sec. [3.4.1](#the-model). Research that employs this model to investigate TC physics is summarized in Sec. [3.4.2](#exploring-tc-physics). To enable faster computation, surrogates have been developed, as reported in Sec. [3.4.3](#surrogates). Finally, the 2D-slab TCBL model has been extensively applied to evaluate TC-induced design wind speeds at specified locations, particularly when used in conjunction with TC track models (Sec. [3.2.1.3](#tc-track-model)). These applications are reviewed in Sec. [3.4.4](#applications).
 
-### The model
+### 2D-slab model
 
 The classical 2D-slab TC model is formulated on height-averaged primitive equations. Originating from [Chow (1971)](#ref-chow-1971), the governing equations commonly used in practice are expressed on a moving Cartesian coordinate system ([Vickery et al. 2000a](#ref-vickery-2000a); [Li and Hong 2015](#ref-li-2015)):
 

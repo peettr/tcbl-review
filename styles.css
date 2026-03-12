@@ -329,6 +329,10 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
+#quarto-document-content {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {

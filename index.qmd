@@ -124,7 +124,7 @@ Diagnostic models can be further classified into simulation-based and parametric
 |                     | Hybrid                |                       | Smith (1968)     | Langousis et al (2009)                   |
 |                     +-----------------------+-----------------------+------------------+------------------------------------------+
 |                     | Simulation-based      | 2D-slab               | Smith (2003)     | Chow (1971);                             |
-|                     |                       |                       |                  | Vickery et al. (2000a,b)                 |
+|                     |                       |                       |                  | Vickery et al. (2000)                 |
 |                     |                       +-----------------------+------------------+------------------------------------------+
 |                     |                       | 3D nonlinear          | Eliassen and Lystad (1977)  | **[Kepert and Wang (2001)]{.underline}** |
 +---------------------+-----------------------+-----------------------+------------------+------------------------------------------+

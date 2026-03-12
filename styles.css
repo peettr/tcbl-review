@@ -155,12 +155,13 @@ td {
   line-height: 1.5;
 }
 
-td > p:first-child {
-  margin-top: 0;
+td > p {
+  margin-top: 0 !important;
+  margin-bottom: 0.3em !important;
 }
 
 td > p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 tbody tr:nth-child(even) {

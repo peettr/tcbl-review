@@ -455,7 +455,7 @@ The first is based directly on the governing equations together with linearized 
 
 
 $$
-\frac{v_{gr}}{r} \frac{\partial u}{\partial \varphi} - v \left( f + \frac{2 v_{gr}}{r} \right) = K \frac{\partial^2 u}{\partial z^2} \qquad \frac{V}{r} \frac{\partial v}{\partial \varphi} + u \left( f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\partial r} \right) = K \frac{\partial^2 v}{\partial z^2}
+\frac{v_{gr}}{r} \frac{\partial u}{\partial \varphi} - v \left( f + \frac{2 v_{gr}}{r} \right) = K \frac{\partial^2 u}{\partial z^2} \qquad \frac{v_{gr}}{r} \frac{\partial v}{\partial \varphi} + u \left( f + \frac{v_{gr}}{r} + \frac{\partial v_{gr}}{\partial r} \right) = K \frac{\partial^2 v}{\partial z^2}
 $$ {#eq-21}
 
 

@@ -57,6 +57,7 @@ format:
     # bibliography: references.bib
     link-external-newwindow: true
     include-after-body: 
+      - _includes/layout-fix.html
       - _includes/hypothesis.html
       - _includes/chatbot.html
       - _includes/inline-edit.html

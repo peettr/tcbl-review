@@ -329,27 +329,6 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
-/* Override Quarto grid: shrink body content, widen margin area */
-@media (min-width: 992px) {
-  body .page-columns {
-    display: grid !important;
-    gap: 0 !important;
-    grid-template-columns:
-      [screen-start] 1.5em
-      [screen-start-inset] 5fr
-      [page-start page-start-inset] 35px
-      [body-start-outset] 35px
-      [body-start] 1.5em
-      [body-content-start] minmax(400px, calc(600px - 3em))
-      [body-content-end] 5em
-      [body-end] 80px
-      [body-end-outset] minmax(250px, 350px)
-      [page-end-inset] 35px
-      [page-end] 5fr
-      [screen-end-inset] 1.5em
-      [screen-end] !important;
-  }
-}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {

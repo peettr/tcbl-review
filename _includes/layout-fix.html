@@ -1,0 +1,29 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var style = document.createElement('style');
+  style.textContent = `
+    @media (min-width: 992px) {
+      body .page-columns,
+      body.floating .page-columns,
+      body:not(.floating):not(.docked) .page-columns,
+      #quarto-content.page-columns {
+        grid-template-columns:
+          [screen-start] 1.5em
+          [screen-start-inset] 2fr
+          [page-start page-start-inset] 35px
+          [body-start-outset] 35px
+          [body-start] 1.5em
+          [body-content-start] minmax(400px, calc(650px - 3em))
+          [body-content-end] 4em
+          [body-end] 60px
+          [body-end-outset] minmax(200px, 300px)
+          [page-end-inset] 35px
+          [page-end] 2fr
+          [screen-end-inset] 1.5em
+          [screen-end] !important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+});
+</script>

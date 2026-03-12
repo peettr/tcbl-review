@@ -1,6 +1,6 @@
 ---
-title: "An Overview of Modeling Tropical Cyclone Boundary Layer (TCBL)"
-subtitle: "From Meteorological Perspectives to Wind Engineering Applications"
+title: "An overview of tropical cyclone boundary layer (TCBL) modeling"
+subtitle: "From meteorological perspectives to wind engineering applications"
 author:
   - name: Liang Hu
     affiliation: NatHaz Modeling Laboratory, University of Notre Dame

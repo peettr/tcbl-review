@@ -27,7 +27,7 @@ citation:
 
 # Introduction
 
-Tropical cyclones (TCs, hurricanes/typhoons/cyclones) can generate extreme near-surface wind speeds that pose severe hazards to the built environment. These extreme winds threaten civil engineering structures (such as low-rise and high-rise buildings, long-span bridges, wind turbines, and transmission tower--line systems). Combined with TC-induced secondary hazards (e.g., storm surge, flooding, and widespread power outages), TCs often result in devastating socioeconomic impacts. For example, Category 5 Hurricane Katrina (2005), with a maximum sustained wind speed of approximately 280 km/h, struck the United States, causing about \$125 billion in economic loss and 1,392 fatalities ([Wikipedia 2025](#ref-wikipedia-2025)). More recently, the 2024 Atlantic hurricane season produced \$232.27 billion in economic losses, making it the second-costliest season on record ([Wikipedia 2025](#ref-wikipedia-2025)).
+Tropical cyclones (TCs, hurricanes/typhoons/cyclones) can generate extreme near-surface wind speeds that pose severe hazards to the built environment. These extreme winds threaten civil engineering structures (such as low-rise and high-rise buildings, long-span bridges, wind turbines, and transmission tower-line systems). Combined with TC-induced secondary hazards (e.g., storm surge, flooding, and widespread power outages), TCs often result in devastating socioeconomic impacts. For example, Category 5 Hurricane Katrina (2005), with a maximum sustained wind speed of approximately 280 km/h, struck the United States, causing about \$125 billion in economic loss and 1392 fatalities ([Wikipedia 2025](#ref-wikipedia-2025)). More recently, the 2024 Atlantic hurricane season produced \$232.27 billion in economic losses, making it the second-costliest season on record ([Wikipedia 2025](#ref-wikipedia-2025)).
 
 In regions prone to tropical cyclones, mitigating these hazards requires accurate prediction of TC-induced structural damage, a task commonly achieved through simulation-based performance-based wind engineering (PBWE). A core component of PBWE is the hazard analysis module, which demands reliable characterization of the tropical cyclone boundary layer (TCBL), where civil structures reside and experience the most severe wind conditions. Consequently, robust modeling of the TCBL is essential for providing input wind fields to PBWE and for improving risk-informed decision-making for infrastructure in TC-prone regions. A detailed overview of TCBL modeling is thus offered in this study.
 
@@ -35,7 +35,7 @@ In this regard, this section begins with a summary of the PBWE in Sec. [1.1](#pe
 
 ## Performance-based wind engineering (PBWE)
 
-Suppose the TC-induced damage to a structure can be predicted with sufficient accuracy, the structure can then be designed appropriately or retrofitted to withstand TC hazards throughout its life cycle or to recover with adequate resilience. Because this damage prediction is inherently uncertain, it must be assessed probabilistically, and the resulting fragility, vulnerability, risk, and loss estimates can subsequently inform wind-resistant design. To support such assessments, performance-based wind engineering (PBWE) has been developed as a rigorous, module-based simulation framework ([Ciampoli et al. 2011](#ref-ciampoli-2011); [Barbato et al. 2013](#ref-barbato-2013); [Spence and Kareem 2014](#ref-spence-2014); [Vanmarcke et al. 2014](#ref-vanmarcke-2014); [Cai et al. 2019](#ref-cai-2019)) and facilitates optimization of wind-resistant design of structures ([Huang et al. 2012](#ref-huang-2012); [Bobby et al. 2014](#ref-bobby-2014); [Li and Hu 2014](#ref-li-2014); [Deng et al. 2019](#ref-deng-2019); [Subgranon and Spence 2021](#ref-subgranon-2021); [Spence and Arunachalam 2022](#ref-spence-2022)). Although various other methods have been proposed for PBWE, including empirical and heuristic approaches ([Walker 2011](#ref-walker-2011); [Pita et al. 2014](#ref-pita-2014)), the simulation-based PBWE offers the capability to capture structural performance with high fidelity and provides the flexibility to incorporate cutting-edge developments in individual modules. [Figure 1](#fig-pbwe) shows a typical schematic of the PBWE framework for low-rise buildings.
+If the TC-induced damage to a structure can be predicted with sufficient accuracy, the structure can then be designed appropriately or retrofitted to withstand TC hazards throughout its life cycle or to recover with adequate resilience. Because this damage prediction is inherently uncertain, it must be assessed probabilistically, and the resulting fragility, vulnerability, risk, and loss estimates can subsequently inform wind-resistant design. To support such assessments, performance-based wind engineering (PBWE) has been developed as a rigorous, module-based simulation framework ([Ciampoli et al. 2011](#ref-ciampoli-2011); [Barbato et al. 2013](#ref-barbato-2013); [Spence and Kareem 2014](#ref-spence-2014); [Vanmarcke et al. 2014](#ref-vanmarcke-2014); [Cai et al. 2019](#ref-cai-2019)) and facilitates optimization of wind-resistant design of structures ([Huang et al. 2012](#ref-huang-2012); [Bobby et al. 2014](#ref-bobby-2014); [Li and Hu 2014](#ref-li-2014); [Deng et al. 2019](#ref-deng-2019); [Subgranon and Spence 2021](#ref-subgranon-2021); [Spence and Arunachalam 2022](#ref-spence-2022)). Although various other methods have been proposed for PBWE, including empirical and heuristic approaches ([Walker 2011](#ref-walker-2011); [Pita et al. 2014](#ref-pita-2014)), the simulation-based PBWE offers the capability to capture structural performance with high fidelity and provides the flexibility to incorporate cutting-edge developments in individual modules. [Figure 1](#fig-pbwe) shows a typical schematic of the PBWE framework for low-rise buildings.
 
 ::: {#fig-pbwe}
 ![](images/image1.png){width=100%}
@@ -102,7 +102,7 @@ Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al
 
 ## Introduction to TCBL modeling
 
-The evolution of a TC is a complex, dynamic, and thermodynamic process. Fundamentally, it is the interaction between a low-pressure system (a vortex) and the environment (the background atmosphere and the surface). In this context, TCBL modeling aims to solve the primitive equations governing the momentum, heat, and moisture fields in the boundary layer, subject to appropriate boundary conditions. This modeling remains an active meteorological topic and can be approached using traditional physics-based methods or more recent data-driven approaches. Further, physics-based models can be roughly categorized into full-physics (usually the TCBL in numerical weather prediction models) and diagnostic models (simplified by omitting some physical factors). The present study focuses on physics-based methods, while selected data-driven work is summarized in Sec. [4](#data-driven-methods).
+The evolution of a TC is a complex, dynamic, and thermodynamic process. Fundamentally, it is the interaction between a low-pressure system (a vortex) and the environment (the background atmosphere and the surface). In this context, TCBL modeling aims to solve the primitive equations governing the momentum, heat, and moisture fields in the boundary layer, subject to appropriate boundary conditions. This modeling remains an active meteorological topic and can be approached using traditional physics-based methods or more recent data-driven approaches. Furthermore, physics-based models can be roughly categorized into full-physics (usually the TCBL in numerical weather prediction models) and diagnostic models (simplified by omitting some physical factors). The present study focuses on physics-based methods, while selected data-driven work is summarized in Sec. [4](#data-driven-methods).
 
 Full-physics TCBL models refer to the portion of TCBL in the full-physics TC model in meteorology. A full-physics TC model (note that it includes the TCBL but is NOT necessarily equivalent to TCBL models) typically includes the full physics of TC evolution processes, employs the complete set of primitive equations, spans the full vertical depth of the atmosphere, and resolves both the vortex and its environment. Modern full-physics TC models, usually implemented in numerical weather prediction (NWP) systems, can capture TCBL characteristics with high fidelity. Popular tools for full-physics TC modeling include WRF (finite-difference scheme), GFS (finite-volume method), and CM1 (LES), depending on the algorithms used to solve the primitive equations. In such TC models, the TCBL occupies only a small subset of vertical grid levels (even a single level in some early TC models), despite its critical dynamical role. Within the multi-scale TC simulation framework described in Sec. [1.2](#multi-scale-simulation-of-tropical-cyclones), full-physics TCBL modeling usually spans the macro- and mesoscales. Accordingly, full-physics TCBL models (i.e., the TCBL portion in these full-physics TC models) are prognostic because they simulate TC\'s evolution with time and yield a TC\'s instantaneous status.
 
@@ -668,7 +668,7 @@ Given these challenges, a dedicated effort is needed to bridge meteorology and P
 
 Starting from TC characteristic parameters, physics-based TCBL models typically first construct gradient wind or gradient pressure profiles, which then serve as the forcing to compute the TCBL wind fields. Data-driven methods, in contrast, bypass these intermediate steps. As a result, this category of methods generally produces TC-induced asymmetric surface wind fields directly as functions of the TC parameters.
 
-Various data-driven approaches have been proposed to represent the asymmetry in TCBL surface winds. Given the extensive research on axisymmetric radial gradient wind profiles, a natural extension is to allow some or all parameters in these profiles to vary with azimuth \[e.g., ([Xie et al. 2006](#ref-xie-2006); [Hu et al. 2012](#ref-hu-2012))\]. These azimuthally varying parameters may be further modeled in terms of TC parameters predicted by TC track models \[e.g., ([MacAfee and Pearson 2006](#ref-mac-2006))\]. When the embedded asymmetry in radial profiles is deemed insufficient, additional asymmetry formulations can be incorporated. These may take the form of mathematically motivated basis functions ([Knaff et al. 2007](#ref-knaff-2007); [Knaff et al. 2018](#ref-knaff-2018); [Yang et al. 2022](#ref-yang-2022)) or be derived from observed mechanisms of asymmetry in TCs (([Chang et al. 2020](#ref-chang-2020)).. Finally, a data-driven model need not rely on existing radial profiles at all. For example, proposed using POD modes of surface wind fields as a basis for constructing asymmetric wind representations. These three types of data-driven methods are reviewed in the following three subsections.
+Various data-driven approaches have been proposed to represent the asymmetry in TCBL surface winds. Given the extensive research on axisymmetric radial gradient wind profiles, a natural extension is to allow some or all parameters in these profiles to vary with azimuth \[e.g., ([Xie et al. 2006](#ref-xie-2006); [Hu et al. 2012](#ref-hu-2012))\]. These azimuthally varying parameters may be further modeled in terms of TC parameters predicted by TC track models \[e.g., ([MacAfee and Pearson 2006](#ref-mac-2006))\]. When the embedded asymmetry in radial profiles is deemed insufficient, additional asymmetry formulations can be incorporated. These may take the form of mathematically motivated basis functions ([Knaff et al. 2007](#ref-knaff-2007); [Knaff et al. 2018](#ref-knaff-2018); [Yang et al. 2022](#ref-yang-2022)) or be derived from observed mechanisms of asymmetry in TCs ([Chang et al. 2020](#ref-chang-2020)). Finally, a data-driven model need not rely on existing radial profiles at all. For example, proposed using POD modes of surface wind fields as a basis for constructing asymmetric wind representations. These three types of data-driven methods are reviewed in the following three subsections.
 
 ## Modifying radial profiles
 
@@ -746,7 +746,7 @@ This systematic investigation has extensively explored the capability and sensit
 
 This paper offers a comprehensive review of existing TCBL (tropical cyclone boundary layer) wind-field models for quantifying wind loads with applications to PBWE (performance-based wind engineering). The study\'s motivation is first clarified in the context of PBWE, along with the fundamentals of TCBL modeling. Within the multi-scale simulation framework for TCs (tropical cyclones), the full hierarchy of TCBL models (e.g., Table 1) has been categorized into two major groups based on their accuracy and physical rigor. The first group contains full physics models, which correspond to the TCBL components embedded in modern NWP (numerical weather prediction) models such as WRF and CM1. These models resolve all TC-relevant physical processes and, in principle, can therefore usually represent the TCBL most accurately. However, their computational demands remain excessive for PBWE at this time (2025). The second group contains diagnostic models, which solve TCBL wind fields forced by gradient profiles derived from track models. These solutions are quasi-steady and typically reported at several-hour intervals. Their lower computational demands make them better suited for PBWE. The review, therefore, covers both groups, with emphasis on the diagnostic models.
 
-The diagnostic models are further classified according to their characteristic features. They can be parametric (analytical) or simulation-based depending on whether a discretized numerical solution (usually by the finite difference method) is required; empirical or equation-solving depending on whether an explicit equation-solving process is solved; axisymmetric (column) or asymmetric depending on whether azimuthal variation is included in the solving process; 2D or 3D depending on whether vertical structure is resolved; linear or nonlinear depending on whether the nonlinear effects (particularly in advection) are linearized.. This categorization is not rigid, and hybrid models often span multiple categories. A particular model may fall into several categories, even though its name may not explicitly reveal this.
+The diagnostic models are further classified according to their characteristic features. They can be parametric (analytical) or simulation-based depending on whether a discretized numerical solution (usually by the finite difference method) is required; empirical or equation-solving depending on whether an explicit equation-solving process is solved; axisymmetric or asymmetric depending on whether azimuthal variation is included in the solving process; 2D or 3D depending on whether vertical structure is resolved; linear or nonlinear depending on whether the nonlinear effects (particularly in advection) are linearized. This categorization is not rigid, and hybrid models often span multiple categories. A particular model may fall into several categories, even though its name may not explicitly reveal this.
 
 Each diagnostic model category has been reviewed in detail with respect to numerical formulation, historical development, underlying physics, validation, and applications. The relationships among models are discussed by comparative studies and by tracing the simplifications or approximations that connect models of different accuracy levels. The KW01 3D nonlinear TCBL model is regarded as the most rigorous diagnostic model and therefore serves as a benchmark for lower-level models. As such, it receives particular attention and is identified as a promising tool for advancing PBWE.
 
@@ -785,85 +785,85 @@ The authors wish to acknowledge the financial support from the U.S. National Ins
 
 <div id="ref-abarca-2015" class="csl-entry">
 
-Abarca, S. F., Montgomery, M. T., and McWilliams, J. C. (2015). \"The azimuthally averaged boundary layer structure of a numerically simulated major hurricane.\" *Journal of Advances in Modeling Earth Systems*, 7(3), 1207-1219.
+Abarca, S. F., Montgomery, M. T., and McWilliams, J. C. (2015). \"The azimuthally averaged boundary layer structure of a numerically simulated major hurricane.\" *Journal of Advances in Modeling Earth Systems*, 7(3), 1207-1219. <a href="https://doi.org/10.1002/2015ms000457">https://doi.org/10.1002/2015ms000457</a>
 
 </div>
 
 <div id="ref-ahern-2019" class="csl-entry">
 
-Ahern, K., Bourassa, M. A., Hart, R. E., Zhang, J. A., and Rogers, R. F. (2019). \"Observed kinematic and thermodynamic structure in the hurricane boundary layer during intensity change.\" *Monthly Weather Review*, 147(8), 2765-2785.
+Ahern, K., Bourassa, M. A., Hart, R. E., Zhang, J. A., and Rogers, R. F. (2019). \"Observed kinematic and thermodynamic structure in the hurricane boundary layer during intensity change.\" *Monthly Weather Review*, 147(8), 2765-2785. <a href="https://doi.org/10.1175/mwr-d-18-0380.1">https://doi.org/10.1175/mwr-d-18-0380.1</a>
 
 </div>
 
 <div id="ref-ahern-2019" class="csl-entry">
 
-Ahern, K. K. (2019). \"Hurricane boundary layer structure during intensity change: An observational and numerical analysis.\" Ph. D. thesis, Florida State University, Tallahassee, FL, USA.
+Ahern, K. K. (2019). \"Hurricane boundary layer structure during intensity change: An observational and numerical analysis.\" Ph. D. thesis, Florida State University, Tallahassee, FL, USA. <a href="https://doi.org/10.1175/mwr-d-18-0380.1">https://doi.org/10.1175/mwr-d-18-0380.1</a>
 
 </div>
 
 <div id="ref-alimohammadi-2018" class="csl-entry">
 
-Alimohammadi, M., and Malakooti, H. (2018). \"Sensitivity of simulated cyclone Gonu intensity and track to variety of parameterizations: Advanced hurricane WRF model application.\" *Journal of Earth System Science*, 127(3), 41.
+Alimohammadi, M., and Malakooti, H. (2018). \"Sensitivity of simulated cyclone Gonu intensity and track to variety of parameterizations: Advanced hurricane WRF model application.\" *Journal of Earth System Science*, 127(3), 41. <a href="https://doi.org/10.1007/s12040-018-0941-4">https://doi.org/10.1007/s12040-018-0941-4</a>
 
 </div>
 
 <div id="ref-anthes-1972" class="csl-entry">
 
-Anthes, R. A. (1972). \"Development of asymmetries in a three-dimensional numerical model of the tropical cyclone.\" *Monthly Weather Review*, 100(6), 461-476.
+Anthes, R. A. (1972). \"Development of asymmetries in a three-dimensional numerical model of the tropical cyclone.\" *Monthly Weather Review*, 100(6), 461-476. <a href="https://doi.org/10.1175/1520-0493(1972)1000461:doaiat>2.3.co;2">https://doi.org/10.1175/1520-0493(1972)1000461:doaiat>2.3.co;2</a>
 
 </div>
 
 <div id="ref-anthes-1981" class="csl-entry">
 
-Anthes, R. A. (1981). \"Tropical cyclones: Structure, computer simulation models, and operational prediction.\" *Contemporary Physics*, 22(6), 643-680.
+Anthes, R. A. (1981). \"Tropical cyclones: Structure, computer simulation models, and operational prediction.\" *Contemporary Physics*, 22(6), 643-680. <a href="https://doi.org/10.1080/00107518108231560">https://doi.org/10.1080/00107518108231560</a>
 
 </div>
 
 <div id="ref-anthes-1982" class="csl-entry">
 
-Anthes, R. A. (1982). *Tropical cyclones: Their evolution, structure and effects*, American Meteorological Society, Boston, MA.
+Anthes, R. A. (1982). *Tropical cyclones: Their evolution, structure and effects*, American Meteorological Society, Boston, MA. <a href="https://doi.org/10.1007/978-1-935704-28-7">https://doi.org/10.1007/978-1-935704-28-7</a>
 
 </div>
 
 <div id="ref-arthur-2021" class="csl-entry">
 
-Arthur, W. C. (2021). \"A statistical--parametric model of tropical cyclones for hazard assessment.\" *Natural Hazards and Earth System Sciences*, 21(3), 893-916.
+Arthur, W. C. (2021). \"A statistical--parametric model of tropical cyclones for hazard assessment.\" *Natural Hazards and Earth System Sciences*, 21(3), 893-916. <a href="https://doi.org/10.5194/nhess-21-893-2021">https://doi.org/10.5194/nhess-21-893-2021</a>
 
 </div>
 
 <div id="ref-barbato-2013" class="csl-entry">
 
-Barbato, M., Petrini, F., Unnikrishnan, V. U., and Ciampoli, M. (2013). \"Performance-Based Hurricane Engineering (PBHE) framework.\" *Structural Safety*, 45, 24-35.
+Barbato, M., Petrini, F., Unnikrishnan, V. U., and Ciampoli, M. (2013). \"Performance-Based Hurricane Engineering (PBHE) framework.\" *Structural Safety*, 45, 24-35. <a href="https://doi.org/10.1016/j.strusafe.2013.07.002">https://doi.org/10.1016/j.strusafe.2013.07.002</a>
 
 </div>
 
 <div id="ref-batts-1980" class="csl-entry">
 
-Batts, M. E., Simiu, E., and Russell, L. R. (1980). \"Hurricane wind speeds in the United States.\" *Journal of Structural Engineering, ASCE*, 106(10), 2001-2016.
+Batts, M. E., Simiu, E., and Russell, L. R. (1980). \"Hurricane wind speeds in the United States.\" *Journal of Structural Engineering, ASCE*, 106(10), 2001-2016. <a href="https://doi.org/10.1061/jsdeag.0005541">https://doi.org/10.1061/jsdeag.0005541</a>
 
 </div>
 
 <div id="ref-bell-2008" class="csl-entry">
 
-Bell, M. M., and Montgomery, M. T. (2008). \"Observed structure, evolution, and potential intensity of Category 5 Hurricane Isabel (2003) from 12 to 14 September.\" *Monthly Weather Review*, 136(6), 2023-2046.
+Bell, M. M., and Montgomery, M. T. (2008). \"Observed structure, evolution, and potential intensity of Category 5 Hurricane Isabel (2003) from 12 to 14 September.\" *Monthly Weather Review*, 136(6), 2023-2046. <a href="https://doi.org/10.1175/2007mwr1858.1">https://doi.org/10.1175/2007mwr1858.1</a>
 
 </div>
 
 <div id="ref-blanton-2020" class="csl-entry">
 
-Blanton, B., Dresback, K., Colle, B., Kolar, R., Vergara, H., Hong, Y., Leonardo, N., Davidson, R., Nozick, L., and Wachtendorf, T. (2020). \"An integrated scenario ensemble-based framework for hurricane evacuation modeling: Part 2---Hazard modeling.\" *Risk Analysis*, 40(1), 117-133.
+Blanton, B., Dresback, K., Colle, B., Kolar, R., Vergara, H., Hong, Y., Leonardo, N., Davidson, R., Nozick, L., and Wachtendorf, T. (2020). \"An integrated scenario ensemble-based framework for hurricane evacuation modeling: Part 2---Hazard modeling.\" *Risk Analysis*, 40(1), 117-133. <a href="https://doi.org/10.1111/risa.13004">https://doi.org/10.1111/risa.13004</a>
 
 </div>
 
 <div id="ref-bobby-2014" class="csl-entry">
 
-Bobby, S., Spence, S. M. J., Bernardini, E., and Kareem, A. (2014). \"Performance-based topology optimization for wind-excited tall buildings: A framework.\" *Engineering Structures*, 74, 242-255.
+Bobby, S., Spence, S. M. J., Bernardini, E., and Kareem, A. (2014). \"Performance-based topology optimization for wind-excited tall buildings: A framework.\" *Engineering Structures*, 74, 242-255. <a href="https://doi.org/10.1016/j.engstruct.2014.05.043">https://doi.org/10.1016/j.engstruct.2014.05.043</a>
 
 </div>
 
 <div id="ref-bode-1975" class="csl-entry">
 
-Bode, L., and Smith, R. K. (1975). \"A parameterization of the boundary layer of a tropical cyclone.\" *Boundary-Layer Meteorology*, 8(1), 3-19.
+Bode, L., and Smith, R. K. (1975). \"A parameterization of the boundary layer of a tropical cyclone.\" *Boundary-Layer Meteorology*, 8(1), 3-19. <a href="https://doi.org/10.1007/BF02579390">https://doi.org/10.1007/BF02579390</a>
 
 </div>
 
@@ -875,13 +875,13 @@ Bruyère, C. L., Done, J. M., Jaye, A. B., Holland, G. J., Buckley, B., Henderso
 
 <div id="ref-cai-2019" class="csl-entry">
 
-Cai, Y., Xie, Q., Xue, S., Hu, L., and Kareem, A. (2019). \"Fragility modelling framework for transmission line towers under winds.\" *Engineering Structures*, 191, 686-697.
+Cai, Y., Xie, Q., Xue, S., Hu, L., and Kareem, A. (2019). \"Fragility modelling framework for transmission line towers under winds.\" *Engineering Structures*, 191, 686-697. <a href="https://doi.org/10.1016/j.engstruct.2019.04.096">https://doi.org/10.1016/j.engstruct.2019.04.096</a>
 
 </div>
 
 <div id="ref-chang-2020" class="csl-entry">
 
-Chang, D., Amin, S., and Emanuel, K. (2020). \"Modeling and parameter estimation of hurricane wind fields with asymmetry.\" *Journal of Applied Meteorology and Climatology*, 59(4), 687-705.
+Chang, D., Amin, S., and Emanuel, K. (2020). \"Modeling and parameter estimation of hurricane wind fields with asymmetry.\" *Journal of Applied Meteorology and Climatology*, 59(4), 687-705. <a href="https://doi.org/10.1175/jamc-d-19-0126.1">https://doi.org/10.1175/jamc-d-19-0126.1</a>
 
 </div>
 
@@ -893,19 +893,19 @@ Chang, H.-Y. D. (2021). \"Risk assessment and optimal response strategies for re
 
 <div id="ref-chavas-2016" class="csl-entry">
 
-Chavas, D. R., and Lin, N. (2016). \"A model for the complete radial structure of the tropical cyclone wind field. Part II: Wind field variability.\" *Journal of the Atmospheric Sciences*, 73(8), 3093-3113.
+Chavas, D. R., and Lin, N. (2016). \"A model for the complete radial structure of the tropical cyclone wind field. Part II: Wind field variability.\" *Journal of the Atmospheric Sciences*, 73(8), 3093-3113. <a href="https://doi.org/10.1175/jas-d-15-0185.1">https://doi.org/10.1175/jas-d-15-0185.1</a>
 
 </div>
 
 <div id="ref-chavas-2015" class="csl-entry">
 
-Chavas, D. R., Lin, N., and Emanuel, K. (2015). \"A model for the complete radial structure of the tropical cyclone wind field. Part I: Comparison with observed structure.\" *Journal of the Atmospheric Sciences*, 72(9), 3647-3662.
+Chavas, D. R., Lin, N., and Emanuel, K. (2015). \"A model for the complete radial structure of the tropical cyclone wind field. Part I: Comparison with observed structure.\" *Journal of the Atmospheric Sciences*, 72(9), 3647-3662. <a href="https://doi.org/10.1175/jas-d-15-0014.1">https://doi.org/10.1175/jas-d-15-0014.1</a>
 
 </div>
 
 <div id="ref-chen-2025" class="csl-entry">
 
-Chen, J.-H., Marchok, T., Bender, M., Gao, K., Gopalakrishnan, S., Harris, L., Hazelton, A., Liu, B., Mehra, A., Morin, M., Yang, F., Zhang, X., Zhang, Z., and Zhou, L. (2025). \"Closing the gap---Hurricane prediction advances in the U.S. FV3-based models.\" *Bulletin of the American Meteorological Society*, 106(7), E1211-E1220.
+Chen, J.-H., Marchok, T., Bender, M., Gao, K., Gopalakrishnan, S., Harris, L., Hazelton, A., Liu, B., Mehra, A., Morin, M., Yang, F., Zhang, X., Zhang, Z., and Zhou, L. (2025). \"Closing the gap---Hurricane prediction advances in the U.S. FV3-based models.\" *Bulletin of the American Meteorological Society*, 106(7), E1211-E1220. <a href="https://doi.org/10.1175/BAMS-D-24-0036.1">https://doi.org/10.1175/BAMS-D-24-0036.1</a>
 
 </div>
 
@@ -917,43 +917,43 @@ Chow, S.-H. (1971). \"A study of the wind field in the planetary boundary layer 
 
 <div id="ref-ciampoli-2011" class="csl-entry">
 
-Ciampoli, M., Petrini, F., and Augusti, G. (2011). \"Performance-Based Wind Engineering: Towards a general procedure.\" *Structural Safety*, 33(6), 367-378.
+Ciampoli, M., Petrini, F., and Augusti, G. (2011). \"Performance-Based Wind Engineering: Towards a general procedure.\" *Structural Safety*, 33(6), 367-378. <a href="https://doi.org/10.1016/j.strusafe.2011.07.001">https://doi.org/10.1016/j.strusafe.2011.07.001</a>
 
 </div>
 
 <div id="ref-coronel-2016" class="csl-entry">
 
-Coronel, R., Sawada, M., and Iwasaki, T. (2016). \"Impacts of surface drag coefficient and planetary boundary layer schemes on the structure and energetics of typhoon Megi (2010) during intensification.\" *Journal of the Meteorological Society of Japan. Ser. II*, 94(1), 55-73.
+Coronel, R., Sawada, M., and Iwasaki, T. (2016). \"Impacts of surface drag coefficient and planetary boundary layer schemes on the structure and energetics of typhoon Megi (2010) during intensification.\" *Journal of the Meteorological Society of Japan. Ser. II*, 94(1), 55-73. <a href="https://doi.org/10.2151/jmsj.2016-004">https://doi.org/10.2151/jmsj.2016-004</a>
 
 </div>
 
 <div id="ref-cui-2019" class="csl-entry">
 
-Cui, W., and Caracoglia, L. (2019). \"A new stochastic formulation for synthetic hurricane simulation over the North Atlantic Ocean.\" *Engineering Structures*, 199, 109597.
+Cui, W., and Caracoglia, L. (2019). \"A new stochastic formulation for synthetic hurricane simulation over the North Atlantic Ocean.\" *Engineering Structures*, 199, 109597. <a href="https://doi.org/10.1016/j.engstruct.2019.109597">https://doi.org/10.1016/j.engstruct.2019.109597</a>
 
 </div>
 
 <div id="ref-davidson-2012" class="csl-entry">
 
-Davidson, N. E., and Ma, Y. (2012). \"Surface pressure profiles, vortex structure and initialization for hurricane prediction. Part II: Numerical simulations of track, structure and intensity.\" *Meteorology and Atmospheric Physics*, 117(1), 25-45.
+Davidson, N. E., and Ma, Y. (2012). \"Surface pressure profiles, vortex structure and initialization for hurricane prediction. Part II: Numerical simulations of track, structure and intensity.\" *Meteorology and Atmospheric Physics*, 117(1), 25-45. <a href="https://doi.org/10.1007/s00703-012-0191-y">https://doi.org/10.1007/s00703-012-0191-y</a>
 
 </div>
 
 <div id="ref-davis-2008" class="csl-entry">
 
-Davis, C., Wang, W., Chen, S. S., Chen, Y., Corbosiero, K., DeMaria, M., Dudhia, J., Holland, G., Klemp, J., Michalakes, J., Reeves, H., Rotunno, R., Snyder, C., and Xiao, Q. (2008). \"Prediction of landfalling hurricanes with the advanced hurricane WRF model.\" *Monthly Weather Review*, 136(6), 1990-2005.
+Davis, C., Wang, W., Chen, S. S., Chen, Y., Corbosiero, K., DeMaria, M., Dudhia, J., Holland, G., Klemp, J., Michalakes, J., Reeves, H., Rotunno, R., Snyder, C., and Xiao, Q. (2008). \"Prediction of landfalling hurricanes with the advanced hurricane WRF model.\" *Monthly Weather Review*, 136(6), 1990-2005. <a href="https://doi.org/10.1175/2007MWR2085.1">https://doi.org/10.1175/2007MWR2085.1</a>
 
 </div>
 
 <div id="ref-deng-2019" class="csl-entry">
 
-Deng, T., Fu, J., Zheng, Q., Wu, J., and Pi, Y. (2019). \"Performance-based wind-resistant optimization design for tall building structures.\" *Journal of Structural Engineering*, *ASCE*, 145(10), 04019103.
+Deng, T., Fu, J., Zheng, Q., Wu, J., and Pi, Y. (2019). \"Performance-based wind-resistant optimization design for tall building structures.\" *Journal of Structural Engineering*, *ASCE*, 145(10), 04019103. <a href="https://doi.org/10.1061/(asce)st.1943-541x.0002383">https://doi.org/10.1061/(asce)st.1943-541x.0002383</a>
 
 </div>
 
 <div id="ref-done-2020" class="csl-entry">
 
-Done, J. M., Ge, M., Holland, G. J., Dima-West, I., Phibbs, S., Saville, G. R., and Wang, Y. (2020). \"Modelling global tropical cyclone wind footprints.\" *Natural Hazards and Earth System Sciences*, 20(2), 567-580.
+Done, J. M., Ge, M., Holland, G. J., Dima-West, I., Phibbs, S., Saville, G. R., and Wang, Y. (2020). \"Modelling global tropical cyclone wind footprints.\" *Natural Hazards and Earth System Sciences*, 20(2), 567-580. <a href="https://doi.org/10.5194/nhess-20-567-2020">https://doi.org/10.5194/nhess-20-567-2020</a>
 
 </div>
 
@@ -971,7 +971,7 @@ Eliassen, A., and Lystad, M. (1977). \"The Ekman layer of a circular vortex. A n
 
 <div id="ref-elsberry-1979" class="csl-entry">
 
-Elsberry, R. L. (1979). \"Applications of tropical cyclone models.\" *Bulletin of the American Meteorological Society*, 60(7), 750-762.
+Elsberry, R. L. (1979). \"Applications of tropical cyclone models.\" *Bulletin of the American Meteorological Society*, 60(7), 750-762. <a href="https://doi.org/10.1175/1520-0477(1979)0602.0.co;2">https://doi.org/10.1175/1520-0477(1979)0602.0.co;2</a>
 
 </div>
 
@@ -983,49 +983,49 @@ Emanuel, K. (2004). \"Tropical cyclone energetics and structure.\" *Atmospheric 
 
 <div id="ref-emanuel-2006" class="csl-entry">
 
-Emanuel, K., Ravela, S., Vivant, E., and Risi, C. (2006). \"A statistical deterministic approach to hurricane risk assessment.\" *Bulletin of the American Meteorological Society*, 87(3), 299-314.
+Emanuel, K., Ravela, S., Vivant, E., and Risi, C. (2006). \"A statistical deterministic approach to hurricane risk assessment.\" *Bulletin of the American Meteorological Society*, 87(3), 299-314. <a href="https://doi.org/10.1175/bams-87-3-299">https://doi.org/10.1175/bams-87-3-299</a>
 
 </div>
 
 <div id="ref-fang-2018" class="csl-entry">
 
-Fang, G., Zhao, L., Cao, S., Ge, Y., and Pang, W. (2018). \"A novel analytical model for wind field simulation under typhoon boundary layer considering multi-field correlation and height-dependency.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 175, 77-89.
+Fang, G., Zhao, L., Cao, S., Ge, Y., and Pang, W. (2018). \"A novel analytical model for wind field simulation under typhoon boundary layer considering multi-field correlation and height-dependency.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 175, 77-89. <a href="https://doi.org/10.1016/j.jweia.2018.01.019">https://doi.org/10.1016/j.jweia.2018.01.019</a>
 
 </div>
 
 <div id="ref-fei-2021" class="csl-entry">
 
-Fei, R., Wang, Y., and Li, Y. (2021). \"Contribution of vertical advection to supergradient wind in tropical cyclone boundary layer: A numerical study.\" *Journal of the Atmospheric Sciences*, 78(4), 1057-1073.
+Fei, R., Wang, Y., and Li, Y. (2021). \"Contribution of vertical advection to supergradient wind in tropical cyclone boundary layer: A numerical study.\" *Journal of the Atmospheric Sciences*, 78(4), 1057-1073. <a href="https://doi.org/10.1175/JAS-D-20-0075.1">https://doi.org/10.1175/JAS-D-20-0075.1</a>
 
 </div>
 
 <div id="ref-foster-2009" class="csl-entry">
 
-Foster, R. C. (2009). \"Boundary-layer similarity under an axisymmetric, gradient wind vortex.\" *Boundary-Layer Meteorology*, 131(3), 321-344.
+Foster, R. C. (2009). \"Boundary-layer similarity under an axisymmetric, gradient wind vortex.\" *Boundary-Layer Meteorology*, 131(3), 321-344. <a href="https://doi.org/10.1007/s10546-009-9379-1">https://doi.org/10.1007/s10546-009-9379-1</a>
 
 </div>
 
 <div id="ref-fovell-2016" class="csl-entry">
 
-Fovell, R. G., Bu, Y. P., Corbosiero, K. L., Tung, W.-W., Cao, Y., Kuo, H.-C., Hsu, L.-H., and Su, H. (2016). \"Influence of cloud microphysics and radiation on tropical cyclone structure and motion.\" *Meteorological Monographs*, 56(1), 11.11-11.27.
+Fovell, R. G., Bu, Y. P., Corbosiero, K. L., Tung, W.-W., Cao, Y., Kuo, H.-C., Hsu, L.-H., and Su, H. (2016). \"Influence of cloud microphysics and radiation on tropical cyclone structure and motion.\" *Meteorological Monographs*, 56(1), 11.11-11.27. <a href="https://doi.org/10.1175/amsmonographs-d-15-0006.1">https://doi.org/10.1175/amsmonographs-d-15-0006.1</a>
 
 </div>
 
 <div id="ref-fovell-2007" class="csl-entry">
 
-Fovell, R. G., and Su, H. (2007). \"Impact of cloud microphysics on hurricane track forecasts.\" *Geophysical Research Letters*, 34(24).
+Fovell, R. G., and Su, H. (2007). \"Impact of cloud microphysics on hurricane track forecasts.\" *Geophysical Research Letters*, 34(24). <a href="https://doi.org/10.1029/2007gl031723">https://doi.org/10.1029/2007gl031723</a>
 
 </div>
 
 <div id="ref-franklin-2003" class="csl-entry">
 
-Franklin, J. L., Black, M. L., and Valde, K. (2003). \"GPS dropwindsonde wind profiles in hurricanes and their operational implications.\" *Weather and Forecasting*, 18(1), 32-44.
+Franklin, J. L., Black, M. L., and Valde, K. (2003). \"GPS dropwindsonde wind profiles in hurricanes and their operational implications.\" *Weather and Forecasting*, 18(1), 32-44. <a href="https://doi.org/10.1175/1520-0434(2003)0182.0.co;2">https://doi.org/10.1175/1520-0434(2003)0182.0.co;2</a>
 
 </div>
 
 <div id="ref-gao-2014" class="csl-entry">
 
-Gao, K., and Ginis, I. (2014). \"On the generation of roll vortices due to the inflection point instability of the hurricane boundary layer flow.\" *Journal of the Atmospheric Sciences*, 71(11), 4292-4307.
+Gao, K., and Ginis, I. (2014). \"On the generation of roll vortices due to the inflection point instability of the hurricane boundary layer flow.\" *Journal of the Atmospheric Sciences*, 71(11), 4292-4307. <a href="https://doi.org/10.1175/JAS-D-13-0362.1">https://doi.org/10.1175/JAS-D-13-0362.1</a>
 
 </div>
 
@@ -1043,13 +1043,13 @@ Gopalakrishnan, S. G., Srinivas, C. V., and Bhatia, K. T. (2016). \"The hurrican
 
 <div id="ref-greeshma-2015" class="csl-entry">
 
-Greeshma, M. M., Srinivas, C. V., Yesubabu, V., Naidu, C. V., Baskaran, R., and Venkatraman, B. (2015). \"Impact of local data assimilation on tropical cyclone predictions over the Bay of Bengal using the ARW model.\" *Annales Geophysicae*, 33(7), 805-828.
+Greeshma, M. M., Srinivas, C. V., Yesubabu, V., Naidu, C. V., Baskaran, R., and Venkatraman, B. (2015). \"Impact of local data assimilation on tropical cyclone predictions over the Bay of Bengal using the ARW model.\" *Annales Geophysicae*, 33(7), 805-828. <a href="https://doi.org/10.5194/angeo-33-805-2015">https://doi.org/10.5194/angeo-33-805-2015</a>
 
 </div>
 
 <div id="ref-guo-2019" class="csl-entry">
 
-Guo, Y., and van de Lindt, J. (2019). \"Simulation of hurricane wind fields for community resilience applications: A data-driven approach using integrated asymmetric Holland models for inner and outer core regions.\" *Journal of Structural Engineering, ASCE*, 145(9), 04019089.
+Guo, Y., and van de Lindt, J. (2019). \"Simulation of hurricane wind fields for community resilience applications: A data-driven approach using integrated asymmetric Holland models for inner and outer core regions.\" *Journal of Structural Engineering, ASCE*, 145(9), 04019089. <a href="https://doi.org/10.1061/(asce)st.1943-541x.0002366">https://doi.org/10.1061/(asce)st.1943-541x.0002366</a>
 
 </div>
 
@@ -1061,67 +1061,67 @@ Haltiner, G. J., and Martin, F. L. (1957). *Dynamical and physical meteorology*,
 
 <div id="ref-hamill-2011a" class="csl-entry">
 
-Hamill, T. M., Whitaker, J. S., Fiorino, M., and Benjamin, S. G. (2011a). \"Global ensemble predictions of 2009's tropical cyclones initialized with an ensemble Kalman filter.\" *Monthly Weather Review*, 139(2), 668-688.
+Hamill, T. M., Whitaker, J. S., Fiorino, M., and Benjamin, S. G. (2011a). \"Global ensemble predictions of 2009's tropical cyclones initialized with an ensemble Kalman filter.\" *Monthly Weather Review*, 139(2), 668-688. <a href="https://doi.org/10.1175/2010MWR3456.1">https://doi.org/10.1175/2010MWR3456.1</a>
 
 </div>
 
 <div id="ref-hamill-2011b" class="csl-entry">
 
-Hamill, T. M., Whitaker, J. S., Kleist, D. T., Fiorino, M., and Benjamin, S. G. (2011b). \"Predictions of 2010's tropical cyclones using the GFS and ensemble-based data assimilation methods.\" *Monthly Weather Review*, 139(10), 3243-3247.
+Hamill, T. M., Whitaker, J. S., Kleist, D. T., Fiorino, M., and Benjamin, S. G. (2011b). \"Predictions of 2010's tropical cyclones using the GFS and ensemble-based data assimilation methods.\" *Monthly Weather Review*, 139(10), 3243-3247. <a href="https://doi.org/10.1175/mwr-d-11-00079.1">https://doi.org/10.1175/mwr-d-11-00079.1</a>
 
 </div>
 
 <div id="ref-hazelton-2018" class="csl-entry">
 
-Hazelton, A. T., Harris, L., and Lin, S.-J. (2018). \"Evaluation of tropical cyclone structure forecasts in a high-resolution version of the multiscale GFDL fvGFS model.\" *Weather and Forecasting*, 33(2), 419-442.
+Hazelton, A. T., Harris, L., and Lin, S.-J. (2018). \"Evaluation of tropical cyclone structure forecasts in a high-resolution version of the multiscale GFDL fvGFS model.\" *Weather and Forecasting*, 33(2), 419-442. <a href="https://doi.org/10.1175/waf-d-17-0140.1">https://doi.org/10.1175/waf-d-17-0140.1</a>
 
 </div>
 
 <div id="ref-he-2016" class="csl-entry">
 
-He, Y. C., Chan, P. W., and Li, Q. S. (2016). \"Observations of vertical wind profiles of tropical cyclones at coastal areas.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 152, 1-14.
+He, Y. C., Chan, P. W., and Li, Q. S. (2016). \"Observations of vertical wind profiles of tropical cyclones at coastal areas.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 152, 1-14. <a href="https://doi.org/10.1016/j.jweia.2016.01.009">https://doi.org/10.1016/j.jweia.2016.01.009</a>
 
 </div>
 
 <div id="ref-he-2018" class="csl-entry">
 
-He, Y. C., Chan, P. W., and Li, Q. S. (2018). \"Observational study on thermodynamic and kinematic structures of Typhoon Vicente (2012) at landfall.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 172, 280-297.
+He, Y. C., Chan, P. W., and Li, Q. S. (2018). \"Observational study on thermodynamic and kinematic structures of Typhoon Vicente (2012) at landfall.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 172, 280-297. <a href="https://doi.org/10.1016/j.jweia.2017.11.008">https://doi.org/10.1016/j.jweia.2017.11.008</a>
 
 </div>
 
 <div id="ref-hill-2009" class="csl-entry">
 
-Hill, K. A., and Lackmann, G. M. (2009). \"Analysis of idealized tropical cyclone simulations using the weather research and forecasting model: Sensitivity to turbulence parameterization and grid spacing.\" *Monthly Weather Review*, 137(2), 745-765.
+Hill, K. A., and Lackmann, G. M. (2009). \"Analysis of idealized tropical cyclone simulations using the weather research and forecasting model: Sensitivity to turbulence parameterization and grid spacing.\" *Monthly Weather Review*, 137(2), 745-765. <a href="https://doi.org/10.1175/2008mwr2220.1">https://doi.org/10.1175/2008mwr2220.1</a>
 
 </div>
 
 <div id="ref-holland-1980" class="csl-entry">
 
-Holland, G. J. (1980). \"An analytic model of the wind and pressure profiles in hurricanes.\" *Monthly Weather Review*, 108(8), 1212-1218.
+Holland, G. J. (1980). \"An analytic model of the wind and pressure profiles in hurricanes.\" *Monthly Weather Review*, 108(8), 1212-1218. <a href="https://doi.org/10.1175/1520-0493(1980)1082.0.co;2">https://doi.org/10.1175/1520-0493(1980)1082.0.co;2</a>
 
 </div>
 
 <div id="ref-holland-2010" class="csl-entry">
 
-Holland, G. J., Belanger, J. I., and Fritz, A. (2010). \"A revised model for radial profiles of hurricane winds.\" *Monthly Weather Review*, 138(12), 4393-4401.
+Holland, G. J., Belanger, J. I., and Fritz, A. (2010). \"A revised model for radial profiles of hurricane winds.\" *Monthly Weather Review*, 138(12), 4393-4401. <a href="https://doi.org/10.1175/2010mwr3317.1">https://doi.org/10.1175/2010mwr3317.1</a>
 
 </div>
 
 <div id="ref-hong-2019" class="csl-entry">
 
-Hong, X., Hong, H. P., and Li, J. (2019). \"Solution and validation of a three dimensional tropical cyclone boundary layer wind field model.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 193, 103973.
+Hong, X., Hong, H. P., and Li, J. (2019). \"Solution and validation of a three dimensional tropical cyclone boundary layer wind field model.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 193, 103973. <a href="https://doi.org/10.1016/j.jweia.2019.103973">https://doi.org/10.1016/j.jweia.2019.103973</a>
 
 </div>
 
 <div id="ref-hong-2021" class="csl-entry">
 
-Hong, X., and Li, J. (2021). \"A Beta-advection typhoon track model and its application for typhoon hazard assessment.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 208, 104439.
+Hong, X., and Li, J. (2021). \"A Beta-advection typhoon track model and its application for typhoon hazard assessment.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 208, 104439. <a href="https://doi.org/10.1016/j.jweia.2020.104439">https://doi.org/10.1016/j.jweia.2020.104439</a>
 
 </div>
 
 <div id="ref-hu-2012" class="csl-entry">
 
-Hu, K., Chen, Q., and Kimball, S. K. (2012). \"Consistency in hurricane surface wind forecasting: an improved parametric model.\" *Natural Hazards*, 61(3), 1029-1050.
+Hu, K., Chen, Q., and Kimball, S. K. (2012). \"Consistency in hurricane surface wind forecasting: an improved parametric model.\" *Natural Hazards*, 61(3), 1029-1050. <a href="https://doi.org/10.1007/s11069-011-9960-z">https://doi.org/10.1007/s11069-011-9960-z</a>
 
 </div>
 
@@ -1133,25 +1133,25 @@ Hu, L. (2025). \"Modeling tropical cyclone boundary layer (TCBL): From meteorolo
 
 <div id="ref-hu-2010" class="csl-entry">
 
-Hu, X.-M., Nielsen-Gammon, J. W., and Zhang, F. (2010). \"Evaluation of three planetary boundary layer schemes in the WRF model.\" *Journal of Applied Meteorology and Climatology*, 49(9), 1831-1844.
+Hu, X.-M., Nielsen-Gammon, J. W., and Zhang, F. (2010). \"Evaluation of three planetary boundary layer schemes in the WRF model.\" *Journal of Applied Meteorology and Climatology*, 49(9), 1831-1844. <a href="https://doi.org/10.1175/2010JAMC2432.1">https://doi.org/10.1175/2010JAMC2432.1</a>
 
 </div>
 
 <div id="ref-huang-2018" class="csl-entry">
 
-Huang, M., Wang, Y., Lou, W., and Cao, S. (2018). \"Multi-scale simulation of time-varying wind fields for Hangzhou Jiubao Bridge during Typhoon Chan-hom.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 179, 419-437.
+Huang, M., Wang, Y., Lou, W., and Cao, S. (2018). \"Multi-scale simulation of time-varying wind fields for Hangzhou Jiubao Bridge during Typhoon Chan-hom.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 179, 419-437. <a href="https://doi.org/10.1016/j.jweia.2018.06.020">https://doi.org/10.1016/j.jweia.2018.06.020</a>
 
 </div>
 
 <div id="ref-huang-2012" class="csl-entry">
 
-Huang, M, Chan, C. M., and Lou, W. (2012). \"Optimal performance-based design of wind sensitive tall buildings considering uncertainties.\" *Computers & Structures*, 98-99, 7-16.
+Huang, M, Chan, C. M., and Lou, W. (2012). \"Optimal performance-based design of wind sensitive tall buildings considering uncertainties.\" *Computers & Structures*, 98-99, 7-16. <a href="https://doi.org/10.1016/j.compstruc.2012.01.012">https://doi.org/10.1016/j.compstruc.2012.01.012</a>
 
 </div>
 
 <div id="ref-huang-2013" class="csl-entry">
 
-Huang, W. F., and Xu, Y. L. (2013). \"Prediction of typhoon design wind speed and profile over complex terrain.\" *Structural Engineering and Mechanics*, 45(1), 1-18.
+Huang, W. F., and Xu, Y. L. (2013). \"Prediction of typhoon design wind speed and profile over complex terrain.\" *Structural Engineering and Mechanics*, 45(1), 1-18. <a href="https://doi.org/10.12989/sem.2013.45.1.001">https://doi.org/10.12989/sem.2013.45.1.001</a>
 
 </div>
 
@@ -1163,31 +1163,31 @@ Ishihara, T., Siang, K. K., Leong, C. C., and Fujino, Y. (2005). \"Wind field mo
 
 <div id="ref-kanada-2012" class="csl-entry">
 
-Kanada, S., Wada, A., Nakano, M., and Kato, T. (2012). \"Effect of planetary boundary layer schemes on the development of intense tropical cyclones using a cloud-resolving model.\" *Journal of Geophysical Research: Atmospheres*, 117(D3).
+Kanada, S., Wada, A., Nakano, M., and Kato, T. (2012). \"Effect of planetary boundary layer schemes on the development of intense tropical cyclones using a cloud-resolving model.\" *Journal of Geophysical Research: Atmospheres*, 117(D3). <a href="https://doi.org/10.1029/2011jd016582">https://doi.org/10.1029/2011jd016582</a>
 
 </div>
 
 <div id="ref-kaplan-1995" class="csl-entry">
 
-Kaplan, J., and DeMaria, M. (1995). \"A simple empirical model for predicting the decay of tropical cyclone winds after landfall.\" *Journal of Applied Meteorology*, 34(11), 2499-2512.
+Kaplan, J., and DeMaria, M. (1995). \"A simple empirical model for predicting the decay of tropical cyclone winds after landfall.\" *Journal of Applied Meteorology*, 34(11), 2499-2512. <a href="https://doi.org/10.1175/1520-0450(1995)0342.0.CO;2">https://doi.org/10.1175/1520-0450(1995)0342.0.CO;2</a>
 
 </div>
 
 <div id="ref-kaplan-2001" class="csl-entry">
 
-Kaplan, J., and DeMaria, M. (2001). \"On the decay of tropical cyclone winds after landfall in the New England area.\" *Journal of Applied Meteorology*, 40(2), 280-286.
+Kaplan, J., and DeMaria, M. (2001). \"On the decay of tropical cyclone winds after landfall in the New England area.\" *Journal of Applied Meteorology*, 40(2), 280-286. <a href="https://doi.org/10.1175/1520-0450(2001)0402.0.CO;2">https://doi.org/10.1175/1520-0450(2001)0402.0.CO;2</a>
 
 </div>
 
 <div id="ref-kepert-2001" class="csl-entry">
 
-Kepert, J. (2001). \"The dynamics of boundary layer jets within the tropical cyclone core. Part I: Linear theory.\" *Journal of the Atmospheric Sciences*, 58(17), 2469-2484.
+Kepert, J. (2001). \"The dynamics of boundary layer jets within the tropical cyclone core. Part I: Linear theory.\" *Journal of the Atmospheric Sciences*, 58(17), 2469-2484. <a href="https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2">https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2</a>
 
 </div>
 
 <div id="ref-kepert-2001" class="csl-entry">
 
-Kepert, J., and Wang, Y. (2001). \"The dynamics of boundary layer jets within the tropical cyclone core. Part II: Nonlinear enhancement.\" *Journal of the Atmospheric Sciences*, 58(17), 2485-2501.
+Kepert, J., and Wang, Y. (2001). \"The dynamics of boundary layer jets within the tropical cyclone core. Part II: Nonlinear enhancement.\" *Journal of the Atmospheric Sciences*, 58(17), 2485-2501. <a href="https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2">https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2</a>
 
 </div>
 
@@ -1199,205 +1199,205 @@ Kepert, J. D. (2002). \"The wind-field structure of the tropical cyclone boundar
 
 <div id="ref-kepert-2005" class="csl-entry">
 
-Kepert, J. D. (2005). \"Objective analysis of tropical cyclone location and motion from high-density observations.\" *Monthly Weather Review*, 133(8), 2406-2421.
+Kepert, J. D. (2005). \"Objective analysis of tropical cyclone location and motion from high-density observations.\" *Monthly Weather Review*, 133(8), 2406-2421. <a href="https://doi.org/10.1175/mwr2980.1">https://doi.org/10.1175/mwr2980.1</a>
 
 </div>
 
 <div id="ref-kepert-2006a" class="csl-entry">
 
-Kepert, J. D. (2006a). \"Observed boundary layer wind structure and balance in the hurricane core. Part I: Hurricane Georges.\" *Journal of the Atmospheric Sciences*, 63(9), 2169-2193.
+Kepert, J. D. (2006a). \"Observed boundary layer wind structure and balance in the hurricane core. Part I: Hurricane Georges.\" *Journal of the Atmospheric Sciences*, 63(9), 2169-2193. <a href="https://doi.org/10.1175/jas3745.1">https://doi.org/10.1175/jas3745.1</a>
 
 </div>
 
 <div id="ref-kepert-2006b" class="csl-entry">
 
-Kepert, J. D. (2006b). \"Observed boundary layer wind structure and balance in the hurricane core. Part II: Hurricane Mitch.\" *Journal of the Atmospheric Sciences*, 63(9), 2194-2211.
+Kepert, J. D. (2006b). \"Observed boundary layer wind structure and balance in the hurricane core. Part II: Hurricane Mitch.\" *Journal of the Atmospheric Sciences*, 63(9), 2194-2211. <a href="https://doi.org/10.1175/jas3746.1">https://doi.org/10.1175/jas3746.1</a>
 
 </div>
 
 <div id="ref-kepert-2010a" class="csl-entry">
 
-Kepert, J. D. (2010a). \"Slab‐ and height‐resolving models of the tropical cyclone boundary layer. Part I: Comparing the simulations.\" *Quarterly Journal of the Royal Meteorological Society*, 136(652), 1686-1699.
+Kepert, J. D. (2010a). \"Slab‐ and height‐resolving models of the tropical cyclone boundary layer. Part I: Comparing the simulations.\" *Quarterly Journal of the Royal Meteorological Society*, 136(652), 1686-1699. <a href="https://doi.org/10.1002/qj.667">https://doi.org/10.1002/qj.667</a>
 
 </div>
 
 <div id="ref-kepert-2010b" class="csl-entry">
 
-Kepert, J. D. (2010b). \"Slab‐ and height‐resolving models of the tropical cyclone boundary layer. Part II: Why the simulations differ.\" *Quarterly Journal of the Royal Meteorological Society*, 136(652), 1700-1711.
+Kepert, J. D. (2010b). \"Slab‐ and height‐resolving models of the tropical cyclone boundary layer. Part II: Why the simulations differ.\" *Quarterly Journal of the Royal Meteorological Society*, 136(652), 1700-1711. <a href="https://doi.org/10.1002/qj.685">https://doi.org/10.1002/qj.685</a>
 
 </div>
 
 <div id="ref-kepert-2012" class="csl-entry">
 
-Kepert, J. D. (2012). \"Choosing a boundary layer parameterization for tropical cyclone modeling.\" *Monthly Weather Review*, 140(5), 1427-1445.
+Kepert, J. D. (2012). \"Choosing a boundary layer parameterization for tropical cyclone modeling.\" *Monthly Weather Review*, 140(5), 1427-1445. <a href="https://doi.org/10.1175/MWR-D-11-00217.1">https://doi.org/10.1175/MWR-D-11-00217.1</a>
 
 </div>
 
 <div id="ref-kepert-2013" class="csl-entry">
 
-Kepert, J. D. (2013). \"How does the boundary layer contribute to eyewall replacement cycles in axisymmetric tropical cyclones?\" *Journal of the Atmospheric Sciences*, 70(9), 2808-2830.
+Kepert, J. D. (2013). \"How does the boundary layer contribute to eyewall replacement cycles in axisymmetric tropical cyclones?\" *Journal of the Atmospheric Sciences*, 70(9), 2808-2830. <a href="https://doi.org/10.1175/jas-d-13-046.1">https://doi.org/10.1175/jas-d-13-046.1</a>
 
 </div>
 
 <div id="ref-kepert-2017" class="csl-entry">
 
-Kepert, J. D. (2017). \"Time and space scales in the tropical cyclone boundary layer, and the location of the eyewall updraft.\" *Journal of the Atmospheric Sciences*, 74(10), 3305-3323.
+Kepert, J. D. (2017). \"Time and space scales in the tropical cyclone boundary layer, and the location of the eyewall updraft.\" *Journal of the Atmospheric Sciences*, 74(10), 3305-3323. <a href="https://doi.org/10.1175/JAS-D-17-0077.1">https://doi.org/10.1175/JAS-D-17-0077.1</a>
 
 </div>
 
 <div id="ref-kepert-2018" class="csl-entry">
 
-Kepert, J. D. (2018). \"The boundary layer dynamics of tropical cyclone rainbands.\" *Journal of Atmospheric Sciences*, 75(11), 3777-3795.
+Kepert, J. D. (2018). \"The boundary layer dynamics of tropical cyclone rainbands.\" *Journal of Atmospheric Sciences*, 75(11), 3777-3795. <a href="https://doi.org/10.1175/jas-d-18-0133.1">https://doi.org/10.1175/jas-d-18-0133.1</a>
 
 </div>
 
 <div id="ref-kepert-2014" class="csl-entry">
 
-Kepert, J. D., and Nolan, D. S. (2014). \"Reply to "Comments on 'How does the boundary layer contribute to eyewall replacement cycles in axisymmetric tropical cyclones?'".\" *Journal of the Atmospheric Sciences*, 71(12), 4692-4704.
+Kepert, J. D., and Nolan, D. S. (2014). \"Reply to "Comments on 'How does the boundary layer contribute to eyewall replacement cycles in axisymmetric tropical cyclones?'".\" *Journal of the Atmospheric Sciences*, 71(12), 4692-4704. <a href="https://doi.org/10.1175/jas-d-14-0014.1">https://doi.org/10.1175/jas-d-14-0014.1</a>
 
 </div>
 
 <div id="ref-kepert-2016" class="csl-entry">
 
-Kepert, J. D., Schwendike, J., and Ramsay, H. (2016). \"Why is the tropical cyclone boundary layer not \"well mixed\"?\" *Journal of the Atmospheric Sciences*, 73(3), 957-973.
+Kepert, J. D., Schwendike, J., and Ramsay, H. (2016). \"Why is the tropical cyclone boundary layer not \"well mixed\"?\" *Journal of the Atmospheric Sciences*, 73(3), 957-973. <a href="https://doi.org/10.1175/JAS-D-15-0216.1">https://doi.org/10.1175/JAS-D-15-0216.1</a>
 
 </div>
 
 <div id="ref-khare-2009" class="csl-entry">
 
-Khare, S. P., Bonazzi, A., West, N., Bellone, E., and Jewson, S. (2009). \"On the modelling of over-ocean hurricane surface winds and their uncertainty.\" *Quarterly Journal of the Royal Meteorological Society*, 135(642), 1350-1365.
+Khare, S. P., Bonazzi, A., West, N., Bellone, E., and Jewson, S. (2009). \"On the modelling of over-ocean hurricane surface winds and their uncertainty.\" *Quarterly Journal of the Royal Meteorological Society*, 135(642), 1350-1365. <a href="https://doi.org/10.1002/qj.442">https://doi.org/10.1002/qj.442</a>
 
 </div>
 
 <div id="ref-klotz-2017" class="csl-entry">
 
-Klotz, B. W., and Jiang, H. (2017). \"Examination of surface wind asymmetries in tropical cyclones. Part I: General structure and wind shear impacts.\" *Monthly Weather Review*, 145(10), 3989-4009.
+Klotz, B. W., and Jiang, H. (2017). \"Examination of surface wind asymmetries in tropical cyclones. Part I: General structure and wind shear impacts.\" *Monthly Weather Review*, 145(10), 3989-4009. <a href="https://doi.org/10.1175/MWR-D-17-0019.1">https://doi.org/10.1175/MWR-D-17-0019.1</a>
 
 </div>
 
 <div id="ref-knaff-2007" class="csl-entry">
 
-Knaff, J. A., Sampson, C. R., DeMaria, M., Marchok, T. P., Gross, J. M., and McAdie, C. J. (2007). \"Statistical tropical cyclone wind radii prediction using climatology and persistence.\" *Weather and Forecasting*, 22(4), 781-791.
+Knaff, J. A., Sampson, C. R., DeMaria, M., Marchok, T. P., Gross, J. M., and McAdie, C. J. (2007). \"Statistical tropical cyclone wind radii prediction using climatology and persistence.\" *Weather and Forecasting*, 22(4), 781-791. <a href="https://doi.org/10.1175/waf1026.1">https://doi.org/10.1175/waf1026.1</a>
 
 </div>
 
 <div id="ref-knaff-2018" class="csl-entry">
 
-Knaff, J. A., Sampson, C. R., and Musgrave, K. D. (2018). \"Statistical tropical cyclone wind radii prediction using climatology and persistence: Updates for the western north Pacific.\" *Weather and Forecasting*, 33(4), 1093-1098.
+Knaff, J. A., Sampson, C. R., and Musgrave, K. D. (2018). \"Statistical tropical cyclone wind radii prediction using climatology and persistence: Updates for the western north Pacific.\" *Weather and Forecasting*, 33(4), 1093-1098. <a href="https://doi.org/10.1175/waf-d-18-0027.1">https://doi.org/10.1175/waf-d-18-0027.1</a>
 
 </div>
 
 <div id="ref-kueh-2019" class="csl-entry">
 
-Kueh, M.-T., Chen, W.-M., Sheng, Y.-F., Lin, S. C., Wu, T.-R., Yen, E., Tsai, Y.-L., and Lin, C.-Y. (2019). \"Effects of horizontal resolution and air--sea flux parameterization on the intensity and structure of simulated Typhoon Haiyan (2013).\" *Natural Hazards and Earth System Sciences*, 19(7), 1509-1539.
+Kueh, M.-T., Chen, W.-M., Sheng, Y.-F., Lin, S. C., Wu, T.-R., Yen, E., Tsai, Y.-L., and Lin, C.-Y. (2019). \"Effects of horizontal resolution and air--sea flux parameterization on the intensity and structure of simulated Typhoon Haiyan (2013).\" *Natural Hazards and Earth System Sciences*, 19(7), 1509-1539. <a href="https://doi.org/10.5194/nhess-19-1509-2019">https://doi.org/10.5194/nhess-19-1509-2019</a>
 
 </div>
 
 <div id="ref-kuo-1971" class="csl-entry">
 
-Kuo, H. L. (1971). \"Axisymmetric flows in the boundary layer of a maintained vortex.\" *Journal of the Atmospheric Sciences*, 28(1), 20-41.
+Kuo, H. L. (1971). \"Axisymmetric flows in the boundary layer of a maintained vortex.\" *Journal of the Atmospheric Sciences*, 28(1), 20-41. <a href="https://doi.org/10.1175/1520-0469(1971)0282.0.CO;2">https://doi.org/10.1175/1520-0469(1971)0282.0.CO;2</a>
 
 </div>
 
 <div id="ref-kuo-1982" class="csl-entry">
 
-Kuo, H. L. (1982). \"Vortex boundary layer under quadratic surface stress.\" *Boundary-Layer Meteorology*, 22(2), 151-169.
+Kuo, H. L. (1982). \"Vortex boundary layer under quadratic surface stress.\" *Boundary-Layer Meteorology*, 22(2), 151-169. <a href="https://doi.org/10.1007/BF00118250">https://doi.org/10.1007/BF00118250</a>
 
 </div>
 
 <div id="ref-kurihara-1974" class="csl-entry">
 
-Kurihara, Y., and Tuleya, R. E. (1974). \"Structure of a tropical cyclone developed in a three-dimensional numerical simulation model.\" *Journal of the Atmospheric Sciences*, 31(4), 893-919.
+Kurihara, Y., and Tuleya, R. E. (1974). \"Structure of a tropical cyclone developed in a three-dimensional numerical simulation model.\" *Journal of the Atmospheric Sciences*, 31(4), 893-919. <a href="https://doi.org/10.1175/1520-0469(1974)0312.0.CO;2">https://doi.org/10.1175/1520-0469(1974)0312.0.CO;2</a>
 
 </div>
 
 <div id="ref-lam-2023" class="csl-entry">
 
-Lam, R., Sanchez-Gonzalez, A., Willson, M., Wirnsberger, P., Fortunato, M., Alet, F., Ravuri, S., Ewalds, T., Eaton-Rosen, Z., Hu, W., Merose, A., Hoyer, S., Holland, G., Vinyals, O., Stott, J., Pritzel, A., Mohamed, S., and Battaglia, P. (2023). \"Learning skillful medium-range global weather forecasting.\" *Science*, 382, 1416-1421.
+Lam, R., Sanchez-Gonzalez, A., Willson, M., Wirnsberger, P., Fortunato, M., Alet, F., Ravuri, S., Ewalds, T., Eaton-Rosen, Z., Hu, W., Merose, A., Hoyer, S., Holland, G., Vinyals, O., Stott, J., Pritzel, A., Mohamed, S., and Battaglia, P. (2023). \"Learning skillful medium-range global weather forecasting.\" *Science*, 382, 1416-1421. <a href="https://doi.org/10.1126/science.adi2336">https://doi.org/10.1126/science.adi2336</a>
 
 </div>
 
 <div id="ref-langousis-2009" class="csl-entry">
 
-Langousis, A., Veneziano, D., and Chen, S. (2009). \"Boundary layer model for moving tropical cyclones.\" *Hurricanes and Climate Change*, J. B. Elsner, and T. H. Jagger, eds., Springer US, Boston, MA, 265-286.
+Langousis, A., Veneziano, D., and Chen, S. (2009). \"Boundary layer model for moving tropical cyclones.\" *Hurricanes and Climate Change*, J. B. Elsner, and T. H. Jagger, eds., Springer US, Boston, MA, 265-286. <a href="https://doi.org/10.1007/978-0-387-09410-6_15">https://doi.org/10.1007/978-0-387-09410-6_15</a>
 
 </div>
 
 <div id="ref-li-2014" class="csl-entry">
 
-Li, G., and Hu, H. (2014). \"Risk design optimization using many-objective evolutionary algorithm with application to performance-based wind engineering of tall buildings.\" *Structural Safety*, 48, 1-14
+Li, G., and Hu, H. (2014). \"Risk design optimization using many-objective evolutionary algorithm with application to performance-based wind engineering of tall buildings.\" *Structural Safety*, 48, 1-14. <a href="https://doi.org/10.1016/j.strusafe.2014.01.002">https://doi.org/10.1016/j.strusafe.2014.01.002</a>
 
 </div>
 
 <div id="ref-li-2016" class="csl-entry">
 
-Li, S. H., Duan, Z. D., and Hong, H. P. (2016). \"Typhoon wind hazard estimation and mapping for coastal region in mainland China.\" *Natural Hazards Review*, 17(2).
+Li, S. H., Duan, Z. D., and Hong, H. P. (2016). \"Typhoon wind hazard estimation and mapping for coastal region in mainland China.\" *Natural Hazards Review*, 17(2). <a href="https://doi.org/10.1007/s11069-016-2231-2">https://doi.org/10.1007/s11069-016-2231-2</a>
 
 </div>
 
 <div id="ref-li-2015" class="csl-entry">
 
-Li, S. H., and Hong, H. P. (2015). \"Observations on a hurricane wind hazard model used to map extreme hurricane wind speed.\" *Journal of Structural Engineering, ASCE*, 141(10), 04014238.
+Li, S. H., and Hong, H. P. (2015). \"Observations on a hurricane wind hazard model used to map extreme hurricane wind speed.\" *Journal of Structural Engineering, ASCE*, 141(10), 04014238. <a href="https://doi.org/10.1061/(asce)st.1943-541x.0001217">https://doi.org/10.1061/(asce)st.1943-541x.0001217</a>
 
 </div>
 
 <div id="ref-li-2016" class="csl-entry">
 
-Li, S. H., and Hong, H. P. (2016). \"Typhoon wind hazard estimation for China using an empirical track model.\" *Natural Hazards*, 82(2), 1009-1029.
+Li, S. H., and Hong, H. P. (2016). \"Typhoon wind hazard estimation for China using an empirical track model.\" *Natural Hazards*, 82(2), 1009-1029. <a href="https://doi.org/10.1007/s11069-016-2231-2">https://doi.org/10.1007/s11069-016-2231-2</a>
 
 </div>
 
 <div id="ref-li-2021a" class="csl-entry">
 
-Li, T.-H., and Wang, Y. (2021a). \"The role of boundary layer dynamics in tropical cyclone intensification. Part II: Sensitivity to initial vortex structure.\" *Journal of the Meteorological Society of Japan. Ser. II*, 99(2), 555-573.
+Li, T.-H., and Wang, Y. (2021a). \"The role of boundary layer dynamics in tropical cyclone intensification. Part II: Sensitivity to initial vortex structure.\" *Journal of the Meteorological Society of Japan. Ser. II*, 99(2), 555-573. <a href="https://doi.org/10.2151/jmsj.2021-028">https://doi.org/10.2151/jmsj.2021-028</a>
 
 </div>
 
 <div id="ref-li-2021b" class="csl-entry">
 
-Li, T.-H., and Wang, Y. (2021b). \"The role of boundary layer dynamics in tropical cyclone intensification. PartI: Sensitivity to surface drag coefficient.\" *Journal of the Meteorological Society of Japan. Ser. II*, 99(2), 537-554.
+Li, T.-H., and Wang, Y. (2021b). \"The role of boundary layer dynamics in tropical cyclone intensification. PartI: Sensitivity to surface drag coefficient.\" *Journal of the Meteorological Society of Japan. Ser. II*, 99(2), 537-554. <a href="https://doi.org/10.2151/jmsj.2021-027">https://doi.org/10.2151/jmsj.2021-027</a>
 
 </div>
 
 <div id="ref-li-2020" class="csl-entry">
 
-Li, W., Hu, Z., Pei, Z., Li, S., and Chan, P. W. (2020). \"A discussion on influences of turbulent diffusivity and surface drag parameterizations using a linear model of the tropical cyclone boundary layer wind field.\" *Atmospheric Research*, 237, 104847.
+Li, W., Hu, Z., Pei, Z., Li, S., and Chan, P. W. (2020). \"A discussion on influences of turbulent diffusivity and surface drag parameterizations using a linear model of the tropical cyclone boundary layer wind field.\" *Atmospheric Research*, 237, 104847. <a href="https://doi.org/10.1016/j.atmosres.2020.104847">https://doi.org/10.1016/j.atmosres.2020.104847</a>
 
 </div>
 
 <div id="ref-lin-2012" class="csl-entry">
 
-Lin, N., and Chavas, D. (2012). \"On hurricane parametric wind and applications in storm surge modeling.\" *Journal of Geophysical Research: Atmospheres*, 117(D9), 1-19.
+Lin, N., and Chavas, D. (2012). \"On hurricane parametric wind and applications in storm surge modeling.\" *Journal of Geophysical Research: Atmospheres*, 117(D9), 1-19. <a href="https://doi.org/10.1029/2011JD017126">https://doi.org/10.1029/2011JD017126</a>
 
 </div>
 
 <div id="ref-liu-1979" class="csl-entry">
 
-Liu, W. T., Katsaros, K. B., and Businger, J. A. (1979). \"Bulk parameterization of air-sea exchanges of heat and water vapor including the molecular constraints at the interface.\" *Journal of the Atmospheric Sciences*, 36(9), 1722-1735.
+Liu, W. T., Katsaros, K. B., and Businger, J. A. (1979). \"Bulk parameterization of air-sea exchanges of heat and water vapor including the molecular constraints at the interface.\" *Journal of the Atmospheric Sciences*, 36(9), 1722-1735. <a href="https://doi.org/10.1175/1520-0469(1979)0362.0.CO;2">https://doi.org/10.1175/1520-0469(1979)0362.0.CO;2</a>
 
 </div>
 
 <div id="ref-liu-2019" class="csl-entry">
 
-Liu, Y., Chen, D., Li, S., Chan, P. W., and Zhang, Q. (2019). \"A three-dimensional numerical simulation approach to assess typhoon hazards in China coastal regions.\" *Natural Hazards*, 96(2), 809-835.
+Liu, Y., Chen, D., Li, S., Chan, P. W., and Zhang, Q. (2019). \"A three-dimensional numerical simulation approach to assess typhoon hazards in China coastal regions.\" *Natural Hazards*, 96(2), 809-835. <a href="https://doi.org/10.1007/s11069-019-03570-y">https://doi.org/10.1007/s11069-019-03570-y</a>
 
 </div>
 
 <div id="ref-loridan-2017" class="csl-entry">
 
-Loridan, T., Crompton, R. P., and Dubossarsky, E. (2017). \"A machine learning approach to modeling tropical cyclone wind field uncertainty.\" *Monthly Weather Review*, 145(8), 3203-3221.
+Loridan, T., Crompton, R. P., and Dubossarsky, E. (2017). \"A machine learning approach to modeling tropical cyclone wind field uncertainty.\" *Monthly Weather Review*, 145(8), 3203-3221. <a href="https://doi.org/10.1175/mwr-d-16-0429.1">https://doi.org/10.1175/mwr-d-16-0429.1</a>
 
 </div>
 
 <div id="ref-loridan-2014" class="csl-entry">
 
-Loridan, T., Scherer, E., Dixon, M., Bellone, E., and Khare, S. (2014). \"Cyclone wind field asymmetries during extratropical transition in the western north Pacific.\" *Journal of Applied Meteorology and Climatology*, 53(2), 421-428.
+Loridan, T., Scherer, E., Dixon, M., Bellone, E., and Khare, S. (2014). \"Cyclone wind field asymmetries during extratropical transition in the western north Pacific.\" *Journal of Applied Meteorology and Climatology*, 53(2), 421-428. <a href="https://doi.org/10.1175/jamc-d-13-0257.1">https://doi.org/10.1175/jamc-d-13-0257.1</a>
 
 </div>
 
 <div id="ref-ma-2012" class="csl-entry">
 
-Ma, Y., Kafatos, M., and Davidson, N. E. (2012). \"Surface pressure profiles, vortex structure and initialization for hurricane prediction. Part I: analysis of observed and synthetic structures.\" *Meteorology and Atmospheric Physics*, 117(1), 5-23.
+Ma, Y., Kafatos, M., and Davidson, N. E. (2012). \"Surface pressure profiles, vortex structure and initialization for hurricane prediction. Part I: analysis of observed and synthetic structures.\" *Meteorology and Atmospheric Physics*, 117(1), 5-23. <a href="https://doi.org/10.1007/s00703-012-0190-z">https://doi.org/10.1007/s00703-012-0190-z</a>
 
 </div>
 
@@ -1409,43 +1409,43 @@ MacAfee, A. W., and Pearson, G. M. (2006). \"Development and testing of tropical
 
 <div id="ref-mellor-1974" class="csl-entry">
 
-Mellor, G. L., and Yamada, T. (1974). \"A hierarchy of turbulence closure models for planetary boundary layers.\" *Journal of the Atmospheric Sciences*, 31(7), 1791-1806.
+Mellor, G. L., and Yamada, T. (1974). \"A hierarchy of turbulence closure models for planetary boundary layers.\" *Journal of the Atmospheric Sciences*, 31(7), 1791-1806. <a href="https://doi.org/10.1175/1520-0469(1974)0312.0.CO;2">https://doi.org/10.1175/1520-0469(1974)0312.0.CO;2</a>
 
 </div>
 
 <div id="ref-mellor-1982" class="csl-entry">
 
-Mellor, G. L., and Yamada, T. (1982). \"Development of a turbulence closure model for geophysical fluid problems.\" *Reviews of Geophysics*, 20(4), 851-875.
+Mellor, G. L., and Yamada, T. (1982). \"Development of a turbulence closure model for geophysical fluid problems.\" *Reviews of Geophysics*, 20(4), 851-875. <a href="https://doi.org/10.1029/rg020i004p00851">https://doi.org/10.1029/rg020i004p00851</a>
 
 </div>
 
 <div id="ref-meng-1995" class="csl-entry">
 
-Meng, Y., Matsui, M., and Hibi, K. (1995). \"An analytical model for simulation of the wind field in a typhoon boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 56(2), 291-310.
+Meng, Y., Matsui, M., and Hibi, K. (1995). \"An analytical model for simulation of the wind field in a typhoon boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 56(2), 291-310. <a href="https://doi.org/10.1016/0167-6105(94)00014-5">https://doi.org/10.1016/0167-6105(94)00014-5</a>
 
 </div>
 
 <div id="ref-meng-1997" class="csl-entry">
 
-Meng, Y., Matsui, M., and Hibi, K. (1997). \"A numerical study of the wind field in a typhoon boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 67-68, 437-448.
+Meng, Y., Matsui, M., and Hibi, K. (1997). \"A numerical study of the wind field in a typhoon boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 67-68, 437-448. <a href="https://doi.org/10.1016/S0167-6105(97)00092-5">https://doi.org/10.1016/S0167-6105(97)00092-5</a>
 
 </div>
 
 <div id="ref-ming-2016" class="csl-entry">
 
-Ming, J., and Zhang, J. A. (2016). \"Effects of surface flux parameterization on the numerically simulated intensity and structure of Typhoon Morakot (2009).\" *Advances in Atmospheric Sciences*, 33(1), 58-72.
+Ming, J., and Zhang, J. A. (2016). \"Effects of surface flux parameterization on the numerically simulated intensity and structure of Typhoon Morakot (2009).\" *Advances in Atmospheric Sciences*, 33(1), 58-72. <a href="https://doi.org/10.1007/s00376-015-4202-z">https://doi.org/10.1007/s00376-015-4202-z</a>
 
 </div>
 
 <div id="ref-ming-2015" class="csl-entry">
 
-Ming, J., Zhang, J. A., and Rogers, R. F. (2015). \"Typhoon kinematic and thermodynamic boundary layer structure from dropsonde composites.\" *Journal of Geophysical Research: Atmospheres*, 120(8), 3158-3172.
+Ming, J., Zhang, J. A., and Rogers, R. F. (2015). \"Typhoon kinematic and thermodynamic boundary layer structure from dropsonde composites.\" *Journal of Geophysical Research: Atmospheres*, 120(8), 3158-3172. <a href="https://doi.org/10.1002/2014jd022640">https://doi.org/10.1002/2014jd022640</a>
 
 </div>
 
 <div id="ref-montgomery-2001" class="csl-entry">
 
-Montgomery, M. T., Snell, H. D., and Yang, Z. (2001). \"Axisymmetric spindown dynamics of hurricane-like vortices.\" *Journal of the Atmospheric Sciences*, 58(5), 421-435.
+Montgomery, M. T., Snell, H. D., and Yang, Z. (2001). \"Axisymmetric spindown dynamics of hurricane-like vortices.\" *Journal of the Atmospheric Sciences*, 58(5), 421-435. <a href="https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2">https://doi.org/10.1175/1520-0469(2001)0582.0.CO;2</a>
 
 </div>
 
@@ -1457,19 +1457,19 @@ Myers, V., and Malkin, W. (1961). \"Some properties of hurricane wind fields as 
 
 <div id="ref-nolan-2009a" class="csl-entry">
 
-Nolan, D. S., Stern, D. P., and Zhang, J. A. (2009a). \"Evaluation of planetary boundary layer parameterizations in tropical cyclones by comparison of in situ observations and high-resolution simulations of Hurricane Isabel (2003). Part II: Inner-core boundary layer and eyewall structure.\" *Monthly Weather Review*, 137(11), 3675-3698.
+Nolan, D. S., Stern, D. P., and Zhang, J. A. (2009a). \"Evaluation of planetary boundary layer parameterizations in tropical cyclones by comparison of in situ observations and high-resolution simulations of Hurricane Isabel (2003). Part II: Inner-core boundary layer and eyewall structure.\" *Monthly Weather Review*, 137(11), 3675-3698. <a href="https://doi.org/10.1175/2009mwr2786.1">https://doi.org/10.1175/2009mwr2786.1</a>
 
 </div>
 
 <div id="ref-nolan-2009b" class="csl-entry">
 
-Nolan, D. S., Zhang, J. A., and Stern, D. P. (2009b). \"Evaluation of planetary boundary layer parameterizations in tropical cyclones by comparison of in situ observations and high-resolution simulations of Hurricane Isabel (2003). Part I: Initialization, maximum winds, and the outer-core boundary layer.\" *Monthly Weather Review*, 137(11), 3651-3674.
+Nolan, D. S., Zhang, J. A., and Stern, D. P. (2009b). \"Evaluation of planetary boundary layer parameterizations in tropical cyclones by comparison of in situ observations and high-resolution simulations of Hurricane Isabel (2003). Part I: Initialization, maximum winds, and the outer-core boundary layer.\" *Monthly Weather Review*, 137(11), 3651-3674. <a href="https://doi.org/10.1175/2009mwr2785.1">https://doi.org/10.1175/2009mwr2785.1</a>
 
 </div>
 
 <div id="ref-ooyama-1969" class="csl-entry">
 
-Ooyama, K. (1969). \"Numerical simulation of the life cycle of tropical cyclones.\" *Journal of the Atmospheric Sciences*, 26(1), 3-40.
+Ooyama, K. (1969). \"Numerical simulation of the life cycle of tropical cyclones.\" *Journal of the Atmospheric Sciences*, 26(1), 3-40. <a href="https://doi.org/10.1175/1520-0469(1969)0262.0.CO;2">https://doi.org/10.1175/1520-0469(1969)0262.0.CO;2</a>
 
 </div>
 
@@ -1481,25 +1481,25 @@ Orlanski, I. (1975). \"A rational subdivision of scales for atmospheric processe
 
 <div id="ref-pita-2014" class="csl-entry">
 
-Pita, G., Pinelli, J., Gurley, K., and Mitrani-Reiser, J. (2014). \"State of the art of hurricane vulnerability estimation methods: A review.\" *Natural Hazards Review*, 16(2), 04014022.
+Pita, G., Pinelli, J., Gurley, K., and Mitrani-Reiser, J. (2014). \"State of the art of hurricane vulnerability estimation methods: A review.\" *Natural Hazards Review*, 16(2), 04014022. <a href="https://doi.org/10.1061/(ASCE)NH.1527-6996.0000153">https://doi.org/10.1061/(ASCE)NH.1527-6996.0000153</a>
 
 </div>
 
 <div id="ref-powell-2005" class="csl-entry">
 
-Powell, M., Soukup, G., Cocke, S., Gulati, S., Morisseau-Leroy, N., Hamid, S., Dorst, N., and Axe, L. (2005). \"State of Florida hurricane loss projection model: Atmospheric science component.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 93(8), 651-674.
+Powell, M., Soukup, G., Cocke, S., Gulati, S., Morisseau-Leroy, N., Hamid, S., Dorst, N., and Axe, L. (2005). \"State of Florida hurricane loss projection model: Atmospheric science component.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 93(8), 651-674. <a href="https://doi.org/10.1016/j.jweia.2005.05.008">https://doi.org/10.1016/j.jweia.2005.05.008</a>
 
 </div>
 
 <div id="ref-powell-1980" class="csl-entry">
 
-Powell, M. D. (1980). \"Evaluations of diagnostic marine boundary-layer models applied to hurricanes.\" *Monthly Weather Review*, 108(6), 757-766.
+Powell, M. D. (1980). \"Evaluations of diagnostic marine boundary-layer models applied to hurricanes.\" *Monthly Weather Review*, 108(6), 757-766. <a href="https://doi.org/10.1175/1520-0493(1980)1082.0.co;2">https://doi.org/10.1175/1520-0493(1980)1082.0.co;2</a>
 
 </div>
 
 <div id="ref-powell-2009" class="csl-entry">
 
-Powell, M. D., Uhlhorn, E. W., and Kepert, J. D. (2009). \"Estimating maximum surface winds from hurricane reconnaissance measurements.\" *Weather and Forecasting*, 24(3), 868-883.
+Powell, M. D., Uhlhorn, E. W., and Kepert, J. D. (2009). \"Estimating maximum surface winds from hurricane reconnaissance measurements.\" *Weather and Forecasting*, 24(3), 868-883. <a href="https://doi.org/10.1175/2008WAF2007087.1">https://doi.org/10.1175/2008WAF2007087.1</a>
 
 </div>
 
@@ -1511,13 +1511,13 @@ Ramos‐Valle, A. N., Curchitser, E. N., and Bruyère, C. L. (2020). \"Impact of
 
 <div id="ref-ramsay-2009" class="csl-entry">
 
-Ramsay, H. A., Leslie, L. M., and Kepert, J. D. (2009). \"A high-resolution simulation of asymmetries in severe southern hemisphere tropical cyclone Larry (2006).\" *Monthly Weather Review*, 137(12), 4171-4187.
+Ramsay, H. A., Leslie, L. M., and Kepert, J. D. (2009). \"A high-resolution simulation of asymmetries in severe southern hemisphere tropical cyclone Larry (2006).\" *Monthly Weather Review*, 137(12), 4171-4187. <a href="https://doi.org/10.1175/2009mwr2744.1">https://doi.org/10.1175/2009mwr2744.1</a>
 
 </div>
 
 <div id="ref-rao-2014" class="csl-entry">
 
-Rao, D. V. B., and Srinivas, D. (2014). \"Multi-physics ensemble prediction of tropical cyclone movement over Bay of Bengal.\" *Natural Hazards*, 70(1), 883-902.
+Rao, D. V. B., and Srinivas, D. (2014). \"Multi-physics ensemble prediction of tropical cyclone movement over Bay of Bengal.\" *Natural Hazards*, 70(1), 883-902. <a href="https://doi.org/10.1007/s11069-013-0852-2">https://doi.org/10.1007/s11069-013-0852-2</a>
 
 </div>
 
@@ -1529,115 +1529,115 @@ Rosenthal, S. L. (1962). \"A theoretical analysis of the field of motion in the 
 
 <div id="ref-rosenthal-1971" class="csl-entry">
 
-Rosenthal, S. L. (1971). \"The response of a tropical cyclone model to variations in boundary layer parameters, initial conditions, lateral boundary conditions, and domain size.\" *Monthly Weather Review*, 99(10), 767-777.
+Rosenthal, S. L. (1971). \"The response of a tropical cyclone model to variations in boundary layer parameters, initial conditions, lateral boundary conditions, and domain size.\" *Monthly Weather Review*, 99(10), 767-777. <a href="https://doi.org/10.1175/1520-0493(1971)0992.3.co;2">https://doi.org/10.1175/1520-0493(1971)0992.3.co;2</a>
 
 </div>
 
 <div id="ref-russell-1971" class="csl-entry">
 
-Russell, L. R. (1971). \"Probability distributions for hurricane effects.\" *Journal of the Waterways, Harbors and Coastal Engineering Division*, 97(1), 139-154.
+Russell, L. R. (1971). \"Probability distributions for hurricane effects.\" *Journal of the Waterways, Harbors and Coastal Engineering Division*, 97(1), 139-154. <a href="https://doi.org/10.1061/awhcar.0000056">https://doi.org/10.1061/awhcar.0000056</a>
 
 </div>
 
 <div id="ref-sateesh-2017" class="csl-entry">
 
-Sateesh, M., Srinivas, C. V., and Raju, P. V. S. (2017). \"Numerical simulation of tropical cyclone thane: role of boundary layer and surface drag parameterization schemes.\" *Natural Hazards*, 89(3), 1255-1271.
+Sateesh, M., Srinivas, C. V., and Raju, P. V. S. (2017). \"Numerical simulation of tropical cyclone thane: role of boundary layer and surface drag parameterization schemes.\" *Natural Hazards*, 89(3), 1255-1271. <a href="https://doi.org/10.1007/s11069-017-3020-2">https://doi.org/10.1007/s11069-017-3020-2</a>
 
 </div>
 
 <div id="ref-saunders-2019" class="csl-entry">
 
-Saunders, P., Yu, Y., and Pu, Z. (2019). \"Sensitivity of numerical simulations of hurricane Joaquin (2015) to cumulus parameterization schemes: Implications for processes controlling a hairpin turn in the track.\" *Journal of the Meteorological Society of Japan. Ser. II*, 97(3), 577-595.
+Saunders, P., Yu, Y., and Pu, Z. (2019). \"Sensitivity of numerical simulations of hurricane Joaquin (2015) to cumulus parameterization schemes: Implications for processes controlling a hairpin turn in the track.\" *Journal of the Meteorological Society of Japan. Ser. II*, 97(3), 577-595. <a href="https://doi.org/10.2151/jmsj.2019-030">https://doi.org/10.2151/jmsj.2019-030</a>
 
 </div>
 
 <div id="ref-schwendike-2008" class="csl-entry">
 
-Schwendike, J., and Kepert, J. D. (2008). \"The boundary layer winds in hurricanes Danielle (1998) and Isabel (2003).\" *Monthly Weather Review*, 136(8), 3168-3192.
+Schwendike, J., and Kepert, J. D. (2008). \"The boundary layer winds in hurricanes Danielle (1998) and Isabel (2003).\" *Monthly Weather Review*, 136(8), 3168-3192. <a href="https://doi.org/10.1175/2007mwr2296.1">https://doi.org/10.1175/2007mwr2296.1</a>
 
 </div>
 
 <div id="ref-shapiro-1983" class="csl-entry">
 
-Shapiro, L. J. (1983). \"The asymmetric boundary layer flow under a translating hurricane.\" *Journal of the Atmospheric Sciences*, 40(8), 1984-1998.
+Shapiro, L. J. (1983). \"The asymmetric boundary layer flow under a translating hurricane.\" *Journal of the Atmospheric Sciences*, 40(8), 1984-1998. <a href="https://doi.org/10.1175/1520-0469(1983)0402.0.CO;2">https://doi.org/10.1175/1520-0469(1983)0402.0.CO;2</a>
 
 </div>
 
 <div id="ref-shimada-2018" class="csl-entry">
 
-Shimada, U., Kubota, H., Yamada, H., Cayanan, E. O., and Hilario, F. D. (2018). \"Intensity and inner-core structure of typhoon Haiyan (2013) near landfall: Doppler radar analysis.\" *Monthly Weather Review*, 146(2), 583-597.
+Shimada, U., Kubota, H., Yamada, H., Cayanan, E. O., and Hilario, F. D. (2018). \"Intensity and inner-core structure of typhoon Haiyan (2013) near landfall: Doppler radar analysis.\" *Monthly Weather Review*, 146(2), 583-597. <a href="https://doi.org/10.1175/MWR-D-17-0120.1">https://doi.org/10.1175/MWR-D-17-0120.1</a>
 
 </div>
 
 <div id="ref-singh-2021" class="csl-entry">
 
-Singh, K. S., Albert, J., Bhaskaran, P. K., and Alam, P. (2021). \"Assessment of extremely severe cyclonic storms over Bay of Bengal and performance evaluation of ARW model in the prediction of track and intensity.\" *Theoretical and Applied Climatology*, 143(3), 1181-1194.
+Singh, K. S., Albert, J., Bhaskaran, P. K., and Alam, P. (2021). \"Assessment of extremely severe cyclonic storms over Bay of Bengal and performance evaluation of ARW model in the prediction of track and intensity.\" *Theoretical and Applied Climatology*, 143(3), 1181-1194. <a href="https://doi.org/10.1007/s00704-020-03510-y">https://doi.org/10.1007/s00704-020-03510-y</a>
 
 </div>
 
 <div id="ref-singh-2017" class="csl-entry">
 
-Singh, K. S., and Bhaskaran, P. K. (2017). \"Impact of PBL and convection parameterization schemes for prediction of severe land-falling Bay of Bengal cyclones using WRF-ARW model.\" *Journal of Atmospheric and Solar-Terrestrial Physics*, 165-166, 10-24.
+Singh, K. S., and Bhaskaran, P. K. (2017). \"Impact of PBL and convection parameterization schemes for prediction of severe land-falling Bay of Bengal cyclones using WRF-ARW model.\" *Journal of Atmospheric and Solar-Terrestrial Physics*, 165-166, 10-24. <a href="https://doi.org/10.1016/j.jastp.2017.11.004">https://doi.org/10.1016/j.jastp.2017.11.004</a>
 
 </div>
 
 <div id="ref-singh-2018" class="csl-entry">
 
-Singh, K. S., and Bhaskaran, P. K. (2018). \"Impact of lateral boundary and initial conditions in the prediction of Bay of Bengal cyclones using WRF model and its 3D-VAR data assimilation system.\" *Journal of Atmospheric and Solar-Terrestrial Physics*, 175, 64-75.
+Singh, K. S., and Bhaskaran, P. K. (2018). \"Impact of lateral boundary and initial conditions in the prediction of Bay of Bengal cyclones using WRF model and its 3D-VAR data assimilation system.\" *Journal of Atmospheric and Solar-Terrestrial Physics*, 175, 64-75. <a href="https://doi.org/10.1016/j.jastp.2018.05.007">https://doi.org/10.1016/j.jastp.2018.05.007</a>
 
 </div>
 
 <div id="ref-smith-1968" class="csl-entry">
 
-Smith, R. K. (1968). \"The surface boundary layer of a hurricane.\" *Tellus*, 20(3), 473-484.
+Smith, R. K. (1968). \"The surface boundary layer of a hurricane.\" *Tellus*, 20(3), 473-484. <a href="https://doi.org/10.1111/j.2153-3490.1968.tb00388.x">https://doi.org/10.1111/j.2153-3490.1968.tb00388.x</a>
 
 </div>
 
 <div id="ref-smith-2003" class="csl-entry">
 
-Smith, R. K. (2003). \"A simple model of the hurricane boundary layer.\" *Quarterly Journal of the Royal Meteorological Society*, 129(589), 1007-1027.
+Smith, R. K. (2003). \"A simple model of the hurricane boundary layer.\" *Quarterly Journal of the Royal Meteorological Society*, 129(589), 1007-1027. <a href="https://doi.org/10.1256/qj.01.197">https://doi.org/10.1256/qj.01.197</a>
 
 </div>
 
 <div id="ref-smith-2008" class="csl-entry">
 
-Smith, R. K., and Montgomery, M. T. (2008). \"Balanced boundary layers used in hurricane models.\" *Quarterly Journal of the Royal Meteorological Society*, 134(635), 1385-1395.
+Smith, R. K., and Montgomery, M. T. (2008). \"Balanced boundary layers used in hurricane models.\" *Quarterly Journal of the Royal Meteorological Society*, 134(635), 1385-1395. <a href="https://doi.org/10.1002/qj.296">https://doi.org/10.1002/qj.296</a>
 
 </div>
 
 <div id="ref-smith-2008" class="csl-entry">
 
-Smith, R. K., and Vogl, S. (2008). \"A simple model of the hurricane boundary layer revisited.\" *Quarterly Journal of the Royal Meteorological Society*, 134(631), 337-351.
+Smith, R. K., and Vogl, S. (2008). \"A simple model of the hurricane boundary layer revisited.\" *Quarterly Journal of the Royal Meteorological Society*, 134(631), 337-351. <a href="https://doi.org/10.1002/qj.296">https://doi.org/10.1002/qj.296</a>
 
 </div>
 
 <div id="ref-snaiki-2017a" class="csl-entry">
 
-Snaiki, R., and Wu, T. (2017a). \"A linear height-resolving wind field model for tropical cyclone boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 171, 248-260.
+Snaiki, R., and Wu, T. (2017a). \"A linear height-resolving wind field model for tropical cyclone boundary layer.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 171, 248-260. <a href="https://doi.org/10.1016/j.jweia.2017.10.008">https://doi.org/10.1016/j.jweia.2017.10.008</a>
 
 </div>
 
 <div id="ref-snaiki-2017b" class="csl-entry">
 
-Snaiki, R., and Wu, T. (2017b). \"Modeling tropical cyclone boundary layer: Height-resolving pressure and wind fields.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 170, 18-27.
+Snaiki, R., and Wu, T. (2017b). \"Modeling tropical cyclone boundary layer: Height-resolving pressure and wind fields.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 170, 18-27. <a href="https://doi.org/10.1016/j.jweia.2017.08.005">https://doi.org/10.1016/j.jweia.2017.08.005</a>
 
 </div>
 
 <div id="ref-snaiki-2020" class="csl-entry">
 
-Snaiki, R., and Wu, T. (2020). \"An analytical model for rapid estimation of hurricane supergradient winds.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 201, 104175.
+Snaiki, R., and Wu, T. (2020). \"An analytical model for rapid estimation of hurricane supergradient winds.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 201, 104175. <a href="https://doi.org/10.1016/j.jweia.2020.104175">https://doi.org/10.1016/j.jweia.2020.104175</a>
 
 </div>
 
 <div id="ref-spence-2022" class="csl-entry">
 
-Spence, S. M. J., and Arunachalam, S. (2022). \"Performance-based wind engineering: Background and state of the art.\" *Frontiers in Built Environment*, 8, 830207.
+Spence, S. M. J., and Arunachalam, S. (2022). \"Performance-based wind engineering: Background and state of the art.\" *Frontiers in Built Environment*, 8, 830207. <a href="https://doi.org/10.3389/fbuil.2022.830207">https://doi.org/10.3389/fbuil.2022.830207</a>
 
 </div>
 
 <div id="ref-spence-2014" class="csl-entry">
 
-Spence, S. M. J., and Kareem, A. (2014). \"Performance-based design and optimization of uncertain wind-excited dynamic building systems.\" *Engineering Structures*, 78, 133-144.
+Spence, S. M. J., and Kareem, A. (2014). \"Performance-based design and optimization of uncertain wind-excited dynamic building systems.\" *Engineering Structures*, 78, 133-144. <a href="https://doi.org/10.1016/j.engstruct.2014.07.026">https://doi.org/10.1016/j.engstruct.2014.07.026</a>
 
 </div>
 
@@ -1649,133 +1649,133 @@ Stern, D. P. (2010). \"The vertical structure of tangential winds in tropical cy
 
 <div id="ref-subgranon-2021" class="csl-entry">
 
-Subgranon, A., and Spence, S. M. J. (2021). \"Performance-based Bi-objective optimization of structural systems subject to stochastic wind excitation.\" *Mechanical Systems and Signal Processing*, 160, 107893.
+Subgranon, A., and Spence, S. M. J. (2021). \"Performance-based Bi-objective optimization of structural systems subject to stochastic wind excitation.\" *Mechanical Systems and Signal Processing*, 160, 107893. <a href="https://doi.org/10.1016/j.ymssp.2021.107893">https://doi.org/10.1016/j.ymssp.2021.107893</a>
 
 </div>
 
 <div id="ref-thompson-1996" class="csl-entry">
 
-Thompson, E. F., and Cardone, V. J. (1996). \"Practical modeling of hurricane surface wind fields.\" *Journal of Waterway, Port, Coastal, and Ocean Engineering*, 122(4), 195-205.
+Thompson, E. F., and Cardone, V. J. (1996). \"Practical modeling of hurricane surface wind fields.\" *Journal of Waterway, Port, Coastal, and Ocean Engineering*, 122(4), 195-205. <a href="https://doi.org/10.1061/(asce)0733-950x(1996)122:4(195)">https://doi.org/10.1061/(asce)0733-950x(1996)122:4(195)</a>
 
 </div>
 
 <div id="ref-tryggvason-1976" class="csl-entry">
 
-Tryggvason, B. V., Davenport, A. G., and Surry, D. (1976). \"Predicting wind-induced response in hurricane zones.\" *Journal of Structural Engineering, ASCE*, 102(12), 2333-2350.
+Tryggvason, B. V., Davenport, A. G., and Surry, D. (1976). \"Predicting wind-induced response in hurricane zones.\" *Journal of Structural Engineering, ASCE*, 102(12), 2333-2350. <a href="https://doi.org/10.1061/jsdeag.0004496">https://doi.org/10.1061/jsdeag.0004496</a>
 
 </div>
 
 <div id="ref-tse-2014" class="csl-entry">
 
-Tse, K. T., Li, S. W., and Fung, J. C. H. (2014). \"A comparative study of typhoon wind profiles derived from field measurements, meso-scale numerical simulations, and wind tunnel physical modeling.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 131, 46-58.
+Tse, K. T., Li, S. W., and Fung, J. C. H. (2014). \"A comparative study of typhoon wind profiles derived from field measurements, meso-scale numerical simulations, and wind tunnel physical modeling.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 131, 46-58. <a href="https://doi.org/10.1016/j.jweia.2014.05.001">https://doi.org/10.1016/j.jweia.2014.05.001</a>
 
 </div>
 
 <div id="ref-tse-2015" class="csl-entry">
 
-Tse, K. T., Li, S. W., Fung, J. C. H., and Chan, P. W. (2015). \"An information exchange framework between physical modeling and numerical simulation to advance tropical cyclone boundary layer predictions.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 143, 78-90.
+Tse, K. T., Li, S. W., Fung, J. C. H., and Chan, P. W. (2015). \"An information exchange framework between physical modeling and numerical simulation to advance tropical cyclone boundary layer predictions.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 143, 78-90. <a href="https://doi.org/10.1016/j.jweia.2015.04.011">https://doi.org/10.1016/j.jweia.2015.04.011</a>
 
 </div>
 
 <div id="ref-ueno-2011" class="csl-entry">
 
-Ueno, M., and Bessho, K. (2011). \"A statistical analysis of near-core surface wind asymmetries in typhoons obtained from QuikSCAT data.\" *Journal of the Meteorological Society of Japan. Ser. II*, 89(3), 225-241.
+Ueno, M., and Bessho, K. (2011). \"A statistical analysis of near-core surface wind asymmetries in typhoons obtained from QuikSCAT data.\" *Journal of the Meteorological Society of Japan. Ser. II*, 89(3), 225-241. <a href="https://doi.org/10.2151/jmsj.2011-304">https://doi.org/10.2151/jmsj.2011-304</a>
 
 </div>
 
 <div id="ref-uhlhorn-2014" class="csl-entry">
 
-Uhlhorn, E. W., Klotz, B. W., Vukicevic, T., Reasor, P. D., and Rogers, R. F. (2014). \"Observed hurricane wind speed asymmetries and relationships to motion and environmental shear.\" *Monthly Weather Review*, 142(3), 1290-1311.
+Uhlhorn, E. W., Klotz, B. W., Vukicevic, T., Reasor, P. D., and Rogers, R. F. (2014). \"Observed hurricane wind speed asymmetries and relationships to motion and environmental shear.\" *Monthly Weather Review*, 142(3), 1290-1311. <a href="https://doi.org/10.1175/mwr-d-13-00249.1">https://doi.org/10.1175/mwr-d-13-00249.1</a>
 
 </div>
 
 <div id="ref-vanmarcke-2014" class="csl-entry">
 
-Vanmarcke, E., Lin, N., and Yau, S. C. (2014). \"Quantitative risk analysis of damage to structures during windstorms: some multi-scale and system-reliability effects.\" *Structure and Infrastructure Engineering*, 10(10), 1311-1319.
+Vanmarcke, E., Lin, N., and Yau, S. C. (2014). \"Quantitative risk analysis of damage to structures during windstorms: some multi-scale and system-reliability effects.\" *Structure and Infrastructure Engineering*, 10(10), 1311-1319. <a href="https://doi.org/10.1080/15732479.2013.791325">https://doi.org/10.1080/15732479.2013.791325</a>
 
 </div>
 
 <div id="ref-vickery-2006" class="csl-entry">
 
-Vickery, P., Lin, J., Skerlj, P., Twisdale, L., and Huang, K. (2006). \"HAZUS-MH hurricane model methodology. I: Hurricane hazard, terrain, and wind load modeling.\" *Natural Hazards Review*, 7(2), 82-93.
+Vickery, P., Lin, J., Skerlj, P., Twisdale, L., and Huang, K. (2006). \"HAZUS-MH hurricane model methodology. I: Hurricane hazard, terrain, and wind load modeling.\" *Natural Hazards Review*, 7(2), 82-93. <a href="https://doi.org/10.1061/(asce)1527-6988(2006)7:2(82)">https://doi.org/10.1061/(asce)1527-6988(2006)7:2(82)</a>
 
 </div>
 
 <div id="ref-vickery-2000a" class="csl-entry">
 
-Vickery, P., Skerlj, P., Steckley, A., and Twisdale, L. (2000a). \"Hurricane wind field model for use in hurricane simulations.\" *Journal of Structural Engineering, ASCE*, 126(10), 1203-1221.
+Vickery, P., Skerlj, P., Steckley, A., and Twisdale, L. (2000a). \"Hurricane wind field model for use in hurricane simulations.\" *Journal of Structural Engineering, ASCE*, 126(10), 1203-1221. <a href="https://doi.org/10.1061/(asce)0733-9445(2000)126:10(1203)">https://doi.org/10.1061/(asce)0733-9445(2000)126:10(1203)</a>
 
 </div>
 
 <div id="ref-vickery-1995" class="csl-entry">
 
-Vickery, P., and Twisdale, L. (1995). \"Wind-field and filling models for hurricane wind-speed predictions.\" *Journal of Structural Engineering, ASCE*, 121(11), 1700-1709.
+Vickery, P., and Twisdale, L. (1995). \"Wind-field and filling models for hurricane wind-speed predictions.\" *Journal of Structural Engineering, ASCE*, 121(11), 1700-1709. <a href="https://doi.org/10.1061/(asce)0733-9445(1995)121:11(1700)">https://doi.org/10.1061/(asce)0733-9445(1995)121:11(1700)</a>
 
 </div>
 
 <div id="ref-vickery-2009a" class="csl-entry">
 
-Vickery, P. J., Masters, F. J., Powell, M. D., and Wadhera, D. (2009a). \"Hurricane hazard modeling: The past, present, and future.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 97(7-8), 392-405.
+Vickery, P. J., Masters, F. J., Powell, M. D., and Wadhera, D. (2009a). \"Hurricane hazard modeling: The past, present, and future.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 97(7-8), 392-405. <a href="https://doi.org/10.1016/j.jweia.2009.05.005">https://doi.org/10.1016/j.jweia.2009.05.005</a>
 
 </div>
 
 <div id="ref-vickery-2000b" class="csl-entry">
 
-Vickery, P. J., Skerlj, P. F., and Twisdale, L. A. (2000b). \"Simulation of hurricane risk in the US using empirical track model.\" *Journal of Structural Engineering, ASCE*, 126(10), 1222-1237.
+Vickery, P. J., Skerlj, P. F., and Twisdale, L. A. (2000b). \"Simulation of hurricane risk in the US using empirical track model.\" *Journal of Structural Engineering, ASCE*, 126(10), 1222-1237. <a href="https://doi.org/10.1061/(asce)0733-9445(2000)126:10(1222)">https://doi.org/10.1061/(asce)0733-9445(2000)126:10(1222)</a>
 
 </div>
 
 <div id="ref-vickery-2008" class="csl-entry">
 
-Vickery, P. J., and Wadhera, D. (2008). \"Statistical models of Holland pressure profile parameter and radius to maximum winds of hurricanes from flight-level pressure and H\*Wind data.\" *Journal of Applied Meteorology and Climatology*, 47(10), 2497-2517.
+Vickery, P. J., and Wadhera, D. (2008). \"Statistical models of Holland pressure profile parameter and radius to maximum winds of hurricanes from flight-level pressure and H\*Wind data.\" *Journal of Applied Meteorology and Climatology*, 47(10), 2497-2517. <a href="https://doi.org/10.1175/2008jamc1837.1">https://doi.org/10.1175/2008jamc1837.1</a>
 
 </div>
 
 <div id="ref-vickery-2009b" class="csl-entry">
 
-Vickery, P. J., Wadhera, D., Powell, M. D., and Chen, Y. (2009b). \"A hurricane boundary layer and wind field model for use in engineering applications.\" *Journal of Applied Meteorology and Climatology*, 48(2), 381-405.
+Vickery, P. J., Wadhera, D., Powell, M. D., and Chen, Y. (2009b). \"A hurricane boundary layer and wind field model for use in engineering applications.\" *Journal of Applied Meteorology and Climatology*, 48(2), 381-405. <a href="https://doi.org/10.1175/2008jamc1841.1">https://doi.org/10.1175/2008jamc1841.1</a>
 
 </div>
 
 <div id="ref-vickery-2009c" class="csl-entry">
 
-Vickery, P. J., Wadhera, D., Twisdale, L. A., and Lavelle, F. M. (2009c). \"U.S. Hurricane wind speed risk and uncertainty.\" *Journal of Structural Engineering, ASCE*, 135(3), 301-320.
+Vickery, P. J., Wadhera, D., Twisdale, L. A., and Lavelle, F. M. (2009c). \"U.S. Hurricane wind speed risk and uncertainty.\" *Journal of Structural Engineering, ASCE*, 135(3), 301-320. <a href="https://doi.org/10.1061/(asce)0733-9445(2009)135:3(301)">https://doi.org/10.1061/(asce)0733-9445(2009)135:3(301)</a>
 
 </div>
 
 <div id="ref-villarini-2019" class="csl-entry">
 
-Villarini, G., Luitel, B., Vecchi, G. A., and Ghosh, J. (2019). \"Multi-model ensemble forecasting of North Atlantic tropical cyclone activity.\" *Climate Dynamics*, 53(12), 7461-7477.
+Villarini, G., Luitel, B., Vecchi, G. A., and Ghosh, J. (2019). \"Multi-model ensemble forecasting of North Atlantic tropical cyclone activity.\" *Climate Dynamics*, 53(12), 7461-7477. <a href="https://doi.org/10.1007/s00382-016-3369-z">https://doi.org/10.1007/s00382-016-3369-z</a>
 
 </div>
 
 <div id="ref-vogl-2009" class="csl-entry">
 
-Vogl, S. (2009). \"Tropical cyclone boundary-layer models.\" Ph.D. thesis, Ludwig Maximilian University of Munich, München, Germany.
+Vogl, S. (2009). \"Tropical cyclone boundary-layer models.\" Ph.D. thesis, Ludwig Maximilian University of Munich, München, Germany. <a href="https://doi.org/10.1002/qj.390">https://doi.org/10.1002/qj.390</a>
 
 </div>
 
 <div id="ref-vogl-2009" class="csl-entry">
 
-Vogl, S., and Smith, R. K. (2009). \"Limitations of a linear model for the hurricane boundary layer.\" *Quarterly Journal of the Royal Meteorological Society*, 135(641), 839-850.
+Vogl, S., and Smith, R. K. (2009). \"Limitations of a linear model for the hurricane boundary layer.\" *Quarterly Journal of the Royal Meteorological Society*, 135(641), 839-850. <a href="https://doi.org/10.1002/qj.390">https://doi.org/10.1002/qj.390</a>
 
 </div>
 
 <div id="ref-vukicevic-2014" class="csl-entry">
 
-Vukicevic, T., Uhlhorn, E., Reasor, P., and Klotz, B. (2014). \"A novel multiscale intensity metric for evaluation of tropical cyclone intensity forecasts.\" *Journal of the Atmospheric Sciences*, 71(4), 1292-1304.
+Vukicevic, T., Uhlhorn, E., Reasor, P., and Klotz, B. (2014). \"A novel multiscale intensity metric for evaluation of tropical cyclone intensity forecasts.\" *Journal of the Atmospheric Sciences*, 71(4), 1292-1304. <a href="https://doi.org/10.1175/jas-d-13-0153.1">https://doi.org/10.1175/jas-d-13-0153.1</a>
 
 </div>
 
 <div id="ref-walker-2011" class="csl-entry">
 
-Walker, G. R. (2011). \"Modelling the vulnerability of buildings to wind - A review.\" *Canadian Journal of Civil Engineering*, 38(9), 1031-1039.
+Walker, G. R. (2011). \"Modelling the vulnerability of buildings to wind - A review.\" *Canadian Journal of Civil Engineering*, 38(9), 1031-1039. <a href="https://doi.org/10.1139/l11-047">https://doi.org/10.1139/l11-047</a>
 
 </div>
 
 <div id="ref-wang-2018" class="csl-entry">
 
-Wang, W., Sippel, J. A., Abarca, S., Zhu, L., Liu, B., Zhang, Z., Mehra, A., and Tallapragada, V. (2018). \"Improving NCEP HWRF simulations of surface wind and inflow angle in the eyewall area.\" *Weather and Forecasting*, 33(3), 887-898.
+Wang, W., Sippel, J. A., Abarca, S., Zhu, L., Liu, B., Zhang, Z., Mehra, A., and Tallapragada, V. (2018). \"Improving NCEP HWRF simulations of surface wind and inflow angle in the eyewall area.\" *Weather and Forecasting*, 33(3), 887-898. <a href="https://doi.org/10.1175/waf-d-17-0115.1">https://doi.org/10.1175/waf-d-17-0115.1</a>
 
 </div>
 
@@ -1787,7 +1787,7 @@ Wang, Y. (1995). \"Baroclinic aspects of tropical cyclone motion.\" Ph.D. thesis
 
 <div id="ref-wang-1996" class="csl-entry">
 
-Wang, Y. (1996). \"On the forward-in-time upstream advection scheme for non-uniform and time-dependent flow.\" *Meteorology and Atmospheric Physics*, 61(1), 27-38.
+Wang, Y. (1996). \"On the forward-in-time upstream advection scheme for non-uniform and time-dependent flow.\" *Meteorology and Atmospheric Physics*, 61(1), 27-38. <a href="https://doi.org/10.1007/BF01029709">https://doi.org/10.1007/BF01029709</a>
 
 </div>
 
@@ -1799,175 +1799,175 @@ Wikipedia (2025). \"List of costliest Atlantic hurricanes.\" \<https://en.wikipe
 
 <div id="ref-williams-2015" class="csl-entry">
 
-Williams, G. J. (2015). \"The effects of vortex structure and vortex translation on the tropical cyclone boundary layer wind field.\" *Journal of Advances in Modeling Earth Systems*, 7(1), 188-214.
+Williams, G. J. (2015). \"The effects of vortex structure and vortex translation on the tropical cyclone boundary layer wind field.\" *Journal of Advances in Modeling Earth Systems*, 7(1), 188-214. <a href="https://doi.org/10.1002/2013ms000299">https://doi.org/10.1002/2013ms000299</a>
 
 </div>
 
 <div id="ref-williams-2016" class="csl-entry">
 
-Williams, G. J. (2016). \"The inner core thermodynamics of the tropical cyclone boundary layer.\" *Meteorology and Atmospheric Physics*, 128(5), 545-564.
+Williams, G. J. (2016). \"The inner core thermodynamics of the tropical cyclone boundary layer.\" *Meteorology and Atmospheric Physics*, 128(5), 545-564. <a href="https://doi.org/10.1007/s00703-016-0441-5">https://doi.org/10.1007/s00703-016-0441-5</a>
 
 </div>
 
 <div id="ref-williams-2017" class="csl-entry">
 
-Williams, G. J. (2017). \"The thermodynamic evolution of the hurricane boundary layer during eyewall replacement cycles.\" *Meteorology and Atmospheric Physics*, 129(6), 611-627.
+Williams, G. J. (2017). \"The thermodynamic evolution of the hurricane boundary layer during eyewall replacement cycles.\" *Meteorology and Atmospheric Physics*, 129(6), 611-627. <a href="https://doi.org/10.1007/s00703-016-0495-4">https://doi.org/10.1007/s00703-016-0495-4</a>
 
 </div>
 
 <div id="ref-williams-2019" class="csl-entry">
 
-Williams, G. J. (2019). \"Idealized simulations of the inner core boundary layer structure in a landfalling tropical cyclone. Part I: Kinematic structure.\" *Tropical Cyclone Research and Review*, 8(2), 47-67.
+Williams, G. J. (2019). \"Idealized simulations of the inner core boundary layer structure in a landfalling tropical cyclone. Part I: Kinematic structure.\" *Tropical Cyclone Research and Review*, 8(2), 47-67. <a href="https://doi.org/10.1016/j.tcrr.2019.07.006">https://doi.org/10.1016/j.tcrr.2019.07.006</a>
 
 </div>
 
 <div id="ref-willoughby-2006" class="csl-entry">
 
-Willoughby, H. E., Darling, R. W. R., and Rahn, M. E. (2006). \"Parametric representation of the primary hurricane vortex. Part II: A new family of sectionally continuous profiles.\" *Monthly Weather Review*, 134(4), 1102-1120.
+Willoughby, H. E., Darling, R. W. R., and Rahn, M. E. (2006). \"Parametric representation of the primary hurricane vortex. Part II: A new family of sectionally continuous profiles.\" *Monthly Weather Review*, 134(4), 1102-1120. <a href="https://doi.org/10.1175/mwr3106.1">https://doi.org/10.1175/mwr3106.1</a>
 
 </div>
 
 <div id="ref-willoughby-2004" class="csl-entry">
 
-Willoughby, H. E., and Rahn, M. E. (2004). \"Parametric representation of the primary hurricane vortex. Part I: Observations and evaluation of the Holland (1980) model.\" *Monthly Weather Review*, 132(12), 3033-3048.
+Willoughby, H. E., and Rahn, M. E. (2004). \"Parametric representation of the primary hurricane vortex. Part I: Observations and evaluation of the Holland (1980) model.\" *Monthly Weather Review*, 132(12), 3033-3048. <a href="https://doi.org/10.1175/mwr2831.1">https://doi.org/10.1175/mwr2831.1</a>
 
 </div>
 
 <div id="ref-wood-2013" class="csl-entry">
 
-Wood, V. T., White, L. W., Willoughby, H. E., and Jorgensen, D. P. (2013). \"A new parametric tropical cyclone tangential wind profile model.\" *Monthly Weather Review*, 141(6), 1884-1909.
+Wood, V. T., White, L. W., Willoughby, H. E., and Jorgensen, D. P. (2013). \"A new parametric tropical cyclone tangential wind profile model.\" *Monthly Weather Review*, 141(6), 1884-1909. <a href="https://doi.org/10.1175/mwr-d-12-00115.1">https://doi.org/10.1175/mwr-d-12-00115.1</a>
 
 </div>
 
 <div id="ref-wu-2019" class="csl-entry">
 
-Wu, F., and Huang, G. (2019). \"Refined empirical model of typhoon wind field and its application in China.\" *Journal of Structural Engineering, ASCE*, 145(11), 04019122.
+Wu, F., and Huang, G. (2019). \"Refined empirical model of typhoon wind field and its application in China.\" *Journal of Structural Engineering, ASCE*, 145(11), 04019122. <a href="https://doi.org/10.1061/(asce)st.1943-541x.0002422">https://doi.org/10.1061/(asce)st.1943-541x.0002422</a>
 
 </div>
 
 <div id="ref-xiao-2011" class="csl-entry">
 
-Xiao, Y. F., Duan, Z. D., Xiao, Y. Q., Ou, J. P., Chang, L., and Li, Q. S. (2011). \"Typhoon wind hazard analysis for southeast China coastal regions.\" *Structural Safety*, 33(4), 286-295.
+Xiao, Y. F., Duan, Z. D., Xiao, Y. Q., Ou, J. P., Chang, L., and Li, Q. S. (2011). \"Typhoon wind hazard analysis for southeast China coastal regions.\" *Structural Safety*, 33(4), 286-295. <a href="https://doi.org/10.1016/j.strusafe.2011.04.003">https://doi.org/10.1016/j.strusafe.2011.04.003</a>
 
 </div>
 
 <div id="ref-xie-2006" class="csl-entry">
 
-Xie, L., Bao, S., Pietrafesa, L. J., Foley, K., and Fuentes, M. (2006). \"A real-time hurricane surface wind forecasting model: Formulation and verification.\" *Monthly Weather Review*, 134(5), 1355-1370.
+Xie, L., Bao, S., Pietrafesa, L. J., Foley, K., and Fuentes, M. (2006). \"A real-time hurricane surface wind forecasting model: Formulation and verification.\" *Monthly Weather Review*, 134(5), 1355-1370. <a href="https://doi.org/10.1175/mwr3126.1">https://doi.org/10.1175/mwr3126.1</a>
 
 </div>
 
 <div id="ref-yamasaki-1968" class="csl-entry">
 
-Yamasaki, M. (1968). \"Detailed analysis of a tropical cyclone simulated with a 13-layer model.\" *Papers in Meteorology and Geophysics*, 19(4), 559-585.
+Yamasaki, M. (1968). \"Detailed analysis of a tropical cyclone simulated with a 13-layer model.\" *Papers in Meteorology and Geophysics*, 19(4), 559-585. <a href="https://doi.org/10.2467/mripapers1950.19.4_559">https://doi.org/10.2467/mripapers1950.19.4_559</a>
 
 </div>
 
 <div id="ref-yang-2021" class="csl-entry">
 
-Yang, J., Chen, Y., Zhou, H., and Duan, Z. (2021). \"A height-resolving tropical cyclone boundary layer model with vertical advection process.\" *Natural Hazards*, 107(1), 723-749.
+Yang, J., Chen, Y., Zhou, H., and Duan, Z. (2021). \"A height-resolving tropical cyclone boundary layer model with vertical advection process.\" *Natural Hazards*, 107(1), 723-749. <a href="https://doi.org/10.1007/s11069-021-04603-1">https://doi.org/10.1007/s11069-021-04603-1</a>
 
 </div>
 
 <div id="ref-yang-2022" class="csl-entry">
 
-Yang, Y., Dong, L., Li, J., Li, W., Sheng, D., and Zhang, H. (2022). \"A refined model of a typhoon near-surface wind field based on CFD.\" *Natural Hazards*, 114(1), 389-404.
+Yang, Y., Dong, L., Li, J., Li, W., Sheng, D., and Zhang, H. (2022). \"A refined model of a typhoon near-surface wind field based on CFD.\" *Natural Hazards*, 114(1), 389-404. <a href="https://doi.org/10.1007/s11069-022-05394-9">https://doi.org/10.1007/s11069-022-05394-9</a>
 
 </div>
 
 <div id="ref-yoshida-2008" class="csl-entry">
 
-Yoshida, M., Yamamoto, M., Takagi, K., and Ohkuma, T. (2008). \"Prediction of typhoon wind by Level 2.5 closure model.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 96(10), 2104-2120.
+Yoshida, M., Yamamoto, M., Takagi, K., and Ohkuma, T. (2008). \"Prediction of typhoon wind by Level 2.5 closure model.\" *Journal of Wind Engineering and Industrial Aerodynamics*, 96(10), 2104-2120. <a href="https://doi.org/10.1016/j.jweia.2008.02.016">https://doi.org/10.1016/j.jweia.2008.02.016</a>
 
 </div>
 
 <div id="ref-zhang-2017a" class="csl-entry">
 
-Zhang, F., Tao, D., Sun, Y. Q., and Kepert, J. D. (2017a). \"Dynamics and predictability of secondary eyewall formation in sheared tropical cyclones.\" *Journal of Advances in Modeling Earth Systems*, 9(1), 89-112.
+Zhang, F., Tao, D., Sun, Y. Q., and Kepert, J. D. (2017a). \"Dynamics and predictability of secondary eyewall formation in sheared tropical cyclones.\" *Journal of Advances in Modeling Earth Systems*, 9(1), 89-112. <a href="https://doi.org/10.1002/2016ms000729">https://doi.org/10.1002/2016ms000729</a>
 
 </div>
 
 <div id="ref-zhang-2010" class="csl-entry">
 
-Zhang, J. A. (2010). \"Spectral characteristics of turbulence in the hurricane boundary layer over the ocean between the outer rain bands.\" *Quarterly Journal of the Royal Meteorological Society*, 136(649), 918-926.
+Zhang, J. A. (2010). \"Spectral characteristics of turbulence in the hurricane boundary layer over the ocean between the outer rain bands.\" *Quarterly Journal of the Royal Meteorological Society*, 136(649), 918-926. <a href="https://doi.org/10.1002/qj.610">https://doi.org/10.1002/qj.610</a>
 
 </div>
 
 <div id="ref-zhang-2012" class="csl-entry">
 
-Zhang, J. A., and Drennan, W. M. (2012). \"An observational study of vertical eddy diffusivity in the hurricane boundary layer.\" *Journal of the Atmospheric Sciences*, 69(11), 3223-3236.
+Zhang, J. A., and Drennan, W. M. (2012). \"An observational study of vertical eddy diffusivity in the hurricane boundary layer.\" *Journal of the Atmospheric Sciences*, 69(11), 3223-3236. <a href="https://doi.org/10.1175/jas-d-11-0348.1">https://doi.org/10.1175/jas-d-11-0348.1</a>
 
 </div>
 
 <div id="ref-zhang-2009" class="csl-entry">
 
-Zhang, J. A., Drennan, W. M., Black, P. G., and French, J. R. (2009). \"Turbulence structure of the hurricane boundary layer between the outer rainbands.\" *Journal of the Atmospheric Sciences*, 66(8), 2455-2467.
+Zhang, J. A., Drennan, W. M., Black, P. G., and French, J. R. (2009). \"Turbulence structure of the hurricane boundary layer between the outer rainbands.\" *Journal of the Atmospheric Sciences*, 66(8), 2455-2467. <a href="https://doi.org/10.1175/2009jas2954.1">https://doi.org/10.1175/2009jas2954.1</a>
 
 </div>
 
 <div id="ref-zhang-2020" class="csl-entry">
 
-Zhang, J. A., Kalina, E. A., Biswas, M. K., Rogers, R. F., Zhu, P., and Marks, F. D. (2020). \"A review and evaluation of planetary boundary layer parameterizations in hurricane weather research and forecasting model using idealized simulations and observations.\" *Atmosphere*, 11(10), 1091.
+Zhang, J. A., Kalina, E. A., Biswas, M. K., Rogers, R. F., Zhu, P., and Marks, F. D. (2020). \"A review and evaluation of planetary boundary layer parameterizations in hurricane weather research and forecasting model using idealized simulations and observations.\" *Atmosphere*, 11(10), 1091. <a href="https://doi.org/10.3390/atmos11101091">https://doi.org/10.3390/atmos11101091</a>
 
 </div>
 
 <div id="ref-zhang-2015" class="csl-entry">
 
-Zhang, J. A., and Marks, F. D. (2015). \"Effects of horizontal diffusion on tropical cyclone intensity change and structure in idealized three-dimensional numerical simulations.\" *Monthly Weather Review*, 143(10), 3981-3995.
+Zhang, J. A., and Marks, F. D. (2015). \"Effects of horizontal diffusion on tropical cyclone intensity change and structure in idealized three-dimensional numerical simulations.\" *Monthly Weather Review*, 143(10), 3981-3995. <a href="https://doi.org/10.1175/mwr-d-14-00341.1">https://doi.org/10.1175/mwr-d-14-00341.1</a>
 
 </div>
 
 <div id="ref-zhang-2015" class="csl-entry">
 
-Zhang, J. A., Nolan, D. S., Rogers, R. F., and Tallapragada, V. (2015). \"Evaluating the impact of improvements in the boundary layer parameterization on hurricane intensity and structure forecasts in HWRF.\" *Monthly Weather Review*, 143(8), 3136-3155.
+Zhang, J. A., Nolan, D. S., Rogers, R. F., and Tallapragada, V. (2015). \"Evaluating the impact of improvements in the boundary layer parameterization on hurricane intensity and structure forecasts in HWRF.\" *Monthly Weather Review*, 143(8), 3136-3155. <a href="https://doi.org/10.1175/mwr-d-14-00341.1">https://doi.org/10.1175/mwr-d-14-00341.1</a>
 
 </div>
 
 <div id="ref-zhang-2019" class="csl-entry">
 
-Zhang, J. A., and Rogers, R. F. (2019). \"Effects of parameterized boundary layer structure on hurricane rapid intensification in shear.\" *Monthly Weather Review*, 147(3), 853-871.
+Zhang, J. A., and Rogers, R. F. (2019). \"Effects of parameterized boundary layer structure on hurricane rapid intensification in shear.\" *Monthly Weather Review*, 147(3), 853-871. <a href="https://doi.org/10.1175/mwr-d-18-0010.1">https://doi.org/10.1175/mwr-d-18-0010.1</a>
 
 </div>
 
 <div id="ref-zhang-2011" class="csl-entry">
 
-Zhang, J. A., Rogers, R. F., Nolan, D. S., and Marks, F. D. (2011). \"On the characteristic height scales of the hurricane boundary layer.\" *Monthly Weather Review*, 139(8), 2523-2535.
+Zhang, J. A., Rogers, R. F., Nolan, D. S., and Marks, F. D. (2011). \"On the characteristic height scales of the hurricane boundary layer.\" *Monthly Weather Review*, 139(8), 2523-2535. <a href="https://doi.org/10.1175/mwr-d-10-05017.1">https://doi.org/10.1175/mwr-d-10-05017.1</a>
 
 </div>
 
 <div id="ref-zhang-2017b" class="csl-entry">
 
-Zhang, J. A., Rogers, R. F., and Tallapragada, V. (2017b). \"Impact of parameterized boundary layer structure on tropical cyclone rapid intensification forecasts in HWRF.\" *Monthly Weather Review*, 145(4), 1413-1426.
+Zhang, J. A., Rogers, R. F., and Tallapragada, V. (2017b). \"Impact of parameterized boundary layer structure on tropical cyclone rapid intensification forecasts in HWRF.\" *Monthly Weather Review*, 145(4), 1413-1426. <a href="https://doi.org/10.1175/mwr-d-16-0129.1">https://doi.org/10.1175/mwr-d-16-0129.1</a>
 
 </div>
 
 <div id="ref-zhang-2012" class="csl-entry">
 
-Zhang, J. A., and Uhlhorn, E. W. (2012). \"Hurricane sea surface inflow angle and an observation-based parametric model.\" *Monthly Weather Review*, 140(11), 3587-3605.
+Zhang, J. A., and Uhlhorn, E. W. (2012). \"Hurricane sea surface inflow angle and an observation-based parametric model.\" *Monthly Weather Review*, 140(11), 3587-3605. <a href="https://doi.org/10.1175/jas-d-11-0348.1">https://doi.org/10.1175/jas-d-11-0348.1</a>
 
 </div>
 
 <div id="ref-zhu-2008" class="csl-entry">
 
-Zhu, P. (2008). \"Simulation and parameterization of the turbulent transport in the hurricane boundary layer by large eddies.\" *Journal of Geophysical Research: Atmospheres*, 113(D17).
+Zhu, P. (2008). \"Simulation and parameterization of the turbulent transport in the hurricane boundary layer by large eddies.\" *Journal of Geophysical Research: Atmospheres*, 113(D17). <a href="https://doi.org/10.1029/2007JD009643">https://doi.org/10.1029/2007JD009643</a>
 
 </div>
 
 <div id="ref-zhu-2014" class="csl-entry">
 
-Zhu, P., Menelaou, K., and Zhu, Z. (2014). \"Impact of subgrid-scale vertical turbulent mixing on eyewall asymmetric structures and mesovortices of hurricanes.\" *Quarterly Journal of the Royal Meteorological Society*, 140(679), 416-438.
+Zhu, P., Menelaou, K., and Zhu, Z. (2014). \"Impact of subgrid-scale vertical turbulent mixing on eyewall asymmetric structures and mesovortices of hurricanes.\" *Quarterly Journal of the Royal Meteorological Society*, 140(679), 416-438. <a href="https://doi.org/10.1002/qj.2147">https://doi.org/10.1002/qj.2147</a>
 
 </div>
 
 <div id="ref-zhu-2015" class="csl-entry">
 
-Zhu, Z., and Zhu, P. (2015). \"Sensitivities of eyewall replacement cycle to model physics, vortex structure, and background winds in numerical simulations of tropical cyclones.\" *Journal of Geophysical Research: Atmospheres*, 120(2), 590-622.
+Zhu, Z., and Zhu, P. (2015). \"Sensitivities of eyewall replacement cycle to model physics, vortex structure, and background winds in numerical simulations of tropical cyclones.\" *Journal of Geophysical Research: Atmospheres*, 120(2), 590-622. <a href="https://doi.org/10.1002/2014JD022056">https://doi.org/10.1002/2014JD022056</a>
 
 </div>
 
 <div id="ref-zieger-2021" class="csl-entry">
 
-Zieger, S., Kepert, J. D., Greenslade, D. J. M., and Aijaz, S. (2021). \"Assessment of tropical cyclone wave models for engineering applications.\" *Ocean Engineering*, 225, 108748.
+Zieger, S., Kepert, J. D., Greenslade, D. J. M., and Aijaz, S. (2021). \"Assessment of tropical cyclone wave models for engineering applications.\" *Ocean Engineering*, 225, 108748. <a href="https://doi.org/10.1016/j.oceaneng.2021.108748">https://doi.org/10.1016/j.oceaneng.2021.108748</a>
 
 </div>
 

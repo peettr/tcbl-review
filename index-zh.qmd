@@ -764,7 +764,6 @@ KW01三维非线性TCBL模型是一个复杂的非线性系统，风工程界尚
 作者感谢美国国家标准与技术研究院（U.S. National Institute of Standards and Technology, NIST 70NANB24H014）和圣母大学Robert M. Moran教授基金的资助。本文中的任何观点和结论均为作者个人所述。
 
 # 参考文献 {.unnumbered}
-# References {.unnumbered}
 
 ::: {#refs .references}
 

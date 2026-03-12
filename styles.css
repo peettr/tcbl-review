@@ -329,24 +329,26 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
-/* Quarto uses CSS Grid — override grid template to prevent overlap */
-.page-columns {
-  grid-template-columns: minmax(50px, 1fr) minmax(500px, 900px) minmax(50px, 1fr) minmax(200px, 250px) !important;
-  gap: 1.5em !important;
-}
-
-/* Ensure margin sidebar stays in its grid column */
-#quarto-margin-sidebar {
-  grid-column: 4 !important;
-  position: sticky !important;
-  top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-}
-
-/* Content stays in body column */
-#quarto-document-content {
-  grid-column: 2 !important;
+/* Override Quarto grid: shrink body content, widen margin area */
+@media (min-width: 992px) {
+  body .page-columns {
+    display: grid !important;
+    gap: 0 !important;
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset] 5fr
+      [page-start page-start-inset] 35px
+      [body-start-outset] 35px
+      [body-start] 1.5em
+      [body-content-start] minmax(500px, calc(850px - 3em))
+      [body-content-end] 1.5em
+      [body-end] 50px
+      [body-end-outset] minmax(150px, 250px)
+      [page-end-inset] 35px
+      [page-end] 5fr
+      [screen-end-inset] 1.5em
+      [screen-end] !important;
+  }
 }
 
 /* ===== Responsive ===== */

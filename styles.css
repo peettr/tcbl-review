@@ -329,9 +329,11 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
-/* Let Quarto grid handle layout; add padding for breathing room */
+#quarto-margin-sidebar {
+  padding-left: 1.5em;
+}
 .page-columns .column-body {
-  margin-right: 2em;
+  padding-right: 3em;
 }
 
 /* ===== Responsive ===== */

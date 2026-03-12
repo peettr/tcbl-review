@@ -344,8 +344,7 @@ hr {
 
 /* Give main content room for the fixed TOC */
 #quarto-document-content {
-  max-width: calc(100vw - 300px) !important;
-  margin-right: 280px !important;
+  margin-right: 260px !important;
 }
 
 /* ===== Responsive ===== */

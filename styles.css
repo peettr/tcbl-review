@@ -329,11 +329,23 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
+/* Force right margin sidebar to not overlap content */
 #quarto-margin-sidebar {
-  padding-left: 1.5em;
+  position: fixed !important;
+  right: 0 !important;
+  top: 80px;
+  width: 250px !important;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-left: 1em;
+  background: var(--bs-body-bg, #fff);
+  z-index: 10;
 }
-.page-columns .column-body {
-  padding-right: 3em;
+
+/* Give main content room for the fixed TOC */
+#quarto-document-content {
+  max-width: calc(100vw - 300px) !important;
+  margin-right: 280px !important;
 }
 
 /* ===== Responsive ===== */

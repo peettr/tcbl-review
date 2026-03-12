@@ -329,22 +329,24 @@ hr {
 }
 
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
-/* Force right margin sidebar to not overlap content */
-#quarto-margin-sidebar {
-  position: fixed !important;
-  right: 0 !important;
-  top: 80px;
-  width: 250px !important;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  padding-left: 1em;
-  background: var(--bs-body-bg, #fff);
-  z-index: 10;
+/* Quarto uses CSS Grid — override grid template to prevent overlap */
+.page-columns {
+  grid-template-columns: minmax(50px, 1fr) minmax(500px, 900px) minmax(50px, 1fr) minmax(200px, 250px) !important;
+  gap: 1.5em !important;
 }
 
-/* Give main content room for the fixed TOC */
+/* Ensure margin sidebar stays in its grid column */
+#quarto-margin-sidebar {
+  grid-column: 4 !important;
+  position: sticky !important;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+/* Content stays in body column */
 #quarto-document-content {
-  margin-right: 30px !important;
+  grid-column: 2 !important;
 }
 
 /* ===== Responsive ===== */

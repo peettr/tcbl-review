@@ -38,7 +38,7 @@ In this regard, this section begins with a summary of the PBWE in Sec. [1.1](#pe
 Suppose the TC-induced damage to a structure can be predicted with sufficient accuracy, the structure can then be designed appropriately or retrofitted to withstand TC hazards throughout its life cycle or to recover with adequate resilience. Because this damage prediction is inherently uncertain, it must be assessed probabilistically, and the resulting fragility, vulnerability, risk, and loss estimates can subsequently inform wind-resistant design. To support such assessments, performance-based wind engineering (PBWE) has been developed as a rigorous, module-based simulation framework ([Ciampoli et al. 2011](#ref-ciampoli-2011); [Barbato et al. 2013](#ref-barbato-2013); [Spence and Kareem 2014](#ref-spence-2014); [Vanmarcke et al. 2014](#ref-vanmarcke-2014); [Cai et al. 2019](#ref-cai-2019)) and facilitates optimization of wind-resistant design of structures ([Huang et al. 2012](#ref-huang-2012); [Bobby et al. 2014](#ref-bobby-2014); [Li and Hu 2014](#ref-li-2014); [Deng et al. 2019](#ref-deng-2019); [Subgranon and Spence 2021](#ref-subgranon-2021); [Spence and Arunachalam 2022](#ref-spence-2022)). Although various other methods have been proposed for PBWE, including empirical and heuristic approaches ([Walker 2011](#ref-walker-2011); [Pita et al. 2014](#ref-pita-2014)), the simulation-based PBWE offers the capability to capture structural performance with high fidelity and provides the flexibility to incorporate cutting-edge developments in individual modules. [Figure 1](#fig-pbwe) shows a typical schematic of the PBWE framework for low-rise buildings.
 
 ::: {#fig-pbwe}
-![](images/image1.png)
+![](images/image1.png){width=100%}
 
 A typical schematic of the simulation-based PBWE framework for low-rise buildings under TC-induced winds
 :::
@@ -95,7 +95,7 @@ Recent observations have also provided insight into the turbulence structure of 
 A further development in TCBL observational research is the ability to resolve its evolution across different radial locations and storm stages. Ahern ([2019](#ref-ahern-2019)) and Ahern et al. ([2019](#ref-ahern-2019)) analyzed more than 2,000 dropsonde profiles. They revealed systematic variations from the outer to the inner core, as well as transitions across convective, post-convective, intensification, weakening, and steady-state phases. Similar spatial-temporal variations have been reported through multiplatform observations ([Ming et al. 2015](#ref-ming-2015)).
 
 ::: {#fig-tcbl-models}
-![](images/image8.png)
+![](images/image8.png){width=100%}
 
 Mean hurricane wind speed profiles measured by GPS dropsondes \[([Franklin et al. 2003](#ref-franklin-2003)), its Fig. 8\]
 :::

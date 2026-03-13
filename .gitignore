@@ -12,3 +12,6 @@ images/image[0-9]*.png
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Large PPTX files
+*.pptx

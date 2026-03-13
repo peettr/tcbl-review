@@ -338,7 +338,7 @@ $$ {#eq-13}
 
 其中$\xi$和$\lambda$为由梯度风速$v_{gr}$决定的径向变化参数；$C_d$为表面阻力系数；$V_S$为近地风速；$D_1$和$D_2$是待定系数。由于未知量通过近地风速$v$定义，因此求解时需要迭代。需要强调的是，该模型本质上仍为轴对称模型；正如([Vogl and Smith 2009](#ref-vogl-2009); [Snaiki and Wu 2017a](#ref-snaiki-2017a))所指出的，它实际上只是([Kepert 2001](#ref-kepert-2001))三维线性非对称TCBL模型中的0波数（轴对称）分量。不过，如果进一步假定梯度气压或梯度风剖面沿方位角变化，该模型也可用于非对称TCBL模拟([Meng et al. 1995](#ref-meng-1995))；第[3.3](#parametric-models-ii-analytical-solution-based-linear-models)节还将对此作简要说明。在这种处理下，轴对称模型可以改写为随方位角变化的柱模型。还需指出的是，这一线性解析解本身就是第[3.1.3](#axisymmetric-nonlinear-analytical-models)节所述非线性解析解的一阶子集；此外，([Vogl 2009](#ref-vogl-2009); [Vogl and Smith 2009](#ref-vogl-2009))也在弱摩擦线性近似下重新推导得到了与式(@eq-13)相同的解。
 
-## 参数化模型（I）：方法
+## 参数化模型（I）：经验方法
 
 在第[3](#diagnostic-models)节中，自第[3.1](#axisymmetric-models)节之后介绍的模型均为非对称模型。早在20世纪70年代，用于估算台风极端风速的开创性TCBL研究就已采用经验方法，其基本思路是给定TCBL顶部梯度风，再通过经验参数化将其转换为近地风速，而不显式求解控制方程。([Batts et al. 1980](#ref-batts-1980))给出的一个典型例子如下：
 

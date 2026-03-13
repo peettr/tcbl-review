@@ -91,7 +91,7 @@ const mdEn = `
 - Height-averaged (Chow 1971)
 - Nonlinear analytical (Kuo 1982)
 - Linear analytical (Kepert 2001)
-### 3.2 Parametric (I): Methods
+### 3.2 Parametric (I): Empirical methods
 #### Gradient profiles
 - Axisymmetric: Holland (1980), Willoughby (2006), Emanuel (2004)
 - Asymmetric: Xie et al. (2006), Georgiou (1985)
@@ -149,7 +149,7 @@ const mdZh = `
 - 高度平均（Chow 1971）
 - 非线性解析（Kuo 1982）
 - 线性解析（Kepert 2001）
-### 3.2 参数化（I）：方法
+### 3.2 参数化（I）：经验方法
 #### 梯度剖面
 - 轴对称：Holland (1980)、Willoughby (2006)、Emanuel (2004)
 - 非对称：Xie et al. (2006)、Georgiou (1985)

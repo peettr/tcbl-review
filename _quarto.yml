@@ -25,9 +25,11 @@ website:
       - text: "Mind Map"
         href: mindmap.qmd
       - text: "Literature"
-        href: literature.qmd
-      - text: "Network"
-        href: network.qmd
+        menu:
+          - text: "Citation List"
+            href: literature.qmd
+          - text: "Citation Network"
+            href: network.qmd
       - text: "Slides"
         href: presentations.html
     right:

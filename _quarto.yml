@@ -29,7 +29,7 @@ website:
       - text: "Network"
         href: network.qmd
       - text: "Slides"
-        href: slides.qmd
+        href: presentations.html
     right:
       - text: "中文"
         href: index-zh.qmd

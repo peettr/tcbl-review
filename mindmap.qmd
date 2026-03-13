@@ -87,10 +87,10 @@ const mdEn = `
 
 ## 3. Diagnostic Models
 ### 3.1 Axisymmetric models
-- Hybrid (Shapiro 1983)
-- Height-averaged (Chow 1971)
+- Hybrid (Smith 1968, Kepert 2010b)
+- Height-averaged (Smith 2003, Smith & Vogl 2008)
 - Nonlinear analytical (Kuo 1982)
-- Linear analytical (Kepert 2001)
+- Linear analytical (Meng et al. 1995)
 ### 3.2 Parametric (I): Empirical methods
 #### Gradient profiles
 - Axisymmetric: Holland (1980), Willoughby (2006), Emanuel (2004)
@@ -145,10 +145,10 @@ const mdZh = `
 
 ## 3. 诊断模型
 ### 3.1 轴对称模型
-- 混合模型（Shapiro 1983）
-- 高度平均（Chow 1971）
+- 混合模型（Smith 1968, Kepert 2010b）
+- 高度平均（Smith 2003, Smith & Vogl 2008）
 - 非线性解析（Kuo 1982）
-- 线性解析（Kepert 2001）
+- 线性解析（Meng et al. 1995）
 ### 3.2 参数化（I）：经验方法
 #### 梯度剖面
 - 轴对称：Holland (1980)、Willoughby (2006)、Emanuel (2004)

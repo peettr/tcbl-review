@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TCBL Review — Presentation</title>
+  <title>TCBL Review — Presentations</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -21,116 +21,134 @@
     .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
     .header p { opacity: 0.85; font-size: 1rem; }
     .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 1.5rem;
+      margin-top: 1rem; flex-wrap: wrap;
     }
     .nav-links a {
-      color: rgba(255,255,255,0.9);
-      text-decoration: none;
-      font-size: 0.9rem;
-      padding: 0.3rem 0.8rem;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 4px;
-      transition: all 0.2s;
+      color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.9rem;
+      padding: 0.3rem 0.8rem; border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 4px; transition: all 0.2s;
     }
-    .nav-links a:hover {
-      background: rgba(255,255,255,0.15);
-      border-color: rgba(255,255,255,0.6);
+    .nav-links a:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.6); }
+    .nav-links a.active { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.6); }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .intro { text-align: center; margin-bottom: 2rem; color: #555; }
+    .intro a { color: #2d5a8e; text-decoration: none; }
+    .tabs {
+      display: flex; justify-content: center; gap: 0.5rem;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
     }
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .tab-btn {
+      padding: 0.5rem 1.2rem; border: 2px solid #1a365d; border-radius: 20px;
+      background: white; color: #1a365d; cursor: pointer; font-size: 0.85rem;
+      font-weight: 500; transition: all 0.2s;
     }
-    .intro {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
+    .tab-btn:hover, .tab-btn.active { background: #1a365d; color: white; }
+    .deck { display: none; }
+    .deck.active { display: block; }
     .viewer-wrap {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
+      background: white; border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1); overflow: hidden;
     }
     .viewer-header {
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      padding: 1rem 1.5rem; border-bottom: 1px solid #eee;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.5rem;
     }
-    .viewer-header h2 {
-      font-size: 1.15rem;
-      color: #1a365d;
-    }
-    .viewer-header .meta {
-      font-size: 0.8rem;
-      color: #888;
-    }
+    .viewer-header h2 { font-size: 1.15rem; color: #1a365d; }
+    .viewer-header .meta { font-size: 0.8rem; color: #888; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.2s;
-      background: #1a365d;
-      color: white;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem;
+      text-decoration: none; font-weight: 500; transition: all 0.2s;
+      background: #1a365d; color: white;
     }
     .btn:hover { background: #2d5a8e; }
-    .pdf-viewer {
-      width: 100%;
-      height: 75vh;
-      min-height: 500px;
-      border: none;
-    }
+    .pdf-viewer { width: 100%; height: 75vh; min-height: 500px; border: none; }
     .footer {
-      text-align: center;
-      padding: 2rem;
-      color: #888;
-      font-size: 0.85rem;
+      text-align: center; padding: 2rem; color: #888; font-size: 0.85rem;
     }
     .footer a { color: #2d5a8e; text-decoration: none; }
+    @media (max-width: 560px) { .pdf-viewer { height: 50vh; min-height: 350px; } }
   </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>📊 TCBL Review — Presentation</h1>
+  <h1>📊 TCBL Review — Presentations</h1>
   <p>Modeling the Tropical Cyclone Boundary Layer: A Review</p>
   <p style="font-size:0.85rem; opacity:0.7;">Liang Hu &amp; Ahsan Kareem · Advances in Wind Engineering (2026)</p>
   <div class="nav-links">
     <a href="index.html">📄 English</a>
     <a href="index-zh.html">🇨🇳 中文</a>
     <a href="mindmap.html">🧠 Mind Map</a>
-    <a href="presentations.html" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.6);">📊 Slides</a>
+    <a href="presentations.html" class="active">📊 Slides</a>
   </div>
 </div>
 
 <div class="container">
   <p class="intro">
-    AI-generated slide deck summarizing the key findings and model taxonomy of this review.<br>
-    Generated by <a href="https://notebooklm.google.com" target="_blank" style="color:#2d5a8e;">Google NotebookLM</a>.
+    Four AI-generated slide decks, each offering a unique perspective on the TCBL review.<br>
+    Generated by <a href="https://notebooklm.google.com" target="_blank">Google NotebookLM</a>. Click the tabs to switch between versions.
   </p>
 
-  <div class="viewer-wrap">
-    <div class="viewer-header">
-      <div>
-        <h2>🌀 The Atmospheric Blueprint</h2>
-        <div class="meta">March 2026 · Comprehensive overview of TCBL modeling approaches</div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showDeck(0)">🌀 Atmospheric Blueprint (New)</button>
+    <button class="tab-btn" onclick="showDeck(1)">🏗️ TCBL Modeling for PBWE</button>
+    <button class="tab-btn" onclick="showDeck(2)">⚙️ Engineering Models</button>
+    <button class="tab-btn" onclick="showDeck(3)">🌐 Atmospheric Blueprint (v1)</button>
+  </div>
+
+  <div class="deck active" id="deck-0">
+    <div class="viewer-wrap">
+      <div class="viewer-header">
+        <div>
+          <h2>🌀 The Atmospheric Blueprint (Latest)</h2>
+          <div class="meta">March 13, 2026 · Comprehensive overview</div>
+        </div>
+        <a class="btn" href="presentations/NLM_New_Slides.pdf" download>📥 PDF</a>
       </div>
-      <a class="btn" href="presentations/NLM_New_Slides.pdf" download>📥 Download PDF</a>
+      <iframe class="pdf-viewer" src="presentations/NLM_New_Slides.pdf" loading="lazy"></iframe>
     </div>
-    <iframe class="pdf-viewer" src="presentations/NLM_New_Slides.pdf" loading="lazy"></iframe>
+  </div>
+
+  <div class="deck" id="deck-1">
+    <div class="viewer-wrap">
+      <div class="viewer-header">
+        <div>
+          <h2>🏗️ TCBL Modeling for PBWE</h2>
+          <div class="meta">March 11, 2026 · Performance-based wind engineering focus</div>
+        </div>
+        <a class="btn" href="presentations/NLM_TCBL_Modeling_PBWE.pdf" download>📥 PDF</a>
+      </div>
+      <iframe class="pdf-viewer" src="presentations/NLM_TCBL_Modeling_PBWE.pdf" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="deck" id="deck-2">
+    <div class="viewer-wrap">
+      <div class="viewer-header">
+        <div>
+          <h2>⚙️ TCBL Engineering Models</h2>
+          <div class="meta">March 11, 2026 · Model classification &amp; comparison</div>
+        </div>
+        <a class="btn" href="presentations/NLM_TCBL_Engineering_Models.pdf" download>📥 PDF</a>
+      </div>
+      <iframe class="pdf-viewer" src="presentations/NLM_TCBL_Engineering_Models.pdf" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="deck" id="deck-3">
+    <div class="viewer-wrap">
+      <div class="viewer-header">
+        <div>
+          <h2>🌐 The Atmospheric Blueprint (v1)</h2>
+          <div class="meta">March 11, 2026 · Earlier version with different emphasis</div>
+        </div>
+        <a class="btn" href="presentations/NLM_Atmospheric_Blueprint.pdf" download>📥 PDF</a>
+      </div>
+      <iframe class="pdf-viewer" src="presentations/NLM_Atmospheric_Blueprint.pdf" loading="lazy"></iframe>
+    </div>
   </div>
 </div>
 
@@ -139,5 +157,11 @@
   DOI: <a href="https://doi.org/10.1016/j.awe.2025.100097" target="_blank">10.1016/j.awe.2025.100097</a>
 </div>
 
+<script>
+function showDeck(idx) {
+  document.querySelectorAll('.deck').forEach((d,i) => d.classList.toggle('active', i===idx));
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+}
+</script>
 </body>
 </html>

@@ -3,6 +3,8 @@ project:
   output-dir: _site
   resources:
     - citation_network.json
+    - presentations.html
+    - presentations/
   render:
     - index.qmd
     - mindmap.qmd

@@ -10,18 +10,23 @@ format:
 
 ```{=html}
 <style>
+  /* Hide title, comments, chatbot on mindmap page */
+  #title-block-header { display: none !important; }
+  .quarto-page-breadcrumbs { display: none !important; }
+  .comment-section, #chatbot-icon, #chatbot-dialog { display: none !important; }
+  /* Full width layout */
+  #quarto-content { padding: 0 !important; }
+  main.content { max-width: 100vw !important; padding: 0 !important; margin: 0 !important; }
+  #quarto-document-content { overflow: visible !important; max-width: 100vw !important; }
+  .page-columns, .page-rows, .column-page { max-width: 100vw !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; padding: 0 !important; }
+  #quarto-content > * { max-width: 100vw !important; }
+  #quarto-margin-sidebar { display: none !important; }
+  /* Mindmap container */
   #mindmap-container { 
     width: 100vw; 
-    height: 80vh;
+    height: calc(100vh - 120px);
     margin-left: calc(-50vw + 50%);
   }
-  .quarto-page-breadcrumbs { display: none !important; }
-  #quarto-content { padding: 0 !important; }
-  main.content { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
-  #quarto-document-content { overflow: visible !important; max-width: 100% !important; }
-  .page-columns { max-width: 100% !important; }
-  #quarto-content > * { max-width: 100% !important; }
-  .column-page { max-width: 100vw !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; }
   .controls { margin-left: calc(-50vw + 50%); width: 100vw; }
   .controls {
     padding: 10px 20px;

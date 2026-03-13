@@ -73,214 +73,116 @@ const mdEn = `
 # TCBL Modeling
 
 ## 1. Introduction
-### 1.1 Performance-based wind engineering (PBWE)
-### 1.2 Multi-scale simulation of TCs
-### 1.3 Definition of TCBL
-### 1.4 Recent research on TCBL characteristics
-### 1.5 Introduction to TCBL modeling
-### 1.6 Organization of this paper
+### PBWE framework
+### Multi-scale TC simulation
+### TCBL definition & characteristics
+### TCBL modeling overview
 
-## 2. Full-physics TCBL Models
-### 2.1 WRF (Weather Research & Forecasting)
-#### 2.1.1 WRF-ARW (Advanced Research WRF)
-- Turbulence parameterizations (YSU, MYJ)
-- Bottom boundary conditions
-- Initial conditions
-- Data assimilation
-- Ensemble prediction
-#### 2.1.2 HWRF (Hurricane WRF)
-#### 2.1.3 HWCM (Hybrid WRF Cyclone Model)
-### 2.2 Other Models
-- GFS, GFDL, CM1/LES, COAMPS
+## 2. Full-physics Models
+### WRF
+#### WRF-ARW
+#### HWRF
+#### HWCM
+### Other models (GFS, CM1, etc.)
 
 ## 3. Diagnostic Models
-### 3.1 Axisymmetric Models
-#### Hybrid models (Shapiro 1983)
-#### Height-averaged models (Chow 1971)
-#### Nonlinear analytical (Kuo 1982)
-#### Linear analytical (Kepert 2001)
-### 3.2 Parametric Models (I): Methods
-#### Gradient pressure/wind profile models
+### 3.1 Axisymmetric models
+- Hybrid (Shapiro 1983)
+- Height-averaged (Chow 1971)
+- Nonlinear analytical (Kuo 1982)
+- Linear analytical (Kepert 2001)
+### 3.2 Parametric (I): Methods
+#### Gradient profiles
 - Axisymmetric: Holland (1980), Willoughby (2006), Emanuel (2004)
 - Asymmetric: Xie et al. (2006), Georgiou (1985)
 #### TC track models
-- Circular sub-region method
-- Full-track method (Vickery et al. 2000)
-#### Vertical wind profile models
-- Surface Wind Reduction Factor (SWRF)
-- TCBL profile models
-### 3.3 Parametric Models (II): Analytical Linear
-#### K01 model (Kepert 2001)
-#### Axisymmetric model accounting for asymmetry (Meng et al. 1995)
-#### Recent developments
+#### Vertical wind profiles (SWRF)
+### 3.3 Parametric (II): Analytical linear
+- K01 (Kepert 2001)
+- Asymmetric extension (Meng et al. 1995)
 ### 3.4 Simulation-based (I): 2D-slab
-- Height-averaged primitive equations
-- Exploring TC physics
-- Surrogates for PBWE
-- Applications
-### 3.5 Simulation-based (II): 2D Hybrid
-- Prescribed vertical profiles
-### 3.6 Simulation-based (III): **3D Nonlinear** ⭐
-#### KW01 model (Kepert & Wang 2001)
-#### Y08 model (Yoshizumi 2008)
-#### Linearization for efficiency
-#### Validation
-#### Physics
-- Turbulence closure (M-Y, Louis)
-- Vertical advection
-- Landfall & land-sea contrast
-- Thermodynamics
-- TC evolution
-- Micro-meteorological phenomena
-#### Comparison to other models
-- vs 2D-slab, Parametric, Full-physics (CM1, WRF-ARW)
-#### Applications
+### 3.5 Simulation-based (II): 2D hybrid
+### 3.6 Simulation-based (III): **3D nonlinear** ⭐
+#### KW01 (Kepert & Wang 2001)
+#### Y08, linearization, validation
+#### Physics: turbulence, advection, landfall, thermodynamics
+#### Comparison & applications
 
 ## 4. Data-driven Methods
-### Modifying radial profiles
-### Introducing additional asymmetries
-### POD-based models
+- Radial profile modification
+- Asymmetry introduction
+- POD-based models
 
 ## 5. NatHaz Investigation
-### Motivation
-- KW01 most rigorous but not yet adopted in PBWE
-- Current PBWE relies on simplified 2D-slab & parametric models
-### Objectives
-- (1) Evaluate model sensitivity across TC parameter ranges
-- (2) Construct benchmark dataset (692 sorties) for validation
-- (3) Develop hierarchy of linear models as fast approximations
-- (4) Investigate land-sea roughness contrast for landfalling TCs
-### Key findings
-- 692-sortie benchmark: Flight+ input with surface/SFMR/H*Wind output
-- Factor influence typically within 22%, concentrated near RMW
-- Height-resolving column model: reasonable approximation under certain conditions
-- Land-sea roughness: ~22% overall, ~14% surface over-ocean wind change
+- Model sensitivity analysis
+- 692-sortie benchmark dataset
+- Hierarchy of linear approximations
+- Land-sea roughness contrast
 
 ## 6. Concluding Remarks
-### (1) Incorporate 3D nonlinear model into PBWE
-- Develop statistical models for uncertainty/sensitivity
-- Evaluate alternative radial profiles beyond Holland
-- Benchmark all diagnostic models via idealized & practical simulations
-- Statistical model for land-sea roughness asymmetry
-### (2) Microscale phenomena from TCBL outputs
-- Rainbands, tornado-scale vortices, nonstationary turbulence
-- Uncertainty propagation from mesoscale to microscale
-### (3) Influence of TCBL model uncertainty on PBWE metrics
-- Annual maximum wind speeds, loss ratios
-### (4) Continued benchmark dataset development
-- Additional measurements (SAR, SMAP, MTCSWA)
-- Improved dropsonde calibration
-### (5) Data-driven model development
-- ML-based asymmetry modeling
-- Multi-fidelity modeling with benchmark data
-- Surrogates from 3D nonlinear simulations
+- 3D nonlinear model → PBWE integration
+- Microscale phenomena from TCBL outputs
+- Model uncertainty impact on PBWE
+- Benchmark dataset expansion
+- ML & data-driven approaches
 `;
 
 const mdZh = `
 # TCBL建模
 
 ## 1. 引言
-### 1.1 基于性能的风工程（PBWE）
-### 1.2 台风的多尺度模拟
-### 1.3 TCBL的定义
-### 1.4 TCBL特征的近期研究
-### 1.5 TCBL建模概述
-### 1.6 本文的组织结构
+### PBWE框架
+### 台风多尺度模拟
+### TCBL定义与特征
+### TCBL建模概述
 
-## 2. 全物理TCBL模型
-### 2.1 天气研究与预报模型（WRF）
-#### 2.1.1 WRF-ARW
-- 湍流参数化（YSU、MYJ）
-- 下垫面条件
-- 初始条件
-- 资料同化
-- 集合预报
-#### 2.1.2 HWRF
-#### 2.1.3 HWCM（混合WRF气旋模型）
-### 2.2 其他模型
-- GFS、GFDL、CM1/LES、COAMPS
+## 2. 全物理模型
+### WRF
+#### WRF-ARW
+#### HWRF
+#### HWCM
+### 其他模型（GFS、CM1等）
 
 ## 3. 诊断模型
 ### 3.1 轴对称模型
-#### 混合模型（Shapiro 1983）
-#### 高度平均模型（Chow 1971）
-#### 非线性解析模型（Kuo 1982）
-#### 线性解析模型（Kepert 2001）
-### 3.2 参数化模型（I）：方法
-#### 梯度气压/风剖面模型
+- 混合模型（Shapiro 1983）
+- 高度平均（Chow 1971）
+- 非线性解析（Kuo 1982）
+- 线性解析（Kepert 2001）
+### 3.2 参数化（I）：方法
+#### 梯度剖面
 - 轴对称：Holland (1980)、Willoughby (2006)、Emanuel (2004)
 - 非对称：Xie et al. (2006)、Georgiou (1985)
 #### 台风路径模型
-- 单位圆法
-- 全路径法（Vickery et al. 2000）
-#### 垂直风剖面模型
-- 近地面风速折减因子（SWRF）
-- TCBL剖面模型
-### 3.3 参数化模型（II）：解析线性模型
-#### K01模型（Kepert 2001）
-#### 考虑不对称性的轴对称模型（Meng et al. 1995）
-#### 近期进展
-### 3.4 模拟型模型（I）：二维平板模型
-- 高度平均原始方程
-- 探索台风物理机制
-- PBWE替代模型
-- 应用
-### 3.5 模拟型模型（II）：二维混合模型
-- 预设垂直剖面
-### 3.6 模拟型模型（III）：**三维非线性模型** ⭐
-#### KW01模型（Kepert & Wang 2001）
-#### Y08模型（Yoshizumi 2008）
-#### 线性化加速
-#### 验证
-#### 物理机制
-- 湍流闭合（M-Y、Louis）
-- 垂直平流
-- 登陆与海陆对比
-- 热力学
-- 台风演变
-- 微气象现象
-#### 与其他模型的对比
-- 与二维平板、参数化、全物理模型（CM1、WRF-ARW）
-#### 应用
+#### 垂直风剖面（SWRF）
+### 3.3 参数化（II）：解析线性
+- K01（Kepert 2001）
+- 非对称扩展（Meng et al. 1995）
+### 3.4 模拟型（I）：二维平板
+### 3.5 模拟型（II）：二维混合
+### 3.6 模拟型（III）：**三维非线性** ⭐
+#### KW01（Kepert & Wang 2001）
+#### Y08、线性化、验证
+#### 物理机制：湍流、平流、登陆、热力学
+#### 对比与应用
 
 ## 4. 数据驱动方法
-### 修正径向剖面
-### 引入额外不对称性
-### 基于正交分解（POD）的模型
+- 径向剖面修正
+- 不对称性引入
+- POD模型
 
-## 5. NatHaz实验室的系统性研究
-### 研究动机
-- KW01为最严谨的诊断模型，但尚未应用于PBWE
-- 当前PBWE依赖简化的二维平板和参数化模型
-### 研究目标
-- (1) 评估模型对各台风参数范围的敏感性
-- (2) 构建基准数据集（692架次）用于验证
-- (3) 发展线性模型层级体系作为快速近似
-- (4) 研究登陆台风的海陆粗糙度对比效应
-### 主要发现
-- 692架次基准数据集：Flight+输入，地面站/SFMR/H*Wind输出
-- 各因素影响通常在22%以内，集中于RMW附近
-- 高度分辨柱模型：特定条件下可作为合理近似
-- 海陆粗糙度对比：整体风速变化约22%，洋面近地风速变化约14%
+## 5. NatHaz系统性研究
+- 模型敏感性分析
+- 692架次基准数据集
+- 线性近似模型层级
+- 海陆粗糙度对比效应
 
 ## 6. 结论与展望
-### (1) 将三维非线性模型引入PBWE
-- 建立基于台风参数的不确定性/敏感性统计模型
-- 评估Holland之外的替代径向剖面
-- 通过理想化与实际模拟对所有诊断模型进行基准测试
-- 建立海陆粗糙度不对称性统计模型
-### (2) 基于TCBL输出的微尺度现象研究
-- 雨带、龙卷尺度涡旋、非平稳湍流
-- 从中尺度到微尺度的不确定性传播
-### (3) TCBL模型不确定性对PBWE指标的影响
-- 年最大风速、损失比
-### (4) 持续完善基准数据集
-- 新增观测手段（SAR、SMAP、MTCSWA）
-- 改进探空资料标定
-### (5) 数据驱动模型开发
-- 基于机器学习的不对称性建模
-- 结合基准数据的多保真度建模
-- 基于三维非线性模拟的替代模型
+- 三维非线性模型→PBWE集成
+- 基于TCBL输出的微尺度研究
+- 模型不确定性对PBWE的影响
+- 基准数据集扩展
+- 机器学习与数据驱动方法
 `;
 
 let currentLang = 'en';

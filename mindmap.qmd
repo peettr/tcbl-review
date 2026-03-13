@@ -3,7 +3,7 @@ title: "TCBL Models — Interactive Mind Map"
 format:
   html:
     toc: false
-    minimal: true
+    number-sections: false
 ---
 
 ::: {.column-page}

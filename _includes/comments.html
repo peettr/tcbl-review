@@ -149,14 +149,14 @@
 
 <div id="comment-panel">
   <div id="comment-panel-header">
-    <span id="comment-section-title">💬 评论</span>
+    <span id="comment-section-title">💬</span>
     <button class="close-btn" onclick="closeCommentPanel()">✕</button>
   </div>
   <div id="comment-list"></div>
   <div id="comment-form">
-    <input type="text" id="comment-name" placeholder="昵称（可选，默认匿名）" maxlength="30">
-    <textarea id="comment-text" placeholder="写下你的评论..." maxlength="2000"></textarea>
-    <button id="comment-submit" onclick="submitComment()">发送</button>
+    <input type="text" id="comment-name" placeholder="" maxlength="30">
+    <textarea id="comment-text" placeholder="" maxlength="2000"></textarea>
+    <button id="comment-submit" onclick="submitComment()"></button>
   </div>
 </div>
 
@@ -166,16 +166,39 @@ let currentSection = '_global';
 let commentCounts = {};
 let adminKey = '';
 
+// Bilingual support
+const isZhPage = window.location.pathname.includes('index-zh');
+const i18n = {
+  commentTitle: isZhPage ? '评论' : 'Comments',
+  namePlaceholder: isZhPage ? '昵称（可选，默认匿名）' : 'Nickname (optional, default anonymous)',
+  textPlaceholder: isZhPage ? '写下你的评论...' : 'Write a comment...',
+  submit: isZhPage ? '发送' : 'Send',
+  submitting: isZhPage ? '发送中...' : 'Sending...',
+  noComments: isZhPage ? '还没有评论，来留下第一条吧！' : 'No comments yet. Be the first!',
+  loading: isZhPage ? '加载中...' : 'Loading...',
+  loadFail: isZhPage ? '加载失败' : 'Failed to load',
+  sendFail: isZhPage ? '发送失败，请重试' : 'Failed to send. Please try again.',
+  confirmDelete: isZhPage ? '确定删除这条评论？' : 'Delete this comment?',
+  globalBtn: isZhPage ? '💬 留下你的评论' : '💬 Leave a comment',
+  globalTitle: isZhPage ? '全文评论' : 'General comments',
+  adminPrompt: isZhPage ? '输入管理密码：' : 'Enter admin password:',
+};
+
 // Check for admin mode
 (function() {
   const params = new URLSearchParams(window.location.search);
   if (params.has('admin')) {
-    const key = prompt('输入管理密码：');
+    const key = prompt(i18n.adminPrompt);
     if (key) adminKey = key;
   }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Set bilingual placeholders
+  document.getElementById('comment-name').placeholder = i18n.namePlaceholder;
+  document.getElementById('comment-text').placeholder = i18n.textPlaceholder;
+  document.getElementById('comment-submit').textContent = i18n.submit;
+
   // Add comment buttons to all section headings (h2-h6)
   const headings = document.querySelectorAll('main h2[data-anchor-id], main h3[data-anchor-id], main h4[data-anchor-id], main h5[data-anchor-id], main h6[data-anchor-id], main h2[id], main h3[id], main h4[id], main h5[id], main h6[id]');
   headings.forEach(h => {
@@ -193,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (article) {
     const globalDiv = document.createElement('div');
     globalDiv.style.cssText = 'margin: 40px 0; text-align: center;';
-    globalDiv.innerHTML = '<button class="comment-btn" style="font-size:15px; padding:6px 16px;" onclick="openCommentPanel(\'_global\', \'全文评论\')">💬 留下你的评论</button>';
+    globalDiv.innerHTML = '<button class="comment-btn" style="font-size:15px; padding:6px 16px;" onclick="openCommentPanel(\'_global\', i18n.globalTitle)">' + i18n.globalBtn + '</button>';
     article.appendChild(globalDiv);
   }
 
@@ -229,12 +252,12 @@ function closeCommentPanel() {
 
 async function loadComments(section) {
   const list = document.getElementById('comment-list');
-  list.innerHTML = '<div class="no-comments">加载中...</div>';
+  list.innerHTML = '<div class="no-comments">' + i18n.loading + '</div>';
   try {
     const resp = await fetch(COMMENT_API + '?section=' + encodeURIComponent(section));
     const comments = await resp.json();
     if (comments.length === 0) {
-      list.innerHTML = '<div class="no-comments">还没有评论，来留下第一条吧！</div>';
+      list.innerHTML = '<div class="no-comments">' + i18n.noComments + '</div>';
       return;
     }
     list.innerHTML = comments.map(c => `
@@ -249,7 +272,7 @@ async function loadComments(section) {
     `).join('');
     list.scrollTop = list.scrollHeight;
   } catch (e) {
-    list.innerHTML = '<div class="no-comments">加载失败</div>';
+    list.innerHTML = '<div class="no-comments">' + i18n.loadFail + '</div>';
   }
 }
 
@@ -259,7 +282,7 @@ async function submitComment() {
   const name = document.getElementById('comment-name').value.trim();
   const btn = document.getElementById('comment-submit');
   btn.disabled = true;
-  btn.textContent = '发送中...';
+  btn.textContent = i18n.submitting;
   try {
     await fetch(COMMENT_API, {
       method: 'POST',
@@ -274,14 +297,14 @@ async function submitComment() {
       countSpan.textContent = parseInt(countSpan.textContent || '0') + 1;
     }
   } catch (e) {
-    alert('发送失败，请重试');
+    alert(i18n.sendFail);
   }
   btn.disabled = false;
-  btn.textContent = '发送';
+  btn.textContent = i18n.submit;
 }
 
 async function deleteComment(id) {
-  if (!confirm('确定删除这条评论？')) return;
+  if (!confirm(i18n.confirmDelete)) return;
   try {
     const resp = await fetch(COMMENT_API, {
       method: 'DELETE',

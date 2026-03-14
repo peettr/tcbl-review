@@ -408,6 +408,7 @@ function toggleFeifei() {
   let dragPanel = false, panelStartX, panelStartY, panelOrigX, panelOrigY;
   
   document.addEventListener('pointerdown', (e) => {
+    if (window.innerWidth <= 768) return; // No drag on mobile
     if (e.target.closest('#feifei-header') && !e.target.closest('.close-btn')) {
       const sidebar = document.getElementById('feifei-sidebar');
       dragPanel = true;
@@ -558,7 +559,10 @@ function injectFeifeiTab() {
   let dragStarted = false;
   let startX = 0, startY = 0, origX = 0, origY = 0;
 
+  function isMobile() { return window.innerWidth <= 768; }
+
   function onPointerDown(e) {
+    if (isMobile()) return; // No drag on mobile
     isDragging = true;
     dragStarted = false;
     startX = e.clientX;

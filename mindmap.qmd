@@ -255,7 +255,10 @@ function renderMap(md) {
     paddingX: 16,
     color: (node) => {
       const depth = node.state?.depth || 0;
-      const colors = ['#003366', '#0066cc', '#3399ff', '#66b3ff', '#99ccff', '#cce5ff'];
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark' || document.body.classList.contains('quarto-dark');
+      const colors = isDark
+        ? ['#e8e0f0', '#b89edb', '#8cb4f0', '#a0c4ff', '#c9a0f0', '#ddd']
+        : ['#1a1a2e', '#2d2d5e', '#4a3a6a', '#6b4c9a', '#555', '#666'];
       return colors[Math.min(depth, colors.length - 1)];
     }
   }, root);

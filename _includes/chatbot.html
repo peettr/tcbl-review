@@ -294,13 +294,13 @@
     <div class="ff-msg bot">你好！我是菲菲 Feifei～ Ask me anything about this TCBL review. 你也可以直接选中文章中的文字来问我哦！</div>
   </div>
   <div class="ff-quick">
-    <button onclick="quickAsk('这篇综述主要讲什么？')">综述概要</button>
-    <button onclick="quickAsk('KW01模型有什么特别的？')">KW01模型</button>
-    <button onclick="quickAsk('Holland模型怎么用？')">Holland模型</button>
-    <button onclick="quickAsk('PBWE框架是什么？')">PBWE框架</button>
+    <button onclick="quickAsk('What is this review about? / 这篇综述主要讲什么？')">Overview / 综述概要</button>
+    <button onclick="quickAsk('What is special about the KW01 model? / KW01模型有什么特别的？')">KW01 model / KW01模型</button>
+    <button onclick="quickAsk('How is the Holland model used? / Holland模型怎么用？')">Holland model / Holland模型</button>
+    <button onclick="quickAsk('What is the PBWE framework? / PBWE框架是什么？')">PBWE framework / PBWE框架</button>
   </div>
   <div id="feifei-input-area">
-    <input id="feifei-input" type="text" placeholder="问我关于TCBL模型的问题..."
+    <input id="feifei-input" type="text" placeholder="Ask me about TCBL models... / 问我关于TCBL模型的问题..."
            onkeydown="if(event.key==='Enter')sendFeifei()">
     <button id="feifei-send" onclick="sendFeifei()">↑</button>
   </div>
@@ -442,11 +442,11 @@ async function sendFeifei() {
       addMsg('bot', data.reply);
       feifeiHistory.push({ role: 'assistant', content: data.reply });
     } else {
-      addMsg('bot', '喵...出了点小问题，稍后再试？🐱');
+      addMsg('bot', '喵... something went wrong. 稍后再试一下？🐱');
     }
   } catch (e) {
     hideTyping();
-    addMsg('bot', '网络好像不太通 🐱');
+    addMsg('bot', 'Network seems busy... 网络好像不太通 🐱');
   }
 }
 

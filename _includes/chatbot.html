@@ -561,6 +561,10 @@ function injectFeifeiTab() {
 
   function isMobile() { return window.innerWidth <= 768; }
 
+  btn.addEventListener('click', (e) => {
+    if (isMobile()) toggleFeifei();
+  });
+
   function onPointerDown(e) {
     if (isMobile()) return; // No drag on mobile
     isDragging = true;

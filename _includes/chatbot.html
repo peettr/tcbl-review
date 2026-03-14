@@ -317,18 +317,23 @@ let selectedText = '';
 
 function toggleFeifei() {
   const sidebar = document.getElementById('feifei-sidebar');
-  const btn = document.getElementById('feifei-tab');
+  const btn = document.getElementById('feifei-tab-float');
   sidebar.classList.toggle('open');
   
   if (sidebar.classList.contains('open')) {
-    // Position panel near the button
-    const btnRect = btn.getBoundingClientRect();
-    let left = btnRect.left - 390;
-    let top = btnRect.top - 200;
+    let left = window.innerWidth - 404;
+    let top = window.innerHeight - 504;
+    
+    if (btn) {
+      const btnRect = btn.getBoundingClientRect();
+      // Open above and slightly left of the floating button
+      left = btnRect.right - 380;
+      top = btnRect.top - 490;
+    }
     
     // Keep within viewport
-    left = Math.max(10, Math.min(left, window.innerWidth - 400));
-    top = Math.max(10, Math.min(top, window.innerHeight - 500));
+    left = Math.max(10, Math.min(left, window.innerWidth - 390));
+    top = Math.max(10, Math.min(top, window.innerHeight - 490));
     
     sidebar.style.left = left + 'px';
     sidebar.style.top = top + 'px';

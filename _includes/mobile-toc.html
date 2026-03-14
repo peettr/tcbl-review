@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const isArticle = path.endsWith('/') || path.endsWith('/index.html') || path.includes('index-zh') || path.endsWith('/tcbl-review/');
   if (!isArticle) return;
 
-  const headings = document.querySelectorAll('main h1[id], main h2[id], main h3[id], main h4[id], section h1[id], section h2[id], section h3[id], section h4[id]');
+  // Quarto uses data-anchor-id on headings, id on parent section
+  const headings = document.querySelectorAll('h1[data-anchor-id], h2[data-anchor-id], h3[data-anchor-id], h4[data-anchor-id], main > section > h1[id]');
   if (headings.length < 3) return;
 
   const btn = document.createElement('button');
@@ -133,9 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let html = '<div class="toc-header"><span>目录 Contents</span><button class="toc-close" id="mobile-toc-close">✕</button></div><ul class="toc-list">';
   headings.forEach(h => {
     const level = h.tagName.toLowerCase();
-    const text = h.textContent.replace(/[#§¶]/g, '').trim();
+    // Clean up text (remove edit/comment buttons)
+    let text = h.textContent.replace(/[#§¶✏️💬]/g, '').replace(/\d+$/,'').trim();
     if (!text || text.length < 2) return;
-    html += '<li><a href="#' + h.id + '" class="toc-' + level + '">' + text + '</a></li>';
+    // Use parent section id or data-anchor-id for link target
+    const anchor = h.getAttribute('data-anchor-id') || h.id || (h.parentElement && h.parentElement.id) || '';
+    if (!anchor) return;
+    html += '<li><a href="#' + anchor + '" class="toc-' + level + '">' + text + '</a></li>';
   });
   html += '</ul>';
   panel.innerHTML = html;

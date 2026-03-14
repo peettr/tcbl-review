@@ -144,7 +144,7 @@ if (window.innerWidth <= 768) {
     const src = iframe.getAttribute('src');
     const hint = document.createElement('div');
     hint.className = 'mobile-pdf-hint';
-    hint.innerHTML = '📱 滑动不便？<a href="' + src + '" target="_blank">点击全屏查看 PDF</a>';
+    hint.innerHTML = '📱 滑动不便？<a href="' + src + '" target="_blank">点击全屏查看 PDF / Tap to view fullscreen</a>';
     iframe.parentElement.appendChild(hint);
   });
 }

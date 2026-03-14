@@ -9,6 +9,7 @@
   justify-content: flex-start;
   gap: 12px;
   padding: 5px 16px 5px 5px;
+  padding-left: 86px;
   border-radius: 999px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
@@ -22,7 +23,7 @@
   min-height: 92px !important;
   max-height: 92px !important;
   box-sizing: border-box;
-  overflow: hidden !important;
+  overflow: visible !important;
   flex-wrap: nowrap !important;
   flex-shrink: 0 !important;
 }
@@ -30,15 +31,19 @@
   box-shadow: 0 8px 22px rgba(102,126,234,0.45);
 }
 #feifei-tab-float .ff-avatar-wrap {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 75px;
   height: 75px;
   border-radius: 50%;
   overflow: hidden;
-  flex: 0 0 75px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: rgba(255,255,255,0.18);
+  pointer-events: none;
 }
 #feifei-tab-float .ff-avatar-wrap img {
   width: 100%;

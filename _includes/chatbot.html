@@ -513,19 +513,47 @@ async function sendFeifei() {
 }
 
 // Text selection → "Ask Feifei" popup
-document.addEventListener('mouseup', (e) => {
+function showSelectionPopup(e) {
   const popup = document.getElementById('feifei-select-popup');
   const sel = window.getSelection().toString().trim();
   
   if (sel.length > 10 && !e.target.closest('#feifei-sidebar')) {
     selectedText = sel;
     popup.style.display = 'block';
-    popup.style.left = e.pageX + 'px';
-    popup.style.top = (e.pageY - 40) + 'px';
+    // Use touch position or mouse position
+    const px = e.pageX || (e.changedTouches && e.changedTouches[0].pageX) || 0;
+    const py = e.pageY || (e.changedTouches && e.changedTouches[0].pageY) || 0;
+    popup.style.left = px + 'px';
+    popup.style.top = (py - 40) + 'px';
   } else {
     popup.style.display = 'none';
   }
-});
+}
+document.addEventListener('mouseup', showSelectionPopup);
+// Mobile: use selectionchange with a short delay to catch touch selections
+document.addEventListener('selectionchange', (() => {
+  let timer = null;
+  return () => {
+    if (window.innerWidth > 768) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const sel = window.getSelection();
+      const text = sel.toString().trim();
+      const popup = document.getElementById('feifei-select-popup');
+      if (text.length > 10) {
+        selectedText = text;
+        // Position near the selection
+        const range = sel.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        popup.style.display = 'block';
+        popup.style.left = (rect.left + window.scrollX) + 'px';
+        popup.style.top = (rect.top + window.scrollY - 40) + 'px';
+      } else {
+        popup.style.display = 'none';
+      }
+    }, 300);
+  };
+})());
 
 function askAboutSelection() {
   document.getElementById('feifei-select-popup').style.display = 'none';

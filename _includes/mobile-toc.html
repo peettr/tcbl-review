@@ -110,8 +110,7 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // CSS handles hiding on desktop; always create elements
+function initMobileToc() {
   const path = window.location.pathname;
   const isArticle = path.endsWith('/') || path.endsWith('/index.html') || path.includes('index-zh') || path.endsWith('/tcbl-review/');
   if (!isArticle) return;
@@ -160,5 +159,10 @@ document.addEventListener('DOMContentLoaded', function() {
   panel.querySelectorAll('.toc-list a').forEach(a => {
     a.addEventListener('click', closeToc);
   });
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMobileToc);
+} else {
+  initMobileToc();
+}
 </script>

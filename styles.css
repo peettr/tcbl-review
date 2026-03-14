@@ -425,6 +425,7 @@ hr {
 }
 
 /* ===== Dark mode ===== */
+/* ===== Dark mode: comprehensive ===== */
 [data-bs-theme="dark"] #quarto-document-content {
   color: #ddd;
 }
@@ -439,9 +440,15 @@ hr {
   border-bottom-color: #4a3a6a;
 }
 
+[data-bs-theme="dark"] #quarto-document-content h3,
+[data-bs-theme="dark"] #quarto-document-content h4 {
+  color: #ccc;
+}
+
 [data-bs-theme="dark"] .math.display {
   border-left-color: #8b6cbf;
   background: rgba(139, 108, 191, 0.08);
+  color: #ddd;
 }
 
 [data-bs-theme="dark"] figure, [data-bs-theme="dark"] .quarto-figure {
@@ -449,19 +456,95 @@ hr {
   border-color: #333;
 }
 
+[data-bs-theme="dark"] figcaption {
+  color: #aaa;
+}
+
+/* Tables */
+[data-bs-theme="dark"] table {
+  border-color: #555;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] thead {
+  background: linear-gradient(135deg, #4a3a6a, #6b4c9a);
+}
+
 [data-bs-theme="dark"] th {
-  background: #2d2d3d;
+  color: #fff !important;
+  background: transparent;
   border-bottom-color: #8b6cbf;
 }
 
+[data-bs-theme="dark"] td {
+  color: #ddd !important;
+  border-color: #444;
+  background: transparent;
+}
+
+[data-bs-theme="dark"] tbody tr:nth-child(even) {
+  background: rgba(139, 108, 191, 0.06);
+}
+
+[data-bs-theme="dark"] tbody tr:hover {
+  background: rgba(139, 108, 191, 0.12);
+}
+
+[data-bs-theme="dark"] table + .table-caption,
+[data-bs-theme="dark"] caption,
+[data-bs-theme="dark"] .caption-top {
+  color: #bbb;
+}
+
+/* Links */
+[data-bs-theme="dark"] a[href^="#ref-"] {
+  color: #b89edb;
+}
+
+[data-bs-theme="dark"] a {
+  color: #8cb4f0;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: #aaccff;
+}
+
+/* Blockquotes */
 [data-bs-theme="dark"] blockquote {
   border-left-color: #8b6cbf;
   background: rgba(139, 108, 191, 0.06);
   color: #bbb;
 }
 
-[data-bs-theme="dark"] a[href^="#ref-"] {
+/* TOC */
+[data-bs-theme="dark"] #TOC a {
+  color: #aaa;
+}
+
+[data-bs-theme="dark"] #TOC a.active {
   color: #b89edb;
+}
+
+/* Inline code */
+[data-bs-theme="dark"] code {
+  color: #c9a0f0;
+  background: rgba(139, 108, 191, 0.12);
+}
+
+/* Comment buttons */
+[data-bs-theme="dark"] .comment-btn {
+  color: #888;
+  border-color: #555;
+}
+
+/* Edit buttons */
+[data-bs-theme="dark"] .inline-edit-btn {
+  color: #888;
+}
+
+/* Page footer */
+[data-bs-theme="dark"] .page-footer {
+  color: #888;
 }
 
 /* ===== Print ===== */

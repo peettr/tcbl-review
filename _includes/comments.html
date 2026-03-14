@@ -167,21 +167,21 @@ let commentCounts = {};
 let adminKey = '';
 
 // Bilingual support
-const isZhPage = window.location.pathname.includes('index-zh');
+const _isZhComment = window.location.pathname.includes('index-zh');
 const i18n = {
-  commentTitle: isZhPage ? '评论' : 'Comments',
-  namePlaceholder: isZhPage ? '昵称（可选，默认匿名）' : 'Nickname (optional, default anonymous)',
-  textPlaceholder: isZhPage ? '写下你的评论...' : 'Write a comment...',
-  submit: isZhPage ? '发送' : 'Send',
-  submitting: isZhPage ? '发送中...' : 'Sending...',
-  noComments: isZhPage ? '还没有评论，来留下第一条吧！' : 'No comments yet. Be the first!',
-  loading: isZhPage ? '加载中...' : 'Loading...',
-  loadFail: isZhPage ? '加载失败' : 'Failed to load',
-  sendFail: isZhPage ? '发送失败，请重试' : 'Failed to send. Please try again.',
-  confirmDelete: isZhPage ? '确定删除这条评论？' : 'Delete this comment?',
-  globalBtn: isZhPage ? '💬 留下你的评论' : '💬 Leave a comment',
-  globalTitle: isZhPage ? '全文评论' : 'General comments',
-  adminPrompt: isZhPage ? '输入管理密码：' : 'Enter admin password:',
+  commentTitle: _isZhComment ? '评论' : 'Comments',
+  namePlaceholder: _isZhComment ? '昵称（可选，默认匿名）' : 'Nickname (optional, default anonymous)',
+  textPlaceholder: _isZhComment ? '写下你的评论...' : 'Write a comment...',
+  submit: _isZhComment ? '发送' : 'Send',
+  submitting: _isZhComment ? '发送中...' : 'Sending...',
+  noComments: _isZhComment ? '还没有评论，来留下第一条吧！' : 'No comments yet. Be the first!',
+  loading: _isZhComment ? '加载中...' : 'Loading...',
+  loadFail: _isZhComment ? '加载失败' : 'Failed to load',
+  sendFail: _isZhComment ? '发送失败，请重试' : 'Failed to send. Please try again.',
+  confirmDelete: _isZhComment ? '确定删除这条评论？' : 'Delete this comment?',
+  globalBtn: _isZhComment ? '💬 留下你的评论' : '💬 Leave a comment',
+  globalTitle: _isZhComment ? '全文评论' : 'General comments',
+  adminPrompt: _isZhComment ? '输入管理密码：' : 'Enter admin password:',
 };
 
 // Check for admin mode

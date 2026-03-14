@@ -70,7 +70,6 @@ format:
       - _includes/inline-edit.html
       - _includes/comments.html
       - _includes/lang-toggle.html
-      - _includes/mobile-toc.html
 
 execute:
   freeze: auto

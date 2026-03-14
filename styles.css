@@ -426,23 +426,39 @@ hr {
 
 /* ===== Dark mode ===== */
 /* ===== Dark mode: comprehensive ===== */
-[data-bs-theme="dark"] #quarto-document-content {
-  color: #ddd;
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] #quarto-document-content,
+[data-bs-theme="dark"] #quarto-document-content p,
+[data-bs-theme="dark"] #quarto-document-content li,
+[data-bs-theme="dark"] #quarto-document-content span,
+[data-bs-theme="dark"] #quarto-document-content div,
+[data-bs-theme="dark"] .content,
+[data-bs-theme="dark"] main {
+  color: #e0e0e0 !important;
 }
 
 [data-bs-theme="dark"] #quarto-document-content h1 {
-  color: #e8e0f0;
+  color: #f0eaff !important;
   border-bottom-color: #8b6cbf;
 }
 
 [data-bs-theme="dark"] #quarto-document-content h2 {
-  color: #d8d0e8;
+  color: #e8e0f0 !important;
   border-bottom-color: #4a3a6a;
 }
 
 [data-bs-theme="dark"] #quarto-document-content h3,
 [data-bs-theme="dark"] #quarto-document-content h4 {
-  color: #ccc;
+  color: #ddd !important;
+}
+
+[data-bs-theme="dark"] .abstract {
+  color: #ccc !important;
+}
+
+[data-bs-theme="dark"] .quarto-title-meta-contents,
+[data-bs-theme="dark"] .quarto-title-meta-heading {
+  color: #bbb !important;
 }
 
 [data-bs-theme="dark"] .math.display {

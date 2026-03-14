@@ -111,7 +111,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.innerWidth > 768) return;
+  // CSS handles hiding on desktop; always create elements
   const path = window.location.pathname;
   const isArticle = path.endsWith('/') || path.endsWith('/index.html') || path.includes('index-zh') || path.endsWith('/tcbl-review/');
   if (!isArticle) return;

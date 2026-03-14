@@ -341,7 +341,7 @@
 <!-- Button will be injected into TOC sidebar by JS -->
 
 <!-- Selection popup -->
-<div id="feifei-select-popup" onclick="askAboutSelection()"><img src="images/feifei-avatar.jpg" style="width:24px;height:24px;vertical-align:middle;margin-right:4px;border-radius:50%;object-fit:cover;"> 问菲菲</div>
+<div id="feifei-select-popup" onclick="askAboutSelection()"><img src="images/feifei-avatar.jpg" style="width:24px;height:24px;vertical-align:middle;margin-right:4px;border-radius:50%;object-fit:cover;"> <span id="popup-label">Ask Feifei</span></div>
 
 <!-- Sidebar panel -->
 <div id="feifei-sidebar">
@@ -354,14 +354,14 @@
     <button class="close-btn" onclick="toggleFeifei()">✕</button>
   </div>
   <div id="feifei-messages">
-    <div class="ff-msg bot">你好！我是菲菲 Feifei～ Ask me anything about this TCBL review. 你也可以直接选中文章中的文字来问我哦！</div>
+    <div class="ff-msg bot" id="feifei-greeting"></div>
   </div>
   <div class="ff-quick">
-    <button onclick="quickAsk('What is this review about? / 这篇综述主要讲什么？')">Overview / 综述概要</button>
-    <button onclick="quickAsk('What is special about the KW01 model? / KW01模型有什么特别的？')">KW01 model / KW01模型</button>
+    <button id="quick-overview"></button>
+    <button id="quick-kw01"></button>
   </div>
   <div id="feifei-input-area">
-    <input id="feifei-input" type="text" placeholder="Ask Feifei about TCBL... / 问菲菲"
+    <input id="feifei-input" type="text" placeholder=""
            onkeydown="if(event.key==='Enter')sendFeifei()">
     <button id="feifei-send" onclick="sendFeifei()">↑</button>
   </div>
@@ -369,6 +369,20 @@
 
 <script>
 const FEIFEI_API = 'https://feifei-tcbl.peettr.workers.dev';
+const isZhPage = window.location.pathname.includes('index-zh');
+const feifeiI18n = {
+  popupLabel: isZhPage ? '问菲菲' : 'Ask Feifei',
+  explainSelection: isZhPage ? '请解释这段内容' : 'Please explain the selected text',
+  inputPlaceholder: isZhPage ? '问菲菲...' : 'Ask Feifei about TCBL...',
+  greeting: isZhPage
+    ? '你好！我是菲菲 Feifei～ 你可以问我关于这篇综述的任何问题，也可以直接选中文章中的文字来问我哦！'
+    : 'Hi! I\'m Feifei \u{1F431} Ask me anything about this TCBL review. You can also select text in the article to ask me!',
+  btnLabel: isZhPage ? '问菲菲 Ask Feifei' : 'Ask Feifei 问菲菲',
+  quickOverviewLabel: isZhPage ? '综述概要' : 'Overview',
+  quickOverviewQ: isZhPage ? '这篇综述主要讲什么？' : 'What is this review about?',
+  quickKW01Label: isZhPage ? 'KW01模型' : 'KW01 model',
+  quickKW01Q: isZhPage ? 'KW01模型有什么特别的？' : 'What is special about the KW01 model?',
+};
 
 // System prompt with full knowledge base is embedded in the Cloudflare Worker
 const FEIFEI_SYSTEM = null; // handled server-side
@@ -561,7 +575,7 @@ function askAboutSelection() {
   if (!sidebar.classList.contains('open')) {
     toggleFeifei();
   }
-  document.getElementById('feifei-input').value = '请解释这段内容';
+  document.getElementById('feifei-input').value = feifeiI18n.explainSelection;
   document.getElementById('feifei-input').focus();
 }
 
@@ -578,9 +592,9 @@ function injectFeifeiTab() {
   const btn = document.createElement('button');
   btn.id = 'feifei-tab-float';
   btn.type = 'button';
-  btn.setAttribute('aria-label', '问菲菲 Ask Feifei');
+  btn.setAttribute('aria-label', feifeiI18n.btnLabel);
   const avatarSrc = 'images/feifei-avatar.jpg';
-  btn.innerHTML = '<span class="ff-avatar-wrap"><img src="' + avatarSrc + '" alt="菲菲"></span><span class="ff-tab-label">问菲菲 Ask Feifei</span>';
+  btn.innerHTML = '<span class="ff-avatar-wrap"><img src="' + avatarSrc + '" alt="菲菲"></span><span class="ff-tab-label">' + feifeiI18n.btnLabel + '</span>';
   document.body.appendChild(btn);
 
   let isDragging = false;
@@ -659,4 +673,15 @@ function injectFeifeiTab() {
 }
 
 injectFeifeiTab();
+
+// Initialize bilingual text
+document.getElementById('popup-label').textContent = feifeiI18n.popupLabel;
+document.getElementById('feifei-greeting').textContent = feifeiI18n.greeting;
+document.getElementById('feifei-input').placeholder = feifeiI18n.inputPlaceholder;
+var qOverview = document.getElementById('quick-overview');
+qOverview.textContent = feifeiI18n.quickOverviewLabel;
+qOverview.onclick = function() { quickAsk(feifeiI18n.quickOverviewQ); };
+var qKw01 = document.getElementById('quick-kw01');
+qKw01.textContent = feifeiI18n.quickKW01Label;
+qKw01.onclick = function() { quickAsk(feifeiI18n.quickKW01Q); };
 </script>

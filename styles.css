@@ -346,22 +346,77 @@ hr {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  /* Body text */
   #quarto-document-content {
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.5rem;
   }
 
-  #quarto-document-content h1 { font-size: 1.6rem; }
-  #quarto-document-content h2 { font-size: 1.3rem; }
-  #quarto-document-content h3 { font-size: 1.15rem; }
+  /* Headings */
+  #quarto-document-content h1 { font-size: 1.5rem; }
+  #quarto-document-content h2 { font-size: 1.25rem; }
+  #quarto-document-content h3 { font-size: 1.1rem; }
+  #quarto-document-content h4 { font-size: 1rem; }
 
+  /* Equations: scrollable when too wide */
   .math.display {
-    font-size: 0.88em;
-    padding: 0.6em 0.8em;
+    font-size: 0.82em;
+    padding: 0.5em 0.6em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .katex-display {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.3em 0;
   }
 
+  /* Tables: scrollable wrapper */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85em;
+  }
+  table th, table td {
+    white-space: nowrap;
+    padding: 0.4em 0.6em;
+  }
+
+  /* Figures */
   figure, .quarto-figure {
-    padding: 0.5em;
+    padding: 0.3em;
+    margin: 0.8em 0;
+  }
+  figure img, .quarto-figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* References list: tighter */
+  .references {
+    font-size: 0.88em;
+  }
+
+  /* Quarto grid: single column on mobile */
+  .page-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Margin content (footnotes, sidenotes) */
+  .column-margin, .margin-caption {
+    width: 100% !important;
+    margin: 0.5em 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    margin-left: 0.5em;
+    margin-right: 0;
+    padding: 0.6em 0.8em;
+    font-size: 0.93em;
   }
 }
 

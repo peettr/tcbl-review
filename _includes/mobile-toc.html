@@ -89,7 +89,8 @@
   border-bottom: 1px solid #f5f5f5;
 }
 #mobile-toc-panel .toc-list a:active { color: #667eea; }
-#mobile-toc-panel .toc-list .toc-h2 { padding-left: 0; font-weight: 600; font-size: 14px; }
+#mobile-toc-panel .toc-list .toc-h1 { padding-left: 0; font-weight: 700; font-size: 15px; color: #222; }
+#mobile-toc-panel .toc-list .toc-h2 { padding-left: 12px; font-weight: 600; font-size: 14px; }
 #mobile-toc-panel .toc-list .toc-h3 { padding-left: 14px; }
 #mobile-toc-panel .toc-list .toc-h4 { padding-left: 28px; font-size: 12px; color: #888; }
 
@@ -115,8 +116,8 @@ function initMobileToc() {
   const isArticle = path.endsWith('/') || path.endsWith('/index.html') || path.includes('index-zh') || path.endsWith('/tcbl-review/');
   if (!isArticle) return;
 
-  // Quarto uses data-anchor-id on headings, id on parent section
-  const headings = document.querySelectorAll('h1[data-anchor-id], h2[data-anchor-id], h3[data-anchor-id], h4[data-anchor-id], main > section > h1[id]');
+  // Quarto: h2+ have data-anchor-id, h1 have no id but parent section has id
+  const headings = document.querySelectorAll('section[id] > h1, h2[data-anchor-id], h3[data-anchor-id], h4[data-anchor-id]');
   if (headings.length < 3) return;
 
   const btn = document.createElement('button');
@@ -136,7 +137,7 @@ function initMobileToc() {
     // Clean up text (remove edit/comment buttons)
     let text = h.textContent.replace(/[#§¶✏️💬]/g, '').replace(/\d+$/,'').trim();
     if (!text || text.length < 2) return;
-    // Use parent section id or data-anchor-id for link target
+    // h1: use parent section id; h2+: use data-anchor-id
     const anchor = h.getAttribute('data-anchor-id') || h.id || (h.parentElement && h.parentElement.id) || '';
     if (!anchor) return;
     html += '<li><a href="#' + anchor + '" class="toc-' + level + '">' + text + '</a></li>';

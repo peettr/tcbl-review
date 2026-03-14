@@ -283,7 +283,7 @@
 <!-- Sidebar panel -->
 <div id="feifei-sidebar">
   <div id="feifei-header">
-    <div class="avatar"><img src="/tcbl-review/images/feifei-avatar.jpg" alt="菲菲"></div>
+    <div class="avatar"><img src="images/feifei-avatar.jpg" alt="菲菲"></div>
     <div class="info">
       <div class="name">菲菲 Feifei</div>
       <div class="desc">TCBL Review Assistant</div>
@@ -484,7 +484,7 @@ function injectFeifeiTab() {
   btn.id = 'feifei-tab-float';
   btn.type = 'button';
   btn.setAttribute('aria-label', '问菲菲 Ask Feifei');
-  const avatarSrc = (window.location.pathname.includes('/tcbl-review/') ? '/tcbl-review/images/feifei-avatar.jpg' : '/images/feifei-avatar.jpg');
+  const avatarSrc = 'images/feifei-avatar.jpg';
   btn.innerHTML = '<span class="ff-avatar-wrap"><img src="' + avatarSrc + '" alt="菲菲"></span><span class="ff-tab-label">问菲菲 Ask Feifei</span>';
   document.body.appendChild(btn);
 

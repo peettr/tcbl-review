@@ -270,8 +270,32 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-  #feifei-sidebar { width: calc(100vw - 20px) !important; height: calc(100vh - 80px) !important; }
-  #feifei-sidebar.open { left: 10px !important; top: 10px !important; }
+  #feifei-sidebar {
+    width: calc(100vw - 24px) !important;
+    height: 55vh !important;
+    max-height: 420px !important;
+    min-height: 280px !important;
+    border-radius: 12px !important;
+    resize: none !important;
+  }
+  #feifei-sidebar.open {
+    left: 12px !important;
+    bottom: 70px !important;
+    top: auto !important;
+  }
+  #feifei-header {
+    padding: 10px 12px !important;
+  }
+  #feifei-header .close-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
+    background: rgba(255,255,255,0.25) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
   #feifei-tab-float {
     width: 180px !important;
     min-width: 180px !important;

@@ -359,6 +359,7 @@
   <div class="ff-quick">
     <button id="quick-overview"></button>
     <button id="quick-kw01"></button>
+    <button id="quick-who"></button>
   </div>
   <div id="feifei-input-area">
     <input id="feifei-input" type="text" placeholder=""
@@ -382,6 +383,8 @@ const feifeiI18n = {
   quickOverviewQ: isZhPage ? '这篇综述主要讲什么？' : 'What is this review about?',
   quickKW01Label: isZhPage ? 'KW01模型' : 'KW01 model',
   quickKW01Q: isZhPage ? 'KW01模型有什么特别的？' : 'What is special about the KW01 model?',
+  quickWhoLabel: isZhPage ? '菲菲是谁' : "Who's Feifei",
+  quickWhoQ: isZhPage ? '菲菲是谁？' : 'Who is Feifei?',
 };
 
 // System prompt with full knowledge base is embedded in the Cloudflare Worker
@@ -684,4 +687,7 @@ qOverview.onclick = function() { quickAsk(feifeiI18n.quickOverviewQ); };
 var qKw01 = document.getElementById('quick-kw01');
 qKw01.textContent = feifeiI18n.quickKW01Label;
 qKw01.onclick = function() { quickAsk(feifeiI18n.quickKW01Q); };
+var qWho = document.getElementById('quick-who');
+qWho.textContent = feifeiI18n.quickWhoLabel;
+qWho.onclick = function() { quickAsk(feifeiI18n.quickWhoQ); };
 </script>

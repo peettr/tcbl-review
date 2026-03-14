@@ -1,0 +1,106 @@
+/* Dark mode overrides - loaded AFTER darkly theme for highest priority */
+
+body {
+  color: #e0e0e0 !important;
+}
+
+#quarto-document-content,
+#quarto-document-content p,
+#quarto-document-content li,
+#quarto-document-content span:not(.ff-tab-label),
+#quarto-document-content div,
+main, .content {
+  color: #e0e0e0 !important;
+}
+
+#quarto-document-content h1 {
+  color: #f0eaff !important;
+}
+
+#quarto-document-content h2 {
+  color: #e8e0f0 !important;
+}
+
+#quarto-document-content h3,
+#quarto-document-content h4 {
+  color: #ddd !important;
+}
+
+.abstract, .abstract p {
+  color: #ccc !important;
+}
+
+.quarto-title-meta-contents,
+.quarto-title-meta-heading {
+  color: #bbb !important;
+}
+
+/* Tables */
+table {
+  border-color: #555 !important;
+}
+
+thead {
+  background: linear-gradient(135deg, #4a3a6a, #6b4c9a) !important;
+}
+
+th {
+  color: #fff !important;
+}
+
+td {
+  color: #ddd !important;
+  border-color: #444 !important;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(139, 108, 191, 0.06) !important;
+}
+
+table + .table-caption,
+caption, .caption-top {
+  color: #bbb !important;
+}
+
+/* Figures */
+figcaption {
+  color: #aaa !important;
+}
+
+/* Links */
+a {
+  color: #8cb4f0 !important;
+}
+
+a:hover {
+  color: #aaccff !important;
+}
+
+a[href^="#ref-"] {
+  color: #b89edb !important;
+}
+
+/* Equations */
+.math.display {
+  color: #ddd !important;
+}
+
+/* Blockquotes */
+blockquote {
+  color: #ccc !important;
+}
+
+/* Code */
+code {
+  color: #c9a0f0 !important;
+}
+
+/* TOC */
+#TOC a {
+  color: #bbb !important;
+}
+
+/* Sidebar TOC */
+.sidebar nav a {
+  color: #bbb !important;
+}

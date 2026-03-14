@@ -22,7 +22,11 @@ website:
   navbar:
     left:
       - text: "Article"
-        href: index.qmd
+        menu:
+          - text: "English"
+            href: index.qmd
+          - text: "中文"
+            href: index-zh.qmd
       - text: "Mind Map"
         href: mindmap.qmd
       - text: "Literature"
@@ -34,8 +38,6 @@ website:
       - text: "Slides"
         href: presentations.qmd
     right:
-      - text: "中文"
-        href: index-zh.qmd
       - icon: github
         href: https://github.com/peettr/tcbl-review
   page-footer:

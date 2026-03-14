@@ -479,7 +479,8 @@ function injectFeifeiTab() {
   btn.id = 'feifei-tab-float';
   btn.type = 'button';
   btn.setAttribute('aria-label', '问菲菲 Ask Feifei');
-  btn.innerHTML = '<span class="ff-avatar-wrap"><img src="/images/feifei-avatar.jpg" alt="菲菲"></span><span class="ff-tab-label">问菲菲 Ask Feifei</span>';
+  const avatarSrc = (window.location.pathname.includes('/tcbl-review/') ? '/tcbl-review/images/feifei-avatar.jpg' : '/images/feifei-avatar.jpg');
+  btn.innerHTML = '<span class="ff-avatar-wrap"><img src="' + avatarSrc + '" alt="菲菲"></span><span class="ff-tab-label">问菲菲 Ask Feifei</span>';
   document.body.appendChild(btn);
 
   let isDragging = false;

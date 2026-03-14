@@ -270,18 +270,21 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Chat dialog: left-side, narrower */
   #feifei-sidebar {
-    width: calc(100vw - 24px) !important;
-    height: 55vh !important;
-    max-height: 420px !important;
-    min-height: 280px !important;
+    width: 75vw !important;
+    max-width: 300px !important;
+    height: 50vh !important;
+    max-height: 400px !important;
+    min-height: 260px !important;
     border-radius: 12px !important;
     resize: none !important;
   }
   #feifei-sidebar.open {
     left: 12px !important;
-    bottom: 70px !important;
+    bottom: 16px !important;
     top: auto !important;
+    right: auto !important;
   }
   #feifei-header {
     padding: 10px 12px !important;
@@ -296,28 +299,30 @@
     align-items: center !important;
     justify-content: center !important;
   }
+  /* Chatbot button: keep prominent */
   #feifei-tab-float {
-    width: 180px !important;
-    min-width: 180px !important;
-    max-width: 180px !important;
-    height: 38px !important;
-    min-height: 38px !important;
-    max-height: 38px !important;
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
     right: 12px !important;
     bottom: 16px !important;
-    padding: 4px 12px 4px 60px !important;
+    padding: 5px 14px 5px 70px !important;
     gap: 8px;
+    box-shadow: 0 6px 20px rgba(102,126,234,0.5) !important;
   }
   #feifei-tab-float .ff-avatar-wrap {
-    width: 52px !important;
-    height: 52px !important;
+    width: 62px !important;
+    height: 62px !important;
   }
   #feifei-tab-float .ff-avatar-wrap img {
     width: 100% !important;
     height: 100% !important;
   }
   #feifei-tab-float .ff-tab-label {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
   #feifei-select-popup {
     font-size: 13px !important;

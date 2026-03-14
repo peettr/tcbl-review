@@ -30,11 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
     el.style.position = 'relative';
     el.appendChild(btn);
     
-    // Show on hover
-    el.addEventListener('mouseenter', () => btn.style.opacity = '1');
-    el.addEventListener('mouseleave', () => {
-      if (!el.classList.contains('editing')) btn.style.opacity = '0';
-    });
+    // Show on hover (desktop) or always visible (mobile)
+    if (window.innerWidth <= 768) {
+      btn.style.opacity = '0.4';
+      btn.style.right = '4px';
+      btn.style.fontSize = '12px';
+      btn.style.padding = '1px 4px';
+    } else {
+      el.addEventListener('mouseenter', () => btn.style.opacity = '1');
+      el.addEventListener('mouseleave', () => {
+        if (!el.classList.contains('editing')) btn.style.opacity = '0';
+      });
+    }
     
     // Click to edit
     btn.addEventListener('click', (e) => {

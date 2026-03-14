@@ -616,14 +616,17 @@ function injectFeifeiTab() {
   document.addEventListener('pointerup', onPointerUp);
   btn.style.touchAction = 'none';
 
-  const savedX = localStorage.getItem('feifei-x');
-  const savedY = localStorage.getItem('feifei-y');
-  if (savedX && savedY) {
-    btn.style.right = 'auto';
-    btn.style.bottom = 'auto';
-    btn.style.left = savedX;
-    btn.style.top = savedY;
-    btn.style.transform = 'none';
+  // Restore saved position only on desktop
+  if (!isMobile()) {
+    const savedX = localStorage.getItem('feifei-x');
+    const savedY = localStorage.getItem('feifei-y');
+    if (savedX && savedY) {
+      btn.style.right = 'auto';
+      btn.style.bottom = 'auto';
+      btn.style.left = savedX;
+      btn.style.top = savedY;
+      btn.style.transform = 'none';
+    }
   }
 }
 

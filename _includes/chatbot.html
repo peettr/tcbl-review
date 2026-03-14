@@ -326,9 +326,9 @@ function toggleFeifei() {
     
     if (btn) {
       const btnRect = btn.getBoundingClientRect();
-      // Open above and slightly left of the floating button
+      // Open directly above the floating button with a small gap
       left = btnRect.right - 380;
-      top = btnRect.top - 490;
+      top = btnRect.top - 500;
     }
     
     // Keep within viewport

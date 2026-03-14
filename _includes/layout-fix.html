@@ -25,5 +25,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   `;
   document.head.appendChild(style);
+
+  // Dark mode overrides — injected last for highest priority
+  var darkStyle = document.createElement('style');
+  darkStyle.textContent = \`
+    [data-bs-theme="dark"] body,
+    [data-bs-theme="dark"] #quarto-document-content,
+    [data-bs-theme="dark"] #quarto-document-content p,
+    [data-bs-theme="dark"] #quarto-document-content li,
+    [data-bs-theme="dark"] #quarto-document-content span:not(.ff-tab-label),
+    [data-bs-theme="dark"] #quarto-document-content div,
+    [data-bs-theme="dark"] main,
+    [data-bs-theme="dark"] .content {
+      color: #e0e0e0 !important;
+    }
+    [data-bs-theme="dark"] #quarto-document-content h1 { color: #f0eaff !important; }
+    [data-bs-theme="dark"] #quarto-document-content h2 { color: #e8e0f0 !important; }
+    [data-bs-theme="dark"] #quarto-document-content h3,
+    [data-bs-theme="dark"] #quarto-document-content h4 { color: #ddd !important; }
+    [data-bs-theme="dark"] .abstract, [data-bs-theme="dark"] .abstract p { color: #ccc !important; }
+    [data-bs-theme="dark"] .quarto-title-meta-contents,
+    [data-bs-theme="dark"] .quarto-title-meta-heading { color: #bbb !important; }
+    [data-bs-theme="dark"] table { border-color: #555 !important; }
+    [data-bs-theme="dark"] thead { background: linear-gradient(135deg, #4a3a6a, #6b4c9a) !important; }
+    [data-bs-theme="dark"] th { color: #fff !important; }
+    [data-bs-theme="dark"] td { color: #ddd !important; border-color: #444 !important; }
+    [data-bs-theme="dark"] tbody tr:nth-child(even) { background: rgba(139,108,191,0.06) !important; }
+    [data-bs-theme="dark"] table + .table-caption,
+    [data-bs-theme="dark"] caption, [data-bs-theme="dark"] .caption-top { color: #bbb !important; }
+    [data-bs-theme="dark"] figcaption { color: #aaa !important; }
+    [data-bs-theme="dark"] a { color: #8cb4f0 !important; }
+    [data-bs-theme="dark"] a:hover { color: #aaccff !important; }
+    [data-bs-theme="dark"] a[href^="#ref-"] { color: #b89edb !important; }
+    [data-bs-theme="dark"] .math.display { color: #ddd !important; }
+    [data-bs-theme="dark"] blockquote { color: #ccc !important; }
+    [data-bs-theme="dark"] code { color: #c9a0f0 !important; }
+    [data-bs-theme="dark"] #TOC a, [data-bs-theme="dark"] .sidebar nav a { color: #bbb !important; }
+    [data-bs-theme="dark"] .page-footer { color: #888 !important; }
+  \`;
+  document.head.appendChild(darkStyle);
 });
 </script>

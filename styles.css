@@ -361,6 +361,7 @@ hr {
 
   /* Equations: scrollable when too wide */
   .math.display {
+    display: block !important;
     font-size: 0.82em;
     padding: 0.5em 0.6em;
     overflow-x: auto !important;
@@ -368,20 +369,11 @@ hr {
     -webkit-overflow-scrolling: touch;
     max-width: calc(100vw - 2rem);
   }
-  .katex-display {
+  mjx-container.MathJax {
     overflow-x: auto !important;
     overflow-y: hidden;
+    max-width: calc(100vw - 3rem);
     -webkit-overflow-scrolling: touch;
-    padding: 0.3em 0;
-  }
-  .katex-display > .katex {
-    overflow-x: auto !important;
-    overflow-y: hidden;
-  }
-  .MathJax, .MathJax_Display {
-    overflow-x: auto !important;
-    overflow-y: hidden;
-    max-width: 100%;
   }
 
   /* Tables: scrollable wrapper */

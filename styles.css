@@ -341,7 +341,7 @@ hr {
 /* ===== Layout: prevent TOC/sidebar overlap ===== */
 #quarto-document-content {
   max-width: 100% !important;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 /* ===== Responsive ===== */
@@ -363,13 +363,25 @@ hr {
   .math.display {
     font-size: 0.82em;
     padding: 0.5em 0.6em;
-    overflow-x: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    max-width: calc(100vw - 2rem);
   }
   .katex-display {
-    overflow-x: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     padding: 0.3em 0;
+  }
+  .katex-display > .katex {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+  }
+  .MathJax, .MathJax_Display {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    max-width: 100%;
   }
 
   /* Tables: scrollable wrapper */

@@ -4,6 +4,7 @@ project:
   resources:
     - citation_network.json
     - presentations/
+    - images/feifei-avatar.jpg
   render:
     - index.qmd
     - mindmap.qmd

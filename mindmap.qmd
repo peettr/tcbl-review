@@ -85,6 +85,15 @@ format:
   .quarto-dark #mindmap-container { background: #1a1a2e; }
   [data-bs-theme="dark"] .controls strong,
   .quarto-dark .controls strong { color: #e0e0e0; }
+  [data-bs-theme="dark"] foreignObject div,
+  [data-bs-theme="dark"] .markmap-node text,
+  [data-bs-theme="dark"] .markmap-foreign div,
+  .quarto-dark foreignObject div,
+  .quarto-dark .markmap-node text,
+  .quarto-dark .markmap-foreign div {
+    color: #e0e0e0 !important;
+    fill: #e0e0e0 !important;
+  }
 
   /* Mobile */
   @media (max-width: 768px) {

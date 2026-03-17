@@ -1,0 +1,127 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add edit buttons to all section headings and paragraphs
+  const editableElements = document.querySelectorAll(
+    'main section > h1, main section > h2, main section > h3, main section > h4, main section > h5, main section > p, main section > .math.display'
+  );
+  
+  editableElements.forEach((el, idx) => {
+    // Create edit button
+    const btn = document.createElement('button');
+    btn.className = 'inline-edit-btn';
+    btn.innerHTML = '✏️';
+    btn.title = 'Suggest an edit';
+    btn.style.cssText = `
+      position: absolute;
+      right: 4px;
+      top: 2px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 6px;
+      z-index: 100;
+    `;
+    
+    // Wrap element for positioning
+    el.style.position = 'relative';
+    el.appendChild(btn);
+    
+    // Show on hover (desktop) or always visible (mobile)
+    if (window.innerWidth <= 768) {
+      btn.style.opacity = '0.4';
+      btn.style.right = '4px';
+      btn.style.fontSize = '12px';
+      btn.style.padding = '1px 4px';
+    } else {
+      el.addEventListener('mouseenter', () => btn.style.opacity = '1');
+      el.addEventListener('mouseleave', () => {
+        if (!el.classList.contains('editing')) btn.style.opacity = '0';
+      });
+    }
+    
+    // Click to edit
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startEdit(el, btn);
+    });
+  });
+  
+  function startEdit(el, btn) {
+    if (el.classList.contains('editing')) return;
+    
+    const originalText = el.innerText;
+    const originalHTML = el.innerHTML;
+    const sectionHeading = el.closest('section')?.querySelector('h1,h2,h3,h4,h5')?.innerText || 'Unknown section';
+    
+    el.classList.add('editing');
+    el.setAttribute('contenteditable', 'true');
+    el.style.outline = '2px solid #0066cc';
+    el.style.padding = '8px';
+    el.style.borderRadius = '4px';
+    el.style.backgroundColor = '#f0f7ff';
+    el.focus();
+    
+    // Add save/cancel toolbar
+    const toolbar = document.createElement('div');
+    toolbar.className = 'edit-toolbar';
+    toolbar.style.cssText = `
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    `;
+    toolbar.innerHTML = `
+      <button class="edit-save" style="background:#0066cc;color:white;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:14px;">Submit Edit</button>
+      <button class="edit-cancel" style="background:#f5f5f5;border:1px solid #ddd;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:14px;">Cancel</button>
+      <span style="color:#666;font-size:12px;">Edit the text above, then click Submit</span>
+    `;
+    el.after(toolbar);
+    
+    // Cancel
+    toolbar.querySelector('.edit-cancel').addEventListener('click', () => {
+      el.innerHTML = originalHTML;
+      el.removeAttribute('contenteditable');
+      el.classList.remove('editing');
+      el.style.outline = '';
+      el.style.padding = '';
+      el.style.backgroundColor = '';
+      toolbar.remove();
+    });
+    
+    // Save -> create GitHub Issue with the suggested edit
+    toolbar.querySelector('.edit-save').addEventListener('click', () => {
+      const newText = el.innerText;
+      if (newText === originalText) {
+        alert('No changes detected.');
+        return;
+      }
+      
+      // Build GitHub Issue body
+      const issueTitle = encodeURIComponent(`Edit suggestion: ${sectionHeading.substring(0, 60)}`);
+      const issueBody = encodeURIComponent(
+        `## Suggested Edit\n\n` +
+        `**Section:** ${sectionHeading}\n\n` +
+        `### Original:\n\`\`\`\n${originalText.substring(0, 500)}\n\`\`\`\n\n` +
+        `### Proposed:\n\`\`\`\n${newText.substring(0, 500)}\n\`\`\`\n\n` +
+        `---\n*Submitted via inline edit on the interactive review.*`
+      );
+      
+      const url = `https://github.com/peettr/tcbl-review/issues/new?title=${issueTitle}&body=${issueBody}&labels=edit-suggestion`;
+      window.open(url, '_blank');
+      
+      // Reset
+      el.innerHTML = originalHTML;
+      el.removeAttribute('contenteditable');
+      el.classList.remove('editing');
+      el.style.outline = '';
+      el.style.padding = '';
+      el.style.backgroundColor = '';
+      toolbar.remove();
+    });
+  }
+});
+</script>

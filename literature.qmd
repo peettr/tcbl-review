@@ -1,0 +1,114 @@
+---
+title: "Literature Analysis"
+format:
+  html:
+    toc: false
+---
+
+## Publication Timeline
+
+This visualization shows the temporal distribution of 181 references cited in the TCBL review, spanning from 1957 to 2025.
+
+```{=html}
+<div id="timeline" style="width:100%; height:400px; margin: 20px 0;"></div>
+
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+const data = [{"year": 1957, "count": 1}, {"year": 1961, "count": 1}, {"year": 1962, "count": 1}, {"year": 1968, "count": 2}, {"year": 1969, "count": 1}, {"year": 1971, "count": 5}, {"year": 1972, "count": 1}, {"year": 1974, "count": 2}, {"year": 1975, "count": 2}, {"year": 1976, "count": 1}, {"year": 1977, "count": 1}, {"year": 1979, "count": 2}, {"year": 1980, "count": 3}, {"year": 1981, "count": 1}, {"year": 1982, "count": 3}, {"year": 1983, "count": 1}, {"year": 1985, "count": 1}, {"year": 1995, "count": 4}, {"year": 1996, "count": 2}, {"year": 1997, "count": 1}, {"year": 2001, "count": 4}, {"year": 2002, "count": 1}, {"year": 2003, "count": 4}, {"year": 2004, "count": 2}, {"year": 2005, "count": 3}, {"year": 2006, "count": 5}, {"year": 2007, "count": 2}, {"year": 2008, "count": 8}, {"year": 2009, "count": 9}, {"year": 2010, "count": 4}, {"year": 2011, "count": 5}, {"year": 2012, "count": 9}, {"year": 2013, "count": 4}, {"year": 2014, "count": 13}, {"year": 2015, "count": 10}, {"year": 2016, "count": 10}, {"year": 2017, "count": 6}, {"year": 2018, "count": 10}, {"year": 2019, "count": 15}, {"year": 2020, "count": 7}, {"year": 2021, "count": 8}, {"year": 2022, "count": 2}, {"year": 2023, "count": 1}, {"year": 2025, "count": 3}];
+const years = data.map(d => d.year);
+const counts = data.map(d => d.count);
+
+Plotly.newPlot("timeline", [{
+  x: years,
+  y: counts,
+  type: "bar",
+  marker: {
+    color: counts.map(c => c > 10 ? "#003366" : c > 5 ? "#0066cc" : "#99ccff"),
+  },
+  hovertemplate: "<b>%{x}</b><br>%{y} papers<extra></extra>"
+}], {
+  title: "References by Publication Year",
+  xaxis: { title: "Year", dtick: 5 },
+  yaxis: { title: "Number of References" },
+  plot_bgcolor: "#fafafa",
+  font: { family: "system-ui" },
+  margin: { t: 50, b: 60 }
+}, {responsive: true});
+</script>
+```
+
+## Key Research Groups
+
+Based on the reference analysis, the following groups have made significant contributions to TCBL modeling:
+
+| Research Group | Key Contributions | References |
+|---|---|---|
+| **Kepert et al.** (Bureau of Meteorology, Australia) | KW01 3D model, linear theory, validation | ~20 papers |
+| **Zhang, J. A. et al.** (NOAA/HRD) | BL observations, turbulence, HWRF | ~15 papers |
+| **Vickery et al.** (Applied Research Associates) | 2D-slab model, MC simulation, PBWE | ~8 papers |
+| **Kareem et al.** (NatHaz, Notre Dame) | PBWE framework, systematic investigation | ~6 papers |
+| **Holland et al.** | Gradient wind profiles, TC structure | ~5 papers |
+| **Zhu et al.** | LES of TCBL, turbulence parameterization | ~5 papers |
+
+## Model Evolution
+
+```{=html}
+<div id="model-timeline" style="width:100%; height:300px; margin: 20px 0;"></div>
+
+<script>
+const models = [
+  {name: "Chow (1971)", year: 1971, type: "Axisymmetric"},
+  {name: "Shapiro (1983)", year: 1983, type: "Axisymmetric"},
+  {name: "Holland (1980)", year: 1980, type: "Parametric"},
+  {name: "Meng et al. (1995)", year: 1995, type: "Parametric"},
+  {name: "Vickery (2000)", year: 2000, type: "2D-slab"},
+  {name: "Kepert (2001)", year: 2001, type: "3D Linear"},
+  {name: "KW01", year: 2001, type: "3D Nonlinear"},
+  {name: "Willoughby (2006)", year: 2006, type: "Parametric"},
+  {name: "Y08", year: 2008, type: "3D Nonlinear"},
+  {name: "Holland (2010)", year: 2010, type: "Parametric"},
+  {name: "Langousis (2009)", year: 2009, type: "2D Hybrid"},
+  {name: "WRF-TCBL", year: 2014, type: "Full-physics"},
+  {name: "POD methods", year: 2020, type: "Data-driven"},
+  {name: "GPU-MC (NatHaz)", year: 2024, type: "3D Nonlinear"}
+];
+
+const colors = {
+  "Axisymmetric": "#ff9999",
+  "Parametric": "#99ccff", 
+  "2D-slab": "#ffcc99",
+  "2D Hybrid": "#ffeb99",
+  "3D Linear": "#99ff99",
+  "3D Nonlinear": "#003366",
+  "Full-physics": "#cc99ff",
+  "Data-driven": "#ff99cc"
+};
+
+const types = [...new Set(models.map(m => m.type))];
+const traces = types.map(t => {
+  const ms = models.filter(m => m.type === t);
+  return {
+    x: ms.map(m => m.year),
+    y: ms.map(m => m.type),
+    text: ms.map(m => m.name),
+    mode: "markers+text",
+    name: t,
+    textposition: "top center",
+    textfont: { size: 10 },
+    marker: { size: 14, color: colors[t] || "#999" }
+  };
+});
+
+Plotly.newPlot("model-timeline", traces, {
+  title: "Evolution of TCBL Models",
+  xaxis: { title: "Year", range: [1968, 2027] },
+  yaxis: { title: "" },
+  showlegend: false,
+  plot_bgcolor: "#fafafa",
+  font: { family: "system-ui" },
+  margin: { t: 50, l: 120, b: 50 }
+}, {responsive: true});
+</script>
+```
+
+[← Back to Article](index.html)

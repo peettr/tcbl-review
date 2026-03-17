@@ -1,0 +1,6066 @@
+{
+  "nodes": [
+    {
+      "id": "ref-abarca-2015",
+      "label": "Abarca (2015)",
+      "short": "Abarca 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-ahern-2019",
+      "label": "Ahern (2019)",
+      "short": "Ahern 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-alimohammadi-2018",
+      "label": "Alimohammadi (2018)",
+      "short": "Alimohammadi 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-anthes-1972",
+      "label": "Anthes (1972)",
+      "short": "Anthes 1972",
+      "year": 1972,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-anthes-1981",
+      "label": "Anthes (1981)",
+      "short": "Anthes 1981",
+      "year": 1981,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-anthes-1982",
+      "label": "Anthes (1982)",
+      "short": "Anthes 1982",
+      "year": 1982,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-arthur-2021",
+      "label": "Arthur (2021)",
+      "short": "Arthur 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-barbato-2013",
+      "label": "Barbato (2013)",
+      "short": "Barbato 2013",
+      "year": 2013,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-batts-1980",
+      "label": "Batts (1980)",
+      "short": "Batts 1980",
+      "year": 1980,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-bell-2008",
+      "label": "Bell (2008)",
+      "short": "Bell 2008",
+      "year": 2008,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-blanton-2020",
+      "label": "Blanton (2020)",
+      "short": "Blanton 2020",
+      "year": 2020,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-bobby-2014",
+      "label": "Bobby (2014)",
+      "short": "Bobby 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-bode-1975",
+      "label": "Bode (1975)",
+      "short": "Bode 1975",
+      "year": 1975,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-bruy-2019",
+      "label": "Bruy\u00e8re (2019)",
+      "short": "Bruy 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-cai-2019",
+      "label": "Cai (2019)",
+      "short": "Cai 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-chang-2020",
+      "label": "Chang (2020)",
+      "short": "Chang 2020",
+      "year": 2020,
+      "citations": 2,
+      "size": 11,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-chang-2021",
+      "label": "Chang (2021)",
+      "short": "Chang 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-chavas-2016",
+      "label": "Chavas (2016)",
+      "short": "Chavas 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-chavas-2015",
+      "label": "Chavas (2015)",
+      "short": "Chavas 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-chen-2025",
+      "label": "Chen (2025)",
+      "short": "Chen 2025",
+      "year": 2025,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-chow-1971",
+      "label": "Chow (1971)",
+      "short": "Chow 1971",
+      "year": 1971,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-ciampoli-2011",
+      "label": "Ciampoli (2011)",
+      "short": "Ciampoli 2011",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-coronel-2016",
+      "label": "Coronel (2016)",
+      "short": "Coronel 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-cui-2019",
+      "label": "Cui (2019)",
+      "short": "Cui 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-davidson-2012",
+      "label": "Davidson (2012)",
+      "short": "Davidson 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-davis-2008",
+      "label": "Davis (2008)",
+      "short": "Davis 2008",
+      "year": 2008,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-deng-2019",
+      "label": "Deng (2019)",
+      "short": "Deng 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-done-2020",
+      "label": "Done (2020)",
+      "short": "Done 2020",
+      "year": 2020,
+      "citations": 4,
+      "size": 17,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-eliassen-1971",
+      "label": "Eliassen (1971)",
+      "short": "Eliassen 1971",
+      "year": 1971,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-eliassen-1977",
+      "label": "Eliassen (1977)",
+      "short": "Eliassen 1977",
+      "year": 1977,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-elsberry-1979",
+      "label": "Elsberry (1979)",
+      "short": "Elsberry 1979",
+      "year": 1979,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-emanuel-2004",
+      "label": "Emanuel (2004)",
+      "short": "Emanuel 2004",
+      "year": 2004,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-emanuel-2006",
+      "label": "Emanuel (2006)",
+      "short": "Emanuel 2006",
+      "year": 2006,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-fang-2018",
+      "label": "Fang (2018)",
+      "short": "Fang 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-fei-2021",
+      "label": "Fei (2021)",
+      "short": "Fei 2021",
+      "year": 2021,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-foster-2009",
+      "label": "Foster (2009)",
+      "short": "Foster 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-fovell-2016",
+      "label": "Fovell (2016)",
+      "short": "Fovell 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-fovell-2007",
+      "label": "Fovell (2007)",
+      "short": "Fovell 2007",
+      "year": 2007,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-franklin-2003",
+      "label": "Franklin (2003)",
+      "short": "Franklin 2003",
+      "year": 2003,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-gao-2014",
+      "label": "Gao (2014)",
+      "short": "Gao 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-georgiou-1985",
+      "label": "Georgiou (1985)",
+      "short": "Georgiou 1985",
+      "year": 1985,
+      "citations": 4,
+      "size": 17,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-gopalakrishnan-2016",
+      "label": "Gopalakrishnan (2016)",
+      "short": "Gopalakrishnan 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-greeshma-2015",
+      "label": "Greeshma (2015)",
+      "short": "Greeshma 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-guo-2019",
+      "label": "Guo (2019)",
+      "short": "Guo 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-haltiner-1957",
+      "label": "Haltiner (1957)",
+      "short": "Haltiner 1957",
+      "year": 1957,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-hamill-2011a",
+      "label": "Hamill (2011a)",
+      "short": "Hamill 2011a",
+      "year": 2011,
+      "citations": 2,
+      "size": 11,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-hamill-2011b",
+      "label": "Hamill (2011b)",
+      "short": "Hamill 2011b",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-hazelton-2018",
+      "label": "Hazelton (2018)",
+      "short": "Hazelton 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-he-2016",
+      "label": "He (2016)",
+      "short": "He 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-he-2018",
+      "label": "He (2018)",
+      "short": "He 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-hill-2009",
+      "label": "Hill (2009)",
+      "short": "Hill 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-holland-1980",
+      "label": "Holland (1980)",
+      "short": "Holland 1980",
+      "year": 1980,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-holland-2010",
+      "label": "Holland (2010)",
+      "short": "Holland 2010",
+      "year": 2010,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-hong-2019",
+      "label": "Hong (2019)",
+      "short": "Hong 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-hong-2021",
+      "label": "Hong (2021)",
+      "short": "Hong 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-hu-2012",
+      "label": "Hu (2012)",
+      "short": "Hu 2012",
+      "year": 2012,
+      "citations": 2,
+      "size": 11,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-hu-2025",
+      "label": "Hu (2025)",
+      "short": "Hu 2025",
+      "year": 2025,
+      "citations": 1,
+      "size": 8,
+      "category": "NatHaz"
+    },
+    {
+      "id": "ref-hu-2010",
+      "label": "Hu (2010)",
+      "short": "Hu 2010",
+      "year": 2010,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-huang-2018",
+      "label": "Huang (2018)",
+      "short": "Huang 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-huang-2012",
+      "label": "Huang (2012)",
+      "short": "Huang 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-huang-2013",
+      "label": "Huang (2013)",
+      "short": "Huang 2013",
+      "year": 2013,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-ishihara-2005",
+      "label": "Ishihara (2005)",
+      "short": "Ishihara 2005",
+      "year": 2005,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kanada-2012",
+      "label": "Kanada (2012)",
+      "short": "Kanada 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-kaplan-1995",
+      "label": "Kaplan (1995)",
+      "short": "Kaplan 1995",
+      "year": 1995,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kaplan-2001",
+      "label": "Kaplan (2001)",
+      "short": "Kaplan 2001",
+      "year": 2001,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2001",
+      "label": "Kepert (2001)",
+      "short": "Kepert 2001",
+      "year": 2001,
+      "citations": 8,
+      "size": 29,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2002",
+      "label": "Kepert (2002)",
+      "short": "Kepert 2002",
+      "year": 2002,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2005",
+      "label": "Kepert (2005)",
+      "short": "Kepert 2005",
+      "year": 2005,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2006a",
+      "label": "Kepert (2006a)",
+      "short": "Kepert 2006a",
+      "year": 2006,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2006b",
+      "label": "Kepert (2006b)",
+      "short": "Kepert 2006b",
+      "year": 2006,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2010a",
+      "label": "Kepert (2010a)",
+      "short": "Kepert 2010a",
+      "year": 2010,
+      "citations": 5,
+      "size": 20,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2010b",
+      "label": "Kepert (2010b)",
+      "short": "Kepert 2010b",
+      "year": 2010,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2012",
+      "label": "Kepert (2012)",
+      "short": "Kepert 2012",
+      "year": 2012,
+      "citations": 2,
+      "size": 11,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-kepert-2013",
+      "label": "Kepert (2013)",
+      "short": "Kepert 2013",
+      "year": 2013,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2017",
+      "label": "Kepert (2017)",
+      "short": "Kepert 2017",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2018",
+      "label": "Kepert (2018)",
+      "short": "Kepert 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2014",
+      "label": "Kepert (2014)",
+      "short": "Kepert 2014",
+      "year": 2014,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kepert-2016",
+      "label": "Kepert (2016)",
+      "short": "Kepert 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-khare-2009",
+      "label": "Khare (2009)",
+      "short": "Khare 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-klotz-2017",
+      "label": "Klotz (2017)",
+      "short": "Klotz 2017",
+      "year": 2017,
+      "citations": 2,
+      "size": 11,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-knaff-2007",
+      "label": "Knaff (2007)",
+      "short": "Knaff 2007",
+      "year": 2007,
+      "citations": 3,
+      "size": 14,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-knaff-2018",
+      "label": "Knaff (2018)",
+      "short": "Knaff 2018",
+      "year": 2018,
+      "citations": 2,
+      "size": 11,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-kueh-2019",
+      "label": "Kueh (2019)",
+      "short": "Kueh 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-kuo-1971",
+      "label": "Kuo (1971)",
+      "short": "Kuo 1971",
+      "year": 1971,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kuo-1982",
+      "label": "Kuo (1982)",
+      "short": "Kuo 1982",
+      "year": 1982,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-kurihara-1974",
+      "label": "Kurihara (1974)",
+      "short": "Kurihara 1974",
+      "year": 1974,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-langousis-2009",
+      "label": "Langousis (2009)",
+      "short": "Langousis 2009",
+      "year": 2009,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-li-2014",
+      "label": "Li (2014)",
+      "short": "Li 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-li-2016",
+      "label": "Li (2016)",
+      "short": "Li 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-li-2015",
+      "label": "Li (2015)",
+      "short": "Li 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-li-2021a",
+      "label": "Li (2021a)",
+      "short": "Li 2021a",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-li-2021b",
+      "label": "Li (2021b)",
+      "short": "Li 2021b",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-li-2020",
+      "label": "Li (2020)",
+      "short": "Li 2020",
+      "year": 2020,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-lin-2012",
+      "label": "Lin (2012)",
+      "short": "Lin 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-liu-1979",
+      "label": "Liu (1979)",
+      "short": "Liu 1979",
+      "year": 1979,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-liu-2019",
+      "label": "Liu (2019)",
+      "short": "Liu 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-loridan-2017",
+      "label": "Loridan (2017)",
+      "short": "Loridan 2017",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-loridan-2014",
+      "label": "Loridan (2014)",
+      "short": "Loridan 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-ma-2012",
+      "label": "Ma (2012)",
+      "short": "Ma 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-mac-2006",
+      "label": "MacAfee (2006)",
+      "short": "Mac 2006",
+      "year": 2006,
+      "citations": 2,
+      "size": 11,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-mellor-1974",
+      "label": "Mellor (1974)",
+      "short": "Mellor 1974",
+      "year": 1974,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-mellor-1982",
+      "label": "Mellor (1982)",
+      "short": "Mellor 1982",
+      "year": 1982,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-meng-1995",
+      "label": "Meng (1995)",
+      "short": "Meng 1995",
+      "year": 1995,
+      "citations": 5,
+      "size": 20,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-meng-1997",
+      "label": "Meng (1997)",
+      "short": "Meng 1997",
+      "year": 1997,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-ming-2016",
+      "label": "Ming (2016)",
+      "short": "Ming 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-ming-2015",
+      "label": "Ming (2015)",
+      "short": "Ming 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-montgomery-2001",
+      "label": "Montgomery (2001)",
+      "short": "Montgomery 2001",
+      "year": 2001,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-myers-1961",
+      "label": "Myers (1961)",
+      "short": "Myers 1961",
+      "year": 1961,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-nolan-2009a",
+      "label": "Nolan (2009a)",
+      "short": "Nolan 2009a",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-nolan-2009b",
+      "label": "Nolan (2009b)",
+      "short": "Nolan 2009b",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-ooyama-1969",
+      "label": "Ooyama (1969)",
+      "short": "Ooyama 1969",
+      "year": 1969,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-orlanski-1975",
+      "label": "Orlanski (1975)",
+      "short": "Orlanski 1975",
+      "year": 1975,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-pita-2014",
+      "label": "Pita (2014)",
+      "short": "Pita 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-powell-2005",
+      "label": "Powell (2005)",
+      "short": "Powell 2005",
+      "year": 2005,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-powell-1980",
+      "label": "Powell (1980)",
+      "short": "Powell 1980",
+      "year": 1980,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-powell-2009",
+      "label": "Powell (2009)",
+      "short": "Powell 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-ramos-2020",
+      "label": "Ramos\u2010Valle (2020)",
+      "short": "Ramos 2020",
+      "year": 2020,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-ramsay-2009",
+      "label": "Ramsay (2009)",
+      "short": "Ramsay 2009",
+      "year": 2009,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-rao-2014",
+      "label": "Rao (2014)",
+      "short": "Rao 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-rosenthal-1962",
+      "label": "Rosenthal (1962)",
+      "short": "Rosenthal 1962",
+      "year": 1962,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-rosenthal-1971",
+      "label": "Rosenthal (1971)",
+      "short": "Rosenthal 1971",
+      "year": 1971,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-russell-1971",
+      "label": "Russell (1971)",
+      "short": "Russell 1971",
+      "year": 1971,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-sateesh-2017",
+      "label": "Sateesh (2017)",
+      "short": "Sateesh 2017",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-saunders-2019",
+      "label": "Saunders (2019)",
+      "short": "Saunders 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-schwendike-2008",
+      "label": "Schwendike (2008)",
+      "short": "Schwendike 2008",
+      "year": 2008,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-shapiro-1983",
+      "label": "Shapiro (1983)",
+      "short": "Shapiro 1983",
+      "year": 1983,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-shimada-2018",
+      "label": "Shimada (2018)",
+      "short": "Shimada 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-singh-2021",
+      "label": "Singh (2021)",
+      "short": "Singh 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-singh-2017",
+      "label": "Singh (2017)",
+      "short": "Singh 2017",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-singh-2018",
+      "label": "Singh (2018)",
+      "short": "Singh 2018",
+      "year": 2018,
+      "citations": 2,
+      "size": 11,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-smith-1968",
+      "label": "Smith (1968)",
+      "short": "Smith 1968",
+      "year": 1968,
+      "citations": 4,
+      "size": 17,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-smith-2003",
+      "label": "Smith (2003)",
+      "short": "Smith 2003",
+      "year": 2003,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-smith-2008",
+      "label": "Smith (2008)",
+      "short": "Smith 2008",
+      "year": 2008,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-snaiki-2017a",
+      "label": "Snaiki (2017a)",
+      "short": "Snaiki 2017a",
+      "year": 2017,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-snaiki-2017b",
+      "label": "Snaiki (2017b)",
+      "short": "Snaiki 2017b",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-snaiki-2020",
+      "label": "Snaiki (2020)",
+      "short": "Snaiki 2020",
+      "year": 2020,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-spence-2022",
+      "label": "Spence (2022)",
+      "short": "Spence 2022",
+      "year": 2022,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-spence-2014",
+      "label": "Spence (2014)",
+      "short": "Spence 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-stern-2010",
+      "label": "Stern (2010)",
+      "short": "Stern 2010",
+      "year": 2010,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-subgranon-2021",
+      "label": "Subgranon (2021)",
+      "short": "Subgranon 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-thompson-1996",
+      "label": "Thompson (1996)",
+      "short": "Thompson 1996",
+      "year": 1996,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-tryggvason-1976",
+      "label": "Tryggvason (1976)",
+      "short": "Tryggvason 1976",
+      "year": 1976,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-tse-2014",
+      "label": "Tse (2014)",
+      "short": "Tse 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-tse-2015",
+      "label": "Tse (2015)",
+      "short": "Tse 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-ueno-2011",
+      "label": "Ueno (2011)",
+      "short": "Ueno 2011",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-uhlhorn-2014",
+      "label": "Uhlhorn (2014)",
+      "short": "Uhlhorn 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-vanmarcke-2014",
+      "label": "Vanmarcke (2014)",
+      "short": "Vanmarcke 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-vickery-2006",
+      "label": "Vickery (2006)",
+      "short": "Vickery 2006",
+      "year": 2006,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2000a",
+      "label": "Vickery (2000a)",
+      "short": "Vickery 2000a",
+      "year": 2000,
+      "citations": 5,
+      "size": 20,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-1995",
+      "label": "Vickery (1995)",
+      "short": "Vickery 1995",
+      "year": 1995,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2009a",
+      "label": "Vickery (2009a)",
+      "short": "Vickery 2009a",
+      "year": 2009,
+      "citations": 3,
+      "size": 14,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2000b",
+      "label": "Vickery (2000b)",
+      "short": "Vickery 2000b",
+      "year": 2000,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2008",
+      "label": "Vickery (2008)",
+      "short": "Vickery 2008",
+      "year": 2008,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2009b",
+      "label": "Vickery (2009b)",
+      "short": "Vickery 2009b",
+      "year": 2009,
+      "citations": 4,
+      "size": 17,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vickery-2009c",
+      "label": "Vickery (2009c)",
+      "short": "Vickery 2009c",
+      "year": 2009,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-villarini-2019",
+      "label": "Villarini (2019)",
+      "short": "Villarini 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-vogl-2009",
+      "label": "Vogl (2009)",
+      "short": "Vogl 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-vukicevic-2014",
+      "label": "Vukicevic (2014)",
+      "short": "Vukicevic 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-walker-2011",
+      "label": "Walker (2011)",
+      "short": "Walker 2011",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-wang-2018",
+      "label": "Wang (2018)",
+      "short": "Wang 2018",
+      "year": 2018,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-wang-1995",
+      "label": "Wang (1995)",
+      "short": "Wang 1995",
+      "year": 1995,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-wang-1996",
+      "label": "Wang (1996)",
+      "short": "Wang 1996",
+      "year": 1996,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-wikipedia-2025",
+      "label": "Wikipedia (2025). \\\"List of costliest Atlantic hurricanes.\\\" \\<https://en.wikipedia.org/wiki/List_of_costliest_Atlantic_hurricanes\\>. (Jan 3 (2025)",
+      "short": "Wikipedia 2025",
+      "year": 2025,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-williams-2015",
+      "label": "Williams (2015)",
+      "short": "Williams 2015",
+      "year": 2015,
+      "citations": 2,
+      "size": 11,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-williams-2016",
+      "label": "Williams (2016)",
+      "short": "Williams 2016",
+      "year": 2016,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-williams-2017",
+      "label": "Williams (2017)",
+      "short": "Williams 2017",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-williams-2019",
+      "label": "Williams (2019)",
+      "short": "Williams 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-willoughby-2006",
+      "label": "Willoughby (2006)",
+      "short": "Willoughby 2006",
+      "year": 2006,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-willoughby-2004",
+      "label": "Willoughby (2004)",
+      "short": "Willoughby 2004",
+      "year": 2004,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-wood-2013",
+      "label": "Wood (2013)",
+      "short": "Wood 2013",
+      "year": 2013,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-wu-2019",
+      "label": "Wu (2019)",
+      "short": "Wu 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-xiao-2011",
+      "label": "Xiao (2011)",
+      "short": "Xiao 2011",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-xie-2006",
+      "label": "Xie (2006)",
+      "short": "Xie 2006",
+      "year": 2006,
+      "citations": 3,
+      "size": 14,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-yamasaki-1968",
+      "label": "Yamasaki (1968)",
+      "short": "Yamasaki 1968",
+      "year": 1968,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-yang-2021",
+      "label": "Yang (2021)",
+      "short": "Yang 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-yang-2022",
+      "label": "Yang (2022)",
+      "short": "Yang 2022",
+      "year": 2022,
+      "citations": 2,
+      "size": 11,
+      "category": "Data-driven"
+    },
+    {
+      "id": "ref-yoshida-2008",
+      "label": "Yoshida (2008)",
+      "short": "Yoshida 2008",
+      "year": 2008,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    },
+    {
+      "id": "ref-zhang-2017a",
+      "label": "Zhang (2017a)",
+      "short": "Zhang 2017a",
+      "year": 2017,
+      "citations": 2,
+      "size": 11,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-zhang-2010",
+      "label": "Zhang (2010)",
+      "short": "Zhang 2010",
+      "year": 2010,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-zhang-2012",
+      "label": "Zhang (2012)",
+      "short": "Zhang 2012",
+      "year": 2012,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-zhang-2009",
+      "label": "Zhang (2009)",
+      "short": "Zhang 2009",
+      "year": 2009,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-zhang-2020",
+      "label": "Zhang (2020)",
+      "short": "Zhang 2020",
+      "year": 2020,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhang-2015",
+      "label": "Zhang (2015)",
+      "short": "Zhang 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhang-2019",
+      "label": "Zhang (2019)",
+      "short": "Zhang 2019",
+      "year": 2019,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhang-2011",
+      "label": "Zhang (2011)",
+      "short": "Zhang 2011",
+      "year": 2011,
+      "citations": 1,
+      "size": 8,
+      "category": "Introduction"
+    },
+    {
+      "id": "ref-zhang-2017b",
+      "label": "Zhang (2017b)",
+      "short": "Zhang 2017b",
+      "year": 2017,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhu-2008",
+      "label": "Zhu (2008)",
+      "short": "Zhu 2008",
+      "year": 2008,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhu-2014",
+      "label": "Zhu (2014)",
+      "short": "Zhu 2014",
+      "year": 2014,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zhu-2015",
+      "label": "Zhu (2015)",
+      "short": "Zhu 2015",
+      "year": 2015,
+      "citations": 1,
+      "size": 8,
+      "category": "Full-physics"
+    },
+    {
+      "id": "ref-zieger-2021",
+      "label": "Zieger (2021)",
+      "short": "Zieger 2021",
+      "year": 2021,
+      "citations": 1,
+      "size": 8,
+      "category": "Diagnostic"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-bobby-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-cai-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-ciampoli-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-deng-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-huang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-barbato-2013",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-cai-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-ciampoli-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-deng-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-huang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-bobby-2014",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-ciampoli-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-deng-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-huang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-cai-2019",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-deng-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-huang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ciampoli-2011",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-huang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-deng-2019",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-li-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2012",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-pita-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2014",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-pita-2014",
+      "target": "ref-spence-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-pita-2014",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-pita-2014",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-pita-2014",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-pita-2014",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2014",
+      "target": "ref-spence-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2014",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2014",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2014",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2022",
+      "target": "ref-subgranon-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2022",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-spence-2022",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-subgranon-2021",
+      "target": "ref-vanmarcke-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-subgranon-2021",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vanmarcke-2014",
+      "target": "ref-walker-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-orlanski-1975",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kepert-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-liu-1979",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-zhang-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2012",
+      "target": "ref-liu-1979",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2012",
+      "target": "ref-zhang-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-liu-1979",
+      "target": "ref-zhang-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-franklin-2003",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-gopalakrishnan-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-he-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-he-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-ahern-2019",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-gopalakrishnan-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-he-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-he-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-franklin-2003",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-he-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-he-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-gopalakrishnan-2016",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-he-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2016",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-he-2018",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-loridan-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-ming-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-loridan-2014",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2015",
+      "target": "ref-shimada-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2015",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2015",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2015",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2015",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-shimada-2018",
+      "target": "ref-ueno-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-shimada-2018",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-shimada-2018",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-shimada-2018",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-ueno-2011",
+      "target": "ref-zhang-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-ueno-2011",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-ueno-2011",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2009",
+      "target": "ref-zhang-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2009",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2010",
+      "target": "ref-zhang-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2010a",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kepert-2010a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kepert-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-meng-1995",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-kepert-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-zhang-2017a",
+      "weight": 2
+    },
+    {
+      "source": "ref-langousis-2009",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-langousis-2009",
+      "target": "ref-smith-1968",
+      "weight": 3
+    },
+    {
+      "source": "ref-langousis-2009",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-langousis-2009",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-smith-1968",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-smith-1968",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-khare-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-alimohammadi-2018",
+      "target": "ref-davis-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kueh-2019",
+      "target": "ref-saunders-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-hu-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-nolan-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-nolan-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-sateesh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-singh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-hill-2009",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-nolan-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-nolan-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-sateesh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-singh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2010",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-nolan-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-sateesh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-singh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009a",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-sateesh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-singh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-nolan-2009b",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-sateesh-2017",
+      "target": "ref-singh-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-sateesh-2017",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-sateesh-2017",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-sateesh-2017",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-sateesh-2017",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2017",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2017",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2017",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2017",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2018",
+      "target": "ref-singh-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2018",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2018",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2021",
+      "target": "ref-zhu-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-singh-2021",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhu-2014",
+      "target": "ref-zhu-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-ming-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-tse-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-ming-2016",
+      "target": "ref-tse-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011a",
+      "target": "ref-singh-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-greeshma-2015",
+      "target": "ref-tse-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-fovell-2007",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-fovell-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-hamill-2011a",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-hamill-2011b",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-liu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-blanton-2020",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-fovell-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-hamill-2011a",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-hamill-2011b",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-liu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2007",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2016",
+      "target": "ref-hamill-2011a",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2016",
+      "target": "ref-hamill-2011b",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2016",
+      "target": "ref-liu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2016",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-fovell-2016",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011a",
+      "target": "ref-hamill-2011b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011a",
+      "target": "ref-liu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011a",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011a",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011b",
+      "target": "ref-liu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011b",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-hamill-2011b",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-liu-2019",
+      "target": "ref-rao-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-liu-2019",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-rao-2014",
+      "target": "ref-villarini-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-chen-2025",
+      "target": "ref-wang-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-chen-2025",
+      "target": "ref-zhang-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-chen-2025",
+      "target": "ref-zhang-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-chen-2025",
+      "target": "ref-zhang-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-chen-2025",
+      "target": "ref-zhang-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-wang-2018",
+      "target": "ref-zhang-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-wang-2018",
+      "target": "ref-zhang-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-wang-2018",
+      "target": "ref-zhang-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-wang-2018",
+      "target": "ref-zhang-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2015",
+      "target": "ref-zhang-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2015",
+      "target": "ref-zhang-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2015",
+      "target": "ref-zhang-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2017b",
+      "target": "ref-zhang-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2017b",
+      "target": "ref-zhang-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-zhang-2019",
+      "target": "ref-zhang-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-bruy-2019",
+      "target": "ref-ramos-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-coronel-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-hazelton-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-huang-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-kanada-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-kepert-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-abarca-2015",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-coronel-2016",
+      "target": "ref-hazelton-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-coronel-2016",
+      "target": "ref-huang-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-coronel-2016",
+      "target": "ref-kanada-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-coronel-2016",
+      "target": "ref-kepert-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-coronel-2016",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-hazelton-2018",
+      "target": "ref-huang-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-hazelton-2018",
+      "target": "ref-kanada-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-hazelton-2018",
+      "target": "ref-kepert-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-hazelton-2018",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2018",
+      "target": "ref-kanada-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2018",
+      "target": "ref-kepert-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2018",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kanada-2012",
+      "target": "ref-kepert-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-kanada-2012",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2016",
+      "target": "ref-zhu-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-kepert-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-anthes-1981",
+      "weight": 2
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-ooyama-1969",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-rosenthal-1962",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-rosenthal-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-ooyama-1969",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-rosenthal-1962",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-rosenthal-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-ooyama-1969",
+      "target": "ref-rosenthal-1962",
+      "weight": 1
+    },
+    {
+      "source": "ref-ooyama-1969",
+      "target": "ref-rosenthal-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-ooyama-1969",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-ooyama-1969",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-rosenthal-1962",
+      "target": "ref-rosenthal-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-rosenthal-1962",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-rosenthal-1962",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-rosenthal-1971",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-rosenthal-1971",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-smith-1968",
+      "target": "ref-yamasaki-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-eliassen-1977",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-foster-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-kepert-2010b",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-kuo-1982",
+      "weight": 2
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-foster-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-kepert-2010b",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1977",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-foster-2009",
+      "target": "ref-kepert-2010b",
+      "weight": 1
+    },
+    {
+      "source": "ref-foster-2009",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-foster-2009",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-foster-2009",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-foster-2009",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-kuo-1982",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kuo-1982",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-kuo-1982",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-langousis-2009",
+      "target": "ref-montgomery-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-montgomery-2001",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-smith-2003",
+      "target": "ref-smith-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kuo-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kuo-1982",
+      "weight": 2
+    },
+    {
+      "source": "ref-kuo-1971",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-vogl-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-vogl-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-snaiki-2017a",
+      "target": "ref-vogl-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-chavas-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-davidson-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-holland-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2015",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-davidson-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-holland-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-chavas-2016",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-holland-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-davidson-2012",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-holland-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-1980",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-kepert-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-lin-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-lin-2012",
+      "target": "ref-ma-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-lin-2012",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-lin-2012",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-lin-2012",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-ma-2012",
+      "target": "ref-willoughby-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-ma-2012",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-ma-2012",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-willoughby-2004",
+      "target": "ref-willoughby-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-willoughby-2004",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-willoughby-2006",
+      "target": "ref-wood-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-guo-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-haltiner-1957",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-haltiner-1957",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-guo-2019",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-haltiner-1957",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-kepert-2006b",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-ramsay-2009",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-schwendike-2008",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-ramsay-2009",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-schwendike-2008",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-myers-1961",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-myers-1961",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-myers-1961",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-myers-1961",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-myers-1961",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-schwendike-2008",
+      "weight": 2
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-schwendike-2008",
+      "target": "ref-tryggvason-1976",
+      "weight": 1
+    },
+    {
+      "source": "ref-schwendike-2008",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-tryggvason-1976",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-bell-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-cui-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-emanuel-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-georgiou-1985",
+      "weight": 2
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-cui-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-emanuel-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-georgiou-1985",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-bell-2008",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-emanuel-2004",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-emanuel-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-georgiou-1985",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-cui-2019",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-emanuel-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-georgiou-1985",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2004",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-georgiou-1985",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-emanuel-2006",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-hong-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-kaplan-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2021",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-kaplan-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-1995",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-2001",
+      "target": "ref-russell-1971",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-2001",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-2001",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-2001",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kaplan-2001",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-russell-1971",
+      "target": "ref-vickery-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-russell-1971",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-russell-1971",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-russell-1971",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-1995",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-1995",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-1995",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000b",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000b",
+      "target": "ref-vickery-2009c",
+      "weight": 2
+    },
+    {
+      "source": "ref-vickery-2008",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-powell-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-batts-1980",
+      "target": "ref-vickery-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-powell-1980",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-georgiou-1985",
+      "target": "ref-vickery-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-1980",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-1980",
+      "target": "ref-vickery-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-vickery-2009a",
+      "weight": 2
+    },
+    {
+      "source": "ref-ishihara-2005",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-ishihara-2005",
+      "target": "ref-meng-1997",
+      "weight": 1
+    },
+    {
+      "source": "ref-ishihara-2005",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-ishihara-2005",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-ishihara-2005",
+      "target": "ref-wu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-meng-1997",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-wu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1997",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1997",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1997",
+      "target": "ref-wu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-vickery-2009b",
+      "weight": 2
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-wu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009b",
+      "target": "ref-wu-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-kepert-2002",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-snaiki-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-eliassen-1971",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kepert-2002",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-snaiki-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2001",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-kepert-2006b",
+      "weight": 2
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-snaiki-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-kuo-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-snaiki-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kuo-1982",
+      "target": "ref-snaiki-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-kuo-1982",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-snaiki-2020",
+      "target": "ref-yang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-fang-2018",
+      "target": "ref-huang-2013",
+      "weight": 1
+    },
+    {
+      "source": "ref-fang-2018",
+      "target": "ref-li-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-fang-2018",
+      "target": "ref-meng-1997",
+      "weight": 1
+    },
+    {
+      "source": "ref-fang-2018",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-fang-2018",
+      "target": "ref-snaiki-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2013",
+      "target": "ref-li-2020",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2013",
+      "target": "ref-meng-1997",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2013",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-huang-2013",
+      "target": "ref-snaiki-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2020",
+      "target": "ref-meng-1997",
+      "weight": 2
+    },
+    {
+      "source": "ref-li-2020",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2020",
+      "target": "ref-snaiki-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1997",
+      "target": "ref-snaiki-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1997",
+      "target": "ref-snaiki-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-snaiki-2017a",
+      "target": "ref-snaiki-2017b",
+      "weight": 1
+    },
+    {
+      "source": "ref-chow-1971",
+      "target": "ref-li-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-chow-1971",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-chow-1971",
+      "target": "ref-vickery-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2015",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2015",
+      "target": "ref-vickery-2009a",
+      "weight": 1
+    },
+    {
+      "source": "ref-shapiro-1983",
+      "target": "ref-williams-2015",
+      "weight": 2
+    },
+    {
+      "source": "ref-shapiro-1983",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-li-2016",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-powell-2005",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-arthur-2021",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-powell-2005",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2016",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-thompson-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2005",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-vickery-2000a",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-thompson-1996",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-vickery-2000b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000a",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000b",
+      "target": "ref-vickery-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000b",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2000b",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2006",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2006",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2006",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009b",
+      "target": "ref-vickery-2009c",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009b",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009c",
+      "target": "ref-xiao-2011",
+      "weight": 1
+    },
+    {
+      "source": "ref-bode-1975",
+      "target": "ref-langousis-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-bode-1975",
+      "target": "ref-smith-1968",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-anthes-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-elsberry-1979",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-kurihara-1974",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-wang-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1972",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-anthes-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-elsberry-1979",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-kurihara-1974",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-wang-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1981",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1982",
+      "target": "ref-elsberry-1979",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1982",
+      "target": "ref-kurihara-1974",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1982",
+      "target": "ref-wang-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-anthes-1982",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-elsberry-1979",
+      "target": "ref-kurihara-1974",
+      "weight": 1
+    },
+    {
+      "source": "ref-elsberry-1979",
+      "target": "ref-wang-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-elsberry-1979",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-kurihara-1974",
+      "target": "ref-wang-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-kurihara-1974",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-wang-1995",
+      "target": "ref-wang-1996",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-mellor-1974",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-mellor-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-yoshida-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-mellor-1974",
+      "target": "ref-mellor-1982",
+      "weight": 1
+    },
+    {
+      "source": "ref-mellor-1974",
+      "target": "ref-yoshida-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-mellor-1982",
+      "target": "ref-yoshida-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2020",
+      "target": "ref-meng-1995",
+      "weight": 1
+    },
+    {
+      "source": "ref-meng-1995",
+      "target": "ref-meng-1997",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-hong-2019",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2002",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2005",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-done-2020",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-kepert-2002",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-kepert-2005",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-hong-2019",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-kepert-2005",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2002",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-kepert-2006a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-kepert-2006b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2005",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006a",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-powell-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2006b",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2009",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2009",
+      "target": "ref-schwendike-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2009",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2009",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-powell-2009",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-schwendike-2008",
+      "target": "ref-vickery-2008",
+      "weight": 1
+    },
+    {
+      "source": "ref-schwendike-2008",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-schwendike-2008",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2008",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2008",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009b",
+      "target": "ref-zieger-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-fei-2021",
+      "target": "ref-kepert-2001",
+      "weight": 1
+    },
+    {
+      "source": "ref-fei-2021",
+      "target": "ref-kepert-2002",
+      "weight": 1
+    },
+    {
+      "source": "ref-williams-2016",
+      "target": "ref-williams-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-li-2021a",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2013",
+      "target": "ref-li-2021b",
+      "weight": 1
+    },
+    {
+      "source": "ref-li-2021a",
+      "target": "ref-li-2021b",
+      "weight": 1
+    },
+    {
+      "source": "ref-gao-2014",
+      "target": "ref-kepert-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-kepert-2010b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-shapiro-1983",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010a",
+      "target": "ref-williams-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-shapiro-1983",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2010b",
+      "target": "ref-williams-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-shapiro-1983",
+      "target": "ref-vickery-2009b",
+      "weight": 1
+    },
+    {
+      "source": "ref-vickery-2009b",
+      "target": "ref-williams-2015",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-ramsay-2009",
+      "weight": 1
+    },
+    {
+      "source": "ref-kepert-2014",
+      "target": "ref-stern-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-stern-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-ramsay-2009",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-stern-2010",
+      "target": "ref-zhang-2017a",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-hu-2012",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-knaff-2007",
+      "weight": 2
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-knaff-2018",
+      "weight": 2
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-mac-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-yang-2022",
+      "weight": 2
+    },
+    {
+      "source": "ref-hu-2012",
+      "target": "ref-knaff-2007",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2012",
+      "target": "ref-knaff-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-hu-2012",
+      "target": "ref-mac-2006",
+      "weight": 2
+    },
+    {
+      "source": "ref-hu-2012",
+      "target": "ref-xie-2006",
+      "weight": 2
+    },
+    {
+      "source": "ref-hu-2012",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-knaff-2018",
+      "weight": 2
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-mac-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-yang-2022",
+      "weight": 2
+    },
+    {
+      "source": "ref-knaff-2018",
+      "target": "ref-mac-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2018",
+      "target": "ref-xie-2006",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2018",
+      "target": "ref-yang-2022",
+      "weight": 2
+    },
+    {
+      "source": "ref-mac-2006",
+      "target": "ref-xie-2006",
+      "weight": 2
+    },
+    {
+      "source": "ref-mac-2006",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-xie-2006",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-chang-2021",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2020",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-holland-2010",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-knaff-2007",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-knaff-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-chang-2021",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-klotz-2017",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-knaff-2007",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-knaff-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-holland-2010",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-knaff-2007",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-knaff-2018",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-klotz-2017",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2018",
+      "target": "ref-uhlhorn-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2018",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-uhlhorn-2014",
+      "target": "ref-vukicevic-2014",
+      "weight": 1
+    },
+    {
+      "source": "ref-uhlhorn-2014",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-vukicevic-2014",
+      "target": "ref-yang-2022",
+      "weight": 1
+    },
+    {
+      "source": "ref-knaff-2007",
+      "target": "ref-loridan-2017",
+      "weight": 1
+    }
+  ]
+}

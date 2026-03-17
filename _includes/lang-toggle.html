@@ -1,0 +1,62 @@
+<style>
+#lang-toggle-btn {
+  position: fixed !important;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9998;
+  contain: layout;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 24px;
+  background: rgba(108, 117, 125, 0.9);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+#lang-toggle-btn:hover {
+  background: rgba(80, 90, 100, 0.95);
+  transform: scale(1.05);
+}
+#lang-toggle-btn .globe-icon {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  #lang-toggle-btn {
+    bottom: 12px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    z-index: 99998;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const path = window.location.pathname;
+  const isEn = path.includes('index-en');
+  const isZh = path.endsWith('/') || path.endsWith('/index.html') || path.endsWith('/tcbl-review/');
+  
+  // Only show on article pages (EN or ZH)
+  if (!isZh && !isEn) return;
+  
+  const basePath = path.includes('/tcbl-review/') ? '/tcbl-review/' : '/';
+  
+  const btn = document.createElement('a');
+  btn.id = 'lang-toggle-btn';
+  btn.href = isEn ? basePath + 'index.html' : basePath + 'index-en.html';
+  btn.innerHTML = isEn 
+    ? '<span class="globe-icon">🌐</span> 中文版' 
+    : '<span class="globe-icon">🌐</span> English';
+  
+  document.body.appendChild(btn);
+});
+</script>

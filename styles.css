@@ -1,0 +1,588 @@
+/* TCBL Interactive Review - Enhanced Academic Styling */
+
+/* ===== Typography & Base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+#quarto-document-content {
+  margin: 0 auto;
+  font-family: 'Source Serif 4', 'Georgia', 'Noto Serif SC', serif;
+  font-size: 1.06rem;
+  line-height: 1.85;
+  color: #2c2c2c;
+  letter-spacing: 0.01em;
+}
+
+/* Paragraphs */
+#quarto-document-content p {
+  margin-bottom: 1.1em;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* ===== Headings ===== */
+#quarto-document-content h1 {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #6b4c9a;
+}
+
+#quarto-document-content h2 {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d2d5e;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid #e0d8ec;
+}
+
+#quarto-document-content h3 {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3d3d6e;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+#quarto-document-content h4 {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+}
+
+/* Section numbers */
+.header-section-number {
+  color: #6b4c9a;
+  font-weight: 700;
+  margin-right: 0.4em;
+}
+
+/* ===== Equations ===== */
+.math.display {
+  overflow-x: auto;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-left: 3px solid #6b4c9a;
+  background: linear-gradient(135deg, rgba(107, 76, 154, 0.03), rgba(107, 76, 154, 0.01));
+  border-radius: 0 6px 6px 0;
+}
+
+.math.inline {
+  font-size: 1em;
+}
+
+/* Equation numbers */
+.math.display .MathJax {
+  font-size: 1.05em;
+}
+
+/* ===== Figures ===== */
+figure, .quarto-figure {
+  width: 100%;
+  margin: 2em 0;
+  padding: 1em;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.quarto-figure img,
+figure img,
+#quarto-document-content img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+figcaption, .figure-caption {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.88em;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8em;
+  padding-top: 0.5em;
+  border-top: 1px solid #eee;
+  line-height: 1.5;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.9em;
+  font-family: 'Source Sans 3', sans-serif;
+  border: 2px solid #6b4c9a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(107, 76, 154, 0.08);
+}
+
+thead {
+  background: linear-gradient(135deg, #6b4c9a, #8b6cbf);
+}
+
+th {
+  padding: 0.8em 1em;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  border-bottom: none;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+}
+
+td {
+  padding: 0.7em 1em;
+  border: 1px solid #e8e0f0;
+  vertical-align: middle !important;
+  text-align: center;
+  line-height: 1.5;
+}
+
+td > p {
+  margin-top: 0 !important;
+  margin-bottom: 0.3em !important;
+  text-align: center !important;
+}
+
+td > p:last-child {
+  margin-bottom: 0 !important;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(107, 76, 154, 0.03);
+}
+
+tbody tr:hover {
+  background: rgba(107, 76, 154, 0.07);
+}
+
+/* Table caption */
+table + .table-caption,
+caption,
+.caption-top {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.92em;
+  font-weight: 600;
+  color: #2d2d5e;
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+/* Highlighted cell (KW01) */
+td strong u, td strong .underline {
+  color: #6b4c9a;
+  font-size: 1.05em;
+}
+
+/* Rowspan cells */
+td[rowspan] {
+  background: rgba(107, 76, 154, 0.06);
+  font-weight: 600;
+  color: #3d3d6e;
+}
+
+/* ===== Links & Citations ===== */
+#quarto-document-content a {
+  color: #4a6fa5;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(74, 111, 165, 0.3);
+  transition: all 0.2s;
+}
+
+#quarto-document-content a:hover {
+  color: #6b4c9a;
+  border-bottom-color: #6b4c9a;
+  background: rgba(107, 76, 154, 0.05);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Citation references */
+a[href^="#ref-"] {
+  color: #6b4c9a;
+  font-weight: 500;
+  border-bottom: 1px dotted #6b4c9a;
+}
+
+a[href^="#ref-"]:hover {
+  background: rgba(107, 76, 154, 0.08);
+}
+
+/* ===== Blockquotes ===== */
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid #6b4c9a;
+  background: rgba(107, 76, 154, 0.04);
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: #444;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Lists ===== */
+#quarto-document-content ul,
+#quarto-document-content ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+#quarto-document-content li {
+  margin-bottom: 0.4em;
+  line-height: 1.7;
+}
+
+/* ===== Reference List ===== */
+#references {
+  font-size: 0.92em;
+  line-height: 1.6;
+}
+
+#references p {
+  text-align: left;
+  margin-bottom: 0.8em;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* ===== Abstract/Title area ===== */
+.quarto-title {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.quarto-title h1.title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+
+/* ===== TOC Sidebar ===== */
+#TOC, .sidebar nav {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85em;
+}
+
+#TOC a {
+  border-bottom: none !important;
+}
+
+.sidebar nav .sidebar-item {
+  font-size: 0.88em;
+  line-height: 1.4;
+}
+
+/* Active TOC item */
+.sidebar nav .active {
+  color: #6b4c9a;
+  font-weight: 600;
+}
+
+/* ===== Comment buttons blend ===== */
+.comment-btn {
+  font-family: 'Source Sans 3', sans-serif;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.comment-btn:hover {
+  opacity: 1;
+}
+
+/* ===== Horizontal rules ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 2.5em 0;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* ===== Layout: prevent TOC/sidebar overlap ===== */
+#quarto-document-content {
+  max-width: 100% !important;
+  overflow-x: clip !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  /* Body text */
+  #quarto-document-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.5rem;
+  }
+
+  /* Headings */
+  #quarto-document-content h1 { font-size: 1.5rem; }
+  #quarto-document-content h2 { font-size: 1.25rem; }
+  #quarto-document-content h3 { font-size: 1.1rem; }
+  #quarto-document-content h4 { font-size: 1rem; }
+
+  /* Equations: scrollable when too wide */
+  .math.display {
+    display: block !important;
+    font-size: 0.82em;
+    padding: 0.5em 0.6em;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-width: calc(100vw - 2rem);
+  }
+  mjx-container.MathJax {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    max-width: calc(100vw - 3rem);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tables: scrollable wrapper */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85em;
+  }
+  table th, table td {
+    white-space: nowrap;
+    padding: 0.4em 0.6em;
+  }
+
+  /* Figures */
+  figure, .quarto-figure {
+    padding: 0.3em;
+    margin: 0.8em 0;
+  }
+  figure img, .quarto-figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* References list: tighter */
+  .references {
+    font-size: 0.88em;
+  }
+
+  /* Quarto grid: single column on mobile */
+  .page-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Margin content (footnotes, sidenotes) */
+  .column-margin, .margin-caption {
+    width: 100% !important;
+    margin: 0.5em 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    margin-left: 0.5em;
+    margin-right: 0;
+    padding: 0.6em 0.8em;
+    font-size: 0.93em;
+  }
+}
+
+/* ===== Dark mode ===== */
+/* ===== Dark mode: comprehensive ===== */
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] #quarto-document-content,
+[data-bs-theme="dark"] #quarto-document-content p,
+[data-bs-theme="dark"] #quarto-document-content li,
+[data-bs-theme="dark"] #quarto-document-content span,
+[data-bs-theme="dark"] #quarto-document-content div,
+[data-bs-theme="dark"] .content,
+[data-bs-theme="dark"] main {
+  color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] #quarto-document-content h1 {
+  color: #f0eaff !important;
+  border-bottom-color: #8b6cbf;
+}
+
+[data-bs-theme="dark"] #quarto-document-content h2 {
+  color: #e8e0f0 !important;
+  border-bottom-color: #4a3a6a;
+}
+
+[data-bs-theme="dark"] #quarto-document-content h3,
+[data-bs-theme="dark"] #quarto-document-content h4 {
+  color: #ddd !important;
+}
+
+[data-bs-theme="dark"] .abstract {
+  color: #ccc !important;
+}
+
+[data-bs-theme="dark"] .quarto-title-meta-contents,
+[data-bs-theme="dark"] .quarto-title-meta-heading {
+  color: #bbb !important;
+}
+
+[data-bs-theme="dark"] .math.display {
+  border-left-color: #8b6cbf;
+  background: rgba(139, 108, 191, 0.08);
+  color: #ddd;
+}
+
+[data-bs-theme="dark"] figure, [data-bs-theme="dark"] .quarto-figure {
+  background: #1e1e2e;
+  border-color: #333;
+}
+
+[data-bs-theme="dark"] figcaption {
+  color: #aaa;
+}
+
+/* Tables */
+[data-bs-theme="dark"] table {
+  border-color: #555;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] thead {
+  background: linear-gradient(135deg, #4a3a6a, #6b4c9a);
+}
+
+[data-bs-theme="dark"] th {
+  color: #fff !important;
+  background: transparent;
+  border-bottom-color: #8b6cbf;
+}
+
+[data-bs-theme="dark"] td {
+  color: #ddd !important;
+  border-color: #444;
+  background: transparent;
+}
+
+[data-bs-theme="dark"] tbody tr:nth-child(even) {
+  background: rgba(139, 108, 191, 0.06);
+}
+
+[data-bs-theme="dark"] tbody tr:hover {
+  background: rgba(139, 108, 191, 0.12);
+}
+
+[data-bs-theme="dark"] table + .table-caption,
+[data-bs-theme="dark"] caption,
+[data-bs-theme="dark"] .caption-top {
+  color: #bbb;
+}
+
+/* Links */
+[data-bs-theme="dark"] a[href^="#ref-"] {
+  color: #b89edb;
+}
+
+[data-bs-theme="dark"] a {
+  color: #8cb4f0;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: #aaccff;
+}
+
+/* Blockquotes */
+[data-bs-theme="dark"] blockquote {
+  border-left-color: #8b6cbf;
+  background: rgba(139, 108, 191, 0.06);
+  color: #bbb;
+}
+
+/* TOC */
+[data-bs-theme="dark"] #TOC a {
+  color: #aaa;
+}
+
+[data-bs-theme="dark"] #TOC a.active {
+  color: #b89edb;
+}
+
+/* Inline code */
+[data-bs-theme="dark"] code {
+  color: #c9a0f0;
+  background: rgba(139, 108, 191, 0.12);
+}
+
+/* Comment buttons */
+[data-bs-theme="dark"] .comment-btn {
+  color: #888;
+  border-color: #555;
+}
+
+/* Edit buttons */
+[data-bs-theme="dark"] .inline-edit-btn {
+  color: #888;
+}
+
+/* Page footer */
+[data-bs-theme="dark"] .page-footer {
+  color: #888;
+}
+
+/* ===== Print ===== */
+@media print {
+  .sidebar, .navbar, #chatbot-container, #feifei-tab, .comment-btn,
+  #feifei-sidebar, #comment-panel, .feifei-float-icon {
+    display: none !important;
+  }
+
+  #quarto-document-content {
+    max-width: 100%;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  .math.display {
+    border-left: 2px solid #999;
+    background: none;
+  }
+
+  figure, .quarto-figure {
+    background: none;
+    border: 1px solid #ccc;
+  }
+}

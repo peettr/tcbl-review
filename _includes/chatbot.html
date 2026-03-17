@@ -1,0 +1,693 @@
+<style>
+#feifei-tab-float {
+  all: unset;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 5px 16px 5px 5px;
+  padding-left: 86px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(102,126,234,0.35);
+  cursor: pointer;
+  z-index: 10001;
+  width: 232px !important;
+  min-width: 232px !important;
+  max-width: 232px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  box-sizing: border-box;
+  overflow: visible !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
+}
+#feifei-tab-float:hover {
+  box-shadow: 0 8px 22px rgba(102,126,234,0.45);
+}
+#feifei-tab-float .ff-avatar-wrap {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.18);
+  pointer-events: none;
+}
+#feifei-tab-float .ff-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.0);
+  transform-origin: center;
+  border-radius: 50%;
+  display: block;
+}
+#feifei-tab-float .ff-tab-label {
+  font-size: 17px;
+  font-weight: 600;
+  flex: 0 0 auto;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* Floating chat panel — appears near the 🐱 button */
+#feifei-sidebar {
+  position: fixed;
+  width: 380px;
+  height: 480px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  resize: both;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 600px;
+  max-height: 85vh;
+}
+#feifei-sidebar.open { display: flex; }
+
+/* Feifei button inside TOC area */
+/* #feifei-tab is no longer used — always use floating button */
+
+/* Header */
+#feifei-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  cursor: grab;
+  user-select: none;
+}
+#feifei-header:active { cursor: grabbing; }
+#feifei-header .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  overflow: hidden;
+}
+#feifei-header .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#feifei-header .info { flex: 1; }
+#feifei-header .name { font-weight: 600; font-size: 15px; }
+#feifei-header .desc { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+#feifei-header .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 4px 8px;
+}
+#feifei-header .close-btn:hover { opacity: 1; }
+
+/* Messages */
+#feifei-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ff-msg {
+  max-width: 90%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+.ff-msg.bot {
+  background: #f0f2f5;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.ff-msg.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.ff-msg p { margin: 0.3em 0; }
+.ff-msg strong { font-weight: 600; }
+.ff-typing {
+  align-self: flex-start;
+  padding: 10px 14px;
+  background: #f0f2f5;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #999;
+}
+.ff-typing span { animation: blink 1.4s infinite both; }
+.ff-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ff-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+/* Context quote */
+.ff-context {
+  background: #f8f0ff;
+  border-left: 3px solid #764ba2;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #666;
+  border-radius: 0 8px 8px 0;
+  max-height: 60px;
+  overflow: hidden;
+}
+.ff-context::before { content: '📎 选中内容：'; font-weight: 600; color: #764ba2; }
+
+/* Input area */
+#feifei-input-area {
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  background: white;
+}
+#feifei-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#feifei-input:focus { border-color: #667eea; }
+#feifei-send {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#feifei-send:hover { opacity: 0.9; }
+
+/* Quick questions */
+.ff-quick {
+  padding: 8px 16px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.ff-quick button {
+  background: #f0f2f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ff-quick button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+/* Selection popup */
+#feifei-select-popup {
+  position: absolute;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 10002;
+  display: none;
+  box-shadow: 0 2px 10px rgba(102,126,234,0.4);
+  white-space: nowrap;
+}
+#feifei-select-popup:hover { transform: scale(1.05); }
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Chat dialog: left-side, narrower */
+  #feifei-sidebar {
+    width: 75vw !important;
+    max-width: 300px !important;
+    height: 50vh !important;
+    max-height: 400px !important;
+    min-height: 260px !important;
+    border-radius: 12px !important;
+    resize: none !important;
+  }
+  #feifei-sidebar.open {
+    left: 12px !important;
+    top: 60px !important;
+    bottom: auto !important;
+    right: auto !important;
+  }
+  #feifei-header {
+    padding: 10px 12px !important;
+  }
+  #feifei-header .close-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
+    background: rgba(255,255,255,0.25) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  /* Chatbot button: prominent, avoid Safari bottom bar */
+  #feifei-tab-float {
+    width: 180px !important;
+    min-width: 180px !important;
+    max-width: 180px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    right: 10px !important;
+    bottom: 12px !important;
+    padding: 4px 12px 4px 62px !important;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(102,126,234,0.55) !important;
+    z-index: 99999 !important;
+  }
+  #feifei-tab-float .ff-avatar-wrap {
+    width: 58px !important;
+    height: 58px !important;
+  }
+  #feifei-tab-float .ff-avatar-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #feifei-tab-float .ff-tab-label {
+    font-size: 14px !important;
+  }
+  #feifei-select-popup {
+    font-size: 13px !important;
+  }
+  .ff-quick button {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+  }
+  #feifei-input {
+    font-size: 16px !important;
+  }
+}
+</style>
+
+<!-- Button will be injected into TOC sidebar by JS -->
+
+<!-- Selection popup -->
+<div id="feifei-select-popup" onclick="askAboutSelection()"><img src="images/feifei-avatar.jpg" style="width:24px;height:24px;vertical-align:middle;margin-right:4px;border-radius:50%;object-fit:cover;"> <span id="popup-label">Ask Feifei</span></div>
+
+<!-- Sidebar panel -->
+<div id="feifei-sidebar">
+  <div id="feifei-header">
+    <div class="avatar"><img src="images/feifei-avatar.jpg" alt="菲菲"></div>
+    <div class="info">
+      <div class="name">菲菲 Feifei</div>
+      <div class="desc">TCBL Review Assistant</div>
+    </div>
+    <button class="close-btn" onclick="toggleFeifei()">✕</button>
+  </div>
+  <div id="feifei-messages">
+    <div class="ff-msg bot" id="feifei-greeting"></div>
+  </div>
+  <div class="ff-quick">
+    <button id="quick-overview"></button>
+    <button id="quick-kw01"></button>
+    <button id="quick-who"></button>
+  </div>
+  <div id="feifei-input-area">
+    <input id="feifei-input" type="text" placeholder=""
+           onkeydown="if(event.key==='Enter')sendFeifei()">
+    <button id="feifei-send" onclick="sendFeifei()">↑</button>
+  </div>
+</div>
+
+<script>
+const FEIFEI_API = 'https://feifei-tcbl.peettr.workers.dev';
+const isZhPage = !window.location.pathname.includes('index-en');
+const feifeiI18n = {
+  popupLabel: isZhPage ? '问菲菲' : 'Ask Feifei',
+  explainSelection: isZhPage ? '请解释这段内容' : 'Please explain the selected text',
+  inputPlaceholder: isZhPage ? '问菲菲...' : 'Ask Feifei about TCBL...',
+  greeting: isZhPage
+    ? '你好！我是菲菲 Feifei～ 你可以问我关于这篇综述的任何问题，也可以直接选中文章中的文字来问我哦！'
+    : 'Hi! I\'m Feifei \u{1F431} Ask me anything about this TCBL review. You can also select text in the article to ask me!',
+  btnLabel: isZhPage ? '问菲菲 Ask Feifei' : 'Ask Feifei 问菲菲',
+  quickOverviewLabel: isZhPage ? '综述概要' : 'Overview',
+  quickOverviewQ: isZhPage ? '这篇综述主要讲什么？' : 'What is this review about?',
+  quickKW01Label: isZhPage ? 'KW01模型' : 'KW01 model',
+  quickKW01Q: isZhPage ? 'KW01模型有什么特别的？' : 'What is special about the KW01 model?',
+  quickWhoLabel: isZhPage ? '菲菲是谁' : "Who's Feifei",
+  quickWhoQ: isZhPage ? '菲菲是谁？' : 'Who is Feifei?',
+};
+
+// System prompt with full knowledge base is embedded in the Cloudflare Worker
+const FEIFEI_SYSTEM = null; // handled server-side
+
+let feifeiHistory = [];
+let selectedText = '';
+
+function toggleFeifei() {
+  const sidebar = document.getElementById('feifei-sidebar');
+  const btn = document.getElementById('feifei-tab-float');
+  sidebar.classList.toggle('open');
+  
+  if (sidebar.classList.contains('open')) {
+    let left = window.innerWidth - 404;
+    let top = window.innerHeight - 504;
+    
+    if (btn) {
+      const btnRect = btn.getBoundingClientRect();
+      // Open below the floating button with a small gap, aligned to its left edge
+      left = btnRect.left;
+      top = btnRect.bottom + 12;
+    }
+    
+    // Keep within viewport
+    left = Math.max(10, Math.min(left, window.innerWidth - 390));
+    top = Math.max(10, Math.min(top, window.innerHeight - 490));
+    
+    sidebar.style.left = left + 'px';
+    sidebar.style.top = top + 'px';
+    
+    document.getElementById('feifei-input').focus();
+  }
+}
+
+// Make chat panel draggable by header
+(function() {
+  let dragPanel = false, panelStartX, panelStartY, panelOrigX, panelOrigY;
+  
+  document.addEventListener('pointerdown', (e) => {
+    if (window.innerWidth <= 768) return; // No drag on mobile
+    if (e.target.closest('#feifei-header') && !e.target.closest('.close-btn')) {
+      const sidebar = document.getElementById('feifei-sidebar');
+      dragPanel = true;
+      panelStartX = e.clientX;
+      panelStartY = e.clientY;
+      panelOrigX = sidebar.offsetLeft;
+      panelOrigY = sidebar.offsetTop;
+      sidebar.style.transition = 'none';
+      e.preventDefault();
+    }
+  });
+  
+  document.addEventListener('pointermove', (e) => {
+    if (!dragPanel) return;
+    const sidebar = document.getElementById('feifei-sidebar');
+    let newX = panelOrigX + (e.clientX - panelStartX);
+    let newY = panelOrigY + (e.clientY - panelStartY);
+    newX = Math.max(0, Math.min(newX, window.innerWidth - 100));
+    newY = Math.max(0, Math.min(newY, window.innerHeight - 100));
+    sidebar.style.left = newX + 'px';
+    sidebar.style.top = newY + 'px';
+  });
+  
+  document.addEventListener('pointerup', () => { dragPanel = false; });
+})();
+
+function addMsg(role, text) {
+  const div = document.createElement('div');
+  div.className = `ff-msg ${role}`;
+  div.innerHTML = text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  document.getElementById('feifei-messages').appendChild(div);
+  div.scrollIntoView({ behavior: 'smooth' });
+}
+
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'ff-typing';
+  div.id = 'ff-typing';
+  div.innerHTML = '<span>●</span><span>●</span><span>●</span>';
+  document.getElementById('feifei-messages').appendChild(div);
+  div.scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideTyping() {
+  const el = document.getElementById('ff-typing');
+  if (el) el.remove();
+}
+
+function quickAsk(q) {
+  document.getElementById('feifei-input').value = q;
+  sendFeifei();
+}
+
+async function sendFeifei() {
+  const input = document.getElementById('feifei-input');
+  let text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+  
+  // If there's selected text context, prepend it
+  let userContent = text;
+  if (selectedText) {
+    const ctx = document.createElement('div');
+    ctx.className = 'ff-context';
+    ctx.textContent = selectedText.substring(0, 150);
+    document.getElementById('feifei-messages').appendChild(ctx);
+    userContent = `[用户选中了文章中这段文字: "${selectedText.substring(0, 500)}"]\n\n问题: ${text}`;
+    selectedText = '';
+  }
+  
+  addMsg('user', text);
+  showTyping();
+  
+  feifeiHistory.push({ role: 'user', content: userContent });
+  
+  try {
+    const resp = await fetch(FEIFEI_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        // system prompt is in the worker; RAG retrieves relevant notes
+        messages: feifeiHistory.slice(-6)
+      })
+    });
+    
+    const data = await resp.json();
+    hideTyping();
+    
+    if (data.reply) {
+      addMsg('bot', data.reply);
+      feifeiHistory.push({ role: 'assistant', content: data.reply });
+    } else {
+      addMsg('bot', '喵... something went wrong. 稍后再试一下？🐱');
+    }
+  } catch (e) {
+    hideTyping();
+    addMsg('bot', 'Network seems busy... 网络好像不太通 🐱');
+  }
+}
+
+// Text selection → "Ask Feifei" popup
+function showSelectionPopup(e) {
+  const popup = document.getElementById('feifei-select-popup');
+  const sel = window.getSelection().toString().trim();
+  
+  if (sel.length > 10 && !e.target.closest('#feifei-sidebar')) {
+    selectedText = sel;
+    popup.style.display = 'block';
+    // Use touch position or mouse position
+    const px = e.pageX || (e.changedTouches && e.changedTouches[0].pageX) || 0;
+    const py = e.pageY || (e.changedTouches && e.changedTouches[0].pageY) || 0;
+    popup.style.left = px + 'px';
+    popup.style.top = (py - 40) + 'px';
+  } else {
+    popup.style.display = 'none';
+  }
+}
+document.addEventListener('mouseup', showSelectionPopup);
+// Mobile: use selectionchange with a short delay to catch touch selections
+document.addEventListener('selectionchange', (() => {
+  let timer = null;
+  return () => {
+    if (window.innerWidth > 768) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const sel = window.getSelection();
+      const text = sel.toString().trim();
+      const popup = document.getElementById('feifei-select-popup');
+      if (text.length > 10) {
+        selectedText = text;
+        // Position near the selection
+        const range = sel.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        popup.style.display = 'block';
+        popup.style.left = (rect.left + window.scrollX) + 'px';
+        popup.style.top = (rect.top + window.scrollY - 40) + 'px';
+      } else {
+        popup.style.display = 'none';
+      }
+    }, 300);
+  };
+})());
+
+function askAboutSelection() {
+  document.getElementById('feifei-select-popup').style.display = 'none';
+  const sidebar = document.getElementById('feifei-sidebar');
+  if (!sidebar.classList.contains('open')) {
+    toggleFeifei();
+  }
+  document.getElementById('feifei-input').value = feifeiI18n.explainSelection;
+  document.getElementById('feifei-input').focus();
+}
+
+// Hide popup on scroll
+document.addEventListener('scroll', () => {
+  document.getElementById('feifei-select-popup').style.display = 'none';
+});
+
+// Inject draggable floating button (always fixed-position, never inside sidebar)
+function injectFeifeiTab() {
+  const existing = document.getElementById('feifei-tab-float');
+  if (existing) existing.remove();
+
+  const btn = document.createElement('button');
+  btn.id = 'feifei-tab-float';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', feifeiI18n.btnLabel);
+  const avatarSrc = 'images/feifei-avatar.jpg';
+  btn.innerHTML = '<span class="ff-avatar-wrap"><img src="' + avatarSrc + '" alt="菲菲"></span><span class="ff-tab-label">' + feifeiI18n.btnLabel + '</span>';
+  document.body.appendChild(btn);
+
+  let isDragging = false;
+  let dragStarted = false;
+  let startX = 0, startY = 0, origX = 0, origY = 0;
+
+  function isMobile() { return window.innerWidth <= 768; }
+
+  btn.addEventListener('click', (e) => {
+    if (isMobile()) toggleFeifei();
+  });
+
+  function onPointerDown(e) {
+    if (isMobile()) return; // No drag on mobile
+    isDragging = true;
+    dragStarted = false;
+    startX = e.clientX;
+    startY = e.clientY;
+    const rect = btn.getBoundingClientRect();
+    origX = rect.left;
+    origY = rect.top;
+    btn.setPointerCapture?.(e.pointerId);
+    e.preventDefault();
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (!dragStarted && Math.abs(dx) + Math.abs(dy) < 5) return;
+    if (!dragStarted) dragStarted = true;
+
+    let newX = origX + dx;
+    let newY = origY + dy;
+    newX = Math.max(0, Math.min(newX, window.innerWidth - btn.offsetWidth));
+    newY = Math.max(0, Math.min(newY, window.innerHeight - btn.offsetHeight));
+
+    btn.style.right = 'auto';
+    btn.style.bottom = 'auto';
+    btn.style.left = newX + 'px';
+    btn.style.top = newY + 'px';
+    btn.style.transform = 'none';
+  }
+
+  function onPointerUp(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    btn.releasePointerCapture?.(e.pointerId);
+
+    if (!dragStarted) {
+      toggleFeifei();
+      return;
+    }
+
+    localStorage.setItem('feifei-x', btn.style.left || '');
+    localStorage.setItem('feifei-y', btn.style.top || '');
+  }
+
+  btn.addEventListener('pointerdown', onPointerDown);
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup', onPointerUp);
+  btn.style.touchAction = 'none';
+
+  // Restore saved position only on desktop
+  if (!isMobile()) {
+    const savedX = localStorage.getItem('feifei-x');
+    const savedY = localStorage.getItem('feifei-y');
+    if (savedX && savedY) {
+      btn.style.right = 'auto';
+      btn.style.bottom = 'auto';
+      btn.style.left = savedX;
+      btn.style.top = savedY;
+      btn.style.transform = 'none';
+    }
+  }
+}
+
+injectFeifeiTab();
+
+// Initialize bilingual text
+document.getElementById('popup-label').textContent = feifeiI18n.popupLabel;
+document.getElementById('feifei-greeting').textContent = feifeiI18n.greeting;
+document.getElementById('feifei-input').placeholder = feifeiI18n.inputPlaceholder;
+var qOverview = document.getElementById('quick-overview');
+qOverview.textContent = feifeiI18n.quickOverviewLabel;
+qOverview.onclick = function() { quickAsk(feifeiI18n.quickOverviewQ); };
+var qKw01 = document.getElementById('quick-kw01');
+qKw01.textContent = feifeiI18n.quickKW01Label;
+qKw01.onclick = function() { quickAsk(feifeiI18n.quickKW01Q); };
+var qWho = document.getElementById('quick-who');
+qWho.textContent = feifeiI18n.quickWhoLabel;
+qWho.onclick = function() { quickAsk(feifeiI18n.quickWhoQ); };
+</script>

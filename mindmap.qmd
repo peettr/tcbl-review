@@ -1,0 +1,295 @@
+---
+title: "TCBL Models — Interactive Mind Map"
+format:
+  html:
+    toc: false
+    number-sections: false
+    page-layout: custom
+    include-after-body: []
+---
+
+```{=html}
+<style>
+  #mindmap-container { 
+    width: 100%; 
+    height: calc(100vh - 100px);
+  }
+  /* Fix Chinese text clipping in markmap SVG */
+  .markmap-node text, .markmap-foreign text, .markmap foreignObject {
+    overflow: visible !important;
+  }
+  .markmap-node foreignObject div {
+    padding-right: 8px !important;
+    white-space: nowrap !important;
+  }
+  .controls {
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .controls button, .controls .lang-btn {
+    padding: 6px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .controls button:hover, .controls .lang-btn:hover { background: #e8e8e8; }
+  .controls .lang-btn.active { 
+    background: #0066cc; 
+    color: white; 
+    border-color: #0066cc; 
+  }
+  .back-link { 
+    margin-left: auto; 
+    color: #0066cc; 
+    text-decoration: none; 
+  }
+  .lang-group {
+    display: flex;
+    gap: 4px;
+    margin-left: 20px;
+  }
+
+  /* Dark mode */
+  [data-bs-theme="dark"] .controls,
+  .quarto-dark .controls {
+    background: #2a2a3a;
+    border-bottom-color: #444;
+    color: #ddd;
+  }
+  [data-bs-theme="dark"] .controls button,
+  [data-bs-theme="dark"] .controls .lang-btn,
+  .quarto-dark .controls button,
+  .quarto-dark .controls .lang-btn {
+    background: #333;
+    color: #ddd;
+    border-color: #555;
+  }
+  [data-bs-theme="dark"] .controls button:hover,
+  .quarto-dark .controls button:hover { background: #444; }
+  [data-bs-theme="dark"] .controls .lang-btn.active,
+  .quarto-dark .controls .lang-btn.active {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+  }
+  [data-bs-theme="dark"] .back-link,
+  .quarto-dark .back-link { color: #8cb4f0; }
+  [data-bs-theme="dark"] #mindmap-container,
+  .quarto-dark #mindmap-container { background: #1a1a2e; }
+  [data-bs-theme="dark"] .controls strong,
+  .quarto-dark .controls strong { color: #e0e0e0; }
+  [data-bs-theme="dark"] foreignObject div,
+  [data-bs-theme="dark"] .markmap-node text,
+  [data-bs-theme="dark"] .markmap-foreign div,
+  .quarto-dark foreignObject div,
+  .quarto-dark .markmap-node text,
+  .quarto-dark .markmap-foreign div {
+    color: #e0e0e0 !important;
+    fill: #e0e0e0 !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .controls {
+      padding: 8px 12px;
+      gap: 6px;
+    }
+    .controls button, .controls .lang-btn {
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+    .lang-group { margin-left: 0; }
+    .back-link { margin-left: 0; font-size: 13px; }
+    #mindmap-container { height: calc(100vh - 140px); }
+    .controls strong { font-size: 14px; }
+  }
+</style>
+
+<div class="controls">
+  <strong id="map-title">TCBL Model Taxonomy</strong>
+  <button onclick="mm.fit()">🔄 Fit</button>
+  <button onclick="mm.rescale(1.25)">➕ Zoom In</button>
+  <button onclick="mm.rescale(0.8)">➖ Zoom Out</button>
+  <div class="lang-group">
+    <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" id="btn-zh" onclick="switchLang('zh')">中文</button>
+  </div>
+  <a href="index.html" class="back-link" id="back-link">← Back to Article</a>
+</div>
+
+<svg id="mindmap-container"></svg>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.17"></script>
+
+<script>
+const mdEn = `
+# TCBL Modeling
+
+## 1. Introduction
+### PBWE framework
+### Multi-scale TC simulation
+### TCBL definition & characteristics
+### TCBL modeling overview
+
+## 2. Full-physics Models
+### WRF
+#### WRF-ARW
+#### HWRF
+#### HWCM
+### Other models (GFS, CM1, etc.)
+
+## 3. Diagnostic Models
+### 3.1 Axisymmetric models
+- Hybrid (Smith 1968, Kepert 2010b)
+- Height-averaged (Smith 2003, Smith & Vogl 2008)
+- Nonlinear analytical (Kuo 1982)
+- Linear analytical (Meng et al. 1995)
+### 3.2 Parametric (I): Empirical methods
+#### Gradient profiles
+- Axisymmetric: Holland (1980), Willoughby (2006), Emanuel (2004)
+- Asymmetric: Xie et al. (2006), Georgiou (1985)
+#### TC track models
+#### Vertical wind profiles (SWRF)
+### 3.3 Parametric (II): Analytical linear
+- K01 (Kepert 2001)
+- Asymmetric extension (Meng et al. 1995)
+### 3.4 Simulation-based (I): 2D-slab
+### 3.5 Simulation-based (II): 2D hybrid
+### 3.6 Simulation-based (III): **3D nonlinear** ⭐
+#### KW01 (Kepert & Wang 2001)
+#### Y08, linearization, validation
+#### Physics: turbulence, advection, landfall, thermodynamics
+#### Comparison & applications
+
+## 4. Data-driven Methods
+- Radial profile modification
+- Asymmetry introduction
+- POD-based models
+
+## 5. NatHaz Investigation
+- Model sensitivity analysis
+- 692-sortie benchmark dataset
+- Hierarchy of linear approximations
+- Land-sea roughness contrast
+
+## 6. Concluding Remarks
+- 3D nonlinear model → PBWE integration
+- Microscale phenomena from TCBL outputs
+- Model uncertainty impact on PBWE
+- Benchmark dataset expansion
+- ML & data-driven approaches
+`;
+
+const mdZh = `
+# TCBL建模
+
+## 1. 引言
+### PBWE框架
+### 台风多尺度模拟
+### TCBL定义与特征
+### TCBL建模概述
+
+## 2. 全物理模型
+### WRF
+#### WRF-ARW
+#### HWRF
+#### HWCM
+### 其他模型（GFS、CM1等）
+
+## 3. 诊断模型
+### 3.1 轴对称模型
+- 混合模型（Smith 1968, Kepert 2010b）
+- 高度平均（Smith 2003, Smith & Vogl 2008）
+- 非线性解析（Kuo 1982）
+- 线性解析（Meng et al. 1995）
+### 3.2 参数化（I）：经验方法
+#### 梯度剖面
+- 轴对称：Holland (1980)、Willoughby (2006)、Emanuel (2004)
+- 非对称：Xie et al. (2006)、Georgiou (1985)
+#### 台风路径模型
+#### 垂直风剖面（SWRF）
+### 3.3 参数化（II）：解析线性
+- K01（Kepert 2001）
+- 非对称扩展（Meng et al. 1995）
+### 3.4 模拟型（I）：二维平板
+### 3.5 模拟型（II）：二维混合
+### 3.6 模拟型（III）：**三维非线性** ⭐
+#### KW01（Kepert & Wang 2001）
+#### Y08、线性化、验证
+#### 物理机制：湍流、平流、登陆、热力学
+#### 对比与应用
+
+## 4. 数据驱动方法
+- 径向剖面修正
+- 不对称性引入
+- POD模型
+
+## 5. NatHaz系统性研究
+- 模型敏感性分析
+- 692架次基准数据集
+- 线性近似模型层级
+- 海陆粗糙度对比效应
+
+## 6. 结论与展望
+- 三维非线性模型→PBWE集成
+- 基于TCBL输出的微尺度研究
+- 模型不确定性对PBWE的影响
+- 基准数据集扩展
+- 机器学习与数据驱动方法
+`;
+
+let currentLang = 'en';
+let mm;
+
+function renderMap(md) {
+  const svg = document.getElementById('mindmap-container');
+  svg.innerHTML = '';
+  const { Transformer } = window.markmap;
+  const transformer = new Transformer();
+  const { root } = transformer.transform(md);
+  const { Markmap } = window.markmap;
+  mm = Markmap.create('#mindmap-container', {
+    autoFit: true,
+    duration: 500,
+    maxWidth: 0,
+    paddingX: 16,
+    color: (node) => {
+      const depth = node.state?.depth || 0;
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark' || document.body.classList.contains('quarto-dark');
+      const colors = isDark
+        ? ['#e8e0f0', '#b89edb', '#8cb4f0', '#a0c4ff', '#c9a0f0', '#ddd']
+        : ['#1a1a2e', '#2d2d5e', '#4a3a6a', '#6b4c9a', '#555', '#666'];
+      return colors[Math.min(depth, colors.length - 1)];
+    }
+  }, root);
+  setTimeout(() => mm.fit(), 300);
+}
+
+function switchLang(lang) {
+  currentLang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('map-title').textContent = lang === 'en' ? 'TCBL Model Taxonomy' : 'TCBL模型分类体系';
+  const backLink = document.getElementById('back-link');
+  if (lang === 'en') {
+    backLink.textContent = '← Back to Article';
+    backLink.href = 'index.html';
+  } else {
+    backLink.textContent = '← 返回文章';
+    backLink.href = 'index-zh.html';
+  }
+  renderMap(lang === 'en' ? mdEn : mdZh);
+}
+
+renderMap(mdEn);
+</script>
+```
